@@ -1,5 +1,10 @@
 ---
 title: "Introduction to DS101"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: ["Joschka Schwarz"]
 date: "1/22/2020"
 output: html_document
@@ -15,7 +20,7 @@ This class will teach you how to program in R, with hands-on examples. I develop
 
 If you are already comfortable with R, and would like to focus instead how to analyze data using R's Tidyverse packages, I recommend [R for Data Science](http://r4ds.had.co.nz/), a book that I co-authored with Hadley Wickham. 
 
-This website is (and will always be) __free to use__, and is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) License. If you'd like to give back, please consider reporting a typo or leaving a pull request at [github.com/rstudio-education/hopr](https://github.com/rstudio-education/hopr).
+This website is (and will always be) __free to use__, and is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) License. If you'd like to give back, please consider reporting a typo or leaving a pull request at [github.com/rstudio-education/hopr](https://github.com/TUHH-W11/r-course-material).
 
 
 ```{r cars}
