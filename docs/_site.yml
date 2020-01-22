@@ -1,12 +1,27 @@
-name: "Welcome"
-output_dir: "docs"
+name: Psyc 7709
 navbar:
-  title: "DS_101"
+  title: Psyc 7709
   left:
-  - text: "Home"
-   href: index.html
-  - text: "About"
-   href: about.html
+  - text: Syllabus
+    href: Syllabus.html
+  - text: Schedule
+    href: Schedule.html
+  - text: Videos
+    href: Videos.html
+  - text: Resources
+    href: Resources.html
+  - text: ExampleCode
+    href: ExampleCode.html
+  - text: Package Notes
+    href: Advanced.html
+  - text: Midterm
+    href: MidtermAssignment.html
+  - text: Final
+    href: FinalProject.html
+  - text: Our Book
+    href: book/docs/index.html
+output_dir: docs
 output:
   html_document:
- theme: cosmo
+    lib_dir: site_libs
+    self_contained: no
