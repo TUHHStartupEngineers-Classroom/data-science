@@ -1,0 +1,68 @@
+---
+title: "Syllabus"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 4
+---
+<style>
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    background-color: #2DC6D6;
+}
+</style>
+
+### DS101 – Using R for Business Analytics
+
+Spring 2020
+
+Location: Building Q
+Time: Monday 09:00-15:00
+
+Instructor: 
+
+* Prof. Christoph Ihl [christoph.ihl@tuhh.de](christoph.ihl@tuhh.de)
+* Joschka Schwarz [joschka.schwarz@tuhh.de](joschka.schwarz@tuhh.de)
+
+### General Course Description and Objectives
+
+Practical and skill-focused introduction to using open-source programming software (R, R-studio, and R Markdown) in several aspects of Psychological Research. Course covers basic scripting/coding in R, data-wrangling, advanced graphing and data animation, using R for creating reproducible manuscripts, slide presentations, websites, and web-books for communicating research.
+
+Special Prerequisites: NONE
+
+*Course objectives**: in this course you will learn:
+
+1.	Basic scripting in R: use of variables, logic, loops, functions, intrinsics, packages, workspaces 
+2.	Data transformation: processing data-files into a desired form for a desired analysis
+3.	Data visualization: advanced plotting and graphing of data, creation of journal-quality figures in R.
+4.	Data Simulation: how to create statistical models of data sets for advanced sample-size planning, as well as evaluating existing findings in the literature.
+5.	Communicating research: how to use R Markdown scripts to create APA style manuscripts, websites, web-books, and web-based presentations for communicating research.
+6.	Reproducible research: principles of open-science, including tools for data-sharing, manuscript sharing, pre-registration of research designs, method-sharing, pre-print sharing, and use of online repository services for disseminating shared materials.
+
+### Course Structure
+
+We meet once per week in a computer lab. Each class will involve a small amount of lecturing on R concepts, and a large amount of time for students to complete coding and analysis problems assigned on a weekly basis. By completing the assignments, students will create a coding portfolio demonstrating a variety of data-analysis and communication skills. The process of learning to code is one that involves patience, time, and practice. Students are expected to practice coding outside of class time each week.
+
+
+### Lecture Schedule
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+lectures <- read_excel("Schedule.xlsx", sheet = 1, col_names = TRUE, col_types = NULL, na = "", skip = 0)
+lectures[is.na(lectures)]<- " "
+knitr::kable(lectures)
+```
+
+
+### Assignments and Grading
+
+There are 8 weekly assignments, a midterm project, and a final project composed of an in-class presentation and a paper. The grading rubric is below:
+
+| Assignment |  Points| Total|
+|:----------|--------:|-------:|
+| Weekly assignments | 7 | 56|
+| Midterm project | 17 | 17 |
+| Final Presentation | 7| 7|
+| Final Paper | 20 | 20|
