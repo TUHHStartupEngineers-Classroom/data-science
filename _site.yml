@@ -18,7 +18,7 @@ navbar:
     - text: "Links"
       href: 3-links.html
     - text: Course script
-      href: script/_book/index.html
+      href: script/docs/index.html
   right:
     - icon: fa-github
       href: https://github.com/tuHH-W11/
