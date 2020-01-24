@@ -30,3 +30,4 @@ navbar:
       href: https://www.youtube.com/channel/UCtJeu2eB-kSKDqv1SPBVDcA
     - icon: fa-envelope
       href: mailto:joschka.schwarz@tuhh.de
+output_dir: docs
