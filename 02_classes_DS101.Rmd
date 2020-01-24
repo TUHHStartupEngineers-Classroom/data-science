@@ -1,5 +1,5 @@
 ---
-title: "DS101: Basic Tools and Algortithms"
+title: "DS101 · TUHH Business Analytics R Programming Guide"
 output:
   html_document:
     css: styles.css

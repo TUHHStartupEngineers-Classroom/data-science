@@ -1,5 +1,5 @@
 ---
-title: "Syllabus"
+title: "Syllabus · TUHH Business Analytics R Programming Guide"
 output: 
   html_document:
     toc: true
