@@ -2,7 +2,6 @@
 title: "TUHH Business Analytics R Programming Guide"
 output: html_document
 ---
-
 <style type="text/css">
 .title {
   display: none;

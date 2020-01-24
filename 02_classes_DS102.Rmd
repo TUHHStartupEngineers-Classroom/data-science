@@ -1,5 +1,6 @@
 ---
-title: "DS102 · TUHH Business Analytics R Programming Guide"
+title: "DS102"
+pagetitle:  "DS102 · TUHH Business Analytics R Programming Guide"
 output: html_document
 ---
 
