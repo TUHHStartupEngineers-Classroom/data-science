@@ -113,10 +113,18 @@
   \thm@postskip=\thm@preskip
 }
 \makeatother
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Script for the Class DS101}
+\providecommand{\subtitle}[1]{}
+\subtitle{Data Driven Entrepreneurship: Prediction Algorithms with R}
 \author{Joschka Schwarz}
 \date{2020-01-27}
 
@@ -127,12 +135,11 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{prerequisites}{%
-\chapter{Prerequisites}\label{prerequisites}}
+\hypertarget{preface}{%
+\chapter*{Preface}\label{preface}}
+\addcontentsline{toc}{chapter}{Preface}
 
-This is a \emph{sample} book written in \textbf{Markdown}. You can use anything that Pandoc's Markdown supports, e.g., a math equation \(a^2 + b^2 = c^2\).
-
-The \textbf{bookdown} package can be installed from CRAN or Github:
+This script are the class notes used in the TUHH Data Science course.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -141,6 +148,10 @@ The \textbf{bookdown} package can be installed from CRAN or Github:
 \CommentTok{# devtools::install_github("rstudio/bookdown")}
 \end{Highlighting}
 \end{Shaded}
+
+\hypertarget{acknowledgments}{%
+\chapter*{Acknowledgments}\label{acknowledgments}}
+\addcontentsline{toc}{chapter}{Acknowledgments}
 
 Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading \texttt{\#}.
 
