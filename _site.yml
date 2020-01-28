@@ -1,4 +1,5 @@
 name: "DS-website"
+
 navbar:
   title: "Data-Driven Entrepreneurship"
   #type: inverse --> dark style
@@ -16,11 +17,9 @@ navbar:
             - text: "DS202"
               href: 02_classes_DS202.html
     - text: "Links"
-      href: 3-links.html
-    - text: "Tutorial"
-      href: 04_tut.Rmd
+      href: 03_links.html
     - text: Course script
-      href: script/docs/index.html
+      href: script/docs/preface.html
   right:
     - icon: fa-github
       href: https://github.com/tuHH-W11/
@@ -32,4 +31,6 @@ navbar:
       href: https://www.youtube.com/channel/UCtJeu2eB-kSKDqv1SPBVDcA
     - icon: fa-envelope
       href: mailto:joschka.schwarz@tuhh.de
-output_dir: docs
+output_dir: "docs"
+#exclude: ["./script/*"]
+#rmd_files: ["00_index_webpage.Rmd", "01_syllabus.Rmd", "02_classes_DS101.Rmd", "02_classes_DS102.Rmd", "02_classes_DS201.Rmd", "02_classes_DS202.Rmd", "03_links.Rmd"]

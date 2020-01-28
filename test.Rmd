@@ -1,7 +1,0 @@
----
-title: "MOMA"
-author: "VP Nagraj"
-date: "February 29, 2016"
-output: html_document
-runtime: shiny
----

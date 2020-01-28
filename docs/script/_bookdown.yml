@@ -7,3 +7,5 @@ language:
   ui:
     chapter_name: "Chapter "
 delete_merged_file: true
+rmd_files: ["00_index_script.Rmd", "01_getting_started.Rmd", "02_literature.Rmd", "03_method.Rmd", "04_application.Rmd", "05_summary.Rmd", "06_references.Rmd"]
+

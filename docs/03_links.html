@@ -11,7 +11,7 @@
 
 
 
-<title>Set Up</title>
+<title>Resources · TUHH Business Analytics R Programming Guide</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -299,13 +299,10 @@ $(document).ready(function () {
   </ul>
 </li>
 <li>
-  <a href="3-links.html">Links</a>
+  <a href="03_links.html">Links</a>
 </li>
 <li>
-  <a href="04_tut.Rmd">Tutorial</a>
-</li>
-<li>
-  <a href="script/docs/index.html">Course script</a>
+  <a href="script/docs/preface.html">Course script</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -348,39 +345,37 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Set Up</h1>
+<h1 class="title toc-ignore">Resources · TUHH Business Analytics R Programming Guide</h1>
 
 </div>
 
 
-<pre class="r"><code>library(shiny)
-
-# Define UI for application that draws a histogram
-ui &lt;- fluidPage(
-
-    # Application title
-    titlePanel(&quot;learnr tutorial&quot;),
-
-    # Show a plot of the generated distribution
-    mainPanel(fluidRow(
-       htmlOutput(&quot;frame&quot;)
-    ))
-)
-
-# Define server logic required to draw a histogram
-server &lt;- function(input, output) {
-
-    output$frame &lt;- renderUI({
-        tags$iframe(
-            src=&quot;https://jjallaire.shinyapps.io/learnr-tutorial-03a-data-manip-filter/&quot;, width=1280, height=720
-        )
-    })
+<style type="text/css">
+.title {
+  display: none;
 }
+</style>
+<div class="row" style="padding-top: 30px;">
 
-# Run the application
-shinyApp(ui = ui, server = server)</code></pre>
-<pre><code>## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.</code></pre>
-<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
+<div id="shiny-test" class="section level1">
+<h1>Shiny Test</h1>
+<p><a href="https://learnr-examples.shinyapps.io/ex-setup-r/" class="uri">https://learnr-examples.shinyapps.io/ex-setup-r/</a></p>
+</div>
+<div id="resources" class="section level1">
+<h1>Resources</h1>
+<div id="r-and-r-studio" class="section level3">
+<h3>R and R-Studio</h3>
+<p><a href="http://www.r-project.org">R</a> is a free open-source programming language that can be used for statistical analysis, data-simulation, graphing, and lots of other stuff. Another free program is <a href="http://www.rstudio.com">R-studio</a>, that provides a nice graphic interface for R. Download R first, then download R-studio. Both can run on PCs, Macs or Linux. Students will be learning R in the stats labs using the lab manual <a href=""></a>.</p>
+</div>
+<div id="additional-r-resources" class="section level3">
+<h3>Additional R resources</h3>
+<ol style="list-style-type: decimal">
+<li>Google is great, Google your problem</li>
+<li><a href="https://stackoverflow.com">Stackoverflow</a> is great, google will often take you there because someone has already asked your question, and someone else has answered, usually many people have answered your question many ways.</li>
+<li>This is the definitive guide for all things R Markdown (you will find this very useful as you get better at this skill): <a href="https://bookdown.org/yihui/rmarkdown/">https://bookdown.org/yihui/rmarkdown/</a></li>
+</ol>
+</div>
+</div>
 
 
 
