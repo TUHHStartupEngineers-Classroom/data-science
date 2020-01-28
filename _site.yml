@@ -1,12 +1,12 @@
 name: "DS-website"
-
+output_dir: "docs"
 navbar:
   title: "Data-Driven Entrepreneurship"
   #type: inverse --> dark style
   left:
     - text: "Syllabus"
       href: 01_syllabus.html
-    - text: "Classes"
+    - text: "Labs / Schedule"
       menu:
             - text: "DS101: Basic Tools and Algorithms"
               href: 02_classes_DS101.html
@@ -31,6 +31,6 @@ navbar:
       href: https://www.youtube.com/channel/UCtJeu2eB-kSKDqv1SPBVDcA
     - icon: fa-envelope
       href: mailto:joschka.schwarz@tuhh.de
-output_dir: "docs"
+
 #exclude: ["./script/*"]
 #rmd_files: ["00_index_webpage.Rmd", "01_syllabus.Rmd", "02_classes_DS101.Rmd", "02_classes_DS102.Rmd", "02_classes_DS201.Rmd", "02_classes_DS202.Rmd", "03_links.Rmd"]

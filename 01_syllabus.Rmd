@@ -70,3 +70,5 @@ There are 8 weekly assignments, a midterm project, and a final project composed 
 | Final Paper | 20 | 20|
 
 ## DS202 - Project Applications
+
+Coming soon ...

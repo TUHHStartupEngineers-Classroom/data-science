@@ -1,6 +1,7 @@
 ---
 title: "TUHH Business Analytics R Programming Guide"
 output: html_document
+section_divs: yes
 ---
 <style type="text/css">
 .title {
@@ -12,23 +13,31 @@ output: html_document
 }
 
 </style>
-
 <div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
+<div class="row">
+  <div class="col-md-6 col-sm-4 col-xs-6">
+   <div><img src="./images/w11_logo2.png" height="200px"></div>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-6">
+  <div><img src="./images/rstudio_TIE2.png" height="200px" align="right"></div>
+  </div>
+</div>
 
-# **DS101 & DS102**
+<div class="col-md-10">
+# **Data Driven Entrepreneurship**
 
-### *Data-Driven Entrepreneurship: Basic Tools and Algorithms & Project Applications* {style="padding-top: 0px;"}
+### *Business Analyitcs with R: Basic Tools and Algorithms* {style="padding-top: 0px;"}
 
 This is a class for prgoramming with R. It will teach you how to program in R, with hands-on examples. I wrote it for non-programmers to provide a friendly introduction to the R language. You’ll learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools. Throughout the book, you’ll use your newfound skills to solve practical data science problems.
 
-Instructor: 
+
+### Instructor: 
 
 * Prof. Christoph Ihl [christoph.ihl@tuhh.de](christoph.ihl@tuhh.de)
 * Joschka Schwarz [joschka.schwarz@tuhh.de](joschka.schwarz@tuhh.de)
 
 
-## Content of the class
+### Content of the class
 
 1. Data mangling in the tidyverse
 
@@ -40,11 +49,3 @@ Instructor:
 
 
 </div>
-<div class="col-sm-6">
-
-### [Startup Engineer](https://www.startupengineer.io)
-
-<a href = "https://www.startupengineer.io">
-![](images/w11_logo2.png)
-
-![](images/rstudio.png)
