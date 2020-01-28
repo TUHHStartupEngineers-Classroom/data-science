@@ -126,7 +126,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{Data Driven Entrepreneurship: Prediction Algorithms with R}
 \author{Joschka Schwarz}
-\date{2020-01-27}
+\date{2020-01-28}
 
 \begin{document}
 \maketitle
@@ -227,6 +227,87 @@ Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
 \end{table}
 
 You can write citations, too. For example, we are using the \textbf{bookdown} package \citep{R-bookdown} in this sample book, which was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+
+\hypertarget{installing-r}{%
+\section{Installing R}\label{installing-r}}
+
+CC-BY-SA 4.0
+
+\hypertarget{installing-rstudio}{%
+\section{Installing RStudio}\label{installing-rstudio}}
+
+CC-BY-SA 4.0
+
+\hypertarget{working-with-rstudio}{%
+\section{Working with RStudio}\label{working-with-rstudio}}
+
+\hypertarget{console}{%
+\subsection{Console}\label{console}}
+
+\hypertarget{script-editor}{%
+\subsection{Script Editor}\label{script-editor}}
+
+\hypertarget{workspace-environment}{%
+\subsection{Workspace Environment}\label{workspace-environment}}
+
+\hypertarget{misc.-displays}{%
+\subsection{Misc. Displays}\label{misc.-displays}}
+
+\hypertarget{exercise}{%
+\subsection{Exercise}\label{exercise}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Identify what working directory you are working out of.
+\item
+  Create a folder on your computer titled Learning R. Within R, set your working directory to this folder.
+\end{enumerate}
+
+\hypertarget{working-with-packages}{%
+\section{Working with Packages}\label{working-with-packages}}
+
+\hypertarget{installing-packages}{%
+\subsection{Installing Packages}\label{installing-packages}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# install package from CRAN}
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"dplyr"}\NormalTok{)   }
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{loading-packages}{%
+\subsection{Loading packages}\label{loading-packages}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# load the package to use in the current R session}
+\KeywordTok{library}\NormalTok{(}\StringTok{"packagename"}\NormalTok{)         }
+
+\CommentTok{# use a particular function within a package without loading the package}
+\NormalTok{packagename}\OperatorTok{::}\NormalTok{functionname    }
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{exercise-1}{%
+\subsection{Exercise}\label{exercise-1}}
+
+\texttt{dplyr} is an extremely popular package for common data transformation activities and is available from CRAN. Perform the following tasks:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Install the \texttt{dplyr} package.
+\item
+  Load the \texttt{dplyr} package.
+\item
+  Access the help documentation for the \texttt{dplyr} package.
+\item
+  Check out the vignette(s) for \texttt{dplyr}
+\end{enumerate}
 
 \hypertarget{part-r}{%
 \part{R}\label{part-r}}
