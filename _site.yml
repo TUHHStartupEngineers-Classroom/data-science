@@ -17,6 +17,8 @@ navbar:
               href: 02_classes_DS202.html
     - text: "Links"
       href: 3-links.html
+    - text: "Tutorial"
+      href: 04_tut.Rmd
     - text: Course script
       href: script/docs/index.html
   right:

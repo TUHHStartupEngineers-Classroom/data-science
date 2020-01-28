@@ -11,7 +11,7 @@
 
 
 
-<title>Example: More colors</title>
+<title>Set Up</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -302,7 +302,7 @@ $(document).ready(function () {
   <a href="3-links.html">Links</a>
 </li>
 <li>
-  <a href="04_tut.html">Tutorial</a>
+  <a href="04_tut.Rmd">Tutorial</a>
 </li>
 <li>
   <a href="script/docs/index.html">Course script</a>
@@ -348,21 +348,39 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Example: More colors</h1>
+<h1 class="title toc-ignore">Set Up</h1>
 
 </div>
 
 
-<p>Base R comes with many functions for generating colors. The code below demonstrates the heat.colors function.</p>
-<div id="heat.colors" class="section level2">
-<h2>heat.colors</h2>
-<div class="figure">
-<img src="2-inline_files/figure-html/unnamed-chunk-2-1.png" alt="The Maunga Whau volcano." width="672" />
-<p class="caption">
-The Maunga Whau volcano.
-</p>
-</div>
-</div>
+<pre class="r"><code>library(shiny)
+
+# Define UI for application that draws a histogram
+ui &lt;- fluidPage(
+
+    # Application title
+    titlePanel(&quot;learnr tutorial&quot;),
+
+    # Show a plot of the generated distribution
+    mainPanel(fluidRow(
+       htmlOutput(&quot;frame&quot;)
+    ))
+)
+
+# Define server logic required to draw a histogram
+server &lt;- function(input, output) {
+
+    output$frame &lt;- renderUI({
+        tags$iframe(
+            src=&quot;https://jjallaire.shinyapps.io/learnr-tutorial-03a-data-manip-filter/&quot;, width=1280, height=720
+        )
+    })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)</code></pre>
+<pre><code>## PhantomJS not found. You can install it with webshot::install_phantomjs(). If it is installed, please make sure the phantomjs executable can be found via the PATH variable.</code></pre>
+<div style="width: 100% ; height: 400px ; text-align: center; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" class="muted well">Shiny applications not supported in static R Markdown documents</div>
 
 
 

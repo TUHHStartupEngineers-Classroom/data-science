@@ -1,0 +1,34 @@
+---
+title: "Set Up"
+output: html_document
+
+---
+
+```{r}
+library(shiny)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("learnr tutorial"),
+
+    # Show a plot of the generated distribution
+    mainPanel(fluidRow(
+       htmlOutput("frame")
+    ))
+)
+
+# Define server logic required to draw a histogram
+server <- function(input, output) {
+
+    output$frame <- renderUI({
+        tags$iframe(
+            src="https://jjallaire.shinyapps.io/learnr-tutorial-03a-data-manip-filter/", width=1280, height=720
+        )
+    })
+}
+
+# Run the application
+shinyApp(ui = ui, server = server)
+```
