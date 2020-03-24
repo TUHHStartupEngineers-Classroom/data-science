@@ -15,7 +15,7 @@ description: "This is a minimal example the concepts covered in the class."
 
 # Preface {-}
 
-This script are the class notes used in the TUHH Data Science course.
+This script are the class notes used in the TUHH Data Science course. Will change daily.
 
 ```{r eval=FALSE}
 install.packages("bookdown")
