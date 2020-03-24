@@ -43,7 +43,7 @@ This is a class for prgoramming with R. It will teach you how to program in R, w
 
 2. Statistical Analysis
 
-3. Text analysis
+3. Text analysis & Natural Language Processing
 
 4. Miscellaneous
 
