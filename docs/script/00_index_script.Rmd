@@ -17,6 +17,10 @@ description: "This is a minimal example the concepts covered in the class."
 
 This script are the class notes used in the TUHH Data Science course. Will change daily.
 
+# Prerequisites {-}
+
+There is no prerequisite knowledge needed in R Programming, Data Science, or Machine Learning.
+
 ```{r eval=FALSE}
 install.packages("bookdown")
 # or the development version
