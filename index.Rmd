@@ -24,6 +24,9 @@ section_divs: yes
 </div>
 
 <div class="col-md-10">
+
+***
+
 # **DATA SCIENCE**
 
 ### *Module from our certificate program* {style="padding-top: 0px;"}
@@ -35,8 +38,8 @@ This is a class for programming with R. It will teach you how to program in R, w
 
 ### Instructor: 
 
-* Prof. Christoph Ihl [christoph.ihl@tuhh.de](✉ christoph.ihl@tuhh.de)
-* Joschka Schwarz [joschka.schwarz@tuhh.de](✉ joschka.schwarz@tuhh.de)
+* Prof. Christoph Ihl [(✉ christoph.ihl@tuhh.de)](mailto:christoph.ihl@tuhh.de)
+* Joschka Schwarz [(✉ joschka.schwarz@tuhh.de)](mailto:joschka.schwarz@tuhh.de)
 
 
 ### Content of the class

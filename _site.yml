@@ -1,7 +1,7 @@
 name: "DS-website"
 output_dir: "docs"
 navbar:
-  title: "Data-Driven Entrepreneurship"
+  title: "Data Science at NIT"
   #type: inverse --> dark style
   left:
     - text: "Syllabus"
