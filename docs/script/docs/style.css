@@ -1,0 +1,73 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+.rmdblankbox {
+    background-color: #f7f7f7;
+    margin: 0px;
+    font-size: 14px;
+    padding-top: 13px;
+    padding-left: 13px;
+    line-height: 10px;
+    font-weight: bold;
+    border-bottom:1px solid #fff
+}
+
+.rmdattachment {
+    background-color: #f7f7f7;
+    margin: 0px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    padding-top: 13px;
+    padding-left: 40px;
+    line-height: 10px;
+    border-bottom:1px solid #fff;
+    position:relative;
+}
+
+.rmdattachment:before {
+    content: "\f019";
+    font-family: FontAwesome;
+    left:14px;
+    position:absolute;
+    line-height: 10px;
+    font-size: 20px;
+ }
+
+.rmdshiny {
+    background-color: #f7f7f7;
+    margin: 0px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 40px;
+    line-height: 20px;
+    border-bottom:1px solid #fff;
+    position:relative;
+}
+
+.rmdshiny:before {
+
+content: "";
+background: url("input/images/shiny.png") no-repeat;
+    left:14px;
+    top:9px;
+    position:absolute;
+    width: 25px;
+    background-size: contain;
+    height: 25px;
+ }
+ 
+
+

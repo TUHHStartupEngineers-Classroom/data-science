@@ -1,0 +1,18 @@
+--- 
+title: "DATA SCIENCE Course script"
+subtitle: "Module from our certificate program"
+author: "Joschka Schwarz"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+description: "This is a minimal example the concepts covered in the class."
+---
+
+# Welcome {-}
+
+This script are the class notes used in the NIT Data Science course. It will teach you how to program in R, with hands-on examples for business analytics. It is written for non-programmers to provide a friendly introduction to the R language. You’ll learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools. 

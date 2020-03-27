@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.1 Installing R &amp; RStudio IDE | DATA SCIENCE Course script</title>
+  <meta name="description" content="This is a minimal example the concepts covered in the class." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.1 Installing R &amp; RStudio IDE | DATA SCIENCE Course script" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example the concepts covered in the class." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.1 Installing R &amp; RStudio IDE | DATA SCIENCE Course script" />
+  
+  <meta name="twitter:description" content="This is a minimal example the concepts covered in the class." />
+  
+
+<meta name="author" content="Joschka Schwarz" />
+
+
+<meta name="date" content="2020-03-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="session-01-01.html"/>
+<link rel="next" href="running-r-code-stolen-from-r4ds.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        process_solutions();
+    });
+    function process_solutions() {
+        $("div.section[id^='solution']").each(function(i) {
+        var soln_wrapper_id = "cvxr_ex_" + i;
+        var solution_id = $(this).attr('id');
+        var button = $("<button onclick=\"toggle_solution('" + soln_wrapper_id + "')\">Show/Hide</button>");
+        var new_div = $("<div id='" + soln_wrapper_id + "' class='solution' style='display: none;'></div>");
+        var h = $(this).first();
+        var others = $(this).children().slice(1);
+        $(others).each(function() {
+            $(this).appendTo($(new_div));
+        });
+        $(button).insertAfter($(h));
+        $(new_div).insertAfter($(button));
+        })
+    }
+    function toggle_solution(el_id) {
+      $("#" + el_id).toggle();
+    } 
+</script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Data Science at NIT</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
+<li class="chapter" data-level="0.1" data-path="why-r.html"><a href="why-r.html"><i class="fa fa-check"></i><b>0.1</b> Why R?</a></li>
+<li class="chapter" data-level="0.2" data-path="prerquisites.html"><a href="prerquisites.html"><i class="fa fa-check"></i><b>0.2</b> Prerquisites</a></li>
+<li class="chapter" data-level="0.3" data-path="conventions-used-in-this-book.html"><a href="conventions-used-in-this-book.html"><i class="fa fa-check"></i><b>0.3</b> Conventions Used in This Book</a></li>
+</ul></li>
+<li class="part"><span><b>I Session 1</b></span></li>
+<li class="chapter" data-level="1" data-path="session-01-01.html"><a href="session-01-01.html"><i class="fa fa-check"></i><b>1</b> Getting started - Project Setup</a><ul>
+<li class="chapter" data-level="1.1" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html"><i class="fa fa-check"></i><b>1.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html#interactively"><i class="fa fa-check"></i><b>1.1.1</b> Interactively</a></li>
+<li class="chapter" data-level="1.1.2" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html#manually"><i class="fa fa-check"></i><b>1.1.2</b> Manually</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="running-r-code-stolen-from-r4ds.html"><a href="running-r-code-stolen-from-r4ds.html"><i class="fa fa-check"></i><b>1.2</b> Running R code (stolen from R4DS)</a></li>
+<li class="chapter" data-level="1.3" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>1.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 1</a><ul>
+<li class="chapter" data-level="" data-path="exercise-1.html"><a href="exercise-1.html#solution"><i class="fa fa-check"></i>Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>1.4</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 2</a><ul>
+<li class="chapter" data-level="" data-path="exercise-2.html"><a href="exercise-2.html#solution-1"><i class="fa fa-check"></i>Solution</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="working-with-rstudio.html"><a href="working-with-rstudio.html"><i class="fa fa-check"></i><b>1.5</b> Working with RStudio</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="working-with-rstudio.html"><a href="working-with-rstudio.html#console"><i class="fa fa-check"></i><b>1.5.1</b> Console</a></li>
+<li class="chapter" data-level="1.5.2" data-path="working-with-rstudio.html"><a href="working-with-rstudio.html#script-editor"><i class="fa fa-check"></i><b>1.5.2</b> Script Editor</a></li>
+<li class="chapter" data-level="1.5.3" data-path="working-with-rstudio.html"><a href="working-with-rstudio.html#workspace-environment"><i class="fa fa-check"></i><b>1.5.3</b> Workspace Environment</a></li>
+<li class="chapter" data-level="1.5.4" data-path="working-with-rstudio.html"><a href="working-with-rstudio.html#misc.-displays"><i class="fa fa-check"></i><b>1.5.4</b> Misc. Displays</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Session 2</b></span></li>
+<li class="chapter" data-level="2" data-path="session-02-01.html"><a href="session-02-01.html"><i class="fa fa-check"></i><b>2</b> Functions</a></li>
+<li class="part"><span><b>III Session 3</b></span></li>
+<li class="chapter" data-level="3" data-path="session-03-01.html"><a href="session-03-01.html"><i class="fa fa-check"></i><b>3</b> Business case</a><ul>
+<li class="chapter" data-level="3.1" data-path="exercise1.html"><a href="exercise1.html"><i class="fa fa-check"></i><b>3.1</b> Exercise1</a></li>
+<li class="chapter" data-level="3.2" data-path="solution-2.html"><a href="solution-2.html"><i class="fa fa-check"></i><b>3.2</b> Solution</a></li>
+<li class="chapter" data-level="3.3" data-path="exercise.html"><a href="exercise.html"><i class="fa fa-check"></i><b>3.3</b> Exercise</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="exercise.html"><a href="exercise.html#solution-3"><i class="fa fa-check"></i><b>3.3.1</b> Solution</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Session 4</b></span></li>
+<li class="chapter" data-level="4" data-path="session-04-01.html"><a href="session-04-01.html"><i class="fa fa-check"></i><b>4</b> Whateverest</a></li>
+<li class="part"><span><b>V Session 5</b></span></li>
+<li class="chapter" data-level="5" data-path="session-05-01.html"><a href="session-05-01.html"><i class="fa fa-check"></i><b>5</b> Wayne train</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DATA SCIENCE Course script</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="installing-r-rstudio-ide" class="section level2">
+<h2><span class="header-section-number">1.1</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</h2>
+<div id="interactively" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Interactively</h3>
+<p>Go to the following link and follow the instructions to install R and the IDE RStudio</p>
+<div class="rmdblankbox">
+<p>
+Interactive Shinyapp
+</p>
+</div>
+<div class="rmdshiny">
+<p>
+<a href="https://jwarz.shinyapps.io/learnR/" target="_blank"><b>Install R &amp; RStudio IDE</b></a>
+</p>
+</div>
+</div>
+<div id="manually" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Manually</h3>
+<p><strong>Video instructions to install RStudio (Download link below)</strong></p>
+<div style="padding:62.5% 0 3% 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/203516510?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<div class="rmdblankbox">
+<p>
+Download
+</p>
+</div>
+<div class="rmdattachment">
+<p>
+<strong><a href="https://cloud.r-project.org">https://cloud.r-project.org</a></strong>
+</p>
+</div>
+<hr />
+<p><strong>Video instructions to install RStudio (Download link below)</strong></p>
+<div style="padding:62.5% 0 3% 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/203516968?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<div class="rmdblankbox">
+<p>
+Download
+</p>
+</div>
+<div class="rmdattachment">
+<p>
+<strong><a href="https://rstudio.com/products/rstudio/download/">https://rstudio.com/products/rstudio/download/</a></strong>
+</p>
+</div>
+<hr />
+<p><strong>Video instructions to install R packages</strong></p>
+<div style="padding:62.5% 0 3% 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/203516241?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<p>Installing Packages</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># install package from CRAN</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)   </a></code></pre></div>
+<p>Loading packages</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># load the package to use in the current R session</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">library</span>(<span class="st">&quot;packagename&quot;</span>)         </a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># use a particular function within a package without loading the package</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">packagename<span class="op">::</span>functionname   </a></code></pre></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="session-01-01.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="running-r-code-stolen-from-r4ds.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["book.pdf", "book.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

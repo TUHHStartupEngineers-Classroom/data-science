@@ -1,0 +1,18 @@
+book_filename: "book"
+output_dir: "docs"
+language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+rmd_files: ["00_index_script.Rmd", 
+            "00_preface.Rmd", 
+            "01_session_01.Rmd", 
+            "02_session_01.Rmd", 
+            "03_session_01.Rmd", 
+            "04_session_01.Rmd", 
+            "05_session_01.Rmd", 
+            "06_references.Rmd"]
+

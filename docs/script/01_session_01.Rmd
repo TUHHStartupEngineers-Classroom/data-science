@@ -1,0 +1,144 @@
+# (PART) Session 1 {-}
+# Getting started  - Project Setup {#session_01_01}
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+<table><tr><td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px"></td><td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px"></td></tr></table>
+
+
+##  `r fa("download", fill = "black")` Installing R & RStudio IDE
+### Interactively
+
+Go to the following link and follow the instructions to install R and the IDE RStudio
+
+```{block, type='rmdblankbox'}
+Interactive Shinyapp
+```
+```{block, type='rmdshiny'}
+<a href="https://jwarz.shinyapps.io/learnR/" target="_blank"><b>Install R & RStudio IDE</b></a>
+```
+
+
+### Manually
+
+**Video instructions to install RStudio (Download link below)**
+
+<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516510?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[https://cloud.r-project.org](https://cloud.r-project.org)**
+```
+
+***
+
+**Video instructions to install RStudio (Download link below)**
+
+<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516968?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[https://rstudio.com/products/rstudio/download/](https://rstudio.com/products/rstudio/download/)**
+```
+
+***
+
+**Video instructions to install R packages**
+
+<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516241?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+Installing Packages
+
+```r
+# install package from CRAN
+install.packages("dplyr")   
+```
+Loading packages
+
+```r
+# load the package to use in the current R session
+library("packagename")         
+
+# use a particular function within a package without loading the package
+packagename::functionname   
+```
+
+## Running R code (stolen from R4DS)
+The previous section showed you a couple of examples of running R code. Code in the book looks like this:
+```{r, eval = F}
+1 + 2
+## [1] 3
+```
+
+If you run the same code in your local console, it will look like this:
+```
+> 1 + 2
+[1] 3
+```
+
+There are two main differences. In your console, you type after the `>`, called the __prompt__; we don't show the prompt in the book. In the book, output is commented out with `#>`; in your console it appears directly after your code. These two differences mean that if you're working with an electronic version of the book, you can easily copy code out of the book and into the console.
+Throughout the book we use a consistent set of conventions to refer to code:
+* Functions are in a code font and followed by parentheses, like `sum()`, 
+  or `mean()`.
+* Other R objects (like data or function arguments) are in a code font,
+  without parentheses, like `flights` or `x`.
+  
+* If we want to make it clear what package an object comes from, we'll use
+  the package name followed by two colons, like `dplyr::mutate()`, or   
+  `nycflights13::flights`. This is also valid R code.
+
+
+##  `r fa("tasks", fill = "black")` Exercise 1
+
+1. Identify what working directory you are working out of.
+2. Create a folder on your computer titled `datascience`. Within R, set your working directory to this folder.
+
+### Solution {-}
+
+1. Identify what working directory you are working out of.
+
+```r
+getwd()
+#> [1] "/Users/j.schwarz/NIT/"
+```
+
+2. Create a folder on your computer titled `datascience`. Within R, set your working directory to this folder.
+```r
+setwd("/Users/j.schwarz/NIT/datascience")
+```
+
+##  `r fa("tasks", fill = "black")` Exercise 2
+
+`dplyr` is an extremely popular package for common data transformation activities and is available from CRAN.  Perform the following tasks:
+
+1. Install the `dplyr` package.
+2. Load the `dplyr` package.
+3. Access the help documentation for the `dplyr` package.
+4. Check out the vignette(s) for `dplyr`
+
+### Solution {-}
+
+1. Install the `tidyverse` package.
+
+```{r, eval = FALSE}
+install.packages("tidyverse")
+```
+
+2. Load the `tidyverse` package.
+```{r}
+library(tidyverse)
+```
+
+
+## Working with RStudio
+### Console
+### Script Editor
+### Workspace Environment
+### Misc. Displays
