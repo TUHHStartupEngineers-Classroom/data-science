@@ -1,13 +1,15 @@
 bookdown::gitbook:
+  split_by: section
   css: style.css
   config:
     toc:
       before: |
-        <li><a href="./">Script for DS101</a></li>
+        <li><a href="./">Data Science at NIT</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
     download: ["pdf", "epub"]
+  includes:
+    in_header: header.html
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

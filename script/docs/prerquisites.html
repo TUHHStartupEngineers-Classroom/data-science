@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Preface | DATA SCIENCE Course script</title>
+  <title>0.2 Prerquisites | DATA SCIENCE Course script</title>
   <meta name="description" content="This is a minimal example the concepts covered in the class." />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Preface | DATA SCIENCE Course script" />
+  <meta property="og:title" content="0.2 Prerquisites | DATA SCIENCE Course script" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Preface | DATA SCIENCE Course script" />
+  <meta name="twitter:title" content="0.2 Prerquisites | DATA SCIENCE Course script" />
   
   <meta name="twitter:description" content="This is a minimal example the concepts covered in the class." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="welcome.html"/>
-<link rel="next" href="why-r.html"/>
+<link rel="prev" href="why-r.html"/>
+<link rel="next" href="conventions-used-in-this-book.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -215,42 +215,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="preface" class="section level1 unnumbered">
-<h1>Preface</h1>
-<p>This book will teach you how to program in R. You’ll go from loading data to writing your own functions (which will outperform the functions of other R users). But this is not a typical introduction to R. I want to help you become a data scientist, as well as a computer scientist, so this book will focus on the programming skills that are most related to data science.</p>
-<p>The chapters in the book are arranged according to three practical projects–given that they’re fairly substantial projects, they span multiple chapters. I chose these projects for two reasons. First, they cover the breadth of the R language. You will learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools, such as <code>if else</code> statements, for loops, S3 classes, R’s package system, and R’s debugging tools. The projects will also teach you how to write vectorized R code, a style of lightning-fast code that takes advantage of all of the things R does best.</p>
-<p>But, more importantly, the projects will teach you how to solve the logistical problems of data science—and there are many logistical problems. When you work with data, you will need to store, retrieve, and manipulate large sets of values without introducing errors. As you work through the book, I will teach you not just how to program with R, but how to use the programming skills to support your work as a data scientist.</p>
-<p>Not every programmer needs to be a data scientist, so not every programmer will find this book useful. You will find this book helpful if you’re in one of the following categories:</p>
-<ul>
-<li><p>You already use R as a statistical tool, but you would like to learn how to write your own functions and simulations with R.</p></li>
-<li><p>You would like to teach yourself how to program, and you see the sense of learning a language related to data science.</p></li>
-</ul>
-<p>One of the biggest surprises in this book is that I do not cover traditional applications of R, such as models and graphs; instead, I treat R purely as a programming language. Why this narrow focus? R is designed to be a tool that helps scientists analyze data. It has many excellent functions that make plots and fit models to data. As a result, many statisticians learn to use R as if it were a piece of software—they learn which functions do what they want, and they ignore the rest.</p>
-<p>This is an understandable approach to learning R. Visualizing and modeling data are complicated skills that require a scientist’s full attention. It takes expertise, judgement, and focus to extract reliable insights from a data set. I would not recommend that any data scientist distract herself with computer programming until she feels comfortable with the basic theory and practice of her craft. If you would like to learn the craft of data science, I recommend the book <a href="http://r4ds.had.co.nz/">R for Data Science</a>, my companion volume to this book, co-written with Hadley Wickham.</p>
-<p>However, learning to program <em>should</em> be on every data scientist’s to-do list. Knowing how to program will make you a more flexible analyst and augment your mastery of data science in every way. My favorite metaphor for describing this was introduced by Greg Snow on the R help mailing list in May 2006. Using functions in R is like riding a bus. <em>Writing</em> functions in R is like driving a car.</p>
-<blockquote>
-<p>Busses are very easy to use, you just need to know which bus to get on, where to get on, and where to get off (and you need to pay your fare). Cars, on the other hand, require much more work: you need to have some type of map or directions (even if the map is in your head), you need to put gas in every now and then, you need to know the rules of the road (have some type of drivers license). The big advantage of the car is that it can take you a bunch of places that the bus does not go and it is quicker for some trips that would require transferring between busses.
-Using this analogy, programs like SPSS are busses, easy to use for the standard things, but very frustrating if you want to do something that is not already preprogrammed.
-R is a 4-wheel drive SUV (though environmentally friendly) with a bike on the back, a kayak on top, good walking and running shoes in the passenger seat, and mountain climbing and spelunking gear in the back.
-R can take you anywhere you want to go if you take time to learn how to use the equipment, but that is going to take longer than learning where the bus stops are in SPSS.
-- Greg Snow
-Greg compares R to SPSS, but he assumes that you use the full powers of R; in other words, that you learn how to program in R. If you only use functions that preexist in R, you are using R like SPSS: it is a bus that can only take you to certain places.</p>
-</blockquote>
-<p>This flexibility matters to data scientists. The exact details of a method or simulation will change from problem to problem. If you cannot build a method tailored to your situation, you may find yourself tempted to make unrealistic assumptions just so you can use an ill-suited method that already exists.</p>
-<p>This book will help you make the leap from bus to car. I have written it for beginning programmers. I do not talk about the theory of computer science—there are no discussions of big <code>O()</code> and little <code>o()</code> in these pages. Nor do I get into advanced details such as the workings of <em>lazy evaluation</em>. These things are interesting if you think of computer science at the theoretical level, but they are a distraction when you first learn to program.</p>
-<p>Instead, I teach you how to program in R with three concrete examples. These examples are short, easy to understand, and cover everything you need to know.</p>
-<p>I have taught this material many times in my job as Master Instructor at RStudio. As a teacher, I have found that students learn abstract concepts much faster when they are illustrated by concrete examples. The examples have a second advantage, as well: they provide immediate practice. Learning to program is like learning to speak another language—you progress faster when you practice. In fact, learning to program <em>is</em> learning to speak another language. You will get the best results if you follow along with the examples in the book and experiment whenever an idea strikes you.</p>
-<hr />
-<p>The book is a companion to <a href="http://r4ds.had.co.nz/">R for Data Science</a>. In that book, Hadley Wickham and I explain how to use R to make plots, model data, and write reports. That book teaches these tasks as data-science skills, which require judgement and expertise—not as programming exercises, which they also are. This book will teach you how to program in R. It does not assume that you have mastered the data-science skills taught in <em>R for Data Science</em> (nor that you ever intend to). However, this skill set amplifies that one. And if you master both, you will be a powerful, computer-augmented data scientist, fit to command a high salary and influence scientific dialogue.</p>
-<hr /> 
+<div id="prerquisites" class="section level2">
+<h2><span class="header-section-number">0.2</span> Prerquisites</h2>
+<p>There is no prerequisite knowledge needed in R Programming, Data Science, or Machine Learning.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="welcome.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="why-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="why-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conventions-used-in-this-book.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
