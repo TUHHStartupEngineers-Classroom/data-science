@@ -15,6 +15,11 @@ output:
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 ```
 
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+library(icon)
+```
+
 # Getting Started {-}
 
 2020 | 01 | 23 Last compiled: `r Sys.Date()`
@@ -46,14 +51,13 @@ Complete the following assignments in your team.
 
 |#|Course|datacamp-link|script chapter|
 |:-|------------------------|-|-:|
-|1.|Introduction to R|<a href="https://learn.datacamp.com/courses/free-introduction-to-r" target="_blank"><b>Link</b></a>|2.0|
-|2.|Intermediate R|<a href="https://learn.datacamp.com/courses/intermediate-r" target="_blank"><b>Link</b></a>|2.0|
-|3.|Introduction to the Tidyverse|<a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse" target="_blank"><b>Link</b></a>|2.0|
-|4.|Introduction to Importing Data in R|<a href="https://learn.datacamp.com/courses/introduction-to-importing-data-in-r" target="_blank"><b>Link</b></a>|2.0|
-|5.|Chose further courses as you desire ...|<a href="https://learn.datacamp.com/courses/" target="_blank"><b>Link</b></a>|---|
+|1.|Introduction to R|<a href="https://learn.datacamp.com/courses/free-introduction-to-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|2.|Intermediate R|<a href="https://learn.datacamp.com/courses/intermediate-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|3.|Introduction to the Tidyverse|<a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|4.|Introduction to Importing Data in R|<a href="https://learn.datacamp.com/courses/introduction-to-importing-data-in-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|5.|Chose further courses as you desire ...|<a href="https://learn.datacamp.com/courses/" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|---|
 
 We will be spending the first few weeks of the course working on solving different kinds of business problems in R. These problems will help you learn the ins and outs of coding in R. You can get a head start by trying to solve the problems in this [list of programming challenges](https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html). 
-
 
 # Session
 
