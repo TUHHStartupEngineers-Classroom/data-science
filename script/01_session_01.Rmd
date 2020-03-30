@@ -138,7 +138,7 @@ library(tidyverse)
 ```
 
 
-## Working with RStudio
+## Working with RStudio / Setup & Customization
 ### Console
 ### Script Editor
 ### Workspace Environment
@@ -165,3 +165,5 @@ Download
 ```{block, type='rmdattachment'}
 **[https://desktop.github.com](https://desktop.github.com)**
 ```
+
+
