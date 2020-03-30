@@ -82,7 +82,7 @@ pre code {
 .rmdshiny:before {
 
 content: "";
-background: url("input/images/shiny.png") no-repeat;
+background: url("input/00_general/01_images/shiny.png") no-repeat;
     left:14px;
     top:9px;
     position:absolute;

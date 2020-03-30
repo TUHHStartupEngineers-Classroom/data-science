@@ -1,5 +1,5 @@
 # (PART) Session 1 {-}
-# Getting started  - Project Setup {#session_01_01}
+# Getting started {#session_01_01}
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
 library(fontawesome)
@@ -7,9 +7,9 @@ library(fontawesome)
 
 <table><tr><td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px"></td><td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px"></td></tr></table>
 
-
-##  `r fa("download", fill = "black")` Installing R & RStudio IDE
-### Interactively
+## R & RStudio
+###  `r fa("download", fill = "black")` Installing R & RStudio IDE
+#### Interactively
 
 Go to the following link and follow the instructions to install R and the IDE RStudio
 
@@ -21,7 +21,7 @@ Interactive Shinyapp
 ```
 
 
-### Manually
+#### Manually
 
 **Video instructions to install RStudio (Download link below)**
 
@@ -70,7 +70,7 @@ library("packagename")
 packagename::functionname   
 ```
 
-##  `r fa("info", fill = "black")` Running R code (stolen from R4DS)
+###  `r fa("info", fill = "black")` Running R code (stolen from R4DS)
 The previous section showed you a couple of examples of running R code. Code in the book looks like this:
 
 ```
@@ -96,12 +96,12 @@ Throughout the book we use a consistent set of conventions to refer to code:
   `nycflights13::flights`. This is also valid R code.
 
 
-##  `r fa("tasks", fill = "black")` Exercise 1
+###  `r fa("tasks", fill = "black")` Exercise 1
 
 1. Identify what working directory you are working out of.
 2. Create a folder on your computer titled `datascience`. Within R, set your working directory to this folder.
 
-### Solution {-}
+#### Solution {-}
 
 1. Identify what working directory you are working out of.
 
@@ -115,7 +115,7 @@ getwd()
 setwd("/Users/j.schwarz/NIT/datascience")
 ```
 
-##  `r fa("tasks", fill = "black")` Exercise 2
+###  `r fa("tasks", fill = "black")` Exercise 2
 
 `dplyr` is an extremely popular package for common data transformation activities and is available from CRAN.  Perform the following tasks:
 
@@ -124,7 +124,7 @@ setwd("/Users/j.schwarz/NIT/datascience")
 3. Access the help documentation for the `dplyr` package.
 4. Check out the vignette(s) for `dplyr`
 
-### Solution {-}
+#### Solution {-}
 
 1. Install the `tidyverse` package.
 
@@ -138,15 +138,13 @@ library(tidyverse)
 ```
 
 
-## Working with RStudio / Setup & Customization
-### Console
-### Script Editor
-### Workspace Environment
-### Misc. Displays
+### Working with RStudio / Setup & Customization
+Console
+Script Editor
+Workspace Environment
+Misc. Displays
 
-## Getting started with github
-
-
+## GitHub
 
 1. Create a free github account.
 
@@ -167,3 +165,25 @@ Download
 ```
 
 
+# Project Setup
+## Project structure
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[business_case_01.zip](https://github.com/TUHH-W11/data-science/blob/master/files/session_01/business_case_01.zip)**
+```
+
+```{r project-structure, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/project_structure.png', dpi = NA)
+```
+
+## Installing Packages
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[business_case_01.zip](https://github.com/TUHH-W11/data-science/blob/master/files/session_01/business_case_01.zip)**
+```
