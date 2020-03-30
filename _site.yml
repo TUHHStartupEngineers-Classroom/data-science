@@ -1,4 +1,7 @@
 name: "DS-website"
+output:
+  html_document:
+    css: style.css
 output_dir: "docs"
 navbar:
   title: "Data Science at NIT"
@@ -8,9 +11,9 @@ navbar:
       href: 01_syllabus.html
     - text: "Labs / Schedule"
       menu:
-            - text: "DS101: Basic Tools and Algorithms"
+            - text: "DS101: Data Science at NIT"
               href: 02_classes_DS101.html
-            - text: "DS102: Project Applications"
+            - text: "DS102"
               href: 02_classes_DS102.html
             - text: "DS201"
               href: 02_classes_DS201.html

@@ -3,21 +3,12 @@ title: "DS101"
 pagetitle:  "DS101 · TUHH Business Analytics R Programming Guide"
 output:
   html_document:
-    css: styles.css
     toc: true
     toc_float: true
     collapsed: false
     number_sections: true
     toc_depth: 4
 ---
-
----
-
-<style>
-.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-    background-color: #2DC6D6;
-}
-</style>
 
 [comment]: <> (Set global options for code chunks)
 ```{r setup, include=FALSE}
@@ -28,6 +19,33 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 
 2020 | 01 | 23 Last compiled: `r Sys.Date()`
 
+### Getting Started
+
+Before we meet (online via [zoom](https://zoom.us/download)) for our first class there are few things you should try at home to get started.
+
+1. Download and install R on your computer. This is the R website [https://www.r-project.org](https://www.r-project.org)
+2. Download and install R-studio. You must download and install R first before installing R-studio. The R-studio website is [https://www.rstudio.com](https://www.rstudio.com)
+3. Create a free github account. The github website is [https://github.com](https://github.com)
+4. Download and install github desktop [https://desktop.github.com](https://desktop.github.com)
+
+Don't worry if you ran into issues with these first steps, we will address them in our first video session. 
+
+If you have R-studio working is there anything else you can do before we meet for the first time on Monday? Yes.
+
+You can follow the video tutorial on creating an R markdown website with github pages on the video page. And, you can get started with some of the readings, and you can begin messing around in R. Here are some things to read:
+
+Join the NIT data science team on data camp via this link: [datacamp.com](https://www.datacamp.com/groups/shared_links/91287653ed5bd4c0f14e7c60e2d61a62dc1f1ba2afc84a4909665c00cd441f0c)
+
+Complete the following assignments in your team.
+
+1. [Datacamp - Introduction to R](https://learn.datacamp.com/courses/free-introduction-to-r)
+2. [Datacamp - Intermediate R](https://learn.datacamp.com/courses/intermediate-r)
+3. [Datacamp - Introduction to the Tidyverse](https://learn.datacamp.com/courses/introduction-to-the-tidyverse)
+4. [Datacamp - Introduction to Importing Data in R](https://learn.datacamp.com/courses/introduction-to-importing-data-in-r)
+5. Chose further courses as you desire ...
+
+
+We will be spending the first few weeks of the course working on solving different kinds of business problems in R. These problems will help you learn the ins and outs of coding in R. You can get a head start by trying to solve the problems in this [list of programming challenges](https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html). 
 
 
 # Session 1
