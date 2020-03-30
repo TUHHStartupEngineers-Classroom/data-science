@@ -70,8 +70,9 @@ library("packagename")
 packagename::functionname   
 ```
 
-## Running R code (stolen from R4DS)
+##  `r fa("info", fill = "black")` Running R code (stolen from R4DS)
 The previous section showed you a couple of examples of running R code. Code in the book looks like this:
+
 ```
 1 + 2
 ## [1] 3
@@ -142,3 +143,23 @@ library(tidyverse)
 ### Script Editor
 ### Workspace Environment
 ### Misc. Displays
+
+## Getting started with github
+
+1. Create a free github account.
+
+```{block, type='rmdblankbox'}
+Website
+```
+```{block, type='rmdwebsite'}
+**[https://github.com/](https://github.com/)**
+```
+
+2. Download and install github desktop 
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[https://desktop.github.com](https://desktop.github.com)**
+```
