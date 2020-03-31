@@ -22,7 +22,8 @@ navbar:
     - text: "Links"
       href: 03_links.html
     - text: Course script
-      href: script/docs/preface.html
+      href: script/docs/preface.html[newtab]
+
   right:
     - icon: fa-github
       href: https://github.com/tuHH-W11/
@@ -35,5 +36,7 @@ navbar:
     - icon: fa-envelope
       href: mailto:joschka.schwarz@tuhh.de
 
+
+#       href: script/docs/preface.html
 #exclude: ["./script/*"]
 #rmd_files: ["00_index_webpage.Rmd", "01_syllabus.Rmd", "02_classes_DS101.Rmd", "02_classes_DS102.Rmd", "02_classes_DS201.Rmd", "02_classes_DS202.Rmd", "03_links.Rmd"]

@@ -14,5 +14,7 @@ rmd_files: ["00_index_script.Rmd",
             "03_session_01.Rmd", 
             "04_session_01.Rmd", 
             "05_session_01.Rmd", 
-            "06_references.Rmd"]
+            "06_session_01.Rmd", 
+            "07_session_01.Rmd", 
+            "08_references.Rmd"]
 

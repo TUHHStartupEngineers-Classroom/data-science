@@ -1,5 +1,17 @@
 # (PART) Session 4 {-}
 
-# Whateverest {#session_04_01}
+# Machine Learning concepts
+
+## Customer Segmentation with K-Means Clustering & UMAP
+
+## ML - Linear Algorithms
+## ML - Tree Based Algorithms
+## ML - Preprocessing & SVM
+
+## Testing the models 
+
+
+# Session 04 - Challenge - Company Segmentation with Stock Prices
+# Session 04 - Challenge - Predicting new product model
 
 Here is a review of existing methods.

@@ -1,5 +1,11 @@
-# (PART) Session 5{-}
+# (PART) Session 5 {-}
 
-# Wayne train {#session_05_01}
+# Communication
 
-Here is a review of existing methods.
+## RMarkdown
+## Interactive Plots with Plotly
+
+# Session 05 - Challenge - Report
+## Product Pricing Prediction Algo with XGBoost
+
+
