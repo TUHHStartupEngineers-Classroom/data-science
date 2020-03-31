@@ -13,6 +13,7 @@ pre code {
   white-space: inherit;
 }
 
+/* style for empty box*/
 .rmdblankbox {
     background-color: #f7f7f7;
     margin: 0px;
@@ -24,6 +25,7 @@ pre code {
     border-bottom:1px solid #fff
 }
 
+/* Box for download links*/
 .rmdattachment {
     background-color: #f7f7f7;
     margin: 0px;
@@ -45,6 +47,7 @@ pre code {
     font-size: 20px;
  }
  
+ /* Box for website links*/
  .rmdwebsite {
     background-color: #f7f7f7;
     margin: 0px;
@@ -67,6 +70,8 @@ pre code {
     font-size: 20px;
  }
 
+
+/* Box for shiny links*/
 .rmdshiny {
     background-color: #f7f7f7;
     margin: 0px;
@@ -90,6 +95,14 @@ background: url("input/00_general/01_images/shiny.png") no-repeat;
     background-size: contain;
     height: 25px;
  }
+ 
+/* Change the color of the active chapters*/
+.book .book-summary ul.summary li a:hover, .book .book-summary ul.summary li.active>a {
+    color: #2DC6D6;
+    background: 0 0;
+    text-decoration: none;
+}
+
  
 
 

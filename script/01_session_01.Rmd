@@ -164,9 +164,20 @@ Download
 **[https://desktop.github.com](https://desktop.github.com)**
 ```
 
+```{r github-desktop, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/github_desktop.png', dpi = NA)
+```
 
-# Project Setup
-## Project structure
+# Data Science Workflow
+
+```{r data-science-workflow, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/data_science_workflow.png', dpi = NA)
+```
+
+
+# Project 01 - Sales Analysis
+## Project Setup
+### Project structure
 
 ```{block, type='rmdblankbox'}
 Download
@@ -179,11 +190,438 @@ Download
 knitr::include_graphics('input/session_01/01_images/project_structure.png', dpi = NA)
 ```
 
-## Installing Packages
+### Installing Packages
 
 ```{block, type='rmdblankbox'}
 Download
 ```
 ```{block, type='rmdattachment'}
-**[business_case_01.zip](https://github.com/TUHH-W11/data-science/blob/master/files/session_01/business_case_01.zip)**
+**[session_01_install_pkgs.R](https://github.com/TUHH-W11/data-science/blob/master/script/input/session_01/02_R/session_01_install_pkgs.R)**
+```
+
+##  `r fa("flag-checkered", fill = "black")` Checkpoint
+
+* Key Checks at this Point
+* User Library Verification
+* Directory Structure Verification
+
+
+## Importing, Examining, & Joining Data
+### Setup
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[sales_analysis.R](https://github.com/)**
+```
+
+### Import
+#### flatfiles
+
+``` r
+library(readr)
+library(readxl)
+library(odbc)
+library(RSQLite)
+```
+
+Excel files and local databases
+
+data.frames, lists, vectors, ...
+data types, basics
+
+#### web scraping
+
+``` r
+library(httr)
+library(rvest)
+library(RSelenium)
+```
+
+Screen scraping and jsons via API
+
+###  `r fa("flag-checkered", fill = "black")` Checkpoint
+
+### Cleaning and joining data
+
+```r
+library(dplyr)
+library(tidyr)
+library(tidyverse)
+```
+
+left_join, rbind, filtering, naming, pipe operator, ...
+group_by, summarize
+
+###  `r fa("flag-checkered", fill = "black")` Checkpoint
+
+### Visualizing data with ggplot2
+
+```r
+library(ggplot2)
+```
+
+different geometries
+saving files
+
+###  `r fa("flag-checkered", fill = "black")` Checkpoint
+
+## Session 01 Challenge
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[sales_analysis.rmd](https://github.com/)**
+```
+
+Rmarkdown file with instructions!
+```
+# ---
+#   title: "Week 2 Challenge"
+# author: "Business Science"
+# date: "12/30/2018"
+# output: 
+#   html_document:
+#   toc: TRUE
+# theme: flatly
+# highlight: tango
+# code_folding: show
+# ---
+#   
+#   ```{r setup, include=FALSE}
+# knitr::opts_chunk$set(
+#   echo = TRUE
+# )
+# ```
+# 
+# # Challenge Summary
+# 
+# This is a short challenge to begin applying what you are learning to the problem at hand. You will go through a series of questions related to the course project goals: 
+#   
+#   1. Coming up with a new product idea, and 
+# 
+# 2. Segmenting the customer-base
+# 
+# # Objectives
+# 
+# 1. Apply `dplyr` and `tidyr` functions to answer questions related to the course projects. 
+# 
+# 2. Gain exposure to `rmarkdown`
+# 
+# # Data
+# 
+# To read the data, make sure that the paths point to the appropriate data sets. Saving the file in the main directory should enable the paths to be detected correctly. 
+# 
+# ```{r, message=FALSE, warning=FALSE}
+# # Load libraries
+# library(tidyverse)
+# ```
+# 
+# ```{r}
+# # Read bike orderlines data
+# path_bike_orderlines <- "00_data/bike_sales/data_wrangled/bike_orderlines.rds"
+# bike_orderlines_tbl <- read_rds(path_bike_orderlines)
+# 
+# glimpse(bike_orderlines_tbl)
+# ```
+# 
+# ```{r}
+# # Read bikes data
+# path_bikes <- "00_data/bike_sales//data_raw/bikes.xlsx"
+# bikes_tbl <- readxl::read_excel(path_bikes)
+# 
+# glimpse(bikes_tbl)
+# ```
+# 
+# # Questions
+# 
+# 
+# 
+# ## 1. What are the unique categories of products? (Difficulty = Low)
+# 
+# - Begin with `bike_orderlines_tbl`
+# - Use `distinct()` to evaluate 
+# 
+# Review Primary Product Category (`category_1`).
+# 
+# ```{r}
+# 
+# ```
+# 
+# 
+# Review Secondary Product Category (`category_2`).
+# 
+# ```{r}
+# 
+# ```
+# 
+# Review Frame Material (`frame_material`).
+# 
+# ```{r}
+# 
+# ```
+# 
+# 
+# ## 2. Which product categories have the most sales? (Difficulty = Medium)
+# 
+# - Select appropriate columns from `bike_orderlines_tbl`
+# - Group and summarize the data calling the new column `Sales`. Make sure to ungroup. 
+# - Arrange descending by `Sales`
+# - Rename column names to `Primary Category`, `Secondary Category`, or `Frame Material` (as appropriate).
+# - Format the Sales as `dollar()` 
+# 
+# Review Primary Product Category (`category_1`).
+# 
+# ```{r}
+# 
+# 
+# ```
+# 
+# Review Secondary Product Category (`category_2`).
+# 
+# ```{r}
+# 
+# 
+# ```
+# 
+# 
+# Review Frame Material (`frame_material`).
+# 
+# ```{r}
+# 
+# 
+```
+
+## Session 01 Solution
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[session_01_solution.R](https://github.com/)**
+```
+
+```{r rev-by-year, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/Rplot.png', dpi = NA)
+```
+
+
+```r
+# DS4B 101-R: R FOR BUSINESS ANALYSIS ----
+# JUMPSTART: First Sales Analysis ----
+
+# 1.0 Load libraries ----
+
+# Work horse packages
+library(tidyverse)
+library(lubridate)
+
+# theme_tq()
+library(tidyquant)
+
+# Excel Files
+library(readxl)
+library(writexl)
+
+
+
+
+# 2.0 Importing Files ----
+
+?read_excel()
+
+bikes_tbl <- read_excel(path = "00_data/bike_sales/data_raw/bikes.xlsx")
+
+bikeshops_tbl <- read_excel("00_data/bike_sales/data_raw/bikeshops.xlsx")
+
+orderlines_tbl <- read_excel("00_data/bike_sales/data_raw/orderlines.xlsx")
+names(orderlines_tbl)[1] <- "X__1"
+
+
+
+# 3.0 Examining Data ----
+
+bikes_tbl
+
+glimpse(bikes_tbl)
+
+bikeshops_tbl
+
+orderlines_tbl
+
+# 4.0 Joining Data ----
+
+?left_join
+
+orderlines_tbl
+
+bikes_tbl
+
+left_join(orderlines_tbl, bikes_tbl, by = c("product.id" = "bike.id"))
+
+bike_orderlines_joined_tbl <- orderlines_tbl %>%
+    left_join(bikes_tbl, by = c("product.id" = "bike.id")) %>%
+    left_join(bikeshops_tbl, by = c("customer.id" = "bikeshop.id"))
+
+bike_orderlines_joined_tbl
+
+bike_orderlines_joined_tbl %>% glimpse()
+
+# 5.0 Wrangling Data ----
+
+bike_orderlines_wrangled_tbl <- bike_orderlines_joined_tbl %>%
+    
+    # Separate description into category.1, category.2, and frame.material
+    separate(description,
+             into = c("category.1", "category.2", "frame.material"),
+             sep = " - ",
+             remove = TRUE) %>%
+    
+    # Separate location into city and state
+    separate(location,
+             into = c("city", "state"),
+             sep  = ", ",
+             remove = FALSE) %>%
+    
+    # price extended
+    mutate(total.price = price * quantity) %>%
+    
+    # Reorganize
+    select(-X__1, -location) %>%
+    select(-ends_with(".id")) %>%
+    
+    bind_cols(bike_orderlines_joined_tbl %>% select(order.id)) %>%
+    
+    # Reorder columns
+    select(contains("date"), contains("id"), contains("order"),
+           quantity, price, total.price,
+           everything()) %>%
+    
+    # Renaming columns
+    rename(order_date = order.date) %>%
+    set_names(names(.) %>% str_replace_all("\\.", "_")) 
+
+bike_orderlines_wrangled_tbl %>% glimpse()
+
+
+
+# 6.0 Business Insights ----
+
+
+# 6.1 Sales by Year ----
+
+# Step 1 - Manipulate
+
+sales_by_year_tbl <- bike_orderlines_wrangled_tbl %>%
+    
+    # Selecting columns to focus on and adding a year column
+    select(order_date, total_price) %>%
+    mutate(year = year(order_date)) %>%
+    
+    # Grouping by year, and summarizing sales
+    group_by(year) %>%
+    summarize(sales = sum(total_price)) %>%
+    ungroup() %>%
+    
+    # $ Format Text
+    mutate(sales_text = scales::dollar(sales))
+    
+sales_by_year_tbl
+
+
+# Step 2 - Visualize
+
+sales_by_year_tbl %>%
+    
+    # Setup canvas with year (x-axis) and sales (y-axis)
+    ggplot(aes(x = year, y = sales)) +
+    
+    # Geometries
+    geom_col(fill = "#2c3e50") +
+    geom_label(aes(label = sales_text)) +
+    geom_smooth(method = "lm", se = FALSE) +
+    
+    # Formatting
+    theme_tq() +
+    scale_y_continuous(labels = scales::dollar) +
+    labs(
+        title = "Revenue by Year",
+        subtitle = "Upward trend",
+        x = "",
+        y = "Revenue"
+    )
+
+# 6.2 Sales by Year and Category 2 ----
+
+
+# Step 1 - Manipulate
+
+sales_by_year_cat_2_tbl <- bike_orderlines_wrangled_tbl %>%
+    
+    # Selecting columns and add a year
+    select(order_date, total_price, category_2) %>%
+    mutate(year = year(order_date)) %>%
+    
+    # Groupby and Summarize year and category 2
+    group_by(year, category_2) %>%
+    summarise(sales = sum(total_price)) %>%
+    ungroup() %>%
+    
+    # Format $ Text
+    mutate(sales_text = scales::dollar(sales))
+
+
+sales_by_year_cat_2_tbl
+
+# Step 2 - Visualize
+
+sales_by_year_cat_2_tbl %>%
+    
+    # Set up x, y, fill 
+    ggplot(aes(x = year, y = sales, fill = category_2)) +
+    
+    # Geometries
+    geom_col() +
+    geom_smooth(method = "lm", se = FALSE) +
+    
+    # Facet
+    facet_wrap(~ category_2, ncol = 3, scales = "free_y") +
+    
+    # Formatting
+    theme_tq() +
+    scale_fill_tq() +
+    scale_y_continuous(labels = scales::dollar) +
+    labs(
+        title = "Revenue by Year and Category 2",
+        subtitle = "Each product category has an upward trend",
+        x = "",
+        y = "Revenue",
+        fill = "Product Secondary Category"
+    )
+
+
+# 7.0 Writing Files ----
+
+fs::dir_create("00_data/bike_sales/data_wrangled_student")
+
+# 7.1 Excel ----
+
+bike_orderlines_wrangled_tbl %>%
+    write_xlsx("00_data/bike_sales/data_wrangled_student/bike_orderlines.xlsx")
+
+
+# 7.2 CSV ----
+
+bike_orderlines_wrangled_tbl %>%
+    write_csv("00_data/bike_sales/data_wrangled_student/bike_orderlines.csv")
+
+
+# 7.3 RDS ----
+
+bike_orderlines_wrangled_tbl %>%
+    write_rds("00_data/bike_sales/data_wrangled_student/bike_orderlines.rds")
+
+
 ```

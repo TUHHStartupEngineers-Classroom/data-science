@@ -1,11 +1,7 @@
 
 # (PART) Session 2 {-}
 
-# Functions {#session_02_01}
-
-Here is a review of existing methods.
-
-
+# test (embed Shiny)
 
 ```{r}
 knitr::include_app("http://jwarz.shinyapps.io/learnR/", height = "600px")
@@ -15,4 +11,12 @@ knitr::include_app("http://jwarz.shinyapps.io/learnR/", height = "600px")
 <iframe src ="http://jwarz.shinyapps.io/learnR/"
   style="border: none; width: 100%; height: 500px;"/>
 </iframe>
+
+
+# Wrangling data (PART 2)
+#  `r fa("flag-checkered", fill = "black")` Checkpoint
+
+# Session 02 - Challenge
+# Session 02 - Solution
+
 
