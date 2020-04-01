@@ -28,10 +28,10 @@ Before we meet (online via [zoom](https://zoom.us/download)) for our first class
 
 |#|Assignment|script chapter|
 |:-|------------------------|-----:|
-|1.|Download and install R on your computer. This is the R website [https://www.r-project.org](https://www.r-project.org)|<a href="https://tuhh-w11.github.io/data-science/script/docs/installing-r-rstudio-ide.html" target="_blank"><b>1.1</b></a>|
-|2.|Download and install R-studio. You must download and install R first before installing R-studio. The R-studio website is [https://www.rstudio.com](https://www.rstudio.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/installing-r-rstudio-ide.html" target="_blank"><b>1.1</b></a>|
-|3.|Create a free github account. The github website is [https://github.com](https://github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/getting-started-with-github.html" target="_blank"><b>1.6</b></a>|
-|4.|Download and install github desktop [https://desktop.github.com](https://desktop.github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/getting-started-with-github.html" target="_blank"><b>1.6</b></a>|
+|1.|Download and install R on your computer. This is the R website [https://www.r-project.org](https://www.r-project.org)|<a href="https://tuhh-w11.github.io/data-science/script/docs/r-rstudio.html" target="_blank"><b>1.1</b></a>|
+|2.|Download and install R-studio. You must download and install R first before installing R-studio. The R-studio website is [https://www.rstudio.com](https://www.rstudio.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/r-rstudio.html" target="_blank"><b>1.1</b></a>|
+|3.|Create a free github account. The github website is [https://github.com](https://github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/https://tuhh-w11.github.io/data-science/script/docs/github.html" target="_blank"><b>1.6</b></a>|
+|4.|Download and install github desktop [https://desktop.github.com](https://desktop.github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/https://tuhh-w11.github.io/data-science/script/docs/github.html" target="_blank"><b>1.6</b></a>|
 
 Don't worry if you ran into issues with these first steps, we will address them in our first video session. 
 
