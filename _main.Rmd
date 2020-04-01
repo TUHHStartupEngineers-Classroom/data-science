@@ -3,6 +3,7 @@ title: "TUHH Business Analytics R Programming Guide"
 output: html_document
 section_divs: yes
 ---
+
 <style type="text/css">
 .title {
   display: none;
@@ -139,7 +140,6 @@ title: "DS101"
 pagetitle:  "DS101 · TUHH Business Analytics R Programming Guide"
 output:
   html_document:
-    css: styles.css
     toc: true
     toc_float: true
     collapsed: false
@@ -147,26 +147,56 @@ output:
     toc_depth: 4
 ---
 
----
-
-<style>
-.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-    background-color: #2DC6D6;
-}
-</style>
-
 [comment]: <> (Set global options for code chunks)
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+library(icon)
 ```
 
 # Getting Started {-}
 
 2020 | 01 | 23 Last compiled: `r Sys.Date()`
 
+Before we meet (online via [zoom](https://zoom.us/download)) for our first class there are few things you should try at home to get started.
 
+|#|Assignment|script chapter|
+|:-|------------------------|-----:|
+|1.|Download and install R on your computer. This is the R website [https://www.r-project.org](https://www.r-project.org)|<a href="https://tuhh-w11.github.io/data-science/script/docs/installing-r-rstudio-ide.html" target="_blank"><b>1.1</b></a>|
+|2.|Download and install R-studio. You must download and install R first before installing R-studio. The R-studio website is [https://www.rstudio.com](https://www.rstudio.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/installing-r-rstudio-ide.html" target="_blank"><b>1.1</b></a>|
+|3.|Create a free github account. The github website is [https://github.com](https://github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/getting-started-with-github.html" target="_blank"><b>1.6</b></a>|
+|4.|Download and install github desktop [https://desktop.github.com](https://desktop.github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/getting-started-with-github.html" target="_blank"><b>1.6</b></a>|
 
-# Session 1
+Don't worry if you ran into issues with these first steps, we will address them in our first video session. 
+
+***
+
+<p>
+![](images/datacamp-vector-logo.svg)
+</p>
+
+If you have R-studio working is there anything else you can do before we meet for the first time? Yes.
+
+You can follow the video tutorial on creating an R markdown website with github pages on the video page. And, you can get started with some of the following tutorials, and you can begin messing around in R. 
+
+Join the NIT data science team on data camp via this link. Please register with your tuhh email address. [datacamp.com](https://www.datacamp.com/groups/shared_links/91287653ed5bd4c0f14e7c60e2d61a62dc1f1ba2afc84a4909665c00cd441f0c)
+
+Complete the following assignments in your team.
+
+|#|Course|datacamp-link|script chapter|
+|:-|------------------------|-|-:|
+|1.|Introduction to R|<a href="https://learn.datacamp.com/courses/free-introduction-to-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|2.|Intermediate R|<a href="https://learn.datacamp.com/courses/intermediate-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|3.|Introduction to the Tidyverse|<a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|4.|Introduction to Importing Data in R|<a href="https://learn.datacamp.com/courses/introduction-to-importing-data-in-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|5.|Chose further courses as you desire ...|<a href="https://learn.datacamp.com/courses/" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|---|
+
+We will be spending the first few weeks of the course working on solving different kinds of business problems in R. These problems will help you learn the ins and outs of coding in R. You can get a head start by trying to solve the problems in this [list of programming challenges](https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html). 
+
+# Session
 
 2018 | 7 | 23 Last compiled: `r Sys.Date()`
 
@@ -180,7 +210,8 @@ Here's an even lower level header
 
 I'm writing this tutorial going from the top down. And, this is how it will be printed. So, notice the second post is second in the list. If you want your most recent post to be at the top, then make a new post starting at the top. If you want the oldest first, do, then keep adding to the bottom
 
-# Session 2
+# Session
+## Second level
 
 So far this is just a blog where you can write in plain text and serve your writing to a webpage. One of the main purposes of this lab journal is to record your progress learning R. The reason I am asking you to use this process is because you can both make a website, and a lab journal, and learn R all in R-studio. This makes everything really convenient and in the sam place. 
 
@@ -193,7 +224,8 @@ hist(samples)
 
 When you knit this R Markdown document, you will see that the histogram is printed to the page, along with the R code. This document can be set up to hide the R code in the webpage, just delete the comment (hashtag), from the cold folding option in the yaml header up top. For purposes of letting yourself see the code, and me see the code, best to keep it the way that it is. You learn all of these things and more can be customized in each R code block.
 
-# Session 3
+# Session
+## Second level
 
 Use this lab journal to record what you do in R. This way I will be able to see what you are doing and help you along the way. You will also be creating a repository of all the things you do. You can make posts about everything. Learning specific things in R (project unrelated), and doing things for the project that we will discuss at the beginning of the Fall semester. You can get started now by fiddling around with googling things, and trying stuff out in R. I've placed some helpful starting links in the links page on this website
 
@@ -223,25 +255,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Coming soon
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Coming Soon
 
 <!--chapter:end:02_classes_DS201.Rmd-->
 

@@ -22,7 +22,7 @@ navbar:
     - text: "Links"
       href: 03_links.html
     - text: Course script
-      href: script/docs/preface.html[newtab]
+      href: script/docs/preface.html
 
   right:
     - icon: fa-github

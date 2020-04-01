@@ -176,6 +176,25 @@ knitr::include_graphics('input/session_01/01_images/data_science_workflow.png', 
 
 
 # Project 01 - Sales Analysis
+
+Sales Analysis Overview
+
+**Goals** 
+* Get your hands into R with a real world situation
+* Analyze Sales over time of products sold through the Olist Store
+  + Sales by Year
+  + Sales by secondary product category
+  
+**Steps**
+1. Import
+  + Importing data
+  + Examine data
+  + Join data
+2. Wrang
+
+**Context**
+Olist is the largest department store in Brazilian marketplaces. Olist connects small businesses from all over Brazil to channels without hassle and with a single contract. Those merchants are able to sell their products through the Olist Store and ship them directly to the customers using Olist logistics partners. See more on their website: [www.olist.com](www.olist.com)
+
 ## Project Setup
 ### Project structure
 
