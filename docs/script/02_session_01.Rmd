@@ -1,5 +1,8 @@
 # (PART) Session 2 {-}
 
+```{r sakila, echo=FALSE, fig.cap='sakila db', out.width='100%'}
+knitr::include_graphics('input/session_02/01_images/sakila_db.png', dpi = NA)
+```
 
 <!-- set global eval FALSE so that all chunks will not be evaluated  -->
 

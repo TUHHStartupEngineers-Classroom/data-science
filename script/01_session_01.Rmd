@@ -195,6 +195,14 @@ Sales Analysis Overview
 **Context**
 Olist is the largest department store in Brazilian marketplaces. Olist connects small businesses from all over Brazil to channels without hassle and with a single contract. Those merchants are able to sell their products through the Olist Store and ship them directly to the customers using Olist logistics partners. See more on their website: [www.olist.com](www.olist.com)
 
+## Theory / Background
+### Transactional data
+### data set
+
+```{r data-structure, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/olist_structure_01.png', dpi = NA)
+```
+
 ## Project Setup
 ### Project structure
 
