@@ -2,7 +2,10 @@
 
 # Communication
 
-## FlexDashboard
+## Reports (Interactive Plots)
+### FlexDashboard
+
+<iframe src="sales_dashboard_flex.html" width="100%" height="800" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
 
 # Session 06 - Challenge - Sales Dashboard
 
