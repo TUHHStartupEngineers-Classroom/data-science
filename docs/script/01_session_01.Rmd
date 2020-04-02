@@ -5,7 +5,12 @@
 library(fontawesome)
 ```
 
-<table><tr><td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px" align="middle"></td><td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px" align="middle"></td></tr></table>
+<table>
+  <tr>
+    <td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px" align="left" valign="middle" hspace="50px"></td>
+    <td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px" align="right" valign="middle" hspace="50px"></td>
+  </tr>
+</table>
 
 **On the following sites you'll find information about how to install the language R and the IDE RStudio.**
 
