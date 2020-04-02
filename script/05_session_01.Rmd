@@ -3,12 +3,7 @@
 # Communication
 
 ## RMarkdown
-<embed src= "03_sales_report.pdf" width= "500" height= "375">
-
-<object data=”03_sales_report.pdf" type=”application/pdf” width=”100%” height=”100%”>
-</object>
-Example fallback content: This browser does not support PDFs. Please download the PDF to view it: Download PDF.
-
+<embed src="https://github.com/TUHH-W11/data-science/blob/master/script/03_sales_report.pdf" type="application/pdf" />
 
 ## Interactive Plots with Plotly
 
