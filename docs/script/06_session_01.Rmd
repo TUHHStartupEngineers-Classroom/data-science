@@ -1,9 +1,7 @@
 # (PART) Session 6 {-}
 
-# Communication
-
-## Reports (Interactive Plots)
-### FlexDashboard
+# Communication - Dashboard (I)
+## Flexdashboard
 
 <iframe src="sales_dashboard_flex.html" width="100%" height="800" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
 

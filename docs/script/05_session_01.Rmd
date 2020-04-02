@@ -1,6 +1,6 @@
 # (PART) Session 5 {-}
 
-# Communication
+# Communication - Report
 
 ## Reports (PDF)
 **Example Report with RMarkdown**
@@ -12,6 +12,3 @@
 <iframe src="widget.html" width="100%" height="800" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
 
 # Session 05 - Challenge - Report
-## Product Pricing Prediction Algo with XGBoost
-
-

@@ -1,10 +1,13 @@
 # (PART) Session 7 {-}
 
-# Communication
-
+# Communication - Dashboard (II)
 ## Shiny App
 
-# Session 06 - Challenge - Stock Analyzer
+```{r shiny-app, echo=FALSE, fig.cap='shiny app example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_07/01_images/shiny_example.png', dpi = NA)
+```
+
+# Session 07 - Challenge - Stock Analyzer
 
 
 
