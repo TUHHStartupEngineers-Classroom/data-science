@@ -3,7 +3,9 @@
 # Communication
 
 ## RMarkdown
-<embed src="https://github.com/TUHH-W11/data-science/blob/master/script/03_sales_report.pdf" type="application/pdf" />
+<embed src="https://tuhh-w11.github.io/data-science/script/03_sales_report.pdf" type="application/pdf" />
+
+<embed src="03_sales_report.pdf" type="application/pdf" />
 
 ## Interactive Plots with Plotly
 
