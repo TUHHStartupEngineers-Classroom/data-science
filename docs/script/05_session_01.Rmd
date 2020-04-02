@@ -5,6 +5,8 @@
 ## RMarkdown
 ## Interactive Plots with Plotly
 
+<iframe src="widget.html" width="100%" height="1000" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"> </iframe>
+
 # Session 05 - Challenge - Report
 ## Product Pricing Prediction Algo with XGBoost
 
