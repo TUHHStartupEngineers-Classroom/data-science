@@ -24,7 +24,7 @@
 <meta name="author" content="Joschka Schwarz" />
 
 
-<meta name="date" content="2020-04-01" />
+<meta name="date" content="2020-04-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -877,7 +877,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="project-01-sales-analysis.html"><a href="project-01-sales-analysis.html"><i class="fa fa-check"></i><b>3</b> Project 01 - Sales Analysis</a><ul>
 <li class="chapter" data-level="3.1" data-path="theory-background.html"><a href="theory-background.html"><i class="fa fa-check"></i><b>3.1</b> Theory / Background</a><ul>
 <li class="chapter" data-level="3.1.1" data-path="theory-background.html"><a href="theory-background.html#transactional-data"><i class="fa fa-check"></i><b>3.1.1</b> Transactional data</a></li>
-<li class="chapter" data-level="3.1.2" data-path="theory-background.html"><a href="theory-background.html#data-set"><i class="fa fa-check"></i><b>3.1.2</b> data set</a></li>
+<li class="chapter" data-level="3.1.2" data-path="theory-background.html"><a href="theory-background.html#data-schema"><i class="fa fa-check"></i><b>3.1.2</b> data schema</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="project-setup.html"><a href="project-setup.html"><i class="fa fa-check"></i><b>3.2</b> Project Setup</a><ul>
 <li class="chapter" data-level="3.2.1" data-path="project-setup.html"><a href="project-setup.html#project-structure"><i class="fa fa-check"></i><b>3.2.1</b> Project structure</a></li>
@@ -969,15 +969,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">3.1</span> Theory / Background</h2>
 <div id="transactional-data" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Transactional data</h3>
-</div>
-<div id="data-set" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> data set</h3>
-<div class="figure"><span id="fig:data-structure"></span>
-<img src="input/session_01/01_images/olist_structure_01.png" alt="Project structure example in RStudio." width="100%" />
+<div class="figure"><span id="fig:transactional-data"></span>
+<img src="input/session_01/01_images/transactional_data.png" alt="Project structure example in RStudio." width="100%" />
 <p class="caption">
-FIGURE 3.1: Project structure example in RStudio.
+FIGURE 3.2: Project structure example in RStudio.
 </p>
 </div>
+</div>
+<div id="data-schema" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> data schema</h3>
+<p>The data is divided in multiple datasets for better understanding and organization. Please refer to the following data schema when working with it:</p>
+<div class="figure"><span id="fig:olist-structure-01"></span>
+<img src="input/session_01/01_images/olist_structure_01.png" alt="Project structure example in RStudio." width="100%" />
+<p class="caption">
+FIGURE 3.3: Project structure example in RStudio.
+</p>
+</div>
+<p>The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers. In addition a geolocation dataset that relates Brazilian zip codes to lat/lng coordinates is released.</p>
+<p>This is real commercial data, it has been anonymised, and references to the companies and partners in the review text have been replaced with the names of Game of Thrones great houses.</p>
+<p><strong>Attention</strong></p>
+<ol style="list-style-type: decimal">
+<li>An order might have multiple items.</li>
+<li>Each item might be fulfilled by a distinct seller.</li>
+<li>All text identifying stores and partners where replaced by the names of Game of Thrones great houses.</li>
+</ol>
+<p>It was also a Marketing Funnel Dataset released. Both datasets may be joined to see an order from Marketing perspective!</p>
+<div class="figure"><span id="fig:olist-structure-02"></span>
+<img src="input/session_01/01_images/olist_structure_02.png" alt="Project structure example in RStudio." width="100%" />
+<p class="caption">
+FIGURE 3.4: Project structure example in RStudio.
+</p>
+</div>
+<p><strong>Inspiration</strong></p>
+<p>Here are some inspiration for possible outcomes from this dataset.</p>
+<p>NLP:</p>
+<p>This dataset offers a supreme environment to parse out the reviews text through its multiple dimensions.</p>
+<p>Clustering:</p>
+<p>Some customers didn’t write a review. But why are they happy or mad?</p>
+<p>Sales Prediction:</p>
+<p>With purchase date information you’ll be able to predict future sales.</p>
+<p>Delivery Performance:</p>
+<p>You will also be able to work through delivery performance and find ways to optimize delivery times.</p>
+<p>Product Quality:</p>
+<p>Enjoy yourself discovering the products categories that are more prone to customer insatisfaction.</p>
+<p>Feature Engineering:</p>
+<p>Create features from this rich dataset or attach some external public information to it.</p>
 </div>
 </div>
             </section>

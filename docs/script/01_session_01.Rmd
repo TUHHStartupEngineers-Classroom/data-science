@@ -182,26 +182,85 @@ Sales Analysis Overview
 **Goals** 
 * Get your hands into R with a real world situation
 * Analyze Sales over time of products sold through the Olist Store
-  + Sales by Year
-  + Sales by secondary product category
+    + Sales by Year
+    + Sales by secondary product category
   
 **Steps**
 1. Import
-  + Importing data
-  + Examine data
-  + Join data
-2. Wrang
+    + Importing data
+    + Examine data
+    + Join data
+2. Wrangle data
 
 **Context**
 Olist is the largest department store in Brazilian marketplaces. Olist connects small businesses from all over Brazil to channels without hassle and with a single contract. Those merchants are able to sell their products through the Olist Store and ship them directly to the customers using Olist logistics partners. See more on their website: [www.olist.com](www.olist.com)
 
+After a customer purchases the product from Olist Store a seller gets notified to fulfill that order. Once the customer receives the product, or the estimated delivery date is due, the customer gets a satisfaction survey by email where he can give a note for the purchase experience and write down some comments.
+
+```{r olist-example-page, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/olist_example_page.png', dpi = NA)
+```
+
+
 ## Theory / Background
 ### Transactional data
-### data set
 
-```{r data-structure, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+```{r transactional-data, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/transactional_data.png', dpi = NA)
+```
+
+### data schema
+
+The data is divided in multiple datasets for better understanding and organization. Please refer to the following data schema when working with it:
+
+```{r olist-structure-01, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/session_01/01_images/olist_structure_01.png', dpi = NA)
 ```
+
+The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers. In addition a geolocation dataset that relates Brazilian zip codes to lat/lng coordinates is released.
+
+This is real commercial data, it has been anonymised, and references to the companies and partners in the review text have been replaced with the names of Game of Thrones great houses.
+
+**Attention**
+
+1. An order might have multiple items.
+2. Each item might be fulfilled by a distinct seller.
+3. All text identifying stores and partners where replaced by the names of Game of Thrones great houses.
+
+It was also a Marketing Funnel Dataset released. Both datasets may be joined to see an order from Marketing perspective!
+
+```{r olist-structure-02, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/olist_structure_02.png', dpi = NA)
+```
+
+**Inspiration**
+
+Here are some inspiration for possible outcomes from this dataset.
+
+NLP: 
+
+This dataset offers a supreme environment to parse out the reviews text through its multiple dimensions.
+
+Clustering:
+
+Some customers didn't write a review. But why are they happy or mad?
+
+Sales Prediction:
+
+With purchase date information you'll be able to predict future sales.
+
+Delivery Performance:
+
+You will also be able to work through delivery performance and find ways to optimize delivery times.
+
+Product Quality: 
+
+Enjoy yourself discovering the products categories that are more prone to customer insatisfaction.
+
+Feature Engineering: 
+
+Create features from this rich dataset or attach some external public information to it.
+
 
 ## Project Setup
 ### Project structure
