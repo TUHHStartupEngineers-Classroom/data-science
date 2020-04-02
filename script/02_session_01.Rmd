@@ -10,6 +10,9 @@ knitr::include_graphics('input/session_02/01_images/sakila_db.png', dpi = NA)
 
 
 # Wrangling data (PART 2)
+
+Continuing **session 01**. More advanced.
+
 ## Content 1
 ##  `r fa("flag-checkered", fill = "black")` Checkpoint
 

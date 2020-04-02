@@ -5,7 +5,9 @@
 library(fontawesome)
 ```
 
-<table><tr><td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px"></td><td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px"></td></tr></table>
+<table><tr><td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px" align="middle"></td><td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px" align="middle"></td></tr></table>
+
+**On the following sites you'll find information about how to install the language R and the IDE RStudio.**
 
 ## R & RStudio
 ###  `r fa("download", fill = "black")` Installing R & RStudio IDE
@@ -139,14 +141,14 @@ library(tidyverse)
 
 
 ### Working with RStudio / Setup & Customization
-Console
-Script Editor
-Workspace Environment
-Misc. Displays
+
+Essential basics. The rest will be explained with the business examples
+
+### Cheatsheets
 
 ## GitHub
 
-1. Create a free github account.
+### Create a free github account.
 
 ```{block, type='rmdblankbox'}
 Website
@@ -155,7 +157,7 @@ Website
 **[https://github.com/](https://github.com/)**
 ```
 
-2. Download and install github desktop 
+### Download and install github desktop 
 
 ```{block, type='rmdblankbox'}
 Download
@@ -168,28 +170,38 @@ Download
 knitr::include_graphics('input/session_01/01_images/github_desktop.png', dpi = NA)
 ```
 
+### Create your own LabJournal
+
+Fork, or download ....
+
+<a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>
+
+
+
 # Data Science Workflow
 
 ```{r data-science-workflow, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/session_01/01_images/data_science_workflow.png', dpi = NA)
 ```
 
-R Cheatsheet
+Explanation how about the steps.
+
+Strucutre of the following lessons will be aligned with those steps.
 
 # Project 01 - Sales Analysis
 
-Sales Analysis Overview
+<font size="4">Sales Analysis Overview</font>
 
 **Overall goals**
 
-You are a data scientist. Your assignment is to 
+Introductory words ... You are a data scientist. Your assignment is to ...
 
-study the products ...
-looking for opportunities to sell new producgts
-better serve the customer
-better market the products
+* study the products ...
+* looking for opportunities to sell new producgts
+* better serve the customer
+* better market the products
 
-justify it by data
+* justify it by data ...
 
 **Goals for this session** 
 
@@ -201,10 +213,14 @@ justify it by data
 **Steps**
 
 1. Import
-    + Importing data
-    + Examine data
-    + Join data
+    + flatfiles
+    + databases
+    + scrape
 2. Wrangle data
+    + examine data
+    + clean data
+    + join data
+3. Visualize data
 
 **Context**
 Olist is the largest department store in Brazilian marketplaces. Olist connects small businesses from all over Brazil to channels without hassle and with a single contract. Those merchants are able to sell their products through the Olist Store and ship them directly to the customers using Olist logistics partners. See more on their website: [www.olist.com](www.olist.com)
