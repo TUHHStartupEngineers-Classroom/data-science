@@ -1,10 +1,13 @@
 # (PART) Session 1 {-}
 # Getting started {#session_01_01}
 
+
+<!-- Load gloabal packages -->
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
 library(fontawesome)
 ```
 
+<!-- Logos of R and R-Studio -->
 <table>
   <tr>
     <td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px" align="left" valign="middle" hspace="50px"></td>
@@ -14,6 +17,9 @@ library(fontawesome)
 
 **On the following sites you'll find information about how to install the language R and the IDE RStudio.**
 
+<!-- ++++++++++++++++++++++++++++++ -->
+<!-- Chapter: Install R and RStudio -->
+<!-- ++++++++++++++++++++++++++++++ -->
 ## R & RStudio
 ###  `r fa("download", fill = "black")` Installing R & RStudio IDE
 #### Interactively
@@ -76,7 +82,9 @@ library("packagename")
 # use a particular function within a package without loading the package
 packagename::functionname   
 ```
-
+<!-- ++++++++++++++++++++++++++++++++++++ -->
+<!-- Conventions about R Code in the book -->
+<!-- ++++++++++++++++++++++++++++++++++++ -->
 ###  `r fa("info", fill = "black")` Running R code (stolen from R4DS)
 The previous section showed you a couple of examples of running R code. Code in the book looks like this:
 
@@ -103,6 +111,9 @@ Throughout the book we use a consistent set of conventions to refer to code:
   `nycflights13::flights`. This is also valid R code.
 
 
+<!-- +++++++++++++ -->
+<!-- Example tasks -->
+<!-- +++++++++++++ -->
 ###  `r fa("tasks", fill = "black")` Exercise 1
 
 1. Identify what working directory you are working out of.
@@ -144,12 +155,17 @@ install.packages("tidyverse")
 library(tidyverse)
 ```
 
-
+<!-- ++++++++ -->
+<!-- R basics -->
+<!-- ++++++++ -->
 ### Working with RStudio / Setup & Customization
 
 Essential basics. The rest will be explained with the business examples
 
-### Cheatsheets
+<!-- ++++++ -->
+<!-- GitHub -->
+<!-- ++++++ -->
+
 
 ## GitHub
 
@@ -175,6 +191,10 @@ Download
 knitr::include_graphics('input/session_01/01_images/github_desktop.png', dpi = NA)
 ```
 
+
+<!-- ++++++++++ -->
+<!-- LabJournal -->
+<!-- ++++++++++ -->
 ### Create your own LabJournal
 
 Fork, or download ....
@@ -182,7 +202,9 @@ Fork, or download ....
 <a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>
 
 
-
+<!-- +++++++++++ -->
+<!-- DS Overview -->
+<!-- +++++++++++ -->
 # Data Science Workflow
 
 ```{r data-science-workflow, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
@@ -193,7 +215,29 @@ Explanation how about the steps.
 
 Strucutre of the following lessons will be aligned with those steps.
 
-# Project 01 - Sales Analysis
+## Cheatsheets
+
+Information for some libraries:
+
+**Import**
+
+* [readr](https://readr.tidyverse.org)
+* [readxl](https://readxl.tidyverse.org/)
+* [odbc](https://db.rstudio.com/getting-started/connect-to-database)
+* [DBI](https://db.rstudio.com/getting-started/connect-to-database)
+* [rvest](https://github.com/hadley/rvest)
+
+**Tidy**
+
+* [tibble](https://tibble.tidyverse.org/)
+* [tidyr](https://tidyr.tidyverse.org/)
+
+...
+
+<!-- +++++++++++ -->
+<!-- 1st Project -->
+<!-- +++++++++++ -->
+# **Project 01 - Sales Analysis**
 
 <font size="4">Sales Analysis Overview</font>
 
