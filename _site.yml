@@ -9,7 +9,7 @@ navbar:
   left:
     - text: "Syllabus"
       href: 01_syllabus.html
-    - text: "Labs / Schedule"
+    - text: "Schedule"
       menu:
             - text: "DS101: Data Science at NIT"
               href: 02_classes_DS101.html

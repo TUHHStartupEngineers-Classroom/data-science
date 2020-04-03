@@ -34,7 +34,7 @@ Practical and skill-focused introduction to using open-source programming softwa
 
 Special Prerequisites: NONE
 
-*Course objectives**: in this course you will learn:
+**Course objectives**: in this course you will learn:
 
 1.	Basic scripting in R: use of variables, logic, loops, functions, intrinsics, packages, workspaces 
 2.	Data transformation: processing data-files into a desired form for a desired analysis
@@ -53,7 +53,6 @@ We meet once per week in a computer lab. Each class will involve a small amount 
 ```{r, message=FALSE, warning=FALSE, echo=FALSE}
 library(readxl)
 lectures <- read_excel("Schedule.xlsx", sheet = 1, col_names = TRUE, col_types = NULL, na = "", skip = 0)
-lectures[is.na(lectures)]<- " "
 knitr::kable(lectures)
 ```
 
