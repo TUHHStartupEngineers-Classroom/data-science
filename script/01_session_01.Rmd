@@ -348,7 +348,7 @@ Create features from this rich dataset or attach some external public informatio
 Download
 ```
 ```{block, type='rmdattachment'}
-**[business_case_01.zip](https://github.com/TUHH-W11/data-science/blob/master/files/session_01/business_case_01.zip)**
+**[DS_business_case.zip](https://github.com/TUHH-W11/data-science/blob/master/script/input/session_01/03_files/DS_business_case.zip)**
 ```
 
 ```{r project-structure, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
