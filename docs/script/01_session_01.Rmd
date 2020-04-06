@@ -160,7 +160,9 @@ library(tidyverse)
 <!-- ++++++++ -->
 ### Working with RStudio / Setup & Customization
 
-Essential basics. The rest will be explained with the business examples
+Essential basics. The rest will be explained with the business examples 
+
+* never saving / loading .Rdata on exit / on startup (problem to recreate reproducible code)
 
 <!-- ++++++ -->
 <!-- GitHub -->
@@ -287,6 +289,10 @@ knitr::include_graphics('input/session_01/01_images/olist_example_page.png', dpi
 ```{r transactional-data, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/session_01/01_images/transactional_data.png', dpi = NA)
 ```
+The Entity Relationship Diagram (ERD)
+Types of database relationships (1-to-1, 1-to-many,many-to-many)
+
+
 
 ### data schema
 
@@ -295,6 +301,8 @@ The data is divided in multiple datasets for better understanding and organizati
 ```{r olist-structure-01, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/session_01/01_images/olist_structure_01.png', dpi = NA)
 ```
+
+* insert explanation and screenshots of the excel files
 
 The dataset has information of 100k orders from 2016 to 2018 made at multiple marketplaces in Brazil. Its features allows viewing an order from multiple dimensions: from order status, price, payment and freight performance to customer location, product attributes and finally reviews written by customers. In addition a geolocation dataset that relates Brazilian zip codes to lat/lng coordinates is released.
 
@@ -364,32 +372,152 @@ Download
 **[session_01_install_pkgs.R](https://github.com/TUHH-W11/data-science/blob/master/script/input/session_01/02_R/session_01_install_pkgs.R)**
 ```
 
-##  `r fa("flag-checkered", fill = "black")` Checkpoint
+package deoendencies
+
+c operatior stands for combining elements
+
+control + enter or cmd + enter
+
+global environment
+
+output to the screen (print)
+
+comments (not being added to the cvector)
+
+explanation of the right hand corner (packages, etc)
+
+Errors: what to do in case of errors during installation (maybe Rtools is needed, windows users)
+
+Doy you want to install from source the packages which need compilation
+
+###  `r fa("flag-checkered", fill = "black")` Checkpoint
 
 * Key Checks at this Point
 * User Library Verification
 * Directory Structure Verification
 
 
-## Importing, Examining, & Joining Data
-### Setup
+## Import
+### Setup (Template File)
+
+Download the template we will be using for the analysis
 
 ```{block, type='rmdblankbox'}
 Download
 ```
 ```{block, type='rmdattachment'}
-**[sales_analysis.R](https://github.com/)**
+**[s01-02_sales_analysis.R](https://github.com/)**
 ```
+
+The content of the file looks like this:
+
+````{r, eval = F}
+# datascience at NIT ------------------------------------------------------
+
+# 1.0 Load libraries ----
+library(tidyverse)
+library(lubridate)
+library(tidyquant)
+library(readxl)
+library(writexl)
+
+# 2.0 Importing Files ----
+
+
+
+
+
+# 3.0 Examining Data ----
+
+
+
+
+
+# 4.0 Joining Data ----
+
+
+
+
+# 5.0 Wrangling Data ----
+
+
+
+
+
+# 6.0 Business Insights ----
+
+
+# 6.1 Sales by Year ----
+
+# Step 1 - Manipulate
+
+
+
+
+# Step 2 - Visualize
+
+
+
+# 6.2 Sales by Year and Category 2 ----
+
+
+# Step 1 - Manipulate
+
+
+
+
+# Step 2 - Visualize
+
+
+
+
+# 7.0 Writing Files ----
+
+
+# 7.1 Excel ----
+
+
+# 7.2 CSV ----
+
+
+# 7.3 RDS ----
+```
+
+
+Add some hints (toc, environment, ...)
 
 ### Import
 #### flatfiles
 
 ``` r
-library(readr)
+library(readr) 
 library(readxl)
 library(odbc)
 library(RSQLite)
 ```
+
+importing excel files: readr for our csv files
+for xlsx files read_excel()
+
+
+```{block, type='rmdblankbox'}
+Pro Tip
+```
+```{block, type='rmdprotip'}
+Explain the ? in front of functions (contr + enter). Use ?function_name to get the help documentation on a function. Usage and arguments section.
+```
+
+```{block, type='rmdblankbox'}
+Pro Tip
+```
+```{block, type='rmdprotip'}
+Use tab complete to quickly complete function names as well as file pathes
+```
+
+
+Expplaing assignment
+Explaing tibble ( special structure that stores data)
+Environment variable now, can be viewd by clicking on it
 
 Excel files and local databases
 
@@ -407,6 +535,15 @@ library(RSelenium)
 Screen scraping and jsons via API
 
 ###  `r fa("flag-checkered", fill = "black")` Checkpoint
+
+### Examine
+
+regular print (output tibble to console)
+open data window (view() function), filtering etc.
+glimpse() function (prints it out in a transpose fashoin)
+
+--> Objective: Combine the three tibbles into one that can be analyzed
+
 
 ### Cleaning and joining data
 

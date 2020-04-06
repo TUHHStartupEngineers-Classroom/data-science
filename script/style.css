@@ -103,6 +103,24 @@ background: url("input/00_general/01_images/shiny.png") no-repeat;
     text-decoration: none;
 }
 
- 
+ .rmdprotip {
+    background-color: #f7f7f7;
+    margin: 0px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    padding-top: 13px;
+    padding-left: 40px;
+    line-height: 20px;
+    border-bottom:1px solid #fff;
+    position:relative;
+}
 
-
+.rmdprotip:before {
+    content: "\f129";
+    color: #2DC6D6; 
+    font-family: FontAwesome;
+    left:14px;
+    position:absolute;
+    text-align: center;
+    font-size: 20px;
+ }
