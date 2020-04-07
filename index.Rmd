@@ -37,6 +37,12 @@ Data Science is the science of extracting knowledge and information from data an
 This is a class for programming with R. It will teach you how to program in R, with hands-on examples. I wrote it for non-programmers to provide a friendly introduction to the R language. You’ll learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools. Throughout the book, you’ll use your newfound skills to solve practical data science problems.
 
 
+
+<div id="commento"></div>
+<script src="https://arcane-scrubland-82154.herokuapp.com/js/commento.js"></script>
+
+
+
 ### Instructor: 
 
 * Prof. Christoph Ihl [(✉ christoph.ihl@tuhh.de)](mailto:christoph.ihl@tuhh.de)
