@@ -1,8 +1,4 @@
 # (PART) Session 1 {-}
-<!-- Load gloabal packages -->
-```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
-library(fontawesome)
-```
 #  `r fa("r-project", fill = "black")` Introduction to the tidyverse {#session_01_01}
 
 ```{r data-science-workflow_1, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}

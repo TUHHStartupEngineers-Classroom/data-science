@@ -1,7 +1,6 @@
 # (PART) Session 1 {-}
 #  `r fa("r-project", fill = "black")` Introduction to the tidyverse {#session_01_01}
 
-
 ```{r data-science-workflow_1, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/session_01/01_images/data_science_workflow.png', dpi = NA)
 ```
@@ -14,11 +13,105 @@ The tidyverse is a collection of R packages developed by RStudio’s chief scien
 
 The following tutorial will introduce some basic functions in tidyverse for structuring and analyzing datasets. This is the first in a three-part series on cleaning data to visualize it in R using the tidyverse.
 
-## Introduction to Pipes
+## **IMPORT** - Loading data with readr / readxl
+Before you can manipulate data with R, you need to import the data into R’s memory, or build a connection to the data that R can use to access the data remotely.
+
+How you import your data will depend on the format of the data. The most common way to store small data sets is as a plain text file. Data may also be stored in a proprietary format associated with a specific piece of software, such as SAS, SPSS, or Microsoft Excel. Data used on the internet is often stored as a JSON or XML file. Large data sets may be stored in a database or a distributed storage system.
+
+When you import data into R, R stores the data in your computer’s RAM while you manipulate it. This creates a size limitation: truly big data sets should be stored outside of R in a database or distributed storage system. You can then create a connection to the system that R can use to access the data without bringing the data into your computer’s RAM.
+
+The tidyverse offers the following packages for importing data:
+
+* `readr` for reading flat files like .csv files
+* `readxl` for .xls and .xlsx sheets.
+* `haven` for SPSS, Stata, and SAS data.
+* `googledrive` to interact with files on Google Drive from R.
+
+<style>
+.column{
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+
+
+```{r r-import, echo=FALSE}
+knitr::asis_output(htmltools::htmlPreserve('
+<style>
+.column{
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+.row::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<div class="row">
+  <div class="column">
+    <a href="https://readr.tidyverse.org">
+      <img src="input/session_01/01_images/logo_readr.svg" alt="CAPTION" style="width:100%">
+    </a>
+  </div>
+  <div class="column">
+    <a href="https://readxl.tidyverse.org">
+      <img src="input/session_01/01_images/logo_readxl.svg" alt="Snow" style="width:100%">
+    </a>
+  </div>
+  <div class="column">
+    <a href="https://haven.tidyverse.org">
+      <img src="input/session_01/01_images/logo_haven.svg" alt="Forest" style="width:100%">
+    </a>
+  </div>
+  <div class="column">
+    <a href="https://googledrive.tidyverse.org">
+      <img src="input/session_01/01_images/logo_googledrive.svg" alt="Mountains" style="width:100%">
+    </a>
+  </div>
+</div>
+<p class="caption">Click on the images to get more information</p>
+'))
+```
+
+There are a handful of other packages that are not in the tidyverse, but are tidyverse-adjacent. They are very useful for importing data from other sources:
+
+* [jsonlite](https://github.com/jeroen/jsonlite#jsonlite) for JSON.
+* [xml2](https://github.com/r-lib/xml2) for XML.
+* [httr](https://github.com/r-lib/httr) for web APIs.
+* [rvest](https://github.com/hadley/rvest) for web scraping.
+* [DBI](https://github.com/rstats-db/DBI) for relational databases. To connect to a specific database, you’ll need to pair DBI with a specific backend like RSQLite, RPostgres, or odbc. Learn more at [https://db.rstudio.com](https://db.rstudio.com).
+
+
+<font size="5"><b>Example</b></font>
+```{r, eval=F}
+# Loading data (can also be achieved by clicking on "Import Dataset > From Text (readr)" in the upper right corner)
+library(readr)
+dataset_tbl <- read_csv("data.csv"))
+
+# Writing data
+write_csv(dataset_tbl, "data.csv")
+
+# Saving in csv (or tsv) does mean you loose information about the type of data in particular columns. You can avoid this by using  write_rds() and read_rds() to read/write objects in R binary rds format.
+write_rds(dataset_tbl, "data.rds")
+```
+
+
+
+## Pipes
 <a href="https://magrittr.tidyverse.org">
 <img src="input/session_01/01_images/logo_pipe.svg" align="right" style="width:250px; height:250px; padding:10px"/>
 </a>
-You will be using the “pipe”-operator `%>%` throughout this class. The “pipe” is from the `magrittr` package. Read about using it <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html" target="_blank"><b>here</b></a>. It makes your code more readable by structuring sequences of data operations left-to-right (as opposed to from the inside and out). The pipe makes your code read more like a sentence, branching from left to right. Mathematically it can be written like the following:
+Pipes are a powerful tool for clearly expressing a sequence of multiple operations. You will be using the “pipe”-operator `%>%` throughout this class. The “pipe” is from the `magrittr` package. The point of the pipe is to help you write code in a way that is easier to read and understand. It makes your code more readable by structuring sequences of data operations left-to-right (as opposed to from the inside and out). The pipe makes your code read more like a sentence, branching from left to right. You can read it as a series of imperative statements: group, then summarise, then filter. As suggested by this reading, a good way to pronounce `%>%` when reading code is “then”. Mathematically it can be expressed like the following:
 
 * `x %>% f` is equivalent to `f(x)`
 * `x %>% f(y)` is equivalent to `f(x, y)`
@@ -42,11 +135,15 @@ library("magrittr")
 
 iris %>% head(n=3)
 ```
+<font size="5"><b>Example</b></font>
+When coupling several function calls with the pipe-operator, the benefit will become more apparent. Consider this pseudo example:
 
 ## Tibbles
 <a href="https://tibble.tidyverse.org/">
 <img src="input/session_01/01_images/logo_tibble.svg" align="right" style="width:250px; height:250px; padding:10px"/>
 </a>
+Throughout this class we work with “tibbles” instead of R’s traditional `data.frame`. Tibbles are data frames, but they tweak some older behaviours to make life a little easier. R is an old language, and some things that were useful 10 or 20 years ago now get in your way.
+In most places, the term tibble and data frame will be used interchangeably.
 
 * tibble is one of the unifying features of tidyverse,
 * it is a better data.frame realization,
@@ -83,38 +180,12 @@ vehicles %>% .[['dist']]
 vehicles %>% .[[2]]
 ```
 
-## Loading data with readr
-<a href="https://readr.tidyverse.org">
-<img src="input/session_01/01_images/logo_readr.svg" align="right" style="width:250px; height:250px; padding:10px"/>
-</a>
-In tidyverse you import data using readr package that provides a number of useful data import functions:
 
-read_csv() used to read comma-delimited files,
 
-The most commonly used read_csv() has some familiar arguments like:
-
-skip -- to specify the number of rows to skip (headers),
-col_names -- to supply a vector of column names,
-comment -- to specify what character designates a comment,
-na -- to specify how missing values are represented.
-
-```r
-# Loading data
-dataset_tbl <- read_csv("data.csv"))
-
-# Writing data
-write_csv(dataset_tbl, "data.csv")
-```
-
-But saving in csv (or tsv) does mean you loose information about the type of data in particular columns. You can avoid this by using:
-
-write_rds() and read_rds() to read/write objects in R binary rds format,
-
-## Reshaping your data with tidyr
+## **TIDY** - Reshaping your data with tidyr
 <a href="https://tidyr.tidyverse.org/">
 <img src="input/session_01/01_images/logo_tidyr.svg" align="right" style="width:250px; height:250px; padding:10px"/>
 </a>
-
 The Concept of Tidy Data
 
 * each and every observation is represented as exactly one row,
@@ -129,11 +200,10 @@ Usually data are untidy in only one way. However, if you are unlucky, they are r
 
 For the following example is the Diamonds Dataset used from the ggplot2 package.
 
-`gather`: Use, if some of your column names are actually values of a variable
+`gather()`: Use, if some of your column names are actually values of a variable
 
 ```{r, eval = TRUE, echo=FALSE}
-library(ggplot2)
-library(tidyr)
+library(tidyverse)
 diamonds2 <- readRDS("input/session_01/02_R/diamonds2.rds")
 ```
 
@@ -144,7 +214,7 @@ diamonds2 %>%
   gather(`2008`, `2009`, key = 'year', value = 'price')
 ```
 
-`spread`: Use, if some of your observations are scattered across many rows
+`spread()`: Use, if some of your observations are scattered across many rows
 ```r
 bijou3
 ```
@@ -154,15 +224,104 @@ bijou3 %>%
   head(n = 5)
 ```
 
-## Data Transformations with dplyr
+## **TRANSFORM** - Data Transformations with dplyr
 <a href="https://dplyr.tidyverse.org/">
 <img src="input/session_01/01_images/logo_dplyr.svg" align="right" style="width:250px; height:250px; padding:10px"/>
 </a>
+Often you’ll need to create some new variables or summaries, or maybe you just want to rename the variables or reorder the observations in order to make the data a little easier to work with. dplyr is a grammar of data manipulation, providing a consistent set of verbs that help you solve the most common data manipulation challenges. The following five key dplyr functions allow you to solve the vast majority of your data manipulation challenges:
 
-* `filter`
-* 
+* **`filter()`** picks cases based on their values. So it can be used for selecting the relevant rows.
+
+```{r}
+diamonds %>% 
+    filter(cut == 'Ideal' | cut == 'Premium', carat >= 0.23) %>% 
+    head(5)
+```
+---
+
+* **`arrange()`** changes the ordering of the rows
+
+```{r}
+diamonds %>% 
+  arrange(cut, carat, desc(price))
+```
+
+The NAs always end up at the end of the rearranged tibble.
+
+---
+
+* **`select()`** picks variables based on their names
+
+```{r}
+diamonds %>% 
+  select(color, clarity, x:z) %>% 
+  head(n = 5)
+```
+
+Exclusive select:
+
+```{r}
+diamonds %>% 
+  select(-(x:z)) %>% 
+  head(n = 5)
+```
 
 
+Select helpers
+
+use everything() to bring some columns to the front:
+
+bijou %>% select(x:z, everything()) %>% head(n = 5)
+
+---
+
+* **`rename()`**
+```{r}
+diamonds %>% 
+  rename(var_x = x) %>% 
+  head(n = 5)
+```
+
+---
+
+* **`mutate()`** adds new variables that are functions of existing variables. **`transmute()`**
+```{r}
+diamonds %>% 
+  mutate(p = x + z, q = p + y) %>% 
+  select(-(depth:price)) %>% 
+  head(n = 5)
+```
+
+
+```{r}
+diamonds %>% 
+  transmute(carat, cut, sum = x + y + z) %>% 
+  head(n = 5)
+```
+
+---
+
+* **`group_by()`** and **`summarize()`** reduces multiple values down to a single summary
+```{r}
+diamonds %>% 
+  group_by(cut) %>% 
+  summarize(max_price = max(price),
+            mean_price = mean(price),
+            min_price = min(price))
+```
+
+## Lubridate
+<a href="https://lubridate.tidyverse.org/">
+<img src="input/session_01/01_images/logo_lubridate.svg" align="right" style="width:250px; height:250px; padding:10px"/>
+</a>
+
+## Stringr
+<a href="https://stringr.tidyverse.org">
+<img src="input/session_01/01_images/logo_stringr.svg" align="right" style="width:250px; height:250px; padding:10px"/>
+</a>
+
+## Purrr
+needed here?
 
 
 <!-- +++++++++++ -->
