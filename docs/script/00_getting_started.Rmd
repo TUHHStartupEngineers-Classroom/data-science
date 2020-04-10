@@ -172,8 +172,8 @@ Essential basics. The rest will be explained with the business examples
 
 <table>
   <tr>
-    <td><img src='input/00_getting_started/01_images/logo_github.svg' style="height:100px" align="left" valign="middle" hspace="50px"></td>
-    <td><img src='input/00_getting_started/01_images/logo_github_desktop.svg' style="height:100px" align="right" valign="middle" hspace="50px"></td>
+    <td><img src='input/00_getting_started/01_images/logo_github.svg' style="height:100px" align="left"></td>
+    <td><img src='input/00_getting_started/01_images/logo_github_desktop.svg' style="height:100px" align="right"></td>
   </tr>
 </table>
 

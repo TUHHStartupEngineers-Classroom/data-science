@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.6 Data Transformations with dplyr | 01_session_01.utf8</title>
+  <title>2.3 Import | 01_session_01.utf8</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.6 Data Transformations with dplyr | 01_session_01.utf8" />
+  <meta property="og:title" content="2.3 Import | 01_session_01.utf8" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.6 Data Transformations with dplyr | 01_session_01.utf8" />
+  <meta name="twitter:title" content="2.3 Import | 01_session_01.utf8" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="reshaping-your-data-with-tidyr.html"/>
-<link rel="next" href="project-01-sales-analysis.html"/>
+<link rel="prev" href="project-setup.html"/>
+<link rel="next" href="session-01-challenge.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -855,51 +855,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="part"><span><b>I Session 1</b></span></li>
-<li class="chapter" data-level="1" data-path="session-01-01.html"><a href="session-01-01.html"><i class="fa fa-check"></i><b>1</b> Getting started</a><ul>
-<li class="chapter" data-level="1.1" data-path="r-rstudio.html"><a href="r-rstudio.html"><i class="fa fa-check"></i><b>1.1</b> R &amp; RStudio</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="r-rstudio.html"><a href="r-rstudio.html#installing-r-rstudio-ide"><i class="fa fa-check"></i><b>1.1.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</a></li>
-<li class="chapter" data-level="1.1.2" data-path="r-rstudio.html"><a href="r-rstudio.html#running-r-code-stolen-from-r4ds"><i class="fa fa-check"></i><b>1.1.2</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 192 512"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg> Running R code (stolen from R4DS)</a></li>
-<li class="chapter" data-level="1.1.3" data-path="r-rstudio.html"><a href="r-rstudio.html#exercise-1"><i class="fa fa-check"></i><b>1.1.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 1</a></li>
-<li class="chapter" data-level="1.1.4" data-path="r-rstudio.html"><a href="r-rstudio.html#exercise-2"><i class="fa fa-check"></i><b>1.1.4</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 2</a></li>
-<li class="chapter" data-level="1.1.5" data-path="r-rstudio.html"><a href="r-rstudio.html#working-with-rstudio-setup-customization"><i class="fa fa-check"></i><b>1.1.5</b> Working with RStudio / Setup &amp; Customization</a></li>
+<li class="chapter" data-level="1" data-path="session-01-01.html"><a href="session-01-01.html"><i class="fa fa-check"></i><b>1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 581 512"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> Introduction to the tidyverse</a><ul>
+<li class="chapter" data-level="1.1" data-path="import-loading-data-with-readr-readxl.html"><a href="import-loading-data-with-readr-readxl.html"><i class="fa fa-check"></i><b>1.1</b> <strong>IMPORT</strong> - Loading data with readr / readxl</a></li>
+<li class="chapter" data-level="1.2" data-path="pipes.html"><a href="pipes.html"><i class="fa fa-check"></i><b>1.2</b> Pipes</a></li>
+<li class="chapter" data-level="1.3" data-path="tibbles.html"><a href="tibbles.html"><i class="fa fa-check"></i><b>1.3</b> Tibbles</a></li>
+<li class="chapter" data-level="1.4" data-path="tidy-reshaping-your-data-with-tidyr.html"><a href="tidy-reshaping-your-data-with-tidyr.html"><i class="fa fa-check"></i><b>1.4</b> <strong>TIDY</strong> - Reshaping your data with tidyr</a></li>
+<li class="chapter" data-level="1.5" data-path="transform-data-transformations-with-dplyr.html"><a href="transform-data-transformations-with-dplyr.html"><i class="fa fa-check"></i><b>1.5</b> <strong>TRANSFORM</strong> - Data Transformations with dplyr</a></li>
+<li class="chapter" data-level="1.6" data-path="lubridate.html"><a href="lubridate.html"><i class="fa fa-check"></i><b>1.6</b> Lubridate</a></li>
+<li class="chapter" data-level="1.7" data-path="stringr.html"><a href="stringr.html"><i class="fa fa-check"></i><b>1.7</b> Stringr</a></li>
+<li class="chapter" data-level="1.8" data-path="purrr.html"><a href="purrr.html"><i class="fa fa-check"></i><b>1.8</b> Purrr</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>1.2</b> GitHub</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="github.html"><a href="github.html#create-a-free-github-account."><i class="fa fa-check"></i><b>1.2.1</b> Create a free github account.</a></li>
-<li class="chapter" data-level="1.2.2" data-path="github.html"><a href="github.html#download-and-install-github-desktop"><i class="fa fa-check"></i><b>1.2.2</b> Download and install github desktop</a></li>
-<li class="chapter" data-level="1.2.3" data-path="github.html"><a href="github.html#create-your-own-labjournal"><i class="fa fa-check"></i><b>1.2.3</b> Create your own LabJournal</a></li>
+<li class="chapter" data-level="2" data-path="business-case-sales-analysis.html"><a href="business-case-sales-analysis.html"><i class="fa fa-check"></i><b>2</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg> Business case - Sales Analysis</a><ul>
+<li class="chapter" data-level="2.1" data-path="theory-background.html"><a href="theory-background.html"><i class="fa fa-check"></i><b>2.1</b> Theory / Background</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="theory-background.html"><a href="theory-background.html#transactional-data"><i class="fa fa-check"></i><b>2.1.1</b> Transactional data</a></li>
+<li class="chapter" data-level="2.1.2" data-path="theory-background.html"><a href="theory-background.html#data-schema"><i class="fa fa-check"></i><b>2.1.2</b> data schema</a></li>
 </ul></li>
+<li class="chapter" data-level="2.2" data-path="project-setup.html"><a href="project-setup.html"><i class="fa fa-check"></i><b>2.2</b> Project Setup</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="project-setup.html"><a href="project-setup.html#project-structure"><i class="fa fa-check"></i><b>2.2.1</b> Project structure</a></li>
+<li class="chapter" data-level="2.2.2" data-path="project-setup.html"><a href="project-setup.html#installing-packages"><i class="fa fa-check"></i><b>2.2.2</b> Installing Packages</a></li>
+<li class="chapter" data-level="2.2.3" data-path="project-setup.html"><a href="project-setup.html#checkpoint"><i class="fa fa-check"></i><b>2.2.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="introduction-to-the-tidyverse.html"><a href="introduction-to-the-tidyverse.html"><i class="fa fa-check"></i><b>2</b> Introduction to the tidyverse</a><ul>
-<li class="chapter" data-level="2.1" data-path="overveiw-cheatsheets.html"><a href="overveiw-cheatsheets.html"><i class="fa fa-check"></i><b>2.1</b> Overveiw / Cheatsheets</a></li>
-<li class="chapter" data-level="2.2" data-path="introduction-to-pipes.html"><a href="introduction-to-pipes.html"><i class="fa fa-check"></i><b>2.2</b> Introduction to Pipes</a></li>
-<li class="chapter" data-level="2.3" data-path="tibbles.html"><a href="tibbles.html"><i class="fa fa-check"></i><b>2.3</b> Tibbles</a></li>
-<li class="chapter" data-level="2.4" data-path="loading-data-with-readr.html"><a href="loading-data-with-readr.html"><i class="fa fa-check"></i><b>2.4</b> Loading data with readr</a></li>
-<li class="chapter" data-level="2.5" data-path="reshaping-your-data-with-tidyr.html"><a href="reshaping-your-data-with-tidyr.html"><i class="fa fa-check"></i><b>2.5</b> Reshaping your data with tidyr</a></li>
-<li class="chapter" data-level="2.6" data-path="data-transformations-with-dplyr.html"><a href="data-transformations-with-dplyr.html"><i class="fa fa-check"></i><b>2.6</b> Data Transformations with dplyr</a></li>
+<li class="chapter" data-level="2.3" data-path="import.html"><a href="import.html"><i class="fa fa-check"></i><b>2.3</b> Import</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="import.html"><a href="import.html#setup-template-file"><i class="fa fa-check"></i><b>2.3.1</b> Setup (Template File)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="import.html"><a href="import.html#import-1"><i class="fa fa-check"></i><b>2.3.2</b> Import</a></li>
+<li class="chapter" data-level="2.3.3" data-path="import.html"><a href="import.html#checkpoint-1"><i class="fa fa-check"></i><b>2.3.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
+<li class="chapter" data-level="2.3.4" data-path="import.html"><a href="import.html#examine"><i class="fa fa-check"></i><b>2.3.4</b> Examine</a></li>
+<li class="chapter" data-level="2.3.5" data-path="import.html"><a href="import.html#cleaning-and-joining-data"><i class="fa fa-check"></i><b>2.3.5</b> Cleaning and joining data</a></li>
+<li class="chapter" data-level="2.3.6" data-path="import.html"><a href="import.html#checkpoint-2"><i class="fa fa-check"></i><b>2.3.6</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
+<li class="chapter" data-level="2.3.7" data-path="import.html"><a href="import.html#visualizing-data-with-ggplot2"><i class="fa fa-check"></i><b>2.3.7</b> Visualizing data with ggplot2</a></li>
+<li class="chapter" data-level="2.3.8" data-path="import.html"><a href="import.html#checkpoint-3"><i class="fa fa-check"></i><b>2.3.8</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="project-01-sales-analysis.html"><a href="project-01-sales-analysis.html"><i class="fa fa-check"></i><b>3</b> <strong>Project 01 - Sales Analysis</strong></a><ul>
-<li class="chapter" data-level="3.1" data-path="theory-background.html"><a href="theory-background.html"><i class="fa fa-check"></i><b>3.1</b> Theory / Background</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="theory-background.html"><a href="theory-background.html#transactional-data"><i class="fa fa-check"></i><b>3.1.1</b> Transactional data</a></li>
-<li class="chapter" data-level="3.1.2" data-path="theory-background.html"><a href="theory-background.html#data-schema"><i class="fa fa-check"></i><b>3.1.2</b> data schema</a></li>
+<li class="chapter" data-level="2.4" data-path="session-01-challenge.html"><a href="session-01-challenge.html"><i class="fa fa-check"></i><b>2.4</b> Session 01 Challenge</a></li>
+<li class="chapter" data-level="2.5" data-path="session-01-solution.html"><a href="session-01-solution.html"><i class="fa fa-check"></i><b>2.5</b> Session 01 Solution</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="project-setup.html"><a href="project-setup.html"><i class="fa fa-check"></i><b>3.2</b> Project Setup</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="project-setup.html"><a href="project-setup.html#project-structure"><i class="fa fa-check"></i><b>3.2.1</b> Project structure</a></li>
-<li class="chapter" data-level="3.2.2" data-path="project-setup.html"><a href="project-setup.html#installing-packages"><i class="fa fa-check"></i><b>3.2.2</b> Installing Packages</a></li>
-<li class="chapter" data-level="3.2.3" data-path="project-setup.html"><a href="project-setup.html#checkpoint"><i class="fa fa-check"></i><b>3.2.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="import.html"><a href="import.html"><i class="fa fa-check"></i><b>3.3</b> Import</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="import.html"><a href="import.html#setup-template-file"><i class="fa fa-check"></i><b>3.3.1</b> Setup (Template File)</a></li>
-<li class="chapter" data-level="3.3.2" data-path="import.html"><a href="import.html#import-1"><i class="fa fa-check"></i><b>3.3.2</b> Import</a></li>
-<li class="chapter" data-level="3.3.3" data-path="import.html"><a href="import.html#checkpoint-1"><i class="fa fa-check"></i><b>3.3.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-<li class="chapter" data-level="3.3.4" data-path="import.html"><a href="import.html#examine"><i class="fa fa-check"></i><b>3.3.4</b> Examine</a></li>
-<li class="chapter" data-level="3.3.5" data-path="import.html"><a href="import.html#cleaning-and-joining-data"><i class="fa fa-check"></i><b>3.3.5</b> Cleaning and joining data</a></li>
-<li class="chapter" data-level="3.3.6" data-path="import.html"><a href="import.html#checkpoint-2"><i class="fa fa-check"></i><b>3.3.6</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-<li class="chapter" data-level="3.3.7" data-path="import.html"><a href="import.html#visualizing-data-with-ggplot2"><i class="fa fa-check"></i><b>3.3.7</b> Visualizing data with ggplot2</a></li>
-<li class="chapter" data-level="3.3.8" data-path="import.html"><a href="import.html#checkpoint-3"><i class="fa fa-check"></i><b>3.3.8</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="session-01-challenge.html"><a href="session-01-challenge.html"><i class="fa fa-check"></i><b>3.4</b> Session 01 Challenge</a></li>
-<li class="chapter" data-level="3.5" data-path="session-01-solution.html"><a href="session-01-solution.html"><i class="fa fa-check"></i><b>3.5</b> Session 01 Solution</a></li>
-</ul></li>
+<li class="chapter" data-level="3" data-path="challenge.html"><a href="challenge.html"><i class="fa fa-check"></i><b>3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> Challenge</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -920,27 +909,176 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="data-transformations-with-dplyr" class="section level2">
-<h2><span class="header-section-number">2.6</span> Data Transformations with dplyr</h2>
-<p><a href="https://dplyr.tidyverse.org/">
-<img src="input/session_01/01_images/logo_dplyr.svg" align="right" style="width:250px; height:250px; padding:10px"/>
-</a></p>
-<ul>
-<li><code>filter</code></li>
-<li></li>
-</ul>
-<!-- +++++++++++ -->
-<!-- 1st Project -->
-<!-- +++++++++++ -->
+<div id="import" class="section level2">
+<h2><span class="header-section-number">2.3</span> Import</h2>
+<div id="setup-template-file" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Setup (Template File)</h3>
+<p>Download the template we will be using for the analysis</p>
+<div class="rmdblankbox">
+<p>
+Download
+</p>
 </div>
-<!-- </div> -->
+<div class="rmdattachment">
+<p>
+<strong><a href="https://github.com/">s01-02_sales_analysis.R</a></strong>
+</p>
+</div>
+<p>The content of the file looks like this:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="co"># datascience at NIT ------------------------------------------------------</span></a>
+<a class="sourceLine" id="cb32-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb32-3" data-line-number="3"><span class="co"># 1.0 Load libraries ----</span></a>
+<a class="sourceLine" id="cb32-4" data-line-number="4"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb32-5" data-line-number="5"><span class="kw">library</span>(lubridate)</a>
+<a class="sourceLine" id="cb32-6" data-line-number="6"><span class="kw">library</span>(tidyquant)</a>
+<a class="sourceLine" id="cb32-7" data-line-number="7"><span class="kw">library</span>(readxl)</a>
+<a class="sourceLine" id="cb32-8" data-line-number="8"><span class="kw">library</span>(writexl)</a>
+<a class="sourceLine" id="cb32-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb32-10" data-line-number="10"><span class="co"># 2.0 Importing Files ----</span></a>
+<a class="sourceLine" id="cb32-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb32-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb32-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb32-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb32-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb32-16" data-line-number="16"><span class="co"># 3.0 Examining Data ----</span></a>
+<a class="sourceLine" id="cb32-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb32-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb32-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb32-20" data-line-number="20"></a>
+<a class="sourceLine" id="cb32-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb32-22" data-line-number="22"><span class="co"># 4.0 Joining Data ----</span></a>
+<a class="sourceLine" id="cb32-23" data-line-number="23"></a>
+<a class="sourceLine" id="cb32-24" data-line-number="24"></a>
+<a class="sourceLine" id="cb32-25" data-line-number="25"></a>
+<a class="sourceLine" id="cb32-26" data-line-number="26"></a>
+<a class="sourceLine" id="cb32-27" data-line-number="27"><span class="co"># 5.0 Wrangling Data ----</span></a>
+<a class="sourceLine" id="cb32-28" data-line-number="28"></a>
+<a class="sourceLine" id="cb32-29" data-line-number="29"></a>
+<a class="sourceLine" id="cb32-30" data-line-number="30"></a>
+<a class="sourceLine" id="cb32-31" data-line-number="31"></a>
+<a class="sourceLine" id="cb32-32" data-line-number="32"></a>
+<a class="sourceLine" id="cb32-33" data-line-number="33"><span class="co"># 6.0 Business Insights ----</span></a>
+<a class="sourceLine" id="cb32-34" data-line-number="34"></a>
+<a class="sourceLine" id="cb32-35" data-line-number="35"></a>
+<a class="sourceLine" id="cb32-36" data-line-number="36"><span class="co"># 6.1 Sales by Year ----</span></a>
+<a class="sourceLine" id="cb32-37" data-line-number="37"></a>
+<a class="sourceLine" id="cb32-38" data-line-number="38"><span class="co"># Step 1 - Manipulate</span></a>
+<a class="sourceLine" id="cb32-39" data-line-number="39"></a>
+<a class="sourceLine" id="cb32-40" data-line-number="40"></a>
+<a class="sourceLine" id="cb32-41" data-line-number="41"></a>
+<a class="sourceLine" id="cb32-42" data-line-number="42"></a>
+<a class="sourceLine" id="cb32-43" data-line-number="43"><span class="co"># Step 2 - Visualize</span></a>
+<a class="sourceLine" id="cb32-44" data-line-number="44"></a>
+<a class="sourceLine" id="cb32-45" data-line-number="45"></a>
+<a class="sourceLine" id="cb32-46" data-line-number="46"></a>
+<a class="sourceLine" id="cb32-47" data-line-number="47"><span class="co"># 6.2 Sales by Year and Category 2 ----</span></a>
+<a class="sourceLine" id="cb32-48" data-line-number="48"></a>
+<a class="sourceLine" id="cb32-49" data-line-number="49"></a>
+<a class="sourceLine" id="cb32-50" data-line-number="50"><span class="co"># Step 1 - Manipulate</span></a>
+<a class="sourceLine" id="cb32-51" data-line-number="51"></a>
+<a class="sourceLine" id="cb32-52" data-line-number="52"></a>
+<a class="sourceLine" id="cb32-53" data-line-number="53"></a>
+<a class="sourceLine" id="cb32-54" data-line-number="54"></a>
+<a class="sourceLine" id="cb32-55" data-line-number="55"><span class="co"># Step 2 - Visualize</span></a>
+<a class="sourceLine" id="cb32-56" data-line-number="56"></a>
+<a class="sourceLine" id="cb32-57" data-line-number="57"></a>
+<a class="sourceLine" id="cb32-58" data-line-number="58"></a>
+<a class="sourceLine" id="cb32-59" data-line-number="59"></a>
+<a class="sourceLine" id="cb32-60" data-line-number="60"><span class="co"># 7.0 Writing Files ----</span></a>
+<a class="sourceLine" id="cb32-61" data-line-number="61"></a>
+<a class="sourceLine" id="cb32-62" data-line-number="62"></a>
+<a class="sourceLine" id="cb32-63" data-line-number="63"><span class="co"># 7.1 Excel ----</span></a>
+<a class="sourceLine" id="cb32-64" data-line-number="64"></a>
+<a class="sourceLine" id="cb32-65" data-line-number="65"></a>
+<a class="sourceLine" id="cb32-66" data-line-number="66"><span class="co"># 7.2 CSV ----</span></a>
+<a class="sourceLine" id="cb32-67" data-line-number="67"></a>
+<a class="sourceLine" id="cb32-68" data-line-number="68"></a>
+<a class="sourceLine" id="cb32-69" data-line-number="69"><span class="co"># 7.3 RDS ----</span></a></code></pre></div>
+<p>Add some hints (toc, environment, …)</p>
+</div>
+<div id="import-1" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Import</h3>
+<div id="flatfiles" class="section level4">
+<h4><span class="header-section-number">2.3.2.1</span> flatfiles</h4>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw">library</span>(readr) </a>
+<a class="sourceLine" id="cb33-2" data-line-number="2"><span class="kw">library</span>(readxl)</a>
+<a class="sourceLine" id="cb33-3" data-line-number="3"><span class="kw">library</span>(odbc)</a>
+<a class="sourceLine" id="cb33-4" data-line-number="4"><span class="kw">library</span>(RSQLite)</a></code></pre></div>
+<p>importing excel files: readr for our csv files
+for xlsx files read_excel()</p>
+<div class="rmdblankbox">
+<p>
+Pro Tip
+</p>
+</div>
+<div class="rmdprotip">
+<p>
+Explain the ? in front of functions (contr + enter). Use ?function_name to get the help documentation on a function. Usage and arguments section.
+</p>
+</div>
+<div class="rmdblankbox">
+<p>
+Pro Tip
+</p>
+</div>
+<div class="rmdprotip">
+<p>
+Use tab complete to quickly complete function names as well as file pathes
+</p>
+</div>
+<p>Expplaing assignment
+Explaing tibble ( special structure that stores data)
+Environment variable now, can be viewd by clicking on it</p>
+<p>Excel files and local databases</p>
+<p>data.frames, lists, vectors, …
+data types, basics</p>
+</div>
+<div id="web-scraping" class="section level4">
+<h4><span class="header-section-number">2.3.2.2</span> web scraping</h4>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="kw">library</span>(httr)</a>
+<a class="sourceLine" id="cb34-2" data-line-number="2"><span class="kw">library</span>(rvest)</a>
+<a class="sourceLine" id="cb34-3" data-line-number="3"><span class="kw">library</span>(RSelenium)</a></code></pre></div>
+<p>Screen scraping and jsons via API</p>
+</div>
+</div>
+<div id="checkpoint-1" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</h3>
+</div>
+<div id="examine" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> Examine</h3>
+<p>regular print (output tibble to console)
+open data window (view() function), filtering etc.
+glimpse() function (prints it out in a transpose fashoin)</p>
+<p>–&gt; Objective: Combine the three tibbles into one that can be analyzed</p>
+</div>
+<div id="cleaning-and-joining-data" class="section level3">
+<h3><span class="header-section-number">2.3.5</span> Cleaning and joining data</h3>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">library</span>(dplyr)</a>
+<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="kw">library</span>(tidyr)</a>
+<a class="sourceLine" id="cb35-3" data-line-number="3"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
+<p>left_join, rbind, filtering, naming, pipe operator, …
+group_by, summarize</p>
+</div>
+<div id="checkpoint-2" class="section level3">
+<h3><span class="header-section-number">2.3.6</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</h3>
+</div>
+<div id="visualizing-data-with-ggplot2" class="section level3">
+<h3><span class="header-section-number">2.3.7</span> Visualizing data with ggplot2</h3>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a></code></pre></div>
+<p>different geometries
+saving files</p>
+</div>
+<div id="checkpoint-3" class="section level3">
+<h3><span class="header-section-number">2.3.8</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</h3>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="reshaping-your-data-with-tidyr.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="project-01-sales-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="project-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="session-01-challenge.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

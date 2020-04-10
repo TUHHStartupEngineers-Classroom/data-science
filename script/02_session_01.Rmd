@@ -1,17 +1,33 @@
 # (PART) Session 2 {-}
 
-```{r sakila, echo=FALSE, fig.cap='sakila db', out.width='100%'}
-knitr::include_graphics('input/session_02/01_images/sakila_db.png', dpi = NA)
+<!-- Load gloabal packages -->
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
 ```
+#  `r fa("r-project", fill = "black")` Data visualization with ggplot {#session_01_01}
+<a href="https://ggplot2.tidyverse.org">
+<img src="input/session_02/01_images/logo_ggplot2.svg" align="right" style="width:250px; height:250px; padding:10px"/>
+</a>
+Every ggplot2 plot has three key components:
 
+1. data,
+2. A set of aesthetic mappings between variables in the data and visual properties, and
+3. At least one layer which describes how to render each observation. Layers are usually created with a geom function.
+
+## **VISUALIZE** - Introduction To Visualization In ggplot2
+
+
+## Adding Complexity To Visualizations
+
+## Customizing Your Plots
 <!-- set global eval FALSE so that all chunks will not be evaluated  -->
 
 <!-- Load package to display fontawesome icons -->
 
 
-# Wrangling data (PART 2)
+#  `r fa("user-tie", fill = "black")` Business case - Sales Analysis
 
-Continuing **session 01**. More advanced.
+#  `r fa("laptop-code", fill = "black")` Challenge
 
 ## Content 1
 ##  `r fa("flag-checkered", fill = "black")` Checkpoint
@@ -19,15 +35,15 @@ Continuing **session 01**. More advanced.
 ## Content 2
 ##  `r fa("flag-checkered", fill = "black")` Checkpoint
 
-# Session 02 - Challenge
-# Session 02 - Solution
+## Session 02 - Challenge
+## Session 02 - Solution
 
 ```
 # # Challenge Summary
 # 
 # This is a short challenge to begin applying what you are learning to the problem at hand. You will go through a series of questions related to the course project goals: 
 #   
-#   1. Coming up with a new product idea, and 
+# 1. Coming up with a new product idea, and 
 # 
 # 2. Segmenting the customer-base
 # 
@@ -242,3 +258,6 @@ Continuing **session 01**. More advanced.
 
 
 
+```{r sakila, echo=FALSE, fig.cap='sakila db', out.width='100%'}
+knitr::include_graphics('input/session_02/01_images/sakila_db.png', dpi = NA)
+```
