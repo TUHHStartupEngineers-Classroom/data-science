@@ -32,18 +32,19 @@ section_divs: yes
 
 ### *Module from our certificate program* {style="padding-top: 0px;"}
 
+#### Overview
+
 Data Science is the science of extracting knowledge and information from data and requires competencies in both statistical and computer-based data analysis. This module is part of our complementary studies which are supposed to familiarize students with the entrepreneurial challenges of the future and expand their knowledge on important aspects of technology management.
 
 This is a class for programming with R. It will teach you how to program in R, with hands-on examples. I wrote it for non-programmers to provide a friendly introduction to the R language. You’ll learn how to load data, assemble and disassemble data objects, navigate R’s environment system, write your own functions, and use all of R’s programming tools. Throughout the book, you’ll use your newfound skills to solve practical data science problems.
 
 
+#### Who should take this class?
 
-<div id="commento"></div>
-<script src="https://arcane-scrubland-82154.herokuapp.com/js/commento.js"></script>
+Students with a strong interest and motivation in acquiring the skills required for mastering the computational aspects of modern business analytics. The class is mainly targeting ...  
 
 
-
-### Instructor: 
+#### Instructor: 
 
 * Prof. Christoph Ihl [(✉ christoph.ihl@tuhh.de)](mailto:christoph.ihl@tuhh.de)
 * Joschka Schwarz [(✉ joschka.schwarz@tuhh.de)](mailto:joschka.schwarz@tuhh.de)

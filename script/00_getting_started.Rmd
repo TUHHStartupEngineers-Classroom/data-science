@@ -1,0 +1,221 @@
+# (PART) Getting Started {-}
+
+<!-- Load gloabal packages -->
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+<!-- ++++++++++++++++++++++++++++++ -->
+<!-- Chapter: Install R and RStudio -->
+<!-- ++++++++++++++++++++++++++++++ -->
+# R & RStudio {#getting_started}
+<!-- Logos of R and R-Studio -->
+<table>
+  <tr>
+    <td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px" align="left" valign="middle" hspace="50px"></td>
+    <td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px" align="right" valign="middle" hspace="50px"></td>
+  </tr>
+</table>
+
+**On the following sites you'll find information about how to install the language R and the IDE RStudio.**
+
+
+##  `r fa("download", fill = "black")` Installing R & RStudio IDE
+### Interactively
+
+Go to the following link and follow the instructions to install R and the IDE RStudio
+
+```{block, type='rmdblankbox'}
+Interactive Shinyapp
+```
+```{block, type='rmdshiny'}
+<a href="https://jwarz.shinyapps.io/learnR/" target="_blank"><b>Install R & RStudio IDE</b></a>
+```
+
+
+### Manually
+
+**Video instructions to install RStudio (Download link below)**
+
+<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516510?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[https://cloud.r-project.org](https://cloud.r-project.org)**
+```
+
+***
+
+**Video instructions to install RStudio (Download link below)**
+
+<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516968?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[https://rstudio.com/products/rstudio/download/](https://rstudio.com/products/rstudio/download/)**
+```
+
+***
+
+**Video instructions to install R packages**
+
+<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516241?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+Installing Packages
+
+```r
+# install package from CRAN
+install.packages("dplyr")   
+```
+Loading packages
+
+```r
+# load the package to use in the current R session
+library("packagename")         
+
+# use a particular function within a package without loading the package
+packagename::functionname   
+```
+<!-- ++++++++++++++++++++++++++++++++++++ -->
+<!-- Conventions about R Code in the book -->
+<!-- ++++++++++++++++++++++++++++++++++++ -->
+##  `r fa("info", fill = "black")` Running R code (stolen from R4DS)
+The previous section showed you a couple of examples of running R code. Code in the book looks like this:
+
+```
+1 + 2
+## [1] 3
+```
+
+If you run the same code in your local console, it will look like this:
+``` 
+> 1 + 2
+[1] 3
+```
+
+There are two main differences. In your console, you type after the `>`, called the __prompt__; we don't show the prompt in the book. In the book, output is commented out with `#>`; in your console it appears directly after your code. These two differences mean that if you're working with an electronic version of the book, you can easily copy code out of the book and into the console.
+Throughout the book we use a consistent set of conventions to refer to code:
+* Functions are in a code font and followed by parentheses, like `sum()`, 
+  or `mean()`.
+* Other R objects (like data or function arguments) are in a code font,
+  without parentheses, like `flights` or `x`.
+  
+* If we want to make it clear what package an object comes from, we'll use
+  the package name followed by two colons, like `dplyr::mutate()`, or   
+  `nycflights13::flights`. This is also valid R code.
+
+
+<!-- +++++++++++++ -->
+<!-- Example tasks -->
+<!-- +++++++++++++ -->
+##  `r fa("tasks", fill = "black")` Exercise 1
+
+1. Identify what working directory you are working out of.
+2. Create a folder on your computer titled `datascience`. Within R, set your working directory to this folder.
+
+### Solution {-}
+
+1. Identify what working directory you are working out of.
+
+```r
+getwd()
+#> [1] "/Users/j.schwarz/NIT/"
+```
+
+2. Create a folder on your computer titled `datascience`. Within R, set your working directory to this folder.
+```r
+setwd("/Users/j.schwarz/NIT/datascience")
+```
+
+##  `r fa("tasks", fill = "black")` Exercise 2
+
+`dplyr` is an extremely popular package for common data transformation activities and is available from CRAN.  Perform the following tasks:
+
+1. Install the `dplyr` package.
+2. Load the `dplyr` package.
+3. Access the help documentation for the `dplyr` package.
+4. Check out the vignette(s) for `dplyr`
+
+### Solution {-}
+
+1. Install the `tidyverse` package.
+
+```{r, eval = FALSE}
+install.packages("tidyverse")
+```
+
+2. Load the `tidyverse` package.
+```{r}
+library(tidyverse)
+```
+
+<!-- ++++++++ -->
+<!-- R basics -->
+<!-- ++++++++ -->
+## Working with RStudio / Setup & Customization
+
+Essential basics. The rest will be explained with the business examples 
+
+* never saving / loading .Rdata on exit / on startup (problem to recreate reproducible code)
+
+<!-- ++++++ -->
+<!-- GitHub -->
+<!-- ++++++ -->
+
+
+# GitHub & GitHub Desktop
+
+<table>
+  <tr>
+    <td><img src='input/00_getting_started/01_images/logo_github.svg' style="height:100px" align="left" valign="middle" hspace="50px"></td>
+    <td><img src='input/00_getting_started/01_images/logo_github_desktop.svg' style="height:100px" align="right" valign="middle" hspace="50px"></td>
+  </tr>
+</table>
+
+![](input/00_getting_started/01_images/logo_github.svg) ![](input/00_getting_started/01_images/logo_github_desktop.svg)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
+
+
+## Create a free github account.
+
+```{block, type='rmdblankbox'}
+Website
+```
+```{block, type='rmdwebsite'}
+**[https://github.com/](https://github.com/)**
+```
+
+## Download and install github desktop 
+
+```{block, type='rmdblankbox'}
+Download
+```
+```{block, type='rmdattachment'}
+**[https://desktop.github.com](https://desktop.github.com)**
+```
+
+```{r github-desktop, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/github_desktop.png', dpi = NA)
+```
+
+
+<!-- ++++++++++ -->
+<!-- LabJournal -->
+<!-- ++++++++++ -->
+## Create your own LabJournal
+
+Fork, or download ....
+
+<a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>
+
+
+<!-- +++++++++++ -->
+<!-- DS Overview -->
+<!-- +++++++++++ -->

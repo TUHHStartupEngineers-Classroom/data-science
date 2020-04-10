@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.5 Session 01 Solution | DATA SCIENCE Course script</title>
+  <title>4.5 Session 01 Solution | DATA SCIENCE Course script</title>
   <meta name="description" content="This is a minimal example the concepts covered in the class." />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.5 Session 01 Solution | DATA SCIENCE Course script" />
+  <meta property="og:title" content="4.5 Session 01 Solution | DATA SCIENCE Course script" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.5 Session 01 Solution | DATA SCIENCE Course script" />
+  <meta name="twitter:title" content="4.5 Session 01 Solution | DATA SCIENCE Course script" />
   
   <meta name="twitter:description" content="This is a minimal example the concepts covered in the class." />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Joschka Schwarz" />
 
 
-<meta name="date" content="2020-04-06" />
+<meta name="date" content="2020-04-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -858,97 +858,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i>Welcome</a></li>
 <li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="0.1" data-path="why-r.html"><a href="why-r.html"><i class="fa fa-check"></i><b>0.1</b> Why R?</a></li>
+<li class="chapter" data-level="0.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>0.1</b> Introduction to R</a><ul>
+<li class="chapter" data-level="0.1.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#what-is-r"><i class="fa fa-check"></i><b>0.1.1</b> What is R?</a></li>
+<li class="chapter" data-level="0.1.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#why-using-r"><i class="fa fa-check"></i><b>0.1.2</b> Why using R?</a></li>
+</ul></li>
 <li class="chapter" data-level="0.2" data-path="prerquisites.html"><a href="prerquisites.html"><i class="fa fa-check"></i><b>0.2</b> Prerquisites</a></li>
 <li class="chapter" data-level="0.3" data-path="conventions-used-in-this-book.html"><a href="conventions-used-in-this-book.html"><i class="fa fa-check"></i><b>0.3</b> Conventions Used in This Book</a></li>
 </ul></li>
-<li class="part"><span><b>I Session 1</b></span></li>
-<li class="chapter" data-level="1" data-path="session-01-01.html"><a href="session-01-01.html"><i class="fa fa-check"></i><b>1</b> Getting started</a><ul>
-<li class="chapter" data-level="1.1" data-path="r-rstudio.html"><a href="r-rstudio.html"><i class="fa fa-check"></i><b>1.1</b> R &amp; RStudio</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="r-rstudio.html"><a href="r-rstudio.html#installing-r-rstudio-ide"><i class="fa fa-check"></i><b>1.1.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</a></li>
-<li class="chapter" data-level="1.1.2" data-path="r-rstudio.html"><a href="r-rstudio.html#running-r-code-stolen-from-r4ds"><i class="fa fa-check"></i><b>1.1.2</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 192 512"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg> Running R code (stolen from R4DS)</a></li>
-<li class="chapter" data-level="1.1.3" data-path="r-rstudio.html"><a href="r-rstudio.html#exercise-1"><i class="fa fa-check"></i><b>1.1.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 1</a></li>
-<li class="chapter" data-level="1.1.4" data-path="r-rstudio.html"><a href="r-rstudio.html#exercise-2"><i class="fa fa-check"></i><b>1.1.4</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 2</a></li>
-<li class="chapter" data-level="1.1.5" data-path="r-rstudio.html"><a href="r-rstudio.html#working-with-rstudio-setup-customization"><i class="fa fa-check"></i><b>1.1.5</b> Working with RStudio / Setup &amp; Customization</a></li>
+<li class="part"><span><b>I Getting Started</b></span></li>
+<li class="chapter" data-level="1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>1</b> R &amp; RStudio</a><ul>
+<li class="chapter" data-level="1.1" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html"><i class="fa fa-check"></i><b>1.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html#interactively"><i class="fa fa-check"></i><b>1.1.1</b> Interactively</a></li>
+<li class="chapter" data-level="1.1.2" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html#manually"><i class="fa fa-check"></i><b>1.1.2</b> Manually</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>1.2</b> GitHub</a><ul>
-<li class="chapter" data-level="1.2.1" data-path="github.html"><a href="github.html#create-a-free-github-account."><i class="fa fa-check"></i><b>1.2.1</b> Create a free github account.</a></li>
-<li class="chapter" data-level="1.2.2" data-path="github.html"><a href="github.html#download-and-install-github-desktop"><i class="fa fa-check"></i><b>1.2.2</b> Download and install github desktop</a></li>
-<li class="chapter" data-level="1.2.3" data-path="github.html"><a href="github.html#create-your-own-labjournal"><i class="fa fa-check"></i><b>1.2.3</b> Create your own LabJournal</a></li>
+<li class="chapter" data-level="1.2" data-path="running-r-code-stolen-from-r4ds.html"><a href="running-r-code-stolen-from-r4ds.html"><i class="fa fa-check"></i><b>1.2</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 192 512"><path d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"/></svg> Running R code (stolen from R4DS)</a></li>
+<li class="chapter" data-level="1.3" data-path="exercise-1.html"><a href="exercise-1.html"><i class="fa fa-check"></i><b>1.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 1</a><ul>
+<li class="chapter" data-level="" data-path="exercise-1.html"><a href="exercise-1.html#solution"><i class="fa fa-check"></i>Solution</a></li>
 </ul></li>
+<li class="chapter" data-level="1.4" data-path="exercise-2.html"><a href="exercise-2.html"><i class="fa fa-check"></i><b>1.4</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 2</a><ul>
+<li class="chapter" data-level="" data-path="exercise-2.html"><a href="exercise-2.html#solution-1"><i class="fa fa-check"></i>Solution</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="data-science-workflow.html"><a href="data-science-workflow.html"><i class="fa fa-check"></i><b>2</b> Data Science Workflow</a><ul>
-<li class="chapter" data-level="2.1" data-path="cheatsheets.html"><a href="cheatsheets.html"><i class="fa fa-check"></i><b>2.1</b> Cheatsheets</a></li>
+<li class="chapter" data-level="1.5" data-path="working-with-rstudio-setup-customization.html"><a href="working-with-rstudio-setup-customization.html"><i class="fa fa-check"></i><b>1.5</b> Working with RStudio / Setup &amp; Customization</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="project-01-sales-analysis.html"><a href="project-01-sales-analysis.html"><i class="fa fa-check"></i><b>3</b> <strong>Project 01 - Sales Analysis</strong></a><ul>
-<li class="chapter" data-level="3.1" data-path="theory-background.html"><a href="theory-background.html"><i class="fa fa-check"></i><b>3.1</b> Theory / Background</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="theory-background.html"><a href="theory-background.html#transactional-data"><i class="fa fa-check"></i><b>3.1.1</b> Transactional data</a></li>
-<li class="chapter" data-level="3.1.2" data-path="theory-background.html"><a href="theory-background.html#data-schema"><i class="fa fa-check"></i><b>3.1.2</b> data schema</a></li>
+<li class="chapter" data-level="2" data-path="github-github-desktop.html"><a href="github-github-desktop.html"><i class="fa fa-check"></i><b>2</b> GitHub &amp; GitHub Desktop</a><ul>
+<li class="chapter" data-level="2.1" data-path="create-a-free-github-account-.html"><a href="create-a-free-github-account-.html"><i class="fa fa-check"></i><b>2.1</b> Create a free github account.</a></li>
+<li class="chapter" data-level="2.2" data-path="download-and-install-github-desktop.html"><a href="download-and-install-github-desktop.html"><i class="fa fa-check"></i><b>2.2</b> Download and install github desktop</a></li>
+<li class="chapter" data-level="2.3" data-path="create-your-own-labjournal.html"><a href="create-your-own-labjournal.html"><i class="fa fa-check"></i><b>2.3</b> Create your own LabJournal</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="project-setup.html"><a href="project-setup.html"><i class="fa fa-check"></i><b>3.2</b> Project Setup</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="project-setup.html"><a href="project-setup.html#project-structure"><i class="fa fa-check"></i><b>3.2.1</b> Project structure</a></li>
-<li class="chapter" data-level="3.2.2" data-path="project-setup.html"><a href="project-setup.html#installing-packages"><i class="fa fa-check"></i><b>3.2.2</b> Installing Packages</a></li>
-<li class="chapter" data-level="3.2.3" data-path="project-setup.html"><a href="project-setup.html#checkpoint"><i class="fa fa-check"></i><b>3.2.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="import.html"><a href="import.html"><i class="fa fa-check"></i><b>3.3</b> Import</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="import.html"><a href="import.html#setup-template-file"><i class="fa fa-check"></i><b>3.3.1</b> Setup (Template File)</a></li>
-<li class="chapter" data-level="3.3.2" data-path="import.html"><a href="import.html#import-1"><i class="fa fa-check"></i><b>3.3.2</b> Import</a></li>
-<li class="chapter" data-level="3.3.3" data-path="import.html"><a href="import.html#checkpoint-1"><i class="fa fa-check"></i><b>3.3.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-<li class="chapter" data-level="3.3.4" data-path="import.html"><a href="import.html#examine"><i class="fa fa-check"></i><b>3.3.4</b> Examine</a></li>
-<li class="chapter" data-level="3.3.5" data-path="import.html"><a href="import.html#cleaning-and-joining-data"><i class="fa fa-check"></i><b>3.3.5</b> Cleaning and joining data</a></li>
-<li class="chapter" data-level="3.3.6" data-path="import.html"><a href="import.html#checkpoint-2"><i class="fa fa-check"></i><b>3.3.6</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-<li class="chapter" data-level="3.3.7" data-path="import.html"><a href="import.html#visualizing-data-with-ggplot2"><i class="fa fa-check"></i><b>3.3.7</b> Visualizing data with ggplot2</a></li>
-<li class="chapter" data-level="3.3.8" data-path="import.html"><a href="import.html#checkpoint-3"><i class="fa fa-check"></i><b>3.3.8</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="session-01-challenge.html"><a href="session-01-challenge.html"><i class="fa fa-check"></i><b>3.4</b> Session 01 Challenge</a></li>
-<li class="chapter" data-level="3.5" data-path="session-01-solution.html"><a href="session-01-solution.html"><i class="fa fa-check"></i><b>3.5</b> Session 01 Solution</a></li>
-</ul></li>
-<li class="part"><span><b>II Session 2</b></span></li>
-<li class="chapter" data-level="4" data-path="wrangling-data-part-2.html"><a href="wrangling-data-part-2.html"><i class="fa fa-check"></i><b>4</b> Wrangling data (PART 2)</a><ul>
-<li class="chapter" data-level="4.1" data-path="content-1.html"><a href="content-1.html"><i class="fa fa-check"></i><b>4.1</b> Content 1</a></li>
-<li class="chapter" data-level="4.2" data-path="checkpoint-4.html"><a href="checkpoint-4.html"><i class="fa fa-check"></i><b>4.2</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-<li class="chapter" data-level="4.3" data-path="content-2.html"><a href="content-2.html"><i class="fa fa-check"></i><b>4.3</b> Content 2</a></li>
-<li class="chapter" data-level="4.4" data-path="checkpoint-5.html"><a href="checkpoint-5.html"><i class="fa fa-check"></i><b>4.4</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="session-02-challenge.html"><a href="session-02-challenge.html"><i class="fa fa-check"></i><b>5</b> Session 02 - Challenge</a></li>
-<li class="chapter" data-level="6" data-path="session-02-solution.html"><a href="session-02-solution.html"><i class="fa fa-check"></i><b>6</b> Session 02 - Solution</a></li>
-<li class="part"><span><b>III Session 3</b></span></li>
-<li class="chapter" data-level="7" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>7</b> Time Series</a></li>
-<li class="chapter" data-level="8" data-path="text-fundamentals.html"><a href="text-fundamentals.html"><i class="fa fa-check"></i><b>8</b> Text Fundamentals</a></li>
-<li class="chapter" data-level="9" data-path="categorical-data.html"><a href="categorical-data.html"><i class="fa fa-check"></i><b>9</b> Categorical data</a></li>
-<li class="chapter" data-level="10" data-path="functional-programming.html"><a href="functional-programming.html"><i class="fa fa-check"></i><b>10</b> Functional Programming</a><ul>
-<li class="chapter" data-level="10.1" data-path="exercise1.html"><a href="exercise1.html"><i class="fa fa-check"></i><b>10.1</b> Exercise1</a></li>
-<li class="chapter" data-level="10.2" data-path="solution-2.html"><a href="solution-2.html"><i class="fa fa-check"></i><b>10.2</b> Solution</a></li>
-<li class="chapter" data-level="10.3" data-path="exercise.html"><a href="exercise.html"><i class="fa fa-check"></i><b>10.3</b> Exercise</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="exercise.html"><a href="exercise.html#solution-3"><i class="fa fa-check"></i><b>10.3.1</b> Solution</a></li>
+<li class="part"><span><b>II Session 1</b></span></li>
+<li class="chapter" data-level="3" data-path="session-01-01.html"><a href="session-01-01.html"><i class="fa fa-check"></i><b>3</b> R basics</a><ul>
+<li class="chapter" data-level="3.1" data-path="introduction-to-the-tidyverse.html"><a href="introduction-to-the-tidyverse.html"><i class="fa fa-check"></i><b>3.1</b> Introduction to the tidyverse</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="introduction-to-the-tidyverse.html"><a href="introduction-to-the-tidyverse.html#overveiw-cheatsheets"><i class="fa fa-check"></i><b>3.1.1</b> Overveiw / Cheatsheets</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introduction-to-the-tidyverse.html"><a href="introduction-to-the-tidyverse.html#introduction-to-pipes"><i class="fa fa-check"></i><b>3.1.2</b> Introduction to Pipes</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introduction-to-the-tidyverse.html"><a href="introduction-to-the-tidyverse.html#tibbles"><i class="fa fa-check"></i><b>3.1.3</b> Tibbles</a></li>
+<li class="chapter" data-level="3.1.4" data-path="introduction-to-the-tidyverse.html"><a href="introduction-to-the-tidyverse.html#loading-data-with-readr"><i class="fa fa-check"></i><b>3.1.4</b> Loading data with readr</a></li>
+<li class="chapter" data-level="3.1.5" data-path="introduction-to-the-tidyverse.html"><a href="introduction-to-the-tidyverse.html#reshaping-your-data-with-tidyr"><i class="fa fa-check"></i><b>3.1.5</b> Reshaping your data with tidyr</a></li>
+<li class="chapter" data-level="3.1.6" data-path="introduction-to-the-tidyverse.html"><a href="introduction-to-the-tidyverse.html#data-transformations-with-dplyr"><i class="fa fa-check"></i><b>3.1.6</b> Data Transformations with dplyr</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>IV Session 4</b></span></li>
-<li class="chapter" data-level="11" data-path="machine-learning-concepts.html"><a href="machine-learning-concepts.html"><i class="fa fa-check"></i><b>11</b> Machine Learning concepts</a><ul>
-<li class="chapter" data-level="11.1" data-path="customer-segmentation-with-k-means-clustering-umap.html"><a href="customer-segmentation-with-k-means-clustering-umap.html"><i class="fa fa-check"></i><b>11.1</b> Customer Segmentation with K-Means Clustering &amp; UMAP</a></li>
-<li class="chapter" data-level="11.2" data-path="ml-linear-algorithms.html"><a href="ml-linear-algorithms.html"><i class="fa fa-check"></i><b>11.2</b> ML - Linear Algorithms</a></li>
-<li class="chapter" data-level="11.3" data-path="ml-tree-based-algorithms.html"><a href="ml-tree-based-algorithms.html"><i class="fa fa-check"></i><b>11.3</b> ML - Tree Based Algorithms</a></li>
-<li class="chapter" data-level="11.4" data-path="ml-preprocessing-svm.html"><a href="ml-preprocessing-svm.html"><i class="fa fa-check"></i><b>11.4</b> ML - Preprocessing &amp; SVM</a></li>
-<li class="chapter" data-level="11.5" data-path="testing-the-models.html"><a href="testing-the-models.html"><i class="fa fa-check"></i><b>11.5</b> Testing the models</a></li>
+<li class="chapter" data-level="4" data-path="project-01-sales-analysis.html"><a href="project-01-sales-analysis.html"><i class="fa fa-check"></i><b>4</b> <strong>Project 01 - Sales Analysis</strong></a><ul>
+<li class="chapter" data-level="4.1" data-path="theory-background.html"><a href="theory-background.html"><i class="fa fa-check"></i><b>4.1</b> Theory / Background</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="theory-background.html"><a href="theory-background.html#transactional-data"><i class="fa fa-check"></i><b>4.1.1</b> Transactional data</a></li>
+<li class="chapter" data-level="4.1.2" data-path="theory-background.html"><a href="theory-background.html#data-schema"><i class="fa fa-check"></i><b>4.1.2</b> data schema</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="session-04-challenge-company-segmentation-with-stock-prices.html"><a href="session-04-challenge-company-segmentation-with-stock-prices.html"><i class="fa fa-check"></i><b>12</b> Session 04 - Challenge - Company Segmentation with Stock Prices</a></li>
-<li class="chapter" data-level="13" data-path="session-04-challenge-predicting-new-product-model.html"><a href="session-04-challenge-predicting-new-product-model.html"><i class="fa fa-check"></i><b>13</b> Session 04 - Challenge - Predicting new product model</a></li>
-<li class="part"><span><b>V Session 5</b></span></li>
-<li class="chapter" data-level="14" data-path="communication-report.html"><a href="communication-report.html"><i class="fa fa-check"></i><b>14</b> Communication - Report</a><ul>
-<li class="chapter" data-level="14.1" data-path="reports-pdf.html"><a href="reports-pdf.html"><i class="fa fa-check"></i><b>14.1</b> Reports (PDF)</a></li>
-<li class="chapter" data-level="14.2" data-path="reports-interactive-plots.html"><a href="reports-interactive-plots.html"><i class="fa fa-check"></i><b>14.2</b> Reports (Interactive Plots)</a></li>
+<li class="chapter" data-level="4.2" data-path="project-setup.html"><a href="project-setup.html"><i class="fa fa-check"></i><b>4.2</b> Project Setup</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="project-setup.html"><a href="project-setup.html#project-structure"><i class="fa fa-check"></i><b>4.2.1</b> Project structure</a></li>
+<li class="chapter" data-level="4.2.2" data-path="project-setup.html"><a href="project-setup.html#installing-packages"><i class="fa fa-check"></i><b>4.2.2</b> Installing Packages</a></li>
+<li class="chapter" data-level="4.2.3" data-path="project-setup.html"><a href="project-setup.html#checkpoint"><i class="fa fa-check"></i><b>4.2.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="session-05-challenge-report.html"><a href="session-05-challenge-report.html"><i class="fa fa-check"></i><b>15</b> Session 05 - Challenge - Report</a></li>
-<li class="part"><span><b>VI Session 6</b></span></li>
-<li class="chapter" data-level="16" data-path="communication-dashboard-i.html"><a href="communication-dashboard-i.html"><i class="fa fa-check"></i><b>16</b> Communication - Dashboard (I)</a><ul>
-<li class="chapter" data-level="16.1" data-path="flexdashboard.html"><a href="flexdashboard.html"><i class="fa fa-check"></i><b>16.1</b> Flexdashboard</a></li>
+<li class="chapter" data-level="4.3" data-path="import.html"><a href="import.html"><i class="fa fa-check"></i><b>4.3</b> Import</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="import.html"><a href="import.html#setup-template-file"><i class="fa fa-check"></i><b>4.3.1</b> Setup (Template File)</a></li>
+<li class="chapter" data-level="4.3.2" data-path="import.html"><a href="import.html#import-1"><i class="fa fa-check"></i><b>4.3.2</b> Import</a></li>
+<li class="chapter" data-level="4.3.3" data-path="import.html"><a href="import.html#checkpoint-1"><i class="fa fa-check"></i><b>4.3.3</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
+<li class="chapter" data-level="4.3.4" data-path="import.html"><a href="import.html#examine"><i class="fa fa-check"></i><b>4.3.4</b> Examine</a></li>
+<li class="chapter" data-level="4.3.5" data-path="import.html"><a href="import.html#cleaning-and-joining-data"><i class="fa fa-check"></i><b>4.3.5</b> Cleaning and joining data</a></li>
+<li class="chapter" data-level="4.3.6" data-path="import.html"><a href="import.html#checkpoint-2"><i class="fa fa-check"></i><b>4.3.6</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
+<li class="chapter" data-level="4.3.7" data-path="import.html"><a href="import.html#visualizing-data-with-ggplot2"><i class="fa fa-check"></i><b>4.3.7</b> Visualizing data with ggplot2</a></li>
+<li class="chapter" data-level="4.3.8" data-path="import.html"><a href="import.html#checkpoint-3"><i class="fa fa-check"></i><b>4.3.8</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="session-06-challenge-sales-dashboard.html"><a href="session-06-challenge-sales-dashboard.html"><i class="fa fa-check"></i><b>17</b> Session 06 - Challenge - Sales Dashboard</a></li>
-<li class="part"><span><b>VII Session 7</b></span></li>
-<li class="chapter" data-level="18" data-path="communication-dashboard-ii.html"><a href="communication-dashboard-ii.html"><i class="fa fa-check"></i><b>18</b> Communication - Dashboard (II)</a><ul>
-<li class="chapter" data-level="18.1" data-path="shiny-app.html"><a href="shiny-app.html"><i class="fa fa-check"></i><b>18.1</b> Shiny App</a></li>
+<li class="chapter" data-level="4.4" data-path="session-01-challenge.html"><a href="session-01-challenge.html"><i class="fa fa-check"></i><b>4.4</b> Session 01 Challenge</a></li>
+<li class="chapter" data-level="4.5" data-path="session-01-solution.html"><a href="session-01-solution.html"><i class="fa fa-check"></i><b>4.5</b> Session 01 Solution</a></li>
 </ul></li>
-<li class="chapter" data-level="19" data-path="session-07-challenge-stock-analyzer.html"><a href="session-07-challenge-stock-analyzer.html"><i class="fa fa-check"></i><b>19</b> Session 07 - Challenge - Stock Analyzer</a></li>
+<li class="part"><span><b>III Session 2</b></span></li>
+<li class="chapter" data-level="5" data-path="wrangling-data-part-2.html"><a href="wrangling-data-part-2.html"><i class="fa fa-check"></i><b>5</b> Wrangling data (PART 2)</a><ul>
+<li class="chapter" data-level="5.1" data-path="content-1.html"><a href="content-1.html"><i class="fa fa-check"></i><b>5.1</b> Content 1</a></li>
+<li class="chapter" data-level="5.2" data-path="checkpoint-4.html"><a href="checkpoint-4.html"><i class="fa fa-check"></i><b>5.2</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
+<li class="chapter" data-level="5.3" data-path="content-2.html"><a href="content-2.html"><i class="fa fa-check"></i><b>5.3</b> Content 2</a></li>
+<li class="chapter" data-level="5.4" data-path="checkpoint-5.html"><a href="checkpoint-5.html"><i class="fa fa-check"></i><b>5.4</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="session-02-challenge.html"><a href="session-02-challenge.html"><i class="fa fa-check"></i><b>6</b> Session 02 - Challenge</a></li>
+<li class="chapter" data-level="7" data-path="session-02-solution.html"><a href="session-02-solution.html"><i class="fa fa-check"></i><b>7</b> Session 02 - Solution</a></li>
+<li class="part"><span><b>IV Session 3</b></span></li>
+<li class="chapter" data-level="8" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>8</b> Time Series</a></li>
+<li class="chapter" data-level="9" data-path="text-fundamentals.html"><a href="text-fundamentals.html"><i class="fa fa-check"></i><b>9</b> Text Fundamentals</a></li>
+<li class="chapter" data-level="10" data-path="categorical-data.html"><a href="categorical-data.html"><i class="fa fa-check"></i><b>10</b> Categorical data</a></li>
+<li class="chapter" data-level="11" data-path="functional-programming.html"><a href="functional-programming.html"><i class="fa fa-check"></i><b>11</b> Functional Programming</a><ul>
+<li class="chapter" data-level="11.1" data-path="exercise1.html"><a href="exercise1.html"><i class="fa fa-check"></i><b>11.1</b> Exercise1</a></li>
+<li class="chapter" data-level="11.2" data-path="solution-2.html"><a href="solution-2.html"><i class="fa fa-check"></i><b>11.2</b> Solution</a></li>
+<li class="chapter" data-level="11.3" data-path="exercise.html"><a href="exercise.html"><i class="fa fa-check"></i><b>11.3</b> Exercise</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="exercise.html"><a href="exercise.html#solution-3"><i class="fa fa-check"></i><b>11.3.1</b> Solution</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Session 4</b></span></li>
+<li class="chapter" data-level="12" data-path="machine-learning-concepts.html"><a href="machine-learning-concepts.html"><i class="fa fa-check"></i><b>12</b> Machine Learning concepts</a><ul>
+<li class="chapter" data-level="12.1" data-path="customer-segmentation-with-k-means-clustering-umap.html"><a href="customer-segmentation-with-k-means-clustering-umap.html"><i class="fa fa-check"></i><b>12.1</b> Customer Segmentation with K-Means Clustering &amp; UMAP</a></li>
+<li class="chapter" data-level="12.2" data-path="ml-linear-algorithms.html"><a href="ml-linear-algorithms.html"><i class="fa fa-check"></i><b>12.2</b> ML - Linear Algorithms</a></li>
+<li class="chapter" data-level="12.3" data-path="ml-tree-based-algorithms.html"><a href="ml-tree-based-algorithms.html"><i class="fa fa-check"></i><b>12.3</b> ML - Tree Based Algorithms</a></li>
+<li class="chapter" data-level="12.4" data-path="ml-preprocessing-svm.html"><a href="ml-preprocessing-svm.html"><i class="fa fa-check"></i><b>12.4</b> ML - Preprocessing &amp; SVM</a></li>
+<li class="chapter" data-level="12.5" data-path="testing-the-models.html"><a href="testing-the-models.html"><i class="fa fa-check"></i><b>12.5</b> Testing the models</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="session-04-challenge-company-segmentation-with-stock-prices.html"><a href="session-04-challenge-company-segmentation-with-stock-prices.html"><i class="fa fa-check"></i><b>13</b> Session 04 - Challenge - Company Segmentation with Stock Prices</a></li>
+<li class="chapter" data-level="14" data-path="session-04-challenge-predicting-new-product-model.html"><a href="session-04-challenge-predicting-new-product-model.html"><i class="fa fa-check"></i><b>14</b> Session 04 - Challenge - Predicting new product model</a></li>
+<li class="part"><span><b>VI Session 5</b></span></li>
+<li class="chapter" data-level="15" data-path="communication-report.html"><a href="communication-report.html"><i class="fa fa-check"></i><b>15</b> Communication - Report</a><ul>
+<li class="chapter" data-level="15.1" data-path="reports-pdf.html"><a href="reports-pdf.html"><i class="fa fa-check"></i><b>15.1</b> Reports (PDF)</a></li>
+<li class="chapter" data-level="15.2" data-path="reports-interactive-plots.html"><a href="reports-interactive-plots.html"><i class="fa fa-check"></i><b>15.2</b> Reports (Interactive Plots)</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="session-05-challenge-report.html"><a href="session-05-challenge-report.html"><i class="fa fa-check"></i><b>16</b> Session 05 - Challenge - Report</a></li>
+<li class="part"><span><b>VII Session 6</b></span></li>
+<li class="chapter" data-level="17" data-path="communication-dashboard-i.html"><a href="communication-dashboard-i.html"><i class="fa fa-check"></i><b>17</b> Communication - Dashboard (I)</a><ul>
+<li class="chapter" data-level="17.1" data-path="flexdashboard.html"><a href="flexdashboard.html"><i class="fa fa-check"></i><b>17.1</b> Flexdashboard</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="session-06-challenge-sales-dashboard.html"><a href="session-06-challenge-sales-dashboard.html"><i class="fa fa-check"></i><b>18</b> Session 06 - Challenge - Sales Dashboard</a></li>
+<li class="part"><span><b>VIII Session 7</b></span></li>
+<li class="chapter" data-level="19" data-path="communication-dashboard-ii.html"><a href="communication-dashboard-ii.html"><i class="fa fa-check"></i><b>19</b> Communication - Dashboard (II)</a><ul>
+<li class="chapter" data-level="19.1" data-path="shiny-app.html"><a href="shiny-app.html"><i class="fa fa-check"></i><b>19.1</b> Shiny App</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="session-07-challenge-stock-analyzer.html"><a href="session-07-challenge-stock-analyzer.html"><i class="fa fa-check"></i><b>20</b> Session 07 - Challenge - Stock Analyzer</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -971,7 +987,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="session-01-solution" class="section level2">
-<h2><span class="header-section-number">3.5</span> Session 01 Solution</h2>
+<h2><span class="header-section-number">4.5</span> Session 01 Solution</h2>
 <div class="rmdblankbox">
 <p>
 Download
@@ -985,223 +1001,223 @@ Download
 <div class="figure"><span id="fig:rev-by-year"></span><span id="fig:sakila"></span>
 <img src="input/session_01/01_images/Rplot.png" alt="Project structure example in RStudio." width="100%" />
 <p class="caption">
-FIGURE 3.6: Project structure example in RStudio.
+FIGURE 4.6: Project structure example in RStudio.
 </p>
 </div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="co"># DS4B 101-R: R FOR BUSINESS ANALYSIS ----</span></a>
-<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="co"># JUMPSTART: First Sales Analysis ----</span></a>
-<a class="sourceLine" id="cb18-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb18-4" data-line-number="4"><span class="co"># 1.0 Load libraries ----</span></a>
-<a class="sourceLine" id="cb18-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb18-6" data-line-number="6"><span class="co"># Work horse packages</span></a>
-<a class="sourceLine" id="cb18-7" data-line-number="7"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb18-8" data-line-number="8"><span class="kw">library</span>(lubridate)</a>
-<a class="sourceLine" id="cb18-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb18-10" data-line-number="10"><span class="co"># theme_tq()</span></a>
-<a class="sourceLine" id="cb18-11" data-line-number="11"><span class="kw">library</span>(tidyquant)</a>
-<a class="sourceLine" id="cb18-12" data-line-number="12"></a>
-<a class="sourceLine" id="cb18-13" data-line-number="13"><span class="co"># Excel Files</span></a>
-<a class="sourceLine" id="cb18-14" data-line-number="14"><span class="kw">library</span>(readxl)</a>
-<a class="sourceLine" id="cb18-15" data-line-number="15"><span class="kw">library</span>(writexl)</a>
-<a class="sourceLine" id="cb18-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb18-17" data-line-number="17"></a>
-<a class="sourceLine" id="cb18-18" data-line-number="18"></a>
-<a class="sourceLine" id="cb18-19" data-line-number="19"></a>
-<a class="sourceLine" id="cb18-20" data-line-number="20"><span class="co"># 2.0 Importing Files ----</span></a>
-<a class="sourceLine" id="cb18-21" data-line-number="21"></a>
-<a class="sourceLine" id="cb18-22" data-line-number="22">?<span class="kw">read_excel</span>()</a>
-<a class="sourceLine" id="cb18-23" data-line-number="23"></a>
-<a class="sourceLine" id="cb18-24" data-line-number="24">bikes_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;00_data/bike_sales/data_raw/bikes.xlsx&quot;</span>)</a>
-<a class="sourceLine" id="cb18-25" data-line-number="25"></a>
-<a class="sourceLine" id="cb18-26" data-line-number="26">bikeshops_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;00_data/bike_sales/data_raw/bikeshops.xlsx&quot;</span>)</a>
-<a class="sourceLine" id="cb18-27" data-line-number="27"></a>
-<a class="sourceLine" id="cb18-28" data-line-number="28">orderlines_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;00_data/bike_sales/data_raw/orderlines.xlsx&quot;</span>)</a>
-<a class="sourceLine" id="cb18-29" data-line-number="29"><span class="kw">names</span>(orderlines_tbl)[<span class="dv">1</span>] &lt;-<span class="st"> &quot;X__1&quot;</span></a>
-<a class="sourceLine" id="cb18-30" data-line-number="30"></a>
-<a class="sourceLine" id="cb18-31" data-line-number="31"></a>
-<a class="sourceLine" id="cb18-32" data-line-number="32"></a>
-<a class="sourceLine" id="cb18-33" data-line-number="33"><span class="co"># 3.0 Examining Data ----</span></a>
-<a class="sourceLine" id="cb18-34" data-line-number="34"></a>
-<a class="sourceLine" id="cb18-35" data-line-number="35">bikes_tbl</a>
-<a class="sourceLine" id="cb18-36" data-line-number="36"></a>
-<a class="sourceLine" id="cb18-37" data-line-number="37"><span class="kw">glimpse</span>(bikes_tbl)</a>
-<a class="sourceLine" id="cb18-38" data-line-number="38"></a>
-<a class="sourceLine" id="cb18-39" data-line-number="39">bikeshops_tbl</a>
-<a class="sourceLine" id="cb18-40" data-line-number="40"></a>
-<a class="sourceLine" id="cb18-41" data-line-number="41">orderlines_tbl</a>
-<a class="sourceLine" id="cb18-42" data-line-number="42"></a>
-<a class="sourceLine" id="cb18-43" data-line-number="43"><span class="co"># 4.0 Joining Data ----</span></a>
-<a class="sourceLine" id="cb18-44" data-line-number="44"></a>
-<a class="sourceLine" id="cb18-45" data-line-number="45">?left_join</a>
-<a class="sourceLine" id="cb18-46" data-line-number="46"></a>
-<a class="sourceLine" id="cb18-47" data-line-number="47">orderlines_tbl</a>
-<a class="sourceLine" id="cb18-48" data-line-number="48"></a>
-<a class="sourceLine" id="cb18-49" data-line-number="49">bikes_tbl</a>
-<a class="sourceLine" id="cb18-50" data-line-number="50"></a>
-<a class="sourceLine" id="cb18-51" data-line-number="51"><span class="kw">left_join</span>(orderlines_tbl, bikes_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;product.id&quot;</span> =<span class="st"> &quot;bike.id&quot;</span>))</a>
-<a class="sourceLine" id="cb18-52" data-line-number="52"></a>
-<a class="sourceLine" id="cb18-53" data-line-number="53">bike_orderlines_joined_tbl &lt;-<span class="st"> </span>orderlines_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-54" data-line-number="54"><span class="st">    </span><span class="kw">left_join</span>(bikes_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;product.id&quot;</span> =<span class="st"> &quot;bike.id&quot;</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-55" data-line-number="55"><span class="st">    </span><span class="kw">left_join</span>(bikeshops_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;customer.id&quot;</span> =<span class="st"> &quot;bikeshop.id&quot;</span>))</a>
-<a class="sourceLine" id="cb18-56" data-line-number="56"></a>
-<a class="sourceLine" id="cb18-57" data-line-number="57">bike_orderlines_joined_tbl</a>
-<a class="sourceLine" id="cb18-58" data-line-number="58"></a>
-<a class="sourceLine" id="cb18-59" data-line-number="59">bike_orderlines_joined_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</a>
-<a class="sourceLine" id="cb18-60" data-line-number="60"></a>
-<a class="sourceLine" id="cb18-61" data-line-number="61"><span class="co"># 5.0 Wrangling Data ----</span></a>
-<a class="sourceLine" id="cb18-62" data-line-number="62"></a>
-<a class="sourceLine" id="cb18-63" data-line-number="63">bike_orderlines_wrangled_tbl &lt;-<span class="st"> </span>bike_orderlines_joined_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-64" data-line-number="64"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-65" data-line-number="65"><span class="st">    </span><span class="co"># Separate description into category.1, category.2, and frame.material</span></a>
-<a class="sourceLine" id="cb18-66" data-line-number="66"><span class="st">    </span><span class="kw">separate</span>(description,</a>
-<a class="sourceLine" id="cb18-67" data-line-number="67">             <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;category.1&quot;</span>, <span class="st">&quot;category.2&quot;</span>, <span class="st">&quot;frame.material&quot;</span>),</a>
-<a class="sourceLine" id="cb18-68" data-line-number="68">             <span class="dt">sep =</span> <span class="st">&quot; - &quot;</span>,</a>
-<a class="sourceLine" id="cb18-69" data-line-number="69">             <span class="dt">remove =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-70" data-line-number="70"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-71" data-line-number="71"><span class="st">    </span><span class="co"># Separate location into city and state</span></a>
-<a class="sourceLine" id="cb18-72" data-line-number="72"><span class="st">    </span><span class="kw">separate</span>(location,</a>
-<a class="sourceLine" id="cb18-73" data-line-number="73">             <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;city&quot;</span>, <span class="st">&quot;state&quot;</span>),</a>
-<a class="sourceLine" id="cb18-74" data-line-number="74">             <span class="dt">sep  =</span> <span class="st">&quot;, &quot;</span>,</a>
-<a class="sourceLine" id="cb18-75" data-line-number="75">             <span class="dt">remove =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-76" data-line-number="76"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-77" data-line-number="77"><span class="st">    </span><span class="co"># price extended</span></a>
-<a class="sourceLine" id="cb18-78" data-line-number="78"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">total.price =</span> price <span class="op">*</span><span class="st"> </span>quantity) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-79" data-line-number="79"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-80" data-line-number="80"><span class="st">    </span><span class="co"># Reorganize</span></a>
-<a class="sourceLine" id="cb18-81" data-line-number="81"><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>X__<span class="dv">1</span>, <span class="op">-</span>location) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-82" data-line-number="82"><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span><span class="kw">ends_with</span>(<span class="st">&quot;.id&quot;</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-83" data-line-number="83"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-84" data-line-number="84"><span class="st">    </span><span class="kw">bind_cols</span>(bike_orderlines_joined_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(order.id)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-85" data-line-number="85"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-86" data-line-number="86"><span class="st">    </span><span class="co"># Reorder columns</span></a>
-<a class="sourceLine" id="cb18-87" data-line-number="87"><span class="st">    </span><span class="kw">select</span>(<span class="kw">contains</span>(<span class="st">&quot;date&quot;</span>), <span class="kw">contains</span>(<span class="st">&quot;id&quot;</span>), <span class="kw">contains</span>(<span class="st">&quot;order&quot;</span>),</a>
-<a class="sourceLine" id="cb18-88" data-line-number="88">           quantity, price, total.price,</a>
-<a class="sourceLine" id="cb18-89" data-line-number="89">           <span class="kw">everything</span>()) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-90" data-line-number="90"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-91" data-line-number="91"><span class="st">    </span><span class="co"># Renaming columns</span></a>
-<a class="sourceLine" id="cb18-92" data-line-number="92"><span class="st">    </span><span class="kw">rename</span>(<span class="dt">order_date =</span> order.date) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-93" data-line-number="93"><span class="st">    </span><span class="kw">set_names</span>(<span class="kw">names</span>(.) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;_&quot;</span>)) </a>
-<a class="sourceLine" id="cb18-94" data-line-number="94"></a>
-<a class="sourceLine" id="cb18-95" data-line-number="95">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</a>
-<a class="sourceLine" id="cb18-96" data-line-number="96"></a>
-<a class="sourceLine" id="cb18-97" data-line-number="97"></a>
-<a class="sourceLine" id="cb18-98" data-line-number="98"></a>
-<a class="sourceLine" id="cb18-99" data-line-number="99"><span class="co"># 6.0 Business Insights ----</span></a>
-<a class="sourceLine" id="cb18-100" data-line-number="100"></a>
-<a class="sourceLine" id="cb18-101" data-line-number="101"></a>
-<a class="sourceLine" id="cb18-102" data-line-number="102"><span class="co"># 6.1 Sales by Year ----</span></a>
-<a class="sourceLine" id="cb18-103" data-line-number="103"></a>
-<a class="sourceLine" id="cb18-104" data-line-number="104"><span class="co"># Step 1 - Manipulate</span></a>
-<a class="sourceLine" id="cb18-105" data-line-number="105"></a>
-<a class="sourceLine" id="cb18-106" data-line-number="106">sales_by_year_tbl &lt;-<span class="st"> </span>bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-107" data-line-number="107"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-108" data-line-number="108"><span class="st">    </span><span class="co"># Selecting columns to focus on and adding a year column</span></a>
-<a class="sourceLine" id="cb18-109" data-line-number="109"><span class="st">    </span><span class="kw">select</span>(order_date, total_price) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-110" data-line-number="110"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">year</span>(order_date)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-111" data-line-number="111"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-112" data-line-number="112"><span class="st">    </span><span class="co"># Grouping by year, and summarizing sales</span></a>
-<a class="sourceLine" id="cb18-113" data-line-number="113"><span class="st">    </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-114" data-line-number="114"><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">sales =</span> <span class="kw">sum</span>(total_price)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-115" data-line-number="115"><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-116" data-line-number="116"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-117" data-line-number="117"><span class="st">    </span><span class="co"># $ Format Text</span></a>
-<a class="sourceLine" id="cb18-118" data-line-number="118"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sales_text =</span> scales<span class="op">::</span><span class="kw">dollar</span>(sales))</a>
-<a class="sourceLine" id="cb18-119" data-line-number="119">    </a>
-<a class="sourceLine" id="cb18-120" data-line-number="120">sales_by_year_tbl</a>
-<a class="sourceLine" id="cb18-121" data-line-number="121"></a>
-<a class="sourceLine" id="cb18-122" data-line-number="122"></a>
-<a class="sourceLine" id="cb18-123" data-line-number="123"><span class="co"># Step 2 - Visualize</span></a>
-<a class="sourceLine" id="cb18-124" data-line-number="124"></a>
-<a class="sourceLine" id="cb18-125" data-line-number="125">sales_by_year_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-126" data-line-number="126"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-127" data-line-number="127"><span class="st">    </span><span class="co"># Setup canvas with year (x-axis) and sales (y-axis)</span></a>
-<a class="sourceLine" id="cb18-128" data-line-number="128"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> sales)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-129" data-line-number="129"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-130" data-line-number="130"><span class="st">    </span><span class="co"># Geometries</span></a>
-<a class="sourceLine" id="cb18-131" data-line-number="131"><span class="st">    </span><span class="kw">geom_col</span>(<span class="dt">fill =</span> <span class="st">&quot;#2c3e50&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-132" data-line-number="132"><span class="st">    </span><span class="kw">geom_label</span>(<span class="kw">aes</span>(<span class="dt">label =</span> sales_text)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-133" data-line-number="133"><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-134" data-line-number="134"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-135" data-line-number="135"><span class="st">    </span><span class="co"># Formatting</span></a>
-<a class="sourceLine" id="cb18-136" data-line-number="136"><span class="st">    </span><span class="kw">theme_tq</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-137" data-line-number="137"><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-138" data-line-number="138"><span class="st">    </span><span class="kw">labs</span>(</a>
-<a class="sourceLine" id="cb18-139" data-line-number="139">        <span class="dt">title =</span> <span class="st">&quot;Revenue by Year&quot;</span>,</a>
-<a class="sourceLine" id="cb18-140" data-line-number="140">        <span class="dt">subtitle =</span> <span class="st">&quot;Upward trend&quot;</span>,</a>
-<a class="sourceLine" id="cb18-141" data-line-number="141">        <span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
-<a class="sourceLine" id="cb18-142" data-line-number="142">        <span class="dt">y =</span> <span class="st">&quot;Revenue&quot;</span></a>
-<a class="sourceLine" id="cb18-143" data-line-number="143">    )</a>
-<a class="sourceLine" id="cb18-144" data-line-number="144"></a>
-<a class="sourceLine" id="cb18-145" data-line-number="145"><span class="co"># 6.2 Sales by Year and Category 2 ----</span></a>
-<a class="sourceLine" id="cb18-146" data-line-number="146"></a>
-<a class="sourceLine" id="cb18-147" data-line-number="147"></a>
-<a class="sourceLine" id="cb18-148" data-line-number="148"><span class="co"># Step 1 - Manipulate</span></a>
-<a class="sourceLine" id="cb18-149" data-line-number="149"></a>
-<a class="sourceLine" id="cb18-150" data-line-number="150">sales_by_year_cat_<span class="dv">2</span>_tbl &lt;-<span class="st"> </span>bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-151" data-line-number="151"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-152" data-line-number="152"><span class="st">    </span><span class="co"># Selecting columns and add a year</span></a>
-<a class="sourceLine" id="cb18-153" data-line-number="153"><span class="st">    </span><span class="kw">select</span>(order_date, total_price, category_<span class="dv">2</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-154" data-line-number="154"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">year</span>(order_date)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-155" data-line-number="155"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-156" data-line-number="156"><span class="st">    </span><span class="co"># Groupby and Summarize year and category 2</span></a>
-<a class="sourceLine" id="cb18-157" data-line-number="157"><span class="st">    </span><span class="kw">group_by</span>(year, category_<span class="dv">2</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-158" data-line-number="158"><span class="st">    </span><span class="kw">summarise</span>(<span class="dt">sales =</span> <span class="kw">sum</span>(total_price)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-159" data-line-number="159"><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-160" data-line-number="160"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-161" data-line-number="161"><span class="st">    </span><span class="co"># Format $ Text</span></a>
-<a class="sourceLine" id="cb18-162" data-line-number="162"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sales_text =</span> scales<span class="op">::</span><span class="kw">dollar</span>(sales))</a>
-<a class="sourceLine" id="cb18-163" data-line-number="163"></a>
-<a class="sourceLine" id="cb18-164" data-line-number="164"></a>
-<a class="sourceLine" id="cb18-165" data-line-number="165">sales_by_year_cat_<span class="dv">2</span>_tbl</a>
-<a class="sourceLine" id="cb18-166" data-line-number="166"></a>
-<a class="sourceLine" id="cb18-167" data-line-number="167"><span class="co"># Step 2 - Visualize</span></a>
-<a class="sourceLine" id="cb18-168" data-line-number="168"></a>
-<a class="sourceLine" id="cb18-169" data-line-number="169">sales_by_year_cat_<span class="dv">2</span>_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-170" data-line-number="170"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-171" data-line-number="171"><span class="st">    </span><span class="co"># Set up x, y, fill </span></a>
-<a class="sourceLine" id="cb18-172" data-line-number="172"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> sales, <span class="dt">fill =</span> category_<span class="dv">2</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-173" data-line-number="173"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-174" data-line-number="174"><span class="st">    </span><span class="co"># Geometries</span></a>
-<a class="sourceLine" id="cb18-175" data-line-number="175"><span class="st">    </span><span class="kw">geom_col</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-176" data-line-number="176"><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-177" data-line-number="177"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-178" data-line-number="178"><span class="st">    </span><span class="co"># Facet</span></a>
-<a class="sourceLine" id="cb18-179" data-line-number="179"><span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>category_<span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>, <span class="dt">scales =</span> <span class="st">&quot;free_y&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-180" data-line-number="180"><span class="st">    </span></a>
-<a class="sourceLine" id="cb18-181" data-line-number="181"><span class="st">    </span><span class="co"># Formatting</span></a>
-<a class="sourceLine" id="cb18-182" data-line-number="182"><span class="st">    </span><span class="kw">theme_tq</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-183" data-line-number="183"><span class="st">    </span><span class="kw">scale_fill_tq</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-184" data-line-number="184"><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar) <span class="op">+</span></a>
-<a class="sourceLine" id="cb18-185" data-line-number="185"><span class="st">    </span><span class="kw">labs</span>(</a>
-<a class="sourceLine" id="cb18-186" data-line-number="186">        <span class="dt">title =</span> <span class="st">&quot;Revenue by Year and Category 2&quot;</span>,</a>
-<a class="sourceLine" id="cb18-187" data-line-number="187">        <span class="dt">subtitle =</span> <span class="st">&quot;Each product category has an upward trend&quot;</span>,</a>
-<a class="sourceLine" id="cb18-188" data-line-number="188">        <span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
-<a class="sourceLine" id="cb18-189" data-line-number="189">        <span class="dt">y =</span> <span class="st">&quot;Revenue&quot;</span>,</a>
-<a class="sourceLine" id="cb18-190" data-line-number="190">        <span class="dt">fill =</span> <span class="st">&quot;Product Secondary Category&quot;</span></a>
-<a class="sourceLine" id="cb18-191" data-line-number="191">    )</a>
-<a class="sourceLine" id="cb18-192" data-line-number="192"></a>
-<a class="sourceLine" id="cb18-193" data-line-number="193"></a>
-<a class="sourceLine" id="cb18-194" data-line-number="194"><span class="co"># 7.0 Writing Files ----</span></a>
-<a class="sourceLine" id="cb18-195" data-line-number="195"></a>
-<a class="sourceLine" id="cb18-196" data-line-number="196">fs<span class="op">::</span><span class="kw">dir_create</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student&quot;</span>)</a>
-<a class="sourceLine" id="cb18-197" data-line-number="197"></a>
-<a class="sourceLine" id="cb18-198" data-line-number="198"><span class="co"># 7.1 Excel ----</span></a>
-<a class="sourceLine" id="cb18-199" data-line-number="199"></a>
-<a class="sourceLine" id="cb18-200" data-line-number="200">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-201" data-line-number="201"><span class="st">    </span><span class="kw">write_xlsx</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.xlsx&quot;</span>)</a>
-<a class="sourceLine" id="cb18-202" data-line-number="202"></a>
-<a class="sourceLine" id="cb18-203" data-line-number="203"></a>
-<a class="sourceLine" id="cb18-204" data-line-number="204"><span class="co"># 7.2 CSV ----</span></a>
-<a class="sourceLine" id="cb18-205" data-line-number="205"></a>
-<a class="sourceLine" id="cb18-206" data-line-number="206">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-207" data-line-number="207"><span class="st">    </span><span class="kw">write_csv</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.csv&quot;</span>)</a>
-<a class="sourceLine" id="cb18-208" data-line-number="208"></a>
-<a class="sourceLine" id="cb18-209" data-line-number="209"></a>
-<a class="sourceLine" id="cb18-210" data-line-number="210"><span class="co"># 7.3 RDS ----</span></a>
-<a class="sourceLine" id="cb18-211" data-line-number="211"></a>
-<a class="sourceLine" id="cb18-212" data-line-number="212">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb18-213" data-line-number="213"><span class="st">    </span><span class="kw">write_rds</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.rds&quot;</span>)</a>
-<a class="sourceLine" id="cb18-214" data-line-number="214"></a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="co"># DS4B 101-R: R FOR BUSINESS ANALYSIS ----</span></a>
+<a class="sourceLine" id="cb27-2" data-line-number="2"><span class="co"># JUMPSTART: First Sales Analysis ----</span></a>
+<a class="sourceLine" id="cb27-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb27-4" data-line-number="4"><span class="co"># 1.0 Load libraries ----</span></a>
+<a class="sourceLine" id="cb27-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb27-6" data-line-number="6"><span class="co"># Work horse packages</span></a>
+<a class="sourceLine" id="cb27-7" data-line-number="7"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb27-8" data-line-number="8"><span class="kw">library</span>(lubridate)</a>
+<a class="sourceLine" id="cb27-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb27-10" data-line-number="10"><span class="co"># theme_tq()</span></a>
+<a class="sourceLine" id="cb27-11" data-line-number="11"><span class="kw">library</span>(tidyquant)</a>
+<a class="sourceLine" id="cb27-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb27-13" data-line-number="13"><span class="co"># Excel Files</span></a>
+<a class="sourceLine" id="cb27-14" data-line-number="14"><span class="kw">library</span>(readxl)</a>
+<a class="sourceLine" id="cb27-15" data-line-number="15"><span class="kw">library</span>(writexl)</a>
+<a class="sourceLine" id="cb27-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb27-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb27-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb27-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb27-20" data-line-number="20"><span class="co"># 2.0 Importing Files ----</span></a>
+<a class="sourceLine" id="cb27-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb27-22" data-line-number="22">?<span class="kw">read_excel</span>()</a>
+<a class="sourceLine" id="cb27-23" data-line-number="23"></a>
+<a class="sourceLine" id="cb27-24" data-line-number="24">bikes_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;00_data/bike_sales/data_raw/bikes.xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb27-25" data-line-number="25"></a>
+<a class="sourceLine" id="cb27-26" data-line-number="26">bikeshops_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;00_data/bike_sales/data_raw/bikeshops.xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb27-27" data-line-number="27"></a>
+<a class="sourceLine" id="cb27-28" data-line-number="28">orderlines_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;00_data/bike_sales/data_raw/orderlines.xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb27-29" data-line-number="29"><span class="kw">names</span>(orderlines_tbl)[<span class="dv">1</span>] &lt;-<span class="st"> &quot;X__1&quot;</span></a>
+<a class="sourceLine" id="cb27-30" data-line-number="30"></a>
+<a class="sourceLine" id="cb27-31" data-line-number="31"></a>
+<a class="sourceLine" id="cb27-32" data-line-number="32"></a>
+<a class="sourceLine" id="cb27-33" data-line-number="33"><span class="co"># 3.0 Examining Data ----</span></a>
+<a class="sourceLine" id="cb27-34" data-line-number="34"></a>
+<a class="sourceLine" id="cb27-35" data-line-number="35">bikes_tbl</a>
+<a class="sourceLine" id="cb27-36" data-line-number="36"></a>
+<a class="sourceLine" id="cb27-37" data-line-number="37"><span class="kw">glimpse</span>(bikes_tbl)</a>
+<a class="sourceLine" id="cb27-38" data-line-number="38"></a>
+<a class="sourceLine" id="cb27-39" data-line-number="39">bikeshops_tbl</a>
+<a class="sourceLine" id="cb27-40" data-line-number="40"></a>
+<a class="sourceLine" id="cb27-41" data-line-number="41">orderlines_tbl</a>
+<a class="sourceLine" id="cb27-42" data-line-number="42"></a>
+<a class="sourceLine" id="cb27-43" data-line-number="43"><span class="co"># 4.0 Joining Data ----</span></a>
+<a class="sourceLine" id="cb27-44" data-line-number="44"></a>
+<a class="sourceLine" id="cb27-45" data-line-number="45">?left_join</a>
+<a class="sourceLine" id="cb27-46" data-line-number="46"></a>
+<a class="sourceLine" id="cb27-47" data-line-number="47">orderlines_tbl</a>
+<a class="sourceLine" id="cb27-48" data-line-number="48"></a>
+<a class="sourceLine" id="cb27-49" data-line-number="49">bikes_tbl</a>
+<a class="sourceLine" id="cb27-50" data-line-number="50"></a>
+<a class="sourceLine" id="cb27-51" data-line-number="51"><span class="kw">left_join</span>(orderlines_tbl, bikes_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;product.id&quot;</span> =<span class="st"> &quot;bike.id&quot;</span>))</a>
+<a class="sourceLine" id="cb27-52" data-line-number="52"></a>
+<a class="sourceLine" id="cb27-53" data-line-number="53">bike_orderlines_joined_tbl &lt;-<span class="st"> </span>orderlines_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-54" data-line-number="54"><span class="st">    </span><span class="kw">left_join</span>(bikes_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;product.id&quot;</span> =<span class="st"> &quot;bike.id&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-55" data-line-number="55"><span class="st">    </span><span class="kw">left_join</span>(bikeshops_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;customer.id&quot;</span> =<span class="st"> &quot;bikeshop.id&quot;</span>))</a>
+<a class="sourceLine" id="cb27-56" data-line-number="56"></a>
+<a class="sourceLine" id="cb27-57" data-line-number="57">bike_orderlines_joined_tbl</a>
+<a class="sourceLine" id="cb27-58" data-line-number="58"></a>
+<a class="sourceLine" id="cb27-59" data-line-number="59">bike_orderlines_joined_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</a>
+<a class="sourceLine" id="cb27-60" data-line-number="60"></a>
+<a class="sourceLine" id="cb27-61" data-line-number="61"><span class="co"># 5.0 Wrangling Data ----</span></a>
+<a class="sourceLine" id="cb27-62" data-line-number="62"></a>
+<a class="sourceLine" id="cb27-63" data-line-number="63">bike_orderlines_wrangled_tbl &lt;-<span class="st"> </span>bike_orderlines_joined_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-64" data-line-number="64"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-65" data-line-number="65"><span class="st">    </span><span class="co"># Separate description into category.1, category.2, and frame.material</span></a>
+<a class="sourceLine" id="cb27-66" data-line-number="66"><span class="st">    </span><span class="kw">separate</span>(description,</a>
+<a class="sourceLine" id="cb27-67" data-line-number="67">             <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;category.1&quot;</span>, <span class="st">&quot;category.2&quot;</span>, <span class="st">&quot;frame.material&quot;</span>),</a>
+<a class="sourceLine" id="cb27-68" data-line-number="68">             <span class="dt">sep =</span> <span class="st">&quot; - &quot;</span>,</a>
+<a class="sourceLine" id="cb27-69" data-line-number="69">             <span class="dt">remove =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-70" data-line-number="70"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-71" data-line-number="71"><span class="st">    </span><span class="co"># Separate location into city and state</span></a>
+<a class="sourceLine" id="cb27-72" data-line-number="72"><span class="st">    </span><span class="kw">separate</span>(location,</a>
+<a class="sourceLine" id="cb27-73" data-line-number="73">             <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;city&quot;</span>, <span class="st">&quot;state&quot;</span>),</a>
+<a class="sourceLine" id="cb27-74" data-line-number="74">             <span class="dt">sep  =</span> <span class="st">&quot;, &quot;</span>,</a>
+<a class="sourceLine" id="cb27-75" data-line-number="75">             <span class="dt">remove =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-76" data-line-number="76"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-77" data-line-number="77"><span class="st">    </span><span class="co"># price extended</span></a>
+<a class="sourceLine" id="cb27-78" data-line-number="78"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">total.price =</span> price <span class="op">*</span><span class="st"> </span>quantity) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-79" data-line-number="79"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-80" data-line-number="80"><span class="st">    </span><span class="co"># Reorganize</span></a>
+<a class="sourceLine" id="cb27-81" data-line-number="81"><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>X__<span class="dv">1</span>, <span class="op">-</span>location) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-82" data-line-number="82"><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span><span class="kw">ends_with</span>(<span class="st">&quot;.id&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-83" data-line-number="83"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-84" data-line-number="84"><span class="st">    </span><span class="kw">bind_cols</span>(bike_orderlines_joined_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(order.id)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-85" data-line-number="85"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-86" data-line-number="86"><span class="st">    </span><span class="co"># Reorder columns</span></a>
+<a class="sourceLine" id="cb27-87" data-line-number="87"><span class="st">    </span><span class="kw">select</span>(<span class="kw">contains</span>(<span class="st">&quot;date&quot;</span>), <span class="kw">contains</span>(<span class="st">&quot;id&quot;</span>), <span class="kw">contains</span>(<span class="st">&quot;order&quot;</span>),</a>
+<a class="sourceLine" id="cb27-88" data-line-number="88">           quantity, price, total.price,</a>
+<a class="sourceLine" id="cb27-89" data-line-number="89">           <span class="kw">everything</span>()) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-90" data-line-number="90"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-91" data-line-number="91"><span class="st">    </span><span class="co"># Renaming columns</span></a>
+<a class="sourceLine" id="cb27-92" data-line-number="92"><span class="st">    </span><span class="kw">rename</span>(<span class="dt">order_date =</span> order.date) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-93" data-line-number="93"><span class="st">    </span><span class="kw">set_names</span>(<span class="kw">names</span>(.) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;_&quot;</span>)) </a>
+<a class="sourceLine" id="cb27-94" data-line-number="94"></a>
+<a class="sourceLine" id="cb27-95" data-line-number="95">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</a>
+<a class="sourceLine" id="cb27-96" data-line-number="96"></a>
+<a class="sourceLine" id="cb27-97" data-line-number="97"></a>
+<a class="sourceLine" id="cb27-98" data-line-number="98"></a>
+<a class="sourceLine" id="cb27-99" data-line-number="99"><span class="co"># 6.0 Business Insights ----</span></a>
+<a class="sourceLine" id="cb27-100" data-line-number="100"></a>
+<a class="sourceLine" id="cb27-101" data-line-number="101"></a>
+<a class="sourceLine" id="cb27-102" data-line-number="102"><span class="co"># 6.1 Sales by Year ----</span></a>
+<a class="sourceLine" id="cb27-103" data-line-number="103"></a>
+<a class="sourceLine" id="cb27-104" data-line-number="104"><span class="co"># Step 1 - Manipulate</span></a>
+<a class="sourceLine" id="cb27-105" data-line-number="105"></a>
+<a class="sourceLine" id="cb27-106" data-line-number="106">sales_by_year_tbl &lt;-<span class="st"> </span>bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-107" data-line-number="107"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-108" data-line-number="108"><span class="st">    </span><span class="co"># Selecting columns to focus on and adding a year column</span></a>
+<a class="sourceLine" id="cb27-109" data-line-number="109"><span class="st">    </span><span class="kw">select</span>(order_date, total_price) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-110" data-line-number="110"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">year</span>(order_date)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-111" data-line-number="111"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-112" data-line-number="112"><span class="st">    </span><span class="co"># Grouping by year, and summarizing sales</span></a>
+<a class="sourceLine" id="cb27-113" data-line-number="113"><span class="st">    </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-114" data-line-number="114"><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">sales =</span> <span class="kw">sum</span>(total_price)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-115" data-line-number="115"><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-116" data-line-number="116"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-117" data-line-number="117"><span class="st">    </span><span class="co"># $ Format Text</span></a>
+<a class="sourceLine" id="cb27-118" data-line-number="118"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sales_text =</span> scales<span class="op">::</span><span class="kw">dollar</span>(sales))</a>
+<a class="sourceLine" id="cb27-119" data-line-number="119">    </a>
+<a class="sourceLine" id="cb27-120" data-line-number="120">sales_by_year_tbl</a>
+<a class="sourceLine" id="cb27-121" data-line-number="121"></a>
+<a class="sourceLine" id="cb27-122" data-line-number="122"></a>
+<a class="sourceLine" id="cb27-123" data-line-number="123"><span class="co"># Step 2 - Visualize</span></a>
+<a class="sourceLine" id="cb27-124" data-line-number="124"></a>
+<a class="sourceLine" id="cb27-125" data-line-number="125">sales_by_year_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-126" data-line-number="126"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-127" data-line-number="127"><span class="st">    </span><span class="co"># Setup canvas with year (x-axis) and sales (y-axis)</span></a>
+<a class="sourceLine" id="cb27-128" data-line-number="128"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> sales)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-129" data-line-number="129"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-130" data-line-number="130"><span class="st">    </span><span class="co"># Geometries</span></a>
+<a class="sourceLine" id="cb27-131" data-line-number="131"><span class="st">    </span><span class="kw">geom_col</span>(<span class="dt">fill =</span> <span class="st">&quot;#2c3e50&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-132" data-line-number="132"><span class="st">    </span><span class="kw">geom_label</span>(<span class="kw">aes</span>(<span class="dt">label =</span> sales_text)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-133" data-line-number="133"><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-134" data-line-number="134"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-135" data-line-number="135"><span class="st">    </span><span class="co"># Formatting</span></a>
+<a class="sourceLine" id="cb27-136" data-line-number="136"><span class="st">    </span><span class="kw">theme_tq</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-137" data-line-number="137"><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-138" data-line-number="138"><span class="st">    </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb27-139" data-line-number="139">        <span class="dt">title =</span> <span class="st">&quot;Revenue by Year&quot;</span>,</a>
+<a class="sourceLine" id="cb27-140" data-line-number="140">        <span class="dt">subtitle =</span> <span class="st">&quot;Upward trend&quot;</span>,</a>
+<a class="sourceLine" id="cb27-141" data-line-number="141">        <span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb27-142" data-line-number="142">        <span class="dt">y =</span> <span class="st">&quot;Revenue&quot;</span></a>
+<a class="sourceLine" id="cb27-143" data-line-number="143">    )</a>
+<a class="sourceLine" id="cb27-144" data-line-number="144"></a>
+<a class="sourceLine" id="cb27-145" data-line-number="145"><span class="co"># 6.2 Sales by Year and Category 2 ----</span></a>
+<a class="sourceLine" id="cb27-146" data-line-number="146"></a>
+<a class="sourceLine" id="cb27-147" data-line-number="147"></a>
+<a class="sourceLine" id="cb27-148" data-line-number="148"><span class="co"># Step 1 - Manipulate</span></a>
+<a class="sourceLine" id="cb27-149" data-line-number="149"></a>
+<a class="sourceLine" id="cb27-150" data-line-number="150">sales_by_year_cat_<span class="dv">2</span>_tbl &lt;-<span class="st"> </span>bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-151" data-line-number="151"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-152" data-line-number="152"><span class="st">    </span><span class="co"># Selecting columns and add a year</span></a>
+<a class="sourceLine" id="cb27-153" data-line-number="153"><span class="st">    </span><span class="kw">select</span>(order_date, total_price, category_<span class="dv">2</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-154" data-line-number="154"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">year</span>(order_date)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-155" data-line-number="155"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-156" data-line-number="156"><span class="st">    </span><span class="co"># Groupby and Summarize year and category 2</span></a>
+<a class="sourceLine" id="cb27-157" data-line-number="157"><span class="st">    </span><span class="kw">group_by</span>(year, category_<span class="dv">2</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-158" data-line-number="158"><span class="st">    </span><span class="kw">summarise</span>(<span class="dt">sales =</span> <span class="kw">sum</span>(total_price)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-159" data-line-number="159"><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-160" data-line-number="160"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-161" data-line-number="161"><span class="st">    </span><span class="co"># Format $ Text</span></a>
+<a class="sourceLine" id="cb27-162" data-line-number="162"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sales_text =</span> scales<span class="op">::</span><span class="kw">dollar</span>(sales))</a>
+<a class="sourceLine" id="cb27-163" data-line-number="163"></a>
+<a class="sourceLine" id="cb27-164" data-line-number="164"></a>
+<a class="sourceLine" id="cb27-165" data-line-number="165">sales_by_year_cat_<span class="dv">2</span>_tbl</a>
+<a class="sourceLine" id="cb27-166" data-line-number="166"></a>
+<a class="sourceLine" id="cb27-167" data-line-number="167"><span class="co"># Step 2 - Visualize</span></a>
+<a class="sourceLine" id="cb27-168" data-line-number="168"></a>
+<a class="sourceLine" id="cb27-169" data-line-number="169">sales_by_year_cat_<span class="dv">2</span>_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-170" data-line-number="170"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-171" data-line-number="171"><span class="st">    </span><span class="co"># Set up x, y, fill </span></a>
+<a class="sourceLine" id="cb27-172" data-line-number="172"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> sales, <span class="dt">fill =</span> category_<span class="dv">2</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-173" data-line-number="173"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-174" data-line-number="174"><span class="st">    </span><span class="co"># Geometries</span></a>
+<a class="sourceLine" id="cb27-175" data-line-number="175"><span class="st">    </span><span class="kw">geom_col</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-176" data-line-number="176"><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-177" data-line-number="177"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-178" data-line-number="178"><span class="st">    </span><span class="co"># Facet</span></a>
+<a class="sourceLine" id="cb27-179" data-line-number="179"><span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>category_<span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>, <span class="dt">scales =</span> <span class="st">&quot;free_y&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-180" data-line-number="180"><span class="st">    </span></a>
+<a class="sourceLine" id="cb27-181" data-line-number="181"><span class="st">    </span><span class="co"># Formatting</span></a>
+<a class="sourceLine" id="cb27-182" data-line-number="182"><span class="st">    </span><span class="kw">theme_tq</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-183" data-line-number="183"><span class="st">    </span><span class="kw">scale_fill_tq</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-184" data-line-number="184"><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar) <span class="op">+</span></a>
+<a class="sourceLine" id="cb27-185" data-line-number="185"><span class="st">    </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb27-186" data-line-number="186">        <span class="dt">title =</span> <span class="st">&quot;Revenue by Year and Category 2&quot;</span>,</a>
+<a class="sourceLine" id="cb27-187" data-line-number="187">        <span class="dt">subtitle =</span> <span class="st">&quot;Each product category has an upward trend&quot;</span>,</a>
+<a class="sourceLine" id="cb27-188" data-line-number="188">        <span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb27-189" data-line-number="189">        <span class="dt">y =</span> <span class="st">&quot;Revenue&quot;</span>,</a>
+<a class="sourceLine" id="cb27-190" data-line-number="190">        <span class="dt">fill =</span> <span class="st">&quot;Product Secondary Category&quot;</span></a>
+<a class="sourceLine" id="cb27-191" data-line-number="191">    )</a>
+<a class="sourceLine" id="cb27-192" data-line-number="192"></a>
+<a class="sourceLine" id="cb27-193" data-line-number="193"></a>
+<a class="sourceLine" id="cb27-194" data-line-number="194"><span class="co"># 7.0 Writing Files ----</span></a>
+<a class="sourceLine" id="cb27-195" data-line-number="195"></a>
+<a class="sourceLine" id="cb27-196" data-line-number="196">fs<span class="op">::</span><span class="kw">dir_create</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student&quot;</span>)</a>
+<a class="sourceLine" id="cb27-197" data-line-number="197"></a>
+<a class="sourceLine" id="cb27-198" data-line-number="198"><span class="co"># 7.1 Excel ----</span></a>
+<a class="sourceLine" id="cb27-199" data-line-number="199"></a>
+<a class="sourceLine" id="cb27-200" data-line-number="200">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-201" data-line-number="201"><span class="st">    </span><span class="kw">write_xlsx</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb27-202" data-line-number="202"></a>
+<a class="sourceLine" id="cb27-203" data-line-number="203"></a>
+<a class="sourceLine" id="cb27-204" data-line-number="204"><span class="co"># 7.2 CSV ----</span></a>
+<a class="sourceLine" id="cb27-205" data-line-number="205"></a>
+<a class="sourceLine" id="cb27-206" data-line-number="206">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-207" data-line-number="207"><span class="st">    </span><span class="kw">write_csv</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb27-208" data-line-number="208"></a>
+<a class="sourceLine" id="cb27-209" data-line-number="209"></a>
+<a class="sourceLine" id="cb27-210" data-line-number="210"><span class="co"># 7.3 RDS ----</span></a>
+<a class="sourceLine" id="cb27-211" data-line-number="211"></a>
+<a class="sourceLine" id="cb27-212" data-line-number="212">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb27-213" data-line-number="213"><span class="st">    </span><span class="kw">write_rds</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.rds&quot;</span>)</a>
+<a class="sourceLine" id="cb27-214" data-line-number="214"></a></code></pre></div>
 
 </div>
 <!-- </div> -->
@@ -1210,7 +1226,7 @@ FIGURE 3.6: Project structure example in RStudio.
 
 <img src="input/session_02/01_images/sakila_db.png" alt="sakila db" width="100%" />
 <p class="caption">
-FIGURE 3.7: sakila db
+FIGURE 4.7: sakila db
 </p>
 </div>
 <!-- set global eval FALSE so that all chunks will not be evaluated  -->

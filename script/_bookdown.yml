@@ -9,6 +9,7 @@ language:
 delete_merged_file: true
 rmd_files: ["00_index_script.Rmd", 
             "00_preface.Rmd", 
+            "00_getting_started.Rmd",
             "01_session_01.Rmd", 
             "02_session_01.Rmd", 
             "03_session_01.Rmd", 

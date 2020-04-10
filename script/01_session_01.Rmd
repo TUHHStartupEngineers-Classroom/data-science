@@ -1,223 +1,20 @@
 # (PART) Session 1 {-}
-# Getting started {#session_01_01}
+# R basics {#session_01_01}
+## Introduction to the tidyverse
 
-
-<!-- Load gloabal packages -->
-```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
-library(fontawesome)
-```
-
-<!-- Logos of R and R-Studio -->
-<table>
-  <tr>
-    <td><img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px" align="left" valign="middle" hspace="50px"></td>
-    <td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px" align="right" valign="middle" hspace="50px"></td>
-  </tr>
-</table>
-
-**On the following sites you'll find information about how to install the language R and the IDE RStudio.**
-
-<!-- ++++++++++++++++++++++++++++++ -->
-<!-- Chapter: Install R and RStudio -->
-<!-- ++++++++++++++++++++++++++++++ -->
-## R & RStudio
-###  `r fa("download", fill = "black")` Installing R & RStudio IDE
-#### Interactively
-
-Go to the following link and follow the instructions to install R and the IDE RStudio
-
-```{block, type='rmdblankbox'}
-Interactive Shinyapp
-```
-```{block, type='rmdshiny'}
-<a href="https://jwarz.shinyapps.io/learnR/" target="_blank"><b>Install R & RStudio IDE</b></a>
-```
-
-
-#### Manually
-
-**Video instructions to install RStudio (Download link below)**
-
-<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516510?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
-
-```{block, type='rmdblankbox'}
-Download
-```
-```{block, type='rmdattachment'}
-**[https://cloud.r-project.org](https://cloud.r-project.org)**
-```
-
-***
-
-**Video instructions to install RStudio (Download link below)**
-
-<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516968?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
-```{block, type='rmdblankbox'}
-Download
-```
-```{block, type='rmdattachment'}
-**[https://rstudio.com/products/rstudio/download/](https://rstudio.com/products/rstudio/download/)**
-```
-
-***
-
-**Video instructions to install R packages**
-
-<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516241?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
-Installing Packages
-
-```r
-# install package from CRAN
-install.packages("dplyr")   
-```
-Loading packages
-
-```r
-# load the package to use in the current R session
-library("packagename")         
-
-# use a particular function within a package without loading the package
-packagename::functionname   
-```
-<!-- ++++++++++++++++++++++++++++++++++++ -->
-<!-- Conventions about R Code in the book -->
-<!-- ++++++++++++++++++++++++++++++++++++ -->
-###  `r fa("info", fill = "black")` Running R code (stolen from R4DS)
-The previous section showed you a couple of examples of running R code. Code in the book looks like this:
-
-```
-1 + 2
-## [1] 3
-```
-
-If you run the same code in your local console, it will look like this:
-``` 
-> 1 + 2
-[1] 3
-```
-
-There are two main differences. In your console, you type after the `>`, called the __prompt__; we don't show the prompt in the book. In the book, output is commented out with `#>`; in your console it appears directly after your code. These two differences mean that if you're working with an electronic version of the book, you can easily copy code out of the book and into the console.
-Throughout the book we use a consistent set of conventions to refer to code:
-* Functions are in a code font and followed by parentheses, like `sum()`, 
-  or `mean()`.
-* Other R objects (like data or function arguments) are in a code font,
-  without parentheses, like `flights` or `x`.
-  
-* If we want to make it clear what package an object comes from, we'll use
-  the package name followed by two colons, like `dplyr::mutate()`, or   
-  `nycflights13::flights`. This is also valid R code.
-
-
-<!-- +++++++++++++ -->
-<!-- Example tasks -->
-<!-- +++++++++++++ -->
-###  `r fa("tasks", fill = "black")` Exercise 1
-
-1. Identify what working directory you are working out of.
-2. Create a folder on your computer titled `datascience`. Within R, set your working directory to this folder.
-
-#### Solution {-}
-
-1. Identify what working directory you are working out of.
-
-```r
-getwd()
-#> [1] "/Users/j.schwarz/NIT/"
-```
-
-2. Create a folder on your computer titled `datascience`. Within R, set your working directory to this folder.
-```r
-setwd("/Users/j.schwarz/NIT/datascience")
-```
-
-###  `r fa("tasks", fill = "black")` Exercise 2
-
-`dplyr` is an extremely popular package for common data transformation activities and is available from CRAN.  Perform the following tasks:
-
-1. Install the `dplyr` package.
-2. Load the `dplyr` package.
-3. Access the help documentation for the `dplyr` package.
-4. Check out the vignette(s) for `dplyr`
-
-#### Solution {-}
-
-1. Install the `tidyverse` package.
-
-```{r, eval = FALSE}
-install.packages("tidyverse")
-```
-
-2. Load the `tidyverse` package.
-```{r}
-library(tidyverse)
-```
-
-<!-- ++++++++ -->
-<!-- R basics -->
-<!-- ++++++++ -->
-### Working with RStudio / Setup & Customization
-
-Essential basics. The rest will be explained with the business examples 
-
-* never saving / loading .Rdata on exit / on startup (problem to recreate reproducible code)
-
-<!-- ++++++ -->
-<!-- GitHub -->
-<!-- ++++++ -->
-
-
-## GitHub
-
-### Create a free github account.
-
-```{block, type='rmdblankbox'}
-Website
-```
-```{block, type='rmdwebsite'}
-**[https://github.com/](https://github.com/)**
-```
-
-### Download and install github desktop 
-
-```{block, type='rmdblankbox'}
-Download
-```
-```{block, type='rmdattachment'}
-**[https://desktop.github.com](https://desktop.github.com)**
-```
-
-```{r github-desktop, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
-knitr::include_graphics('input/session_01/01_images/github_desktop.png', dpi = NA)
-```
-
-
-<!-- ++++++++++ -->
-<!-- LabJournal -->
-<!-- ++++++++++ -->
-### Create your own LabJournal
-
-Fork, or download ....
-
-<a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>
-
-
-<!-- +++++++++++ -->
-<!-- DS Overview -->
-<!-- +++++++++++ -->
-# Data Science Workflow
-
-```{r data-science-workflow, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+```{r data-science-workflow_1, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/session_01/01_images/data_science_workflow.png', dpi = NA)
 ```
 
-Explanation how about the steps.
+```{r data-science-workflow_2, echo=FALSE, fig.cap='Typical Tidyverse Workflow', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/tidyverse.png', dpi = NA)
+```
 
-Strucutre of the following lessons will be aligned with those steps.
+The tidyverse is a collection of R packages developed by RStudio’s chief scientist Hadley Wickham. These packages work well together as part of larger data analysis pipeline. To learn more about these tools and how they work together, read R for data science.
 
-## Cheatsheets
+The following tutorial will introduce some basic functions in tidyverse for structuring and analyzing datasets. This is the first in a three-part series on cleaning data to visualize it in R using the tidyverse.
+
+### Overveiw / Cheatsheets
 
 Information for some libraries:
 
@@ -235,6 +32,157 @@ Information for some libraries:
 * [tidyr](https://tidyr.tidyverse.org/)
 
 ...
+
+### Introduction to Pipes
+<a href="https://magrittr.tidyverse.org">
+<img src="input/session_01/01_images/logo_pipe.svg" align="right" style="width:250px; height:250px; padding:10px"/>
+</a>
+You will be using the “pipe”-operator `%>%` throughout this class. The “pipe” is from the `magrittr` package. Read about using it <a href="https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html" target="_blank"><b>here</b></a>. It makes your code more readable by structuring sequences of data operations left-to-right (as opposed to from the inside and out). The pipe makes your code read more like a sentence, branching from left to right. Mathematically it can be written like the following:
+
+* `x %>% f` is equivalent to `f(x)`
+* `x %>% f(y)` is equivalent to `f(x, y)`
+* `x %>% f %>% g %>% h` is equivalent to `h(g(f(x)))`
+
+
+Instead of writing this:
+
+```
+data <- iris
+data <- head(data, n=3)
+```
+
+you can write the code like this:
+
+``` r
+# The easiest way to get magrittr is to load the whole tidyverse:
+library("tidyverse")
+# Alternatively, load just magrittr:
+library("magrittr")
+
+iris %>% head(n=3)
+```
+
+### Tibbles
+<a href="https://tibble.tidyverse.org/">
+<img src="input/session_01/01_images/logo_tibble.svg" align="right" style="width:250px; height:250px; padding:10px"/>
+</a>
+
+* tibble is one of the unifying features of tidyverse,
+* it is a better data.frame realization,
+* objects data.frame can be coerced to tibble using as_tibble()
+
+When you print a tibble:
+* all columns that fit the screen are shown,
+* first 10 rows are shown,
+* data type for each column is shown.
+
+```
+ tibble(
+    x = 1,          # recycling
+    y = runif(50), 
+    z = x + y^2,
+    outcome = rnorm(50)
+  )
+```
+
+```
+as_tibble(cars)
+```
+
+Subsetting tibbles
+
+```
+vehicles <- as_tibble(cars[1:5,])
+vehicles[['speed']]
+vehicles[[1]]
+vehicles$speed
+# Using placeholders
+vehicles %>% .$dist
+vehicles %>% .[['dist']]
+vehicles %>% .[[2]]
+```
+
+### Loading data with readr
+<a href="https://readr.tidyverse.org">
+<img src="input/session_01/01_images/logo_readr.svg" align="right" style="width:250px; height:250px; padding:10px"/>
+</a>
+In tidyverse you import data using readr package that provides a number of useful data import functions:
+
+read_csv() used to read comma-delimited files,
+
+The most commonly used read_csv() has some familiar arguments like:
+
+skip -- to specify the number of rows to skip (headers),
+col_names -- to supply a vector of column names,
+comment -- to specify what character designates a comment,
+na -- to specify how missing values are represented.
+
+```r
+# Loading data
+dataset_tbl <- read_csv("data.csv"))
+
+# Writing data
+write_csv(dataset_tbl, "data.csv")
+```
+
+But saving in csv (or tsv) does mean you loose information about the type of data in particular columns. You can avoid this by using:
+
+write_rds() and read_rds() to read/write objects in R binary rds format,
+
+### Reshaping your data with tidyr
+<a href="https://tidyr.tidyverse.org/">
+<img src="input/session_01/01_images/logo_tidyr.svg" align="right" style="width:250px; height:250px; padding:10px"/>
+</a>
+
+The Concept of Tidy Data
+
+* each and every observation is represented as exactly one row,
+* each and every variable is represented by exactly one column,
+* thus each data table cell contains only one value.
+
+```{r tidy-data, echo=FALSE, fig.cap='The concept of tidy data', out.width='100%'}
+knitr::include_graphics('input/session_01/01_images/tidy_data.png', dpi = NA)
+```
+
+Usually data are untidy in only one way. However, if you are unlucky, they are really untidy and thus a pain to work with...
+
+For the following example is the Diamonds Dataset used from the ggplot2 package.
+
+`gather`: Use, if some of your column names are actually values of a variable
+
+```{r, eval = TRUE, echo=FALSE}
+library(ggplot2)
+library(tidyr)
+diamonds2 <- readRDS("input/session_01/02_R/diamonds2.rds")
+```
+
+```{r, eval = TRUE}
+diamonds2
+
+diamonds2 %>% 
+  gather(`2008`, `2009`, key = 'year', value = 'price')
+```
+
+`spread`: Use, if some of your observations are scattered across many rows
+```r
+bijou3
+```
+```r
+bijou3 %>% 
+  spread(key=dimension, value=measurement) %>% 
+  head(n = 5)
+```
+
+### Data Transformations with dplyr
+<a href="https://dplyr.tidyverse.org/">
+<img src="input/session_01/01_images/logo_dplyr.svg" align="right" style="width:250px; height:250px; padding:10px"/>
+</a>
+
+* `filter`
+* 
+
+
+
 
 <!-- +++++++++++ -->
 <!-- 1st Project -->
