@@ -163,6 +163,31 @@ Essential basics. The rest will be explained with the business examples
 
 * never saving / loading .Rdata on exit / on startup (problem to recreate reproducible code)
 
+
+```{block, type='rmdblankbox'}
+Pro Tip
+```
+```{block, type='rmdprotip'}
+Explain the ? in front of functions (contr + enter). Use ?function_name to get the help documentation on a function. Usage and arguments section.
+```
+
+```{block, type='rmdblankbox'}
+Pro Tip
+```
+```{block, type='rmdprotip'}
+Use tab complete to quickly complete function names as well as file pathes
+```
+
+
+Expplaing assignment
+Explaing tibble ( special structure that stores data)
+Environment variable now, can be viewd by clicking on it
+
+Excel files and local databases
+
+data.frames, lists, vectors, ...
+data types, basics
+
 <!-- ++++++ -->
 <!-- GitHub -->
 <!-- ++++++ -->

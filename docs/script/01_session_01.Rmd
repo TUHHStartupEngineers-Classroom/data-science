@@ -59,22 +59,22 @@ knitr::asis_output(htmltools::htmlPreserve('
 </style>
 <div class="row">
   <div class="column">
-    <a href="https://readr.tidyverse.org">
+    <a href="https://readr.tidyverse.org" target="_blank">
       <img src="input/session_01/01_images/logo_readr.svg" alt="CAPTION" style="width:100%">
     </a>
   </div>
   <div class="column">
-    <a href="https://readxl.tidyverse.org">
+    <a href="https://readxl.tidyverse.org" target="_blank">
       <img src="input/session_01/01_images/logo_readxl.svg" alt="Snow" style="width:100%">
     </a>
   </div>
   <div class="column">
-    <a href="https://haven.tidyverse.org">
+    <a href="https://haven.tidyverse.org" target="_blank">
       <img src="input/session_01/01_images/logo_haven.svg" alt="Forest" style="width:100%">
     </a>
   </div>
   <div class="column">
-    <a href="https://googledrive.tidyverse.org">
+    <a href="https://googledrive.tidyverse.org" target="_blank">
       <img src="input/session_01/01_images/logo_googledrive.svg" alt="Mountains" style="width:100%">
     </a>
   </div>
@@ -310,6 +310,10 @@ diamonds %>%
             min_price = min(price))
 ```
 
+* **`glimpse()`**
+
+
+
 ## Lubridate
 <a href="https://lubridate.tidyverse.org/">
 <img src="input/session_01/01_images/logo_lubridate.svg" align="right" style="width:250px; height:250px; padding:10px"/>
@@ -451,41 +455,6 @@ Download
 knitr::include_graphics('input/session_01/01_images/project_structure.png', dpi = NA)
 ```
 
-### Installing Packages
-
-```{block, type='rmdblankbox'}
-Download
-```
-```{block, type='rmdattachment'}
-**[session_01_install_pkgs.R](https://github.com/TUHH-W11/data-science/blob/master/script/input/session_01/02_R/session_01_install_pkgs.R)**
-```
-
-package deoendencies
-
-c operatior stands for combining elements
-
-control + enter or cmd + enter
-
-global environment
-
-output to the screen (print)
-
-comments (not being added to the cvector)
-
-explanation of the right hand corner (packages, etc)
-
-Errors: what to do in case of errors during installation (maybe Rtools is needed, windows users)
-
-Doy you want to install from source the packages which need compilation
-
-###  `r fa("flag-checkered", fill = "black")` Checkpoint
-
-* Key Checks at this Point
-* User Library Verification
-* Directory Structure Verification
-
-
-## Import
 ### Setup (Template File)
 
 Download the template we will be using for the analysis
@@ -572,59 +541,44 @@ library(writexl)
 ```
 
 
-Add some hints (toc, environment, ...)
-
-### Import
-#### flatfiles
-
-``` r
-library(readr) 
-library(readxl)
-library(odbc)
-library(RSQLite)
-```
-
-importing excel files: readr for our csv files
-for xlsx files read_excel()
-
+### Installing Packages
 
 ```{block, type='rmdblankbox'}
-Pro Tip
+Download
 ```
-```{block, type='rmdprotip'}
-Explain the ? in front of functions (contr + enter). Use ?function_name to get the help documentation on a function. Usage and arguments section.
-```
-
-```{block, type='rmdblankbox'}
-Pro Tip
-```
-```{block, type='rmdprotip'}
-Use tab complete to quickly complete function names as well as file pathes
+```{block, type='rmdattachment'}
+**[session_01_install_pkgs.R](https://github.com/TUHH-W11/data-science/blob/master/script/input/session_01/02_R/session_01_install_pkgs.R)**
 ```
 
+package deoendencies
 
-Expplaing assignment
-Explaing tibble ( special structure that stores data)
-Environment variable now, can be viewd by clicking on it
+c operatior stands for combining elements
 
-Excel files and local databases
+control + enter or cmd + enter
 
-data.frames, lists, vectors, ...
-data types, basics
+global environment
 
-#### web scraping
+output to the screen (print)
 
-``` r
-library(httr)
-library(rvest)
-library(RSelenium)
-```
+comments (not being added to the cvector)
 
-Screen scraping and jsons via API
+explanation of the right hand corner (packages, etc)
+
+Errors: what to do in case of errors during installation (maybe Rtools is needed, windows users)
+
+Doy you want to install from source the packages which need compilation
 
 ###  `r fa("flag-checkered", fill = "black")` Checkpoint
 
-### Examine
+* Key Checks at this Point
+* User Library Verification
+* Directory Structure Verification
+
+
+## Import
+###  `r fa("flag-checkered", fill = "black")` Checkpoint
+
+## Examine
 
 regular print (output tibble to console)
 open data window (view() function), filtering etc.
@@ -633,7 +587,7 @@ glimpse() function (prints it out in a transpose fashoin)
 --> Objective: Combine the three tibbles into one that can be analyzed
 
 
-### Cleaning and joining data
+## Cleaning and joining data
 
 ```r
 library(dplyr)
@@ -646,7 +600,7 @@ group_by, summarize
 
 ###  `r fa("flag-checkered", fill = "black")` Checkpoint
 
-### Visualizing data with ggplot2
+## Visualizing data with ggplot2
 
 ```r
 library(ggplot2)
