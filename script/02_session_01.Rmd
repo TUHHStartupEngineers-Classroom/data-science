@@ -1,4 +1,5 @@
 # (PART) Session 2 {-}
+# Overview
 #  `r fa("r-project", fill = "black")` Data visualization with ggplot {#session_01_02}
 <a href="https://ggplot2.tidyverse.org">
 <img src="input/session_02/01_images/logo_ggplot2.svg" align="right" style="width:250px; height:250px; padding:10px"/>

@@ -1,4 +1,5 @@
 # (PART) Session 1 {-}
+# Overview
 #  `r fa("r-project", fill = "black")` Introduction to the tidyverse {#session_01_01}
 
 ```{r data-science-workflow_1, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
