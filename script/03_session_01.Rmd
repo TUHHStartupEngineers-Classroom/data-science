@@ -1,6 +1,8 @@
 # (PART) Session 3 {-}
 
-# Time Series
+#  `r fa("r-project", fill = "black")` Data manipulation {#session_01_03}
+
+## Time Series
 
 ```{r eval=FALSE}
 library(tidyverse)
@@ -8,20 +10,20 @@ library(lubridate)
 library(tidyquant)
 ```
 
-# Text Fundamentals
+## Text Fundamentals
 
 ```{r eval=FALSE}
 library(stringr)
 ```
 Regex
 
-# Categorical data
+## Categorical data
 
 ```{r eval=FALSE}
 library(forcats)
 ```
 
-# Functional Programming
+## Functional Programming
 
 Learn to build functions
 Loops, apply-family
@@ -30,24 +32,6 @@ Loops, apply-family
 library(purrr)
 ```
 
-## Exercise1 
-Find the mean of `1:10`.
-
-## Solution
-Here is how.
-
-```{r}
-mean(1:10)
-```
-
-## Exercise
-
-Plot `1:10` in R.
-
-### Solution
-
-Here is the solution
-
-```{r}
-plot(1:10)
-```
+#  `r fa("user-tie", fill = "black")` Business case - Sales Analysis
+##  `r fa("flag-checkered", fill = "black")` Checkpoint
+#  `r fa("laptop-code", fill = "black")` Challenge

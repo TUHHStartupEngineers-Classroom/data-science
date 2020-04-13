@@ -1,13 +1,14 @@
 # (PART) Session 7 {-}
 
-# Communication - Dashboard (II)
-## Shiny App
+**Goal**
+* Shiny Apps
 
 ```{r shiny-app, echo=FALSE, fig.cap='shiny app example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/session_07/01_images/shiny_example.png', dpi = NA)
 ```
 
-# Session 07 - Challenge - Stock Analyzer
-
-
+#  `r fa("r-project", fill = "black")` Shiny basics {#session_01_07}
+#  `r fa("user-tie", fill = "black")` Business case - STock Analyzer
+##  `r fa("flag-checkered", fill = "black")` Checkpoint
+#  `r fa("laptop-code", fill = "black")` Challenge
 

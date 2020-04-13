@@ -1,17 +1,14 @@
 # (PART) Session 4 {-}
 
-# Machine Learning concepts
-
+#  `r fa("r-project", fill = "black")` Machine Learning concepts {#session_01_04}
 ## Customer Segmentation with K-Means Clustering & UMAP
-
 ## ML - Linear Algorithms
 ## ML - Tree Based Algorithms
 ## ML - Preprocessing & SVM
 
 ## Testing the models 
 
-
-# Session 04 - Challenge - Company Segmentation with Stock Prices
-# Session 04 - Challenge - Predicting new product model
-
-Here is a review of existing methods.
+#  `r fa("user-tie", fill = "black")` Business case - Company Segmentation with Stock Prices
+Session 04 - Challenge - Predicting new product model
+##  `r fa("flag-checkered", fill = "black")` Checkpoint
+#  `r fa("laptop-code", fill = "black")` Challenge

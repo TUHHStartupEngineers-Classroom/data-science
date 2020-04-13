@@ -21,17 +21,10 @@ Every ggplot2 plot has three key components:
 
 
 #  `r fa("user-tie", fill = "black")` Business case - Sales Analysis
+##  `r fa("flag-checkered", fill = "black")` Checkpoint
 
 #  `r fa("laptop-code", fill = "black")` Challenge
 
-## Content 1
-##  `r fa("flag-checkered", fill = "black")` Checkpoint
-
-## Content 2
-##  `r fa("flag-checkered", fill = "black")` Checkpoint
-
-## Session 02 - Challenge
-## Session 02 - Solution
 
 ```
 # # Challenge Summary

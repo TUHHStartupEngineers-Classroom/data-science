@@ -1,14 +1,25 @@
 # (PART) Session 5 {-}
 
-# Communication - Report
+**Goal**
+* PDF Report
+<iframe src="03_sales_report.pdf" style="width:100%; height:750px;" frameborder="1" allowfullscreen scrolling="yes"></iframe>
+
+* Interactive Report
+<iframe src="widget.html" width="100%" height="800" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
+
+#  `r fa("r-project", fill = "black")` Communication basics {#session_01_05}
 
 ## Reports (PDF)
 **Example Report with RMarkdown**
 
-<iframe src="03_sales_report.pdf" style="width:100%; height:750px;" frameborder="1" allowfullscreen scrolling="yes"></iframe>
+## Presentation • ioslides
 
-## Reports (Interactive Plots)
+## Presentation • revealjs
 
-<iframe src="widget.html" width="100%" height="800" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
+## Presentation • xaringang
 
-# Session 05 - Challenge - Report
+# Interactive Report with plotly
+
+#  `r fa("user-tie", fill = "black")` Business case - Reporting
+##  `r fa("flag-checkered", fill = "black")` Checkpoint
+#  `r fa("laptop-code", fill = "black")` Challenge

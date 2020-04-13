@@ -598,16 +598,6 @@ library(tidyverse)
 left_join, rbind, filtering, naming, pipe operator, ...
 group_by, summarize
 
-###  `r fa("flag-checkered", fill = "black")` Checkpoint
-
-## Visualizing data with ggplot2
-
-```r
-library(ggplot2)
-```
-
-different geometries
-saving files
 
 ###  `r fa("flag-checkered", fill = "black")` Checkpoint
 

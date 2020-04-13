@@ -1,11 +1,12 @@
 # (PART) Session 6 {-}
 
-# Communication - Dashboard (I)
-## Flexdashboard
-
+**Goal**
+* Flexdashboard
 <iframe src="sales_dashboard_flex.html" width="100%" height="800" id="igraph" scrolling="no" seamless="seamless" frameBorder="0"></iframe>
 
-# Session 06 - Challenge - Sales Dashboard
+#  `r fa("r-project", fill = "black")` Flexdashboard basics {#session_01_06}
 
-
+#  `r fa("user-tie", fill = "black")` Business case - Dashboatd (Flex)
+##  `r fa("flag-checkered", fill = "black")` Checkpoint
+#  `r fa("laptop-code", fill = "black")` Challenge
 
