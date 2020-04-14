@@ -44,12 +44,12 @@ This is a class for programming with R. It will teach you how to program in R, w
 Students with a strong interest and motivation in acquiring the skills required for mastering the computational aspects of modern business analytics. The class is mainly targeting ...  
 
 
-```{r r-import, echo=FALSE}
-knitr::asis_output(htmltools::htmlPreserve('
-<script defer src="http://217.93.251.46:8080/js/commento.js"></script>
+
+<!--html_preserve-->
+<script defer src="https://commento.startupengineer.io/js/commento.js"></script>
 <div id="commento"></div>
-'))
-```
+<!--/html_preserve-->
+
 
 
 
