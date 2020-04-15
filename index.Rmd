@@ -46,7 +46,7 @@ Students with a strong interest and motivation in acquiring the skills required 
 
 
 <!--html_preserve-->
-<script defer src="https://commento.startupengineer.io/js/commento.js"></script>
+<script defer src="https://commento.memetrify.de/js/commento.js"></script>
 <div id="commento"></div>
 <!--/html_preserve-->
 
