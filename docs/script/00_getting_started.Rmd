@@ -35,7 +35,9 @@ Interactive Shinyapp
 
 ### Manually
 
-**Video instructions to install RStudio (Download link below)**
+Download and install R, a free software environment for statistical computing and graphics from CRAN, the Comprehensive R Archive Network. 
+
+**Video instructions to install R (Download link below)**
 
 <div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516510?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
@@ -44,10 +46,20 @@ Interactive Shinyapp
 Download
 ```
 ```{block, type='rmdattachment'}
-**[https://cloud.r-project.org](https://cloud.r-project.org)**
+<a href="https://cloud.r-project.org" target="_blank"><b>https://cloud.r-project.org</b></a>
 ```
 
+**Steps**
+
+1. Click “Download R for Mac/Windows”
+2. Download the appropriate file:
+    + Windows users click Base, and download the installer for the latest R version
+    + Mac users select the file R-3.X.X.pkg that aligns with your OS version
+3. Follow the instructions of the installer.
+
 ***
+
+Install RStudio’s IDE (stands for integrated development environment), a powerful user interface for R. 
 
 **Video instructions to install RStudio (Download link below)**
 
@@ -57,14 +69,145 @@ Download
 Download
 ```
 ```{block, type='rmdattachment'}
-**[https://rstudio.com/products/rstudio/download/](https://rstudio.com/products/rstudio/download/)**
+<a href="https://rstudio.com/products/rstudio/download/" target="_blank"><b>https://rstudio.com/products/rstudio/download/</b></a>
 ```
+
+**Steps**
+
+1. Select the install file for your OS.
+2. Follow the instructions of the installer.
 
 ***
 
-**Video instructions to install R packages**
+**Video instructions to install R packages (--y weiter nach hinten)**
 
 <div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516241?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+
+## Working with RStudio
+
+### Understanding the RStudio IDE
+
+```{r rstudio-ide, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
+knitr::include_graphics('input/00_getting_started/01_images/rstudio_ide.png', dpi = NA)
+```
+
+
+Green:
+
+Script files. Saves your code,
+
+Red:
+
+Console/Command Line. Does not save your code. Displays output.
+
+Blue:
+
+Workspace environment. Holds your objects. You can review history
+
+Brown: 
+
+Misc Displays. files in wd. plots when produced. Help files. Loaded packages.
+
+
+```{block, type='rmdblankbox'}
+Pro Tip
+```
+```{block, type='rmdprotip'}
+To change the appearence of RStudio go to Tools --> Global options --> appearences
+```
+
+```{block, type='rmdblankbox'}
+Pro Tip
+```
+```{block, type='rmdprotip'}
+Change saving to never ...
+```
+
+
+Setting working direcorry ...
+
+
+#### Task {-}
+1. Download the files
+
+Insert downlaod here...
+
+2. Create a new .R script and set the working directory to the "..."-folder you downloaded for this class.
+3. Write and execute the following code in the .R script and identify where in the IDE the outputs can be found.
+
+
+```r
+mtcars
+?sum
+hist(mtcars$mpg)
+avg_mpg <- mean(mtcars$mpg)
+random_numbers <- runif(25)
+history()
+```
+
+#### Solution {-}
+
+...
+
+### Getting Help
+
+Inside RStudio
+
+```
+# provides details for specific function
+help(sqrt)
+
+# provides same information as help(functionname)
+?sqrt
+
+# provides examples for said function
+example(sqrt)
+```
+
+External to R
+
+Google 
+rseek
+Stackoverflow
+...
+
+###  Basic R commands and syntax (stolen from R4DS)
+
+**The assignment `<-` operator**
+
+x <- 10
+x <- x + 10 # we can incremenet( build onto) existing objects
+x
+X # must be specific /case sensitive
+
+
+#### Task
+Economic order quantitiy
+
+$$Q = \sqrt{\frac{2DK}{h}}$$
+
+Calulate the Q where:
+
+$D = 1000$
+$K = 5$
+$h = 0.25$
+
+
+```
+# get your current working directory
+getwd()
+[1] "/Users/bradleyboehmke/Dropbox/Academia/Wake Forest/BAN6003"
+
+# set your working directory
+setwd("/Users/bradleyboehmke/Dropbox/Academia/Wake Forest")
+
+getwd()
+[1] "/Users/bradleyboehmke/Dropbox/Academia/Wake Forest"
+```
+
+#### Tasks
+
 
 Installing Packages
 
@@ -84,7 +227,7 @@ packagename::functionname
 <!-- ++++++++++++++++++++++++++++++++++++ -->
 <!-- Conventions about R Code in the book -->
 <!-- ++++++++++++++++++++++++++++++++++++ -->
-##  `r fa("info", fill = "black")` Running R code (stolen from R4DS)
+##  `r fa("info", fill = "black")` Basic R commands and syntax (stolen from R4DS)
 The previous section showed you a couple of examples of running R code. Code in the book looks like this:
 
 ```
