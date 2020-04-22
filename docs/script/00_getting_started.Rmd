@@ -205,8 +205,7 @@ Insert downlaod here...
 2. Create a new .R script and set the working directory to the "..."-folder you downloaded for this class.
 3. Write and execute the following code in the .R script and identify where in the IDE the outputs can be found.
 
-
-```r
+```
 mtcars
 ?sum
 hist(mtcars$mpg)
@@ -219,29 +218,7 @@ history()
 
 ...
 
-### Getting Help
-
-Inside RStudio
-
-```
-# provides details for specific function
-help(sqrt)
-
-# provides same information as help(functionname)
-?sqrt
-
-# provides examples for said function
-example(sqrt)
-```
-
-External to R
-
-Google 
-rseek
-Stackoverflow
-...
-
-###  Basic R commands and syntax (stolen from R4DS)
+##  Basic R commands and syntax (stolen from R4DS)
 
 **The assignment `<-` operator**
 
@@ -251,7 +228,7 @@ x
 X # must be specific /case sensitive
 
 
-#### Task
+### Task
 Economic order quantitiy
 
 $$Q = \sqrt{\frac{2DK}{h}}$$
@@ -275,7 +252,7 @@ getwd()
 [1] "/Users/bradleyboehmke/Dropbox/Academia/Wake Forest"
 ```
 
-#### Tasks
+### Tasks
 
 
 Installing Packages
@@ -293,10 +270,13 @@ library("packagename")
 # use a particular function within a package without loading the package
 packagename::functionname   
 ```
+
+
+
 <!-- ++++++++++++++++++++++++++++++++++++ -->
 <!-- Conventions about R Code in the book -->
 <!-- ++++++++++++++++++++++++++++++++++++ -->
-##  `r fa("info", fill = "black")` Basic R commands and syntax (stolen from R4DS)
+
 The previous section showed you a couple of examples of running R code. Code in the book looks like this:
 
 ```
@@ -325,7 +305,7 @@ Throughout the book we use a consistent set of conventions to refer to code:
 <!-- +++++++++++++ -->
 <!-- Example tasks -->
 <!-- +++++++++++++ -->
-##  `r fa("tasks", fill = "black")` Exercise 1
+###  `r fa("tasks", fill = "black")` Exercise 1 {-}
 
 1. Identify what working directory you are working out of.
 2. Create a folder on your computer titled `datascience`. Within R, set your working directory to this folder.
@@ -344,7 +324,7 @@ getwd()
 setwd("/Users/j.schwarz/NIT/datascience")
 ```
 
-##  `r fa("tasks", fill = "black")` Exercise 2
+###  `r fa("tasks", fill = "black")` Task 2
 
 `dplyr` is an extremely popular package for common data transformation activities and is available from CRAN.  Perform the following tasks:
 
@@ -369,7 +349,7 @@ library(tidyverse)
 <!-- ++++++++ -->
 <!-- R basics -->
 <!-- ++++++++ -->
-## Working with RStudio / Setup & Customization
+
 
 Essential basics. The rest will be explained with the business examples 
 
@@ -399,6 +379,29 @@ Excel files and local databases
 
 data.frames, lists, vectors, ...
 data types, basics
+
+
+## Getting Help
+
+Inside RStudio
+
+```
+# provides details for specific function
+help(sqrt)
+
+# provides same information as help(functionname)
+?sqrt
+
+# provides examples for said function
+example(sqrt)
+```
+
+External to R
+
+Google 
+rseek
+Stackoverflow
+...
 
 <!-- ++++++ -->
 <!-- GitHub -->

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 Installing R &amp; RStudio IDE | DATA SCIENCE Course script</title>
+  <title>1.3 Basic R commands and syntax (stolen from R4DS) | DATA SCIENCE Course script</title>
   <meta name="description" content="This is a minimal example the concepts covered in the class." />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 Installing R &amp; RStudio IDE | DATA SCIENCE Course script" />
+  <meta property="og:title" content="1.3 Basic R commands and syntax (stolen from R4DS) | DATA SCIENCE Course script" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 Installing R &amp; RStudio IDE | DATA SCIENCE Course script" />
+  <meta name="twitter:title" content="1.3 Basic R commands and syntax (stolen from R4DS) | DATA SCIENCE Course script" />
   
   <meta name="twitter:description" content="This is a minimal example the concepts covered in the class." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="getting-started.html"/>
-<link rel="next" href="working-with-rstudio.html"/>
+<link rel="prev" href="working-with-rstudio.html"/>
+<link rel="next" href="getting-help.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -1009,81 +1009,138 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="installing-r-rstudio-ide" class="section level2">
-<h2><span class="header-section-number">1.1</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</h2>
-<div id="interactively" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> Interactively</h3>
-<p>Go to the following link and follow the instructions to install R and the IDE RStudio</p>
-<div class="rmdblankbox">
-<p>
-Interactive Shinyapp
-</p>
+<div id="basic-r-commands-and-syntax-stolen-from-r4ds" class="section level2">
+<h2><span class="header-section-number">1.3</span> Basic R commands and syntax (stolen from R4DS)</h2>
+<p><strong>The assignment <code>&lt;-</code> operator</strong></p>
+<p>x &lt;- 10
+x &lt;- x + 10 # we can incremenet( build onto) existing objects
+x
+X # must be specific /case sensitive</p>
+<div id="task-1" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Task</h3>
+<p>Economic order quantitiy</p>
+<p><span class="math display">\[Q = \sqrt{\frac{2DK}{h}}\]</span></p>
+<p>Calulate the Q where:</p>
+<p><span class="math inline">\(D = 1000\)</span>
+<span class="math inline">\(K = 5\)</span>
+<span class="math inline">\(h = 0.25\)</span></p>
+<pre><code># get your current working directory
+getwd()
+[1] &quot;/Users/bradleyboehmke/Dropbox/Academia/Wake Forest/BAN6003&quot;
+
+# set your working directory
+setwd(&quot;/Users/bradleyboehmke/Dropbox/Academia/Wake Forest&quot;)
+
+getwd()
+[1] &quot;/Users/bradleyboehmke/Dropbox/Academia/Wake Forest&quot;</code></pre>
 </div>
-<div class="rmdshiny">
-<p>
-<a href="https://jwarz.shinyapps.io/learnR/" target="_blank"><b>Install R &amp; RStudio IDE</b></a>
-</p>
-</div>
-</div>
-<div id="manually" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> Manually</h3>
-<p>Download and install R, a free software environment for statistical computing and graphics from CRAN, the Comprehensive R Archive Network.</p>
-<p><strong>Video instructions to install R (Download link below)</strong></p>
-<div style="padding:62.5% 0 3% 0;position:relative;">
-<iframe src="https://player.vimeo.com/video/203516510?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-</iframe>
-</div>
-<script src="https://player.vimeo.com/api/player.js"></script>
-<div class="rmdblankbox">
-<p>
-Download
-</p>
-</div>
-<div class="rmdattachment">
-<p>
-<a href="https://cloud.r-project.org" target="_blank"><b><a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a></b></a>
-</p>
-</div>
-<p><strong>Steps</strong></p>
-<ol style="list-style-type: decimal">
-<li>Click “Download R for Mac/Windows”</li>
-<li>Download the appropriate file:
+<div id="tasks" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Tasks</h3>
+<p>Installing Packages</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># install package from CRAN</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)   </a></code></pre></div>
+<p>Loading packages</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># load the package to use in the current R session</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">library</span>(<span class="st">&quot;packagename&quot;</span>)         </a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co"># use a particular function within a package without loading the package</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">packagename<span class="op">::</span>functionname   </a></code></pre></div>
+<!-- ++++++++++++++++++++++++++++++++++++ -->
+<!-- Conventions about R Code in the book -->
+<!-- ++++++++++++++++++++++++++++++++++++ -->
+<p>The previous section showed you a couple of examples of running R code. Code in the book looks like this:</p>
+<pre><code>1 + 2
+## [1] 3</code></pre>
+<p>If you run the same code in your local console, it will look like this:</p>
+<pre><code>&gt; 1 + 2
+[1] 3</code></pre>
+<p>There are two main differences. In your console, you type after the <code>&gt;</code>, called the <strong>prompt</strong>; we don’t show the prompt in the book. In the book, output is commented out with <code>#&gt;</code>; in your console it appears directly after your code. These two differences mean that if you’re working with an electronic version of the book, you can easily copy code out of the book and into the console.
+Throughout the book we use a consistent set of conventions to refer to code:
+* Functions are in a code font and followed by parentheses, like <code>sum()</code>,
+or <code>mean()</code>.
+* Other R objects (like data or function arguments) are in a code font,
+without parentheses, like <code>flights</code> or <code>x</code>.</p>
 <ul>
-<li>Windows users click Base, and download the installer for the latest R version</li>
-<li>Mac users select the file R-3.X.X.pkg that aligns with your OS version</li>
-</ul></li>
-<li>Follow the instructions of the installer.</li>
-</ol>
-<hr />
-<p>Install RStudio’s IDE (stands for integrated development environment), a powerful user interface for R.</p>
-<p><strong>Video instructions to install RStudio (Download link below)</strong></p>
-<div style="padding:62.5% 0 3% 0;position:relative;">
-<iframe src="https://player.vimeo.com/video/203516968?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-</iframe>
+<li>If we want to make it clear what package an object comes from, we’ll use
+the package name followed by two colons, like <code>dplyr::mutate()</code>, or<br />
+<code>nycflights13::flights</code>. This is also valid R code.</li>
+</ul>
+<!-- +++++++++++++ -->
+<!-- Example tasks -->
+<!-- +++++++++++++ -->
 </div>
-<script src="https://player.vimeo.com/api/player.js"></script>
+<div id="exercise-1" class="section level3 unnumbered">
+<h3><svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Exercise 1</h3>
+<ol style="list-style-type: decimal">
+<li>Identify what working directory you are working out of.</li>
+<li>Create a folder on your computer titled <code>datascience</code>. Within R, set your working directory to this folder.</li>
+</ol>
+</div>
+<div id="solution-1" class="section level3 unnumbered">
+<h3>Solution</h3>
+<ol style="list-style-type: decimal">
+<li>Identify what working directory you are working out of.</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">getwd</span>()</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="co">#&gt; [1] &quot;/Users/j.schwarz/NIT/&quot;</span></a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a folder on your computer titled <code>datascience</code>. Within R, set your working directory to this folder.</li>
+</ol>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">setwd</span>(<span class="st">&quot;/Users/j.schwarz/NIT/datascience&quot;</span>)</a></code></pre></div>
+</div>
+<div id="task-2" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg> Task 2</h3>
+<p><code>dplyr</code> is an extremely popular package for common data transformation activities and is available from CRAN. Perform the following tasks:</p>
+<ol style="list-style-type: decimal">
+<li>Install the <code>dplyr</code> package.</li>
+<li>Load the <code>dplyr</code> package.</li>
+<li>Access the help documentation for the <code>dplyr</code> package.</li>
+<li>Check out the vignette(s) for <code>dplyr</code></li>
+</ol>
+</div>
+<div id="solution-2" class="section level3 unnumbered">
+<h3>Solution</h3>
+<ol style="list-style-type: decimal">
+<li>Install the <code>tidyverse</code> package.</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</a></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Load the <code>tidyverse</code> package.</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
+<!-- ++++++++ -->
+<!-- R basics -->
+<!-- ++++++++ -->
+<p>Essential basics. The rest will be explained with the business examples</p>
+<ul>
+<li>never saving / loading .Rdata on exit / on startup (problem to recreate reproducible code)</li>
+</ul>
 <div class="rmdblankbox">
 <p>
-Download
+Pro Tip
 </p>
 </div>
-<div class="rmdattachment">
+<div class="rmdprotip">
 <p>
-<a href="https://rstudio.com/products/rstudio/download/" target="_blank"><b><a href="https://rstudio.com/products/rstudio/download/" class="uri">https://rstudio.com/products/rstudio/download/</a></b></a>
+Explain the ? in front of functions (contr + enter). Use ?function_name to get the help documentation on a function. Usage and arguments section.
 </p>
 </div>
-<p><strong>Steps</strong></p>
-<ol style="list-style-type: decimal">
-<li>Select the install file for your OS.</li>
-<li>Follow the instructions of the installer.</li>
-</ol>
-<hr />
-<p><strong>Video instructions to install R packages (–y weiter nach hinten)</strong></p>
-<div style="padding:62.5% 0 3% 0;position:relative;">
-<iframe src="https://player.vimeo.com/video/203516241?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-</iframe>
+<div class="rmdblankbox">
+<p>
+Pro Tip
+</p>
 </div>
-<script src="https://player.vimeo.com/api/player.js"></script>
+<div class="rmdprotip">
+<p>
+Use tab complete to quickly complete function names as well as file pathes
+</p>
+</div>
+<p>Expplaing assignment
+Explaing tibble ( special structure that stores data)
+Environment variable now, can be viewd by clicking on it</p>
+<p>Excel files and local databases</p>
+<p>data.frames, lists, vectors, …
+data types, basics</p>
 </div>
 </div>
             </section>
@@ -1091,8 +1148,8 @@ Download
           </div>
         </div>
       </div>
-<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="working-with-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="working-with-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="getting-help.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
