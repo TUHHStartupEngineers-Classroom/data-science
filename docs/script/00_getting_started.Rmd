@@ -5,6 +5,24 @@
 library(fontawesome)
 ```
 
+__Introductory__
+Is made of projects ...These projects are lighthearted, but they are also deep. As you complete them, you will become an expert at the skills you need to work with data as a data scientist. You will learn how to store data in your computer’s memory, how to access data that is already there, and how to transform data values in memory when necessary. You will also learn how to write your own programs in R that you can use to analyze data and run simulations.
+
+The first project will be creating business formulas. This first project will make it easier to study these things by teaching you the basics of R.
+
+Your first mission is simple: assemble R code that will simulate variable cost. Once you have done that, we’ll be calculating the optimal order quantity
+
+In this project, you will learn how to:
+
+* Use the R and RStudio interfaces
+* Run R commands
+* Create R objects
+* Write your own R functions and scripts
+* Load and use R packages
+* Generate random samples
+
+Don’t worry if it seems like we cover a lot of ground fast. This project is designed to give you a concise overview of the R language. You will return to many of the concepts we meet here in projects 2 and 3, where you will examine the concepts in depth.
+
 <!-- ++++++++++++++++++++++++++++++ -->
 <!-- Chapter: Install R and RStudio -->
 <!-- ++++++++++++++++++++++++++++++ -->
@@ -16,6 +34,8 @@ library(fontawesome)
     <td><img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px" align="right" valign="middle" hspace="50px"></td>
   </tr>
 </table>
+
+You’ll need to have both R and RStudio installed on your computer before you can use them. Both are free and easy to download.
 
 R and RStudio are separate downloads and installations. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. On the following sites you'll find information about how to install the language R and the IDE RStudio.
 
@@ -99,6 +119,9 @@ We will use RStudio IDE to write code, navigate the files on our computer, inspe
 
 ### Understanding the RStudio IDE
 
+The R User Interface
+Before you can ask your computer to save some numbers, you’ll need to know how to talk to it. That’s where R and RStudio come in. RStudio gives you a way to talk to your computer. R gives you a language to speak in. To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in Figure 2.1.
+
 ```{r rstudio-ide, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/00_getting_started/01_images/rstudio_ide.png', dpi = NA)
 ```
@@ -125,7 +148,9 @@ RStudio is divided into 4 “Panes”: the Source for your scripts and documents
 
 One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone.
 
+Before you can ask your computer to save some numbers, you’ll need to know how to talk to it. That’s where R and RStudio come in. RStudio gives you a way to talk to your computer. R gives you a language to speak in. To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in Figure 2.1.
 
+Your computer does your bidding when you type R commands at the prompt in the bottom line of the console pane. Don’t forget to hit the Enter key.
 
 ```{block, type='rmdblankbox'}
 Pro Tip
@@ -218,15 +243,115 @@ history()
 
 ...
 
-##  Basic R commands and syntax (stolen from R4DS)
+##  Basic R commands and syntax 
 
-**The assignment `<-` operator**
+This chapter provides a broad overview of the R language that will get you programming right away. In it, you will build a pair of virtual dice that you can use to generate random numbers. Don’t worry if you’ve never programmed before; the chapter will teach you everything you need to know.
+
+To simulate a pair of dice, you will have to distill each die into its essential features. You cannot place a physical object, like a die, into a computer (well, not without unscrewing some screws), but you can save information about the object in your computer’s memory.
+
+Which information should you save? In general, a die has six important pieces of information: when you roll a die, it can only result in one of six numbers: 1, 2, 3, 4, 5, and 6. You can capture the essential characteristics of a die by saving the numbers 1, 2, 3, 4, 5, and 6 as a group of values in your computer’s memory.
+
+Let’s work on saving these numbers first, and then consider a method for “rolling” our die.
+
+The RStudio interface is simple. You type R code into the bottom line of the RStudio console pane and then click Enter to run it. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line.
+
+When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. Then RStudio displays a fresh prompt for your next command. For example, if you type 1 + 1 and hit Enter, RStudio will display:
+
+````
+> 1 + 1
+[1] 2
+>
+```
+
+You’ll notice that a [1] appears next to your result. R is just letting you know that this line begins with the first value in your result. Some commands return more than one value, and their results may fill up multiple lines. For example, the command 100:130 returns 31 values; it creates a sequence of integers from 100 to 130. Notice that new bracketed numbers appear at the start of the second and third lines of output. These numbers just mean that the second line begins with the 14th value in the result, and the third line begins with the 25th value. You can mostly ignore the numbers that appear in brackets:
+
+```
+> 100:130
+ [1] 100 101 102 103 104 105 106 107 108 109 110 111 112
+[14] 113 114 115 116 117 118 119 120 121 122 123 124 125
+[25] 126 127 128 129 130
+```
+
+Infobox
+The colon operator (:) returns every integer between two integers. It is an easy way to create a sequence of numbers.
+
+If you type an incomplete command and press Enter, R will display a + prompt, which means R is waiting for you to type the rest of your command. Either finish the command or hit Escape to start over:
+
+```
+> 5 -
++
++ 1
+[1] 4
+```
+
+If you type a command that R doesn’t recognize, R will return an error message. If you ever see an error message, don’t panic. R is just telling you that your computer couldn’t understand or do what you asked it to do. You can then try a different command at the next prompt:
+
+```
+> 3 % 5
+Error: unexpected input in "3 % 5"
+>
+```
+
+Once you get the hang of the command line, you can easily do anything in R that you would do with a calculator. For example, you could do some basic arithmetic:
+
+```
+2 * 3   
+## 6
+
+4 - 1   
+## 3
+
+6 / (4 - 1)   
+## 2
+```
+
+Did you notice something different about this code? I’ve left out the >’s and [1]’s. This will make the code easier to copy and paste if you want to put it in your own console.
+
+R treats the hashtag character, #, in a special way; R will not run anything that follows a hashtag on a line. This makes hashtags very useful for adding comments and annotations to your code. Humans will be able to read the comments, but your computer will pass over them. The hashtag is known as the commenting symbol in R.
+
+For the remainder of the book, I’ll use hashtags to display the output of R code. I’ll use a single hashtag to add my own comments and a double hashtag, ##, to display the results of code. I’ll avoid showing >s and [1]s unless I want you to look at them.
+
+Info Box
+Cancelling commands
+
+Some R commands may take a long time to run. You can cancel a command once it has begun by pressing ctrl + c. Note that it may also take R a long time to cancel the comma
+
+Throughout the book, I’ll put exercises in chunks, like the one above. I’ll follow each exercise with a model answer, like the one below.
+
+
+
+### The assignment `<-` operator / Objects
 
 x <- 10
 x <- x + 10 # we can incremenet( build onto) existing objects
 x
 X # must be specific /case sensitive
 
+
+Alert box
+
+Capitalization
+
+R is case-sensitive, so name and Name will refer to different objects:
+```
+Name <- 1
+name <- 0
+
+Name + 1
+## 2
+```
+You can name an object in R almost anything you want, but there are a few rules. First, a name cannot start with a number. Second, a name cannot use some special symbols, like ^, !, $, @, +, -, /, or *:
+
+Finally, R will overwrite any previous information stored in an object without asking you for permission. So, it is a good idea to not use names that are already taken:
+
+Basic maths
+vector calculation
+
+### Functions
+
+Example
+Own function
+Arguments
 
 ### Task
 Economic order quantitiy
@@ -251,9 +376,7 @@ setwd("/Users/bradleyboehmke/Dropbox/Academia/Wake Forest")
 getwd()
 [1] "/Users/bradleyboehmke/Dropbox/Academia/Wake Forest"
 ```
-
-### Tasks
-
+### Packages
 
 Installing Packages
 
