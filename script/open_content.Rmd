@@ -1,0 +1,18 @@
+CONTENT
+
+1. Webscraping
+  * https://www.analyticsvidhya.com/blog/2017/03/beginners-guide-on-web-scraping-in-r-using-rvest-with-hands-on-knowledge/
+  
+2. Text Mining / Sentinment
+  * https://www.tidytextmining.com/sentiment.html
+  
+3. Social Network Analysis
+  * https://books.google.de/books?hl=de&lr=&id=Tn-L5WoCeygC&oi=fnd&pg=PR3&dq=startups+github&ots=SUb3u1Kbsh&sig=I18Tia72ZeBTqfnXTrSTUZzoJOk#v=onepage&q&f=false
+  
+4. 
+
+STYLE
+
+Hide only solutions
+--> https://datacarpentry.org/R-ecology-lesson/01-intro-to-r.html
+--> some other
