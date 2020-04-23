@@ -5,24 +5,6 @@
 library(fontawesome)
 ```
 
-__Introductory__
-Is made of projects ...These projects are lighthearted, but they are also deep. As you complete them, you will become an expert at the skills you need to work with data as a data scientist. You will learn how to store data in your computer’s memory, how to access data that is already there, and how to transform data values in memory when necessary. You will also learn how to write your own programs in R that you can use to analyze data and run simulations.
-
-The first project will be creating business formulas. This first project will make it easier to study these things by teaching you the basics of R.
-
-Your first mission is simple: assemble R code that will simulate variable cost. Once you have done that, we’ll be calculating the optimal order quantity
-
-In this project, you will learn how to:
-
-* Use the R and RStudio interfaces
-* Run R commands
-* Create R objects
-* Write your own R functions and scripts
-* Load and use R packages
-* Generate random samples
-
-Don’t worry if it seems like we cover a lot of ground fast. This project is designed to give you a concise overview of the R language. You will return to many of the concepts we meet here in projects 2 and 3, where you will examine the concepts in depth.
-
 <!-- ++++++++++++++++++++++++++++++ -->
 <!-- Chapter: Install R and RStudio -->
 <!-- ++++++++++++++++++++++++++++++ -->
@@ -35,15 +17,19 @@ Don’t worry if it seems like we cover a lot of ground fast. This project is de
   </tr>
 </table>
 
-You’ll need to have both R and RStudio installed on your computer before you can use them. Both are free and easy to download.
 
-R and RStudio are separate downloads and installations. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. On the following sites you'll find information about how to install the language R and the IDE RStudio.
+The first project will be creating a decision tool used in cost accounting. This first project will make it easier to study these things by teaching you the basics of R. The term “R” is used to refer to both the programming language and the software that interprets the scripts written using it. Your first mission is simple: assemble R code that will calculate the ideal quantity of inventory to order for a given product. Once you have done that, we’ll be calculating ...
 
-The term “R” is used to refer to both the programming language and the software that interprets the scripts written using it.
+In this project, you will learn how to:
 
-RStudio is currently a very popular way to not only write your R scripts but also to interact with the R software. To function correctly, RStudio needs R and therefore both need to be installed on your computer.
+* Use the R and RStudio interfaces
+* Run R commands
+* Create R objects
+* Write your own R functions and scripts
 
+Don’t worry if it seems like we cover a lot of ground fast. This project is designed to give you a concise overview of the R language. You will return to many of the concepts we meet here in the next projects, where you will examine the concepts in depth.
 
+Before you can ask your computer to save some numbers, you’ll need to know how to talk to it. RStudio gives you a way to talk to your computer. R gives you a language to speak in. To start you will need to have both R and RStudio installed on your computer before you can use them. R and RStudio are separate downloads and installations. Both are free (under the Affero General Public License (AGPL) v3) and easy to download. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. On the following sites you'll find information about how to install the language R and the IDE RStudio. You can choose between an interactive and a manual tutorial.
 
 ##  `r fa("download", fill = "black")` Installing R & RStudio IDE
 ### Interactively
@@ -111,44 +97,66 @@ Download
 
 ## Working with RStudio
 
-Let’s start by learning about RStudio, which is an Integrated Development Environment (IDE) for working with R.
-
-The RStudio IDE open-source product is free under the Affero General Public License (AGPL) v3. The RStudio IDE is also available with a commercial license and priority email support from RStudio, Inc.
-
-We will use RStudio IDE to write code, navigate the files on our computer, inspect the variables we are going to create, and visualize the plots we will generate. RStudio can also be used for other things (e.g., version control, developing packages, writing Shiny apps) that we will not cover during the workshop.
+Let’s start by learning about RStudio, the Integrated Development Environment (IDE) for working with R. We will use RStudio IDE to write code, navigate the files on our computer, inspect the variables we are going to create, and visualize the plots we will generate. (RStudio can also be used for other things (e.g., version control, developing packages, writing Shiny apps) that we will not cover during this class).
 
 ### Understanding the RStudio IDE
 
-The R User Interface
-Before you can ask your computer to save some numbers, you’ll need to know how to talk to it. That’s where R and RStudio come in. RStudio gives you a way to talk to your computer. R gives you a language to speak in. To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in Figure 2.1.
+To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in (insert reference)
 
 ```{r rstudio-ide, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/00_getting_started/01_images/rstudio_ide.png', dpi = NA)
 ```
 
-RStudio interface screenshot. Clockwise from top left: Source, Environment/History, Files/Plots/Packages/Help/Viewer, Console.
+One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone. RStudio is divided into 4 Panes. The placement of these panes and their content can be customized (see menu, Tools -> Global Options -> Pane Layout).
 
-Green:
+```{r, echo=FALSE}
+knitr::asis_output(htmltools::htmlPreserve('
+<style>
+.boxouter {
+      border-radius: 5px;
+      width: 800px;
+      padding: 10px;
+      margin-bottom: 10px;
+}
+    
+.boxfloat {
+      padding: 10px;
+      border: 5px solid;
+      background-color: #fff;
+      border-radius: 5px;
+      color: #000000;
+      font-weight: bold;
+      float: left;  
+      width: 150px;
+      height: 80px;
+      margin: 0 20px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align:center;
+}
 
-Script files. Saves your code,
+</style>
+<div class="boxouter">
+      <div class="boxfloat" style="border-color: #4EF903">Script files/ Source</div>
+      Haere are the script files and documents. Saves your code. Add more content here. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+</div>
+<div class="boxouter">
+      <div class="boxfloat" style="border-color: #2332FF">Environment/ History</div>
+      Holds your objects. You can review history.  Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+</div>
+<div class="boxouter">
+      <div class="boxfloat" style="border-color: #AA7942">Misc. Displays</div>
+       Files/Plots/Packages/Help/Viewer .files in wd. plots when produced. Help files. Loaded packages. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+</div>
+<div class="boxouter">
+      <div class="boxfloat" style="border-color: #F52602">Console/ Command Line</div>
+       Does not save your code. Displays output. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+</div>
+<br>
+'))
+```
 
-Red:
-
-Console/Command Line. Does not save your code. Displays output.
-
-Blue:
-
-Workspace environment. Holds your objects. You can review history
-
-Brown: 
-
-Misc Displays. files in wd. plots when produced. Help files. Loaded packages.
-
-RStudio is divided into 4 “Panes”: the Source for your scripts and documents (top-left, in the default layout), your Environment/History (top-right), your Files/Plots/Packages/Help/Viewer (bottom-right), and the R Console (bottom-left). The placement of these panes and their content can be customized (see menu, Tools -> Global Options -> Pane Layout).
-
-One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone.
-
-Before you can ask your computer to save some numbers, you’ll need to know how to talk to it. That’s where R and RStudio come in. RStudio gives you a way to talk to your computer. R gives you a language to speak in. To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in Figure 2.1.
 
 Your computer does your bidding when you type R commands at the prompt in the bottom line of the console pane. Don’t forget to hit the Enter key.
 
@@ -320,7 +328,9 @@ Throughout the book, I’ll put exercises in chunks, like the one above. I’ll 
 
 
 
-### The assignment `<-` operator / Objects
+### Objects
+
+The assignment `<-` operator
 
 x <- 10
 x <- x + 10 # we can incremenet( build onto) existing objects
