@@ -101,13 +101,13 @@ Let’s start by learning about RStudio, the Integrated Development Environment 
 
 ### Understanding the RStudio IDE
 
-To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in (insert reference)
+To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in (insert reference). At the first startup you will not see an open script as seen in the green frame. You can create one by clicking first on ![](input/00_getting_started/01_images//new_file.png){ width="3.5%" } (new file) and then on ![](input/00_getting_started/01_images//new_r_file.png){ width="3.5%" } (new R script) in the upper left corner. Alternatively you can use the shortcut <kbd>Shift</kbd>+<kbd>⌘</kbd>+<kbd>N</kbd> on macOS.
 
 ```{r rstudio-ide, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}
 knitr::include_graphics('input/00_getting_started/01_images/rstudio_ide.png', dpi = NA)
 ```
 
-One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone. RStudio is divided into 4 Panes. The placement of these panes and their content can be customized (see menu, Tools -> Global Options -> Pane Layout).
+One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone. RStudio is divided into 4 Panes. The placement of these panes and their content can be customized (`Tools -> Global Options -> Pane Layout`).
 
 ```{r, echo=FALSE}
 knitr::asis_output(htmltools::htmlPreserve('
@@ -139,7 +139,7 @@ knitr::asis_output(htmltools::htmlPreserve('
 </style>
 <div class="boxouter">
       <div class="boxfloat" style="border-color: #4EF903">Script files/ Source</div>
-      Haere are the script files and documents. Saves your code. Add more content here. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum. Lorem Ipsum.
+      Here you can create a draft of your code as you go by using an R script. An R script is just a plain text file that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. To save a script, click the scripts pane, and then go to File > Save As in the menu bar.
 </div>
 <div class="boxouter">
       <div class="boxfloat" style="border-color: #2332FF">Environment/ History</div>
