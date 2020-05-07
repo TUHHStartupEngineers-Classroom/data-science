@@ -1019,19 +1019,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Let’s work on saving these numbers first, and then consider a method for “rolling” our die.</p>
 <p>The RStudio interface is simple. You type R code into the bottom line of the RStudio console pane and then click Enter to run it. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line.</p>
 <p>When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. Then RStudio displays a fresh prompt for your next command. For example, if you type 1 + 1 and hit Enter, RStudio will display:</p>
-<p>`<code>&gt; 1 + 1 [1] 2 &gt;</code></p>
-<p>You’ll notice that a [1] appears next to your result. R is just letting you know that this line begins with the first value in your result. Some commands return more than one value, and their results may fill up multiple lines. For example, the command 100:130 returns 31 values; it creates a sequence of integers from 100 to 130. Notice that new bracketed numbers appear at the start of the second and third lines of output. These numbers just mean that the second line begins with the 14th value in the result, and the third line begins with the 25th value. You can mostly ignore the numbers that appear in brackets:</p>
-<pre><code>&gt; 100:130
- [1] 100 101 102 103 104 105 106 107 108 109 110 111 112
-[14] 113 114 115 116 117 118 119 120 121 122 123 124 125
-[25] 126 127 128 129 130</code></pre>
-<p>Infobox
+<p>``<code>&gt; 1 + 1 [1] 2 &gt;</code>
+Infobox
 The colon operator (:) returns every integer between two integers. It is an easy way to create a sequence of numbers.</p>
-<p>If you type an incomplete command and press Enter, R will display a + prompt, which means R is waiting for you to type the rest of your command. Either finish the command or hit Escape to start over:</p>
-<pre><code>&gt; 5 -
-+
-+ 1
-[1] 4</code></pre>
+<p>If you type an incomplete command and press Enter, R will display a + prompt, which means R is waiting for you to type the rest of your command. Either finish the command or hit Escape</p>
 <p>If you type a command that R doesn’t recognize, R will return an error message. If you ever see an error message, don’t panic. R is just telling you that your computer couldn’t understand or do what you asked it to do. You can then try a different command at the next prompt:</p>
 <pre><code>&gt; 3 % 5
 Error: unexpected input in &quot;3 % 5&quot;
@@ -1170,6 +1161,14 @@ the package name followed by two colons, like <code>dplyr::mutate()</code>, or<b
 <li>Load the <code>tidyverse</code> package.</li>
 </ol>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
+<pre><code>## ── Attaching packages ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.0     ✓ purrr   0.3.4
+## ✓ tibble  3.0.1     ✓ dplyr   0.8.5
+## ✓ tidyr   1.0.2     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
 <!-- ++++++++ -->
 <!-- R basics -->
 <!-- ++++++++ -->
