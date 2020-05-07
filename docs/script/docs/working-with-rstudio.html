@@ -24,7 +24,7 @@
 <meta name="author" content="Joschka Schwarz" />
 
 
-<meta name="date" content="2020-05-06" />
+<meta name="date" content="2020-05-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1013,17 +1013,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="working-with-rstudio" class="section level2">
 <h2><span class="header-section-number">1.2</span> Working with RStudio</h2>
-<p>Let’s start by learning about RStudio, the Integrated Development Environment (IDE) for working with R. We will use RStudio IDE to write code, navigate the files on our computer, inspect the variables we are going to create, and visualize the plots we will generate. (RStudio can also be used for other things (e.g., version control, developing packages, writing Shiny apps) that we will not cover during this class).</p>
+<p>Let’s start by learning about RStudio, the Integrated Development Environment (IDE) for working with R. We will use RStudio IDE to write code, navigate the files on our computer, inspect the variables we are going to create, and visualize the plots we will generate. RStudio can also be used for other things (e.g., version control, developing packages, writing Shiny apps) that we will not cover during this class.</p>
 <div id="understanding-the-rstudio-ide" class="section level3">
 <h3><span class="header-section-number">1.2.1</span> Understanding the RStudio IDE</h3>
-<p>To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in (insert reference). At the first startup you will not see an open script as seen in the green frame. You can create one by clicking first on <img src="input/00_getting_started/01_images/new_file.png" style="width:3.1%" /> (new file) and then on <img src="input/00_getting_started/01_images/new_r_file.png" style="width:3.1%" /> (new R script) in the upper left corner. Alternatively you can use the shortcut <kbd>Shift</kbd>+<kbd>⌘</kbd>+<kbd>N</kbd> on macOS or <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>N</kbd> on Windows &amp; Linux.</p>
+<p>One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone. To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in (insert reference). RStudio is divided into 4 Panes. The placement of these panes and their content can be customized (<code>Tools -&gt; Global Options -&gt; Pane Layout</code>). At first startup you will not see an open script as seen in the green frame. You can create one by clicking first on <img src="input/00_getting_started/01_images/new_file.png" style="width:3.1%" /> (new file) and then on <img src="input/00_getting_started/01_images/new_r_file.png" style="width:3.1%" /> (new R script) in the upper left corner. Alternatively you can use the shortcut <kbd>Shift</kbd>+<kbd>⌘</kbd>+<kbd>N</kbd> on macOS or <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>N</kbd> on Windows &amp; Linux.</p>
 <div class="figure"><span id="fig:rstudio-ide"></span>
 <img src="input/00_getting_started/01_images/rstudio_ide.png" alt="Project structure example in RStudio." width="100%" />
 <p class="caption">
 FIGURE 1.1: Project structure example in RStudio.
 </p>
 </div>
-<p>One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone. RStudio is divided into 4 Panes. The placement of these panes and their content can be customized (<code>Tools -&gt; Global Options -&gt; Pane Layout</code>).</p>
+<p>The basis of programming is that we write down instructions for the computer to follow, and then we tell the computer to follow those instructions. We write, or <b>code</b>, instructions in R because it is a common language that both the computer and we can understand. We call the instructions <b>commands</b> and we tell the computer to follow the instructions by <b>executing</b> (also called <b>running</b>) those commands. There are two main ways of interacting with R: by using the console or by using script files.</p>
 
 <style>
 .boxouter {
@@ -1043,7 +1043,7 @@ FIGURE 1.1: Project structure example in RStudio.
       float: left;  
       width: 150px;
       height: 80px;
-      margin: 0 20px 0 0;
+      margin: 5px 20px 0 0;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -1052,22 +1052,66 @@ FIGURE 1.1: Project structure example in RStudio.
 
 </style>
 <div class="boxouter">
+  <div class="boxfloat" style="border-color: #F52602">Console/ Command Line</div>
+The console appears in the bottom left panel. Simply put, the Console is where you type commands and visually see the outputs. This is the place where commands written in the R language can be typed and executed immediately by hitting Enter. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line. This pane does not save your code. Those commands will be forgotten when you close the session. It only displays the output and the history of commands that have been executed. When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. If R is ready to accept a new command, RStudio displays a fresh <code>></code> prompt for your next command. For example, if you type 10 * 10 and hit Enter, RStudio will display:
+       
+<pre><code>> 10 * 10
+[1] 100
+></code></pre>
+
+You’ll notice that a <code>[1]</code> appears next to your result. R is just letting you know that this line begins with the first value in your result. Some commands return more than one value, and their results may fill up multiple lines. For example, the command <code>1:100</code> returns 100 values; it creates a sequence of integers from 1 to 100. Notice that new bracketed numbers appear at the start of the second and third lines of output. These numbers just mean that the second line begins with the 30th value in the result, and the third line begins with the 59th value and so on. You can mostly ignore the numbers that appear in brackets:
+
+<pre><code>[1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29
+[30]  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58
+[59]  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87
+[88]  88  89  90  91  92  93  94  95  96  97  98  99 100</code></pre>
+
+If you type an incomplete command and press Enter, R will display a <code>+</code> prompt, which means R is waiting for you to type the rest of your command. This is because you have not closed a parenthesis or quotation, i.e. you do not have the same number of left-parentheses as right-parentheses, or the same number of opening and closing quotation marks. Either finish the command or hit <kbd>`Esc`</kbd> to start over:
+
+<pre><code>> 99 +
++
++ 1
+[1] 100</code></pre>
+ 
+If you type a command that R doesn’t recognize, R will return an error message. If you ever see an error message, don’t panic. R is just telling you that your computer couldn’t understand or do what you asked it to do. You can then try a different command at the next prompt:
+
+<pre><code>> 100 % 2
+Error: unexpected input in "100 % 2"
+></code></pre>
+
+Once you get the hang of the command line, you can easily do anything in R that you would do with a calculator. For example, you could do some basic arithmetic:
+
+<pre><code>2 * 3   
+## 6
+
+4 - 1   
+## 3
+
+6 / (4 - 1)   
+## 2</code></pre>
+
+Did you notice something different about this code? I’ve left out the <code>></code>’s and <code>[1]</code>’s. This will make the code easier to copy and paste if you want to put it in your own console.
+
+R treats the hashtag character, <code>#</code>, in a special way; R will not run anything that follows a hashtag on a line. This makes hashtags very useful for adding comments and annotations to your code. Humans will be able to read the comments, but your computer will pass over them. The hashtag is known as the commenting symbol in R.
+
+For the remainder of the book, I’ll use hashtags to display the output of R code. I’ll use a single hashtag to add my own comments and a double hashtag, <code>##</code>, to display the results of code. I’ll avoid showing <code>></code> and <code>[1]</code> unless I want you to look at them.
+
+</div>
+<div class="boxouter">
       <div class="boxfloat" style="border-color: #4EF903">Script files/ Source</div>
-      Here you can create a draft of your code as you go by using an R script. An R script is just a plain text file that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. To save a script, click <img src="input/00_getting_started/01_images/save.png" alt="save icon" width="3.1%" > or use the shortcut <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS or <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows & Linux. 
+Because we want our code and workflow to be reproducible, it is better to type the commands we want in the script editor, and save the script. In the source tab you can create a draft of your code as you go by using an R script. An R script is just a plain text file that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. To save a script, click <img src="input/00_getting_started/01_images/save.png" alt="save icon" width="3.1%" > or use the shortcut <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS or <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows & Linux.<br>
+<br>
+RStudio allows you to execute commands directly from the script editor by using the <kbd>`Ctrl`</kbd> + <kbd>`Enter`</kbd> shortcut (on Macs, <kbd>`Cmd`</kbd> + <kbd>`Return`</kbd> will work, too). The command on the current line in the script (indicated by the cursor) or all of the commands in the currently selected text will be sent to the console and executed when you press the shortcut.
 </div>
 <div class="boxouter">
       <div class="boxfloat" style="border-color: #2332FF">Environment/ History</div>
-      When you create an object, the object will appear in the index tab Environment. This pane will show you all of the objects you’ve created since opening RStudio. History Tab. Build Tab will be useful later when you create your own website to hand in your code.
+When you create an object (i.e., dataframes, arrays, values and functions), the object will appear in the index tab Environment. This pane will show you all of the objects you’ve created since opening RStudio. You can see the values for objects with a single value and for those that are longer R will tell you their class. When you have data in your environment that have two dimensions (rows and columns) you may click on them and they will appear in the Source Editor pane like a spreadsheet. Also in this pane is the History tab, where you can see all of the code executed for the session. If you double-click a line or highlight a block of lines and then double-click those, you can send it to the Console (i.e., run them). The history will not be saved if we did not choose to save the environment after a session. The Build Tab will be useful later when you create your own website to hand in your code. We will come back to this shortly.
 </div>
 <div class="boxouter">
       <div class="boxfloat" style="border-color: #AA7942">Misc. Displays</div>
-      This pane has a number of different tabs. 
-       Files/Plots/Packages/Help/Viewer .files in wd. plots when produced. Help files. Loaded packages. The <b>Files</b> tab has a navigable file manager, just like the file system on your operating system. The <b>Plot</b> tab is where graphics you create will appear. The <b>Packages</b> tab shows you the packages that are installed and those that can be installed (more on this later). The <b>Help</b> tab allows you to search the R documentation for help and is where the help appears when you ask for it from the Console. You can just type <code>?function_name</code> or <code>help(function_name)</code> into the console.
+The bottom right panel is the miscellaneous panel containing five separate tabs. The <b>Files</b> tab has a navigable file manager, just like the file system on your operating system. It shows all the files and folders in the default workspace. The <b>Plot</b> tab is where graphics you create will appear. Here we can zoom, export, configure and inspect graphs/figures. The <b>Packages</b> tab shows you the packages that are installed and those that can be installed (more on this later). The <b>Help</b> tab allows you to search the R documentation for help and is where the help appears when you ask for it from the Console. You can just type <code>?function_name</code> or <code>help(function_name)</code> into the console.
 </div>
-<div class="boxouter">
-      <div class="boxfloat" style="border-color: #F52602">Console/ Command Line</div>
-       The console appears in the pane on your left. You type R code into the bottom line and then click Enter to run it. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line. This pane does not save your code. It only displays the output. When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. Then RStudio displays a fresh prompt for your next command. For example, if you type 1 + 1 and hit Enter, RStudio will display:
-</div>
+
 
 <pre><code>&gt; 10 * 10
 [1] 100
