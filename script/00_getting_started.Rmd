@@ -111,7 +111,7 @@ The basis of programming is that we write down instructions for the computer to 
 
 <!-- RStudio IDE: Console -->
 <div class="boxouter">
-  <div class="boxfloat" style="border-color: #F52602">Console/ Command Line</div>
+  <div class="boxfloat" style="border-color: #F52602">Console</div>
 The console appears in the bottom left panel. Simply put, the Console is where you type commands and visually see the outputs. This is the place where commands written in the R language can be typed and executed immediately by hitting Enter. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line. This pane does not save your code. Those commands will be forgotten when you close the session. It only displays the output and the history of commands that have been executed. When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. If R is ready to accept a new command, RStudio displays a fresh <code>></code> prompt for your next command. For example, if you type 10 * 10 and hit Enter, RStudio will display:
 </div> 
 ```       
@@ -156,13 +156,51 @@ R treats the hashtag character, <code>#</code>, in a special way; R will not run
 
 For the remainder of the book, I’ll use hashtags to display the output of R code. I’ll use a single hashtag to add my own comments and a double hashtag, <code>##</code>, to display the results of code. I’ll avoid showing <code>></code> and <code>[1]</code> unless I want you to look at them.
 
+<!-- EXERCISE RStudio IDE: Console -->
+<font size="4"><b>Exercise</b></font>
+
+That’s the basic interface for executing R code in RStudio. Think you have it? If so, try doing these simple tasks to calculate the economic order quantity with the given formula (Hint: Use `sqrt(x)` to calculate the square root).
+
+$$Q = \sqrt{\frac{2DK}{h}}$$
+
+Calulate the Q where:
+
+$D = 1000$,
+$K = 5$,
+$h = 0.25$
+
+<font size="4"><b>Solution</b></font>
+
+```{r, eval = F}
+2 * 1000 * 5
+## 10000
+10000 / 0.25
+## 40000
+sqrt(40000)
+## 200
+```
+
+
+Throughout the book, I’ll put exercises in chunks, like the one above. I’ll follow each exercise with a model answer, like the one below.
+
 <!-- RStudio IDE: Source -->
 <div class="boxouter">
   <div class="boxfloat" style="border-color: #4EF903">Script files/ Source</div>
-Because we want our code and workflow to be reproducible, it is better to type the commands we want in the script editor, and save the script. In the source tab you can create a draft of your code as you go by using an R script. An R script is just a plain text file that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. To save a script, click <img src="input/00_getting_started/01_images/save.png" alt="save icon" width="3.1%" > or use the shortcut <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS or <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows & Linux.<br>
+Because we want our code and workflow to be reproducible and generally we will want to write programs longer than a few lines, it is better to type the commands we want in the script editor, and save the script. In the source tab you can create a draft of your code as you go by using an R script. An R script is just a plain text file (saved with a .R or .r extension) that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. Moreover, the source editor in RStudio has the advantage of providing syntax highlighting, code completion, and smart indentation. You can see the different colours for numbers and there is also highlighting to help you count brackets (click your cursor next to a bracket and push the right arrow and you will see its partner bracket highlighted).To save a script, click <img src="input/00_getting_started/01_images/save.png" alt="save icon" width="3.1%" > or use the shortcut <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS or <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows & Linux.<br>
 <br>
 RStudio allows you to execute commands directly from the script editor by using the <kbd>`Ctrl`</kbd> + <kbd>`Enter`</kbd> shortcut (on Macs, <kbd>`Cmd`</kbd> + <kbd>`Return`</kbd> will work, too). The command on the current line in the script (indicated by the cursor) or all of the commands in the currently selected text will be sent to the console and executed when you press the shortcut.
 </div> 
+
+<!-- EXERCISE RStudio IDE: Console -->
+<font size="4"><b>Exercise</b></font>
+
+Write your calculations for the EOQ in the script editor and ...
+
+* ... execute a single line (Run icon ![](input/00_getting_started/01_images/run_icon.png){ width="3.1%" } or <kbd>`Cmd`</kbd>+ <kbd>`Return`</kbd>). Note that the cursor can be anywhere on the line and one does not need to highlight anything — do this for the code on line 2
+* ... execute multiple lines (Highlight lines with the cursor, then Run icon or <kbd>`Cmd`</kbd>+ <kbd>`Return`</kbd>
+* ... execute the whole script (Source icon ![](input/00_getting_started/01_images/source_icon.png){ width="3.1%" } or <kbd>`Cmd`</kbd> + <kbd>`Shift`</kbd> + <kbd>`S`</kbd>)
+
+Note that running code via source differs in a few respects from entering it at the R command line. Sourcing a file does not print command outputs. To see your output click the arrow next to the source icon and click `Source with Echo` or use <kbd>`Cmd`</kbd> + <kbd>`Shift`</kbd> + <kbd>`Return`</kbd>.
 
 <!-- RStudio IDE: Environment -->
 <div class="boxouter">

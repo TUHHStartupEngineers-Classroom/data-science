@@ -142,7 +142,7 @@ background: url("input/00_general/01_images/shiny.png") no-repeat;
 .boxouter {
       border-radius: 5px;
       width: 800px;
-      padding: 0px;
+      padding: 5px;
       margin-bottom: 10px;
 }
     

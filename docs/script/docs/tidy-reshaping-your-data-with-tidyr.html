@@ -1031,7 +1031,7 @@ FIGURE 5.1: The concept of tidy data
 <p>Usually data are untidy in only one way. However, if you are unlucky, they are really untidy and thus a pain to work with…</p>
 <p>For the following example is the Diamonds Dataset used from the ggplot2 package.</p>
 <p><code>gather()</code>: Use, if some of your column names are actually values of a variable</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1">diamonds2</a></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1">diamonds2</a></code></pre></div>
 <pre><code>## # A tibble: 5 x 3
 ##   cut     `2008` `2009`
 ##   &lt;chr&gt;    &lt;dbl&gt;  &lt;dbl&gt;
@@ -1040,8 +1040,8 @@ FIGURE 5.1: The concept of tidy data
 ## 3 Good       237    333
 ## 4 Premium    334    340
 ## 5 Good       335    341</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1">diamonds2 <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb31-2" data-line-number="2"><span class="st">  </span><span class="kw">gather</span>(<span class="st">`</span><span class="dt">2008</span><span class="st">`</span>, <span class="st">`</span><span class="dt">2009</span><span class="st">`</span>, <span class="dt">key =</span> <span class="st">&#39;year&#39;</span>, <span class="dt">value =</span> <span class="st">&#39;price&#39;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1">diamonds2 <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="st">  </span><span class="kw">gather</span>(<span class="st">`</span><span class="dt">2008</span><span class="st">`</span>, <span class="st">`</span><span class="dt">2009</span><span class="st">`</span>, <span class="dt">key =</span> <span class="st">&#39;year&#39;</span>, <span class="dt">value =</span> <span class="st">&#39;price&#39;</span>)</a></code></pre></div>
 <pre><code>## # A tibble: 10 x 3
 ##    cut     year  price
 ##    &lt;chr&gt;   &lt;chr&gt; &lt;dbl&gt;
@@ -1056,10 +1056,10 @@ FIGURE 5.1: The concept of tidy data
 ##  9 Premium 2009    340
 ## 10 Good    2009    341</code></pre>
 <p><code>spread()</code>: Use, if some of your observations are scattered across many rows</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1">bijou3</a></code></pre></div>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">bijou3 <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb34-2" data-line-number="2"><span class="st">  </span><span class="kw">spread</span>(<span class="dt">key=</span>dimension, <span class="dt">value=</span>measurement) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb34-3" data-line-number="3"><span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">5</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">bijou3</a></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1">bijou3 <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="st">  </span><span class="kw">spread</span>(<span class="dt">key=</span>dimension, <span class="dt">value=</span>measurement) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb35-3" data-line-number="3"><span class="st">  </span><span class="kw">head</span>(<span class="dt">n =</span> <span class="dv">5</span>)</a></code></pre></div>
 </div>
             </section>
 

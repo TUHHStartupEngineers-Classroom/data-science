@@ -1027,7 +1027,7 @@ FIGURE 1.1: RStudio Integrated Development Environment (IDE).
 <!-- RStudio IDE: Console -->
 <div class="boxouter">
 <div class="boxfloat" style="border-color: #F52602">
-Console/ Command Line
+Console
 </div>
 <p>The console appears in the bottom left panel. Simply put, the Console is where you type commands and visually see the outputs. This is the place where commands written in the R language can be typed and executed immediately by hitting Enter. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line. This pane does not save your code. Those commands will be forgotten when you close the session. It only displays the output and the history of commands that have been executed. When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. If R is ready to accept a new command, RStudio displays a fresh <code>&gt;</code> prompt for your next command. For example, if you type 10 * 10 and hit Enter, RStudio will display:</p>
 </div>
@@ -1060,15 +1060,40 @@ Error: unexpected input in &quot;100 % 2&quot;
 <p>Did you notice something different about this code? I’ve left out the <code>&gt;</code>’s and <code>[1]</code>’s. This will make the code easier to copy and paste if you want to put it in your own console.</p>
 <p>R treats the hashtag character, <code>#</code>, in a special way; R will not run anything that follows a hashtag on a line. This makes hashtags very useful for adding comments and annotations to your code. Humans will be able to read the comments, but your computer will pass over them. The hashtag is known as the commenting symbol in R.</p>
 <p>For the remainder of the book, I’ll use hashtags to display the output of R code. I’ll use a single hashtag to add my own comments and a double hashtag, <code>##</code>, to display the results of code. I’ll avoid showing <code>&gt;</code> and <code>[1]</code> unless I want you to look at them.</p>
+<!-- EXERCISE RStudio IDE: Console -->
+<p><font size="4"><b>Exercise</b></font></p>
+<p>That’s the basic interface for executing R code in RStudio. Think you have it? If so, try doing these simple tasks to calculate the economic order quantity with the given formula (Hint: Use <code>sqrt(x)</code> to calculate the square root).</p>
+<p><span class="math display">\[Q = \sqrt{\frac{2DK}{h}}\]</span></p>
+<p>Calulate the Q where:</p>
+<p><span class="math inline">\(D = 1000\)</span>,
+<span class="math inline">\(K = 5\)</span>,
+<span class="math inline">\(h = 0.25\)</span></p>
+<p><font size="4"><b>Solution</b></font></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">1000</span> <span class="op">*</span><span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">## 10000</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="dv">10000</span> <span class="op">/</span><span class="st"> </span><span class="fl">0.25</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">## 40000</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="kw">sqrt</span>(<span class="dv">40000</span>)</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">## 200</span></a></code></pre></div>
+<p>Throughout the book, I’ll put exercises in chunks, like the one above. I’ll follow each exercise with a model answer, like the one below.</p>
 <!-- RStudio IDE: Source -->
 <div class="boxouter">
 <div class="boxfloat" style="border-color: #4EF903">
 Script files/ Source
 </div>
-<p>Because we want our code and workflow to be reproducible, it is better to type the commands we want in the script editor, and save the script. In the source tab you can create a draft of your code as you go by using an R script. An R script is just a plain text file that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. To save a script, click <img src="input/00_getting_started/01_images/save.png" alt="save icon" width="3.1%" > or use the shortcut <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS or <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows &amp; Linux.<br>
+<p>Because we want our code and workflow to be reproducible and generally we will want to write programs longer than a few lines, it is better to type the commands we want in the script editor, and save the script. In the source tab you can create a draft of your code as you go by using an R script. An R script is just a plain text file (saved with a .R or .r extension) that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. Moreover, the source editor in RStudio has the advantage of providing syntax highlighting, code completion, and smart indentation. You can see the different colours for numbers and there is also highlighting to help you count brackets (click your cursor next to a bracket and push the right arrow and you will see its partner bracket highlighted).To save a script, click <img src="input/00_getting_started/01_images/save.png" alt="save icon" width="3.1%" > or use the shortcut <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS or <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows &amp; Linux.<br>
 <br>
 RStudio allows you to execute commands directly from the script editor by using the <kbd><code>Ctrl</code></kbd> + <kbd><code>Enter</code></kbd> shortcut (on Macs, <kbd><code>Cmd</code></kbd> + <kbd><code>Return</code></kbd> will work, too). The command on the current line in the script (indicated by the cursor) or all of the commands in the currently selected text will be sent to the console and executed when you press the shortcut.</p>
 </div>
+<!-- EXERCISE RStudio IDE: Console -->
+<p><font size="4"><b>Exercise</b></font></p>
+<p>Write your calculations for the EOQ in the script editor and …</p>
+<ul>
+<li>… execute a single line (Run icon <img src="input/00_getting_started/01_images/run_icon.png" style="width:3.1%" /> or <kbd><code>Cmd</code></kbd>+ <kbd><code>Return</code></kbd>). Note that the cursor can be anywhere on the line and one does not need to highlight anything — do this for the code on line 2</li>
+<li>… execute multiple lines (Highlight lines with the cursor, then Run icon or <kbd><code>Cmd</code></kbd>+ <kbd><code>Return</code></kbd></li>
+<li>… execute the whole script (Source icon <img src="input/00_getting_started/01_images/source_icon.png" style="width:3.1%" /> or <kbd><code>Cmd</code></kbd> + <kbd><code>Shift</code></kbd> + <kbd><code>S</code></kbd>)</li>
+</ul>
+<p>Note that running code via source differs in a few respects from entering it at the R command line. Sourcing a file does not print command outputs. To see your output click the arrow next to the source icon and click <code>Source with Echo</code> or use <kbd><code>Cmd</code></kbd> + <kbd><code>Shift</code></kbd> + <kbd><code>Return</code></kbd>.</p>
 <!-- RStudio IDE: Environment -->
 <div class="boxouter">
 <div class="boxfloat" style="border-color: #2332FF">
