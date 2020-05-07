@@ -1029,220 +1029,220 @@ Download
 FIGURE 6.6: Project structure example in RStudio.
 </p>
 </div>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" data-line-number="1"><span class="co"># DS4B 101-R: R FOR BUSINESS ANALYSIS ----</span></a>
-<a class="sourceLine" id="cb58-2" data-line-number="2"><span class="co"># JUMPSTART: First Sales Analysis ----</span></a>
-<a class="sourceLine" id="cb58-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb58-4" data-line-number="4"><span class="co"># 1.0 Load libraries ----</span></a>
-<a class="sourceLine" id="cb58-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb58-6" data-line-number="6"><span class="co"># Work horse packages</span></a>
-<a class="sourceLine" id="cb58-7" data-line-number="7"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb58-8" data-line-number="8"><span class="kw">library</span>(lubridate)</a>
-<a class="sourceLine" id="cb58-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb58-10" data-line-number="10"><span class="co"># theme_tq()</span></a>
-<a class="sourceLine" id="cb58-11" data-line-number="11"><span class="kw">library</span>(tidyquant)</a>
-<a class="sourceLine" id="cb58-12" data-line-number="12"></a>
-<a class="sourceLine" id="cb58-13" data-line-number="13"><span class="co"># Excel Files</span></a>
-<a class="sourceLine" id="cb58-14" data-line-number="14"><span class="kw">library</span>(readxl)</a>
-<a class="sourceLine" id="cb58-15" data-line-number="15"><span class="kw">library</span>(writexl)</a>
-<a class="sourceLine" id="cb58-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb58-17" data-line-number="17"></a>
-<a class="sourceLine" id="cb58-18" data-line-number="18"></a>
-<a class="sourceLine" id="cb58-19" data-line-number="19"></a>
-<a class="sourceLine" id="cb58-20" data-line-number="20"><span class="co"># 2.0 Importing Files ----</span></a>
-<a class="sourceLine" id="cb58-21" data-line-number="21"></a>
-<a class="sourceLine" id="cb58-22" data-line-number="22">?<span class="kw">read_excel</span>()</a>
-<a class="sourceLine" id="cb58-23" data-line-number="23"></a>
-<a class="sourceLine" id="cb58-24" data-line-number="24">bikes_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;00_data/bike_sales/data_raw/bikes.xlsx&quot;</span>)</a>
-<a class="sourceLine" id="cb58-25" data-line-number="25"></a>
-<a class="sourceLine" id="cb58-26" data-line-number="26">bikeshops_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;00_data/bike_sales/data_raw/bikeshops.xlsx&quot;</span>)</a>
-<a class="sourceLine" id="cb58-27" data-line-number="27"></a>
-<a class="sourceLine" id="cb58-28" data-line-number="28">orderlines_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;00_data/bike_sales/data_raw/orderlines.xlsx&quot;</span>)</a>
-<a class="sourceLine" id="cb58-29" data-line-number="29"><span class="kw">names</span>(orderlines_tbl)[<span class="dv">1</span>] &lt;-<span class="st"> &quot;X__1&quot;</span></a>
-<a class="sourceLine" id="cb58-30" data-line-number="30"></a>
-<a class="sourceLine" id="cb58-31" data-line-number="31"></a>
-<a class="sourceLine" id="cb58-32" data-line-number="32"></a>
-<a class="sourceLine" id="cb58-33" data-line-number="33"><span class="co"># 3.0 Examining Data ----</span></a>
-<a class="sourceLine" id="cb58-34" data-line-number="34"></a>
-<a class="sourceLine" id="cb58-35" data-line-number="35">bikes_tbl</a>
-<a class="sourceLine" id="cb58-36" data-line-number="36"></a>
-<a class="sourceLine" id="cb58-37" data-line-number="37"><span class="kw">glimpse</span>(bikes_tbl)</a>
-<a class="sourceLine" id="cb58-38" data-line-number="38"></a>
-<a class="sourceLine" id="cb58-39" data-line-number="39">bikeshops_tbl</a>
-<a class="sourceLine" id="cb58-40" data-line-number="40"></a>
-<a class="sourceLine" id="cb58-41" data-line-number="41">orderlines_tbl</a>
-<a class="sourceLine" id="cb58-42" data-line-number="42"></a>
-<a class="sourceLine" id="cb58-43" data-line-number="43"><span class="co"># 4.0 Joining Data ----</span></a>
-<a class="sourceLine" id="cb58-44" data-line-number="44"></a>
-<a class="sourceLine" id="cb58-45" data-line-number="45">?left_join</a>
-<a class="sourceLine" id="cb58-46" data-line-number="46"></a>
-<a class="sourceLine" id="cb58-47" data-line-number="47">orderlines_tbl</a>
-<a class="sourceLine" id="cb58-48" data-line-number="48"></a>
-<a class="sourceLine" id="cb58-49" data-line-number="49">bikes_tbl</a>
-<a class="sourceLine" id="cb58-50" data-line-number="50"></a>
-<a class="sourceLine" id="cb58-51" data-line-number="51"><span class="kw">left_join</span>(orderlines_tbl, bikes_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;product.id&quot;</span> =<span class="st"> &quot;bike.id&quot;</span>))</a>
-<a class="sourceLine" id="cb58-52" data-line-number="52"></a>
-<a class="sourceLine" id="cb58-53" data-line-number="53">bike_orderlines_joined_tbl &lt;-<span class="st"> </span>orderlines_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-54" data-line-number="54"><span class="st">    </span><span class="kw">left_join</span>(bikes_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;product.id&quot;</span> =<span class="st"> &quot;bike.id&quot;</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-55" data-line-number="55"><span class="st">    </span><span class="kw">left_join</span>(bikeshops_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;customer.id&quot;</span> =<span class="st"> &quot;bikeshop.id&quot;</span>))</a>
-<a class="sourceLine" id="cb58-56" data-line-number="56"></a>
-<a class="sourceLine" id="cb58-57" data-line-number="57">bike_orderlines_joined_tbl</a>
-<a class="sourceLine" id="cb58-58" data-line-number="58"></a>
-<a class="sourceLine" id="cb58-59" data-line-number="59">bike_orderlines_joined_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</a>
-<a class="sourceLine" id="cb58-60" data-line-number="60"></a>
-<a class="sourceLine" id="cb58-61" data-line-number="61"><span class="co"># 5.0 Wrangling Data ----</span></a>
-<a class="sourceLine" id="cb58-62" data-line-number="62"></a>
-<a class="sourceLine" id="cb58-63" data-line-number="63">bike_orderlines_wrangled_tbl &lt;-<span class="st"> </span>bike_orderlines_joined_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-64" data-line-number="64"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-65" data-line-number="65"><span class="st">    </span><span class="co"># Separate description into category.1, category.2, and frame.material</span></a>
-<a class="sourceLine" id="cb58-66" data-line-number="66"><span class="st">    </span><span class="kw">separate</span>(description,</a>
-<a class="sourceLine" id="cb58-67" data-line-number="67">             <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;category.1&quot;</span>, <span class="st">&quot;category.2&quot;</span>, <span class="st">&quot;frame.material&quot;</span>),</a>
-<a class="sourceLine" id="cb58-68" data-line-number="68">             <span class="dt">sep =</span> <span class="st">&quot; - &quot;</span>,</a>
-<a class="sourceLine" id="cb58-69" data-line-number="69">             <span class="dt">remove =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-70" data-line-number="70"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-71" data-line-number="71"><span class="st">    </span><span class="co"># Separate location into city and state</span></a>
-<a class="sourceLine" id="cb58-72" data-line-number="72"><span class="st">    </span><span class="kw">separate</span>(location,</a>
-<a class="sourceLine" id="cb58-73" data-line-number="73">             <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;city&quot;</span>, <span class="st">&quot;state&quot;</span>),</a>
-<a class="sourceLine" id="cb58-74" data-line-number="74">             <span class="dt">sep  =</span> <span class="st">&quot;, &quot;</span>,</a>
-<a class="sourceLine" id="cb58-75" data-line-number="75">             <span class="dt">remove =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-76" data-line-number="76"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-77" data-line-number="77"><span class="st">    </span><span class="co"># price extended</span></a>
-<a class="sourceLine" id="cb58-78" data-line-number="78"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">total.price =</span> price <span class="op">*</span><span class="st"> </span>quantity) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-79" data-line-number="79"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-80" data-line-number="80"><span class="st">    </span><span class="co"># Reorganize</span></a>
-<a class="sourceLine" id="cb58-81" data-line-number="81"><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>X__<span class="dv">1</span>, <span class="op">-</span>location) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-82" data-line-number="82"><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span><span class="kw">ends_with</span>(<span class="st">&quot;.id&quot;</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-83" data-line-number="83"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-84" data-line-number="84"><span class="st">    </span><span class="kw">bind_cols</span>(bike_orderlines_joined_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(order.id)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-85" data-line-number="85"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-86" data-line-number="86"><span class="st">    </span><span class="co"># Reorder columns</span></a>
-<a class="sourceLine" id="cb58-87" data-line-number="87"><span class="st">    </span><span class="kw">select</span>(<span class="kw">contains</span>(<span class="st">&quot;date&quot;</span>), <span class="kw">contains</span>(<span class="st">&quot;id&quot;</span>), <span class="kw">contains</span>(<span class="st">&quot;order&quot;</span>),</a>
-<a class="sourceLine" id="cb58-88" data-line-number="88">           quantity, price, total.price,</a>
-<a class="sourceLine" id="cb58-89" data-line-number="89">           <span class="kw">everything</span>()) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-90" data-line-number="90"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-91" data-line-number="91"><span class="st">    </span><span class="co"># Renaming columns</span></a>
-<a class="sourceLine" id="cb58-92" data-line-number="92"><span class="st">    </span><span class="kw">rename</span>(<span class="dt">order_date =</span> order.date) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-93" data-line-number="93"><span class="st">    </span><span class="kw">set_names</span>(<span class="kw">names</span>(.) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;_&quot;</span>)) </a>
-<a class="sourceLine" id="cb58-94" data-line-number="94"></a>
-<a class="sourceLine" id="cb58-95" data-line-number="95">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</a>
-<a class="sourceLine" id="cb58-96" data-line-number="96"></a>
-<a class="sourceLine" id="cb58-97" data-line-number="97"></a>
-<a class="sourceLine" id="cb58-98" data-line-number="98"></a>
-<a class="sourceLine" id="cb58-99" data-line-number="99"><span class="co"># 6.0 Business Insights ----</span></a>
-<a class="sourceLine" id="cb58-100" data-line-number="100"></a>
-<a class="sourceLine" id="cb58-101" data-line-number="101"></a>
-<a class="sourceLine" id="cb58-102" data-line-number="102"><span class="co"># 6.1 Sales by Year ----</span></a>
-<a class="sourceLine" id="cb58-103" data-line-number="103"></a>
-<a class="sourceLine" id="cb58-104" data-line-number="104"><span class="co"># Step 1 - Manipulate</span></a>
-<a class="sourceLine" id="cb58-105" data-line-number="105"></a>
-<a class="sourceLine" id="cb58-106" data-line-number="106">sales_by_year_tbl &lt;-<span class="st"> </span>bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-107" data-line-number="107"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-108" data-line-number="108"><span class="st">    </span><span class="co"># Selecting columns to focus on and adding a year column</span></a>
-<a class="sourceLine" id="cb58-109" data-line-number="109"><span class="st">    </span><span class="kw">select</span>(order_date, total_price) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-110" data-line-number="110"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">year</span>(order_date)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-111" data-line-number="111"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-112" data-line-number="112"><span class="st">    </span><span class="co"># Grouping by year, and summarizing sales</span></a>
-<a class="sourceLine" id="cb58-113" data-line-number="113"><span class="st">    </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-114" data-line-number="114"><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">sales =</span> <span class="kw">sum</span>(total_price)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-115" data-line-number="115"><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-116" data-line-number="116"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-117" data-line-number="117"><span class="st">    </span><span class="co"># $ Format Text</span></a>
-<a class="sourceLine" id="cb58-118" data-line-number="118"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sales_text =</span> scales<span class="op">::</span><span class="kw">dollar</span>(sales))</a>
-<a class="sourceLine" id="cb58-119" data-line-number="119">    </a>
-<a class="sourceLine" id="cb58-120" data-line-number="120">sales_by_year_tbl</a>
-<a class="sourceLine" id="cb58-121" data-line-number="121"></a>
-<a class="sourceLine" id="cb58-122" data-line-number="122"></a>
-<a class="sourceLine" id="cb58-123" data-line-number="123"><span class="co"># Step 2 - Visualize</span></a>
-<a class="sourceLine" id="cb58-124" data-line-number="124"></a>
-<a class="sourceLine" id="cb58-125" data-line-number="125">sales_by_year_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-126" data-line-number="126"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-127" data-line-number="127"><span class="st">    </span><span class="co"># Setup canvas with year (x-axis) and sales (y-axis)</span></a>
-<a class="sourceLine" id="cb58-128" data-line-number="128"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> sales)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-129" data-line-number="129"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-130" data-line-number="130"><span class="st">    </span><span class="co"># Geometries</span></a>
-<a class="sourceLine" id="cb58-131" data-line-number="131"><span class="st">    </span><span class="kw">geom_col</span>(<span class="dt">fill =</span> <span class="st">&quot;#2c3e50&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-132" data-line-number="132"><span class="st">    </span><span class="kw">geom_label</span>(<span class="kw">aes</span>(<span class="dt">label =</span> sales_text)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-133" data-line-number="133"><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-134" data-line-number="134"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-135" data-line-number="135"><span class="st">    </span><span class="co"># Formatting</span></a>
-<a class="sourceLine" id="cb58-136" data-line-number="136"><span class="st">    </span><span class="kw">theme_tq</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-137" data-line-number="137"><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-138" data-line-number="138"><span class="st">    </span><span class="kw">labs</span>(</a>
-<a class="sourceLine" id="cb58-139" data-line-number="139">        <span class="dt">title =</span> <span class="st">&quot;Revenue by Year&quot;</span>,</a>
-<a class="sourceLine" id="cb58-140" data-line-number="140">        <span class="dt">subtitle =</span> <span class="st">&quot;Upward trend&quot;</span>,</a>
-<a class="sourceLine" id="cb58-141" data-line-number="141">        <span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
-<a class="sourceLine" id="cb58-142" data-line-number="142">        <span class="dt">y =</span> <span class="st">&quot;Revenue&quot;</span></a>
-<a class="sourceLine" id="cb58-143" data-line-number="143">    )</a>
-<a class="sourceLine" id="cb58-144" data-line-number="144"></a>
-<a class="sourceLine" id="cb58-145" data-line-number="145"><span class="co"># 6.2 Sales by Year and Category 2 ----</span></a>
-<a class="sourceLine" id="cb58-146" data-line-number="146"></a>
-<a class="sourceLine" id="cb58-147" data-line-number="147"></a>
-<a class="sourceLine" id="cb58-148" data-line-number="148"><span class="co"># Step 1 - Manipulate</span></a>
-<a class="sourceLine" id="cb58-149" data-line-number="149"></a>
-<a class="sourceLine" id="cb58-150" data-line-number="150">sales_by_year_cat_<span class="dv">2</span>_tbl &lt;-<span class="st"> </span>bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-151" data-line-number="151"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-152" data-line-number="152"><span class="st">    </span><span class="co"># Selecting columns and add a year</span></a>
-<a class="sourceLine" id="cb58-153" data-line-number="153"><span class="st">    </span><span class="kw">select</span>(order_date, total_price, category_<span class="dv">2</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-154" data-line-number="154"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">year</span>(order_date)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-155" data-line-number="155"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-156" data-line-number="156"><span class="st">    </span><span class="co"># Groupby and Summarize year and category 2</span></a>
-<a class="sourceLine" id="cb58-157" data-line-number="157"><span class="st">    </span><span class="kw">group_by</span>(year, category_<span class="dv">2</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-158" data-line-number="158"><span class="st">    </span><span class="kw">summarise</span>(<span class="dt">sales =</span> <span class="kw">sum</span>(total_price)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-159" data-line-number="159"><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-160" data-line-number="160"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-161" data-line-number="161"><span class="st">    </span><span class="co"># Format $ Text</span></a>
-<a class="sourceLine" id="cb58-162" data-line-number="162"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sales_text =</span> scales<span class="op">::</span><span class="kw">dollar</span>(sales))</a>
-<a class="sourceLine" id="cb58-163" data-line-number="163"></a>
-<a class="sourceLine" id="cb58-164" data-line-number="164"></a>
-<a class="sourceLine" id="cb58-165" data-line-number="165">sales_by_year_cat_<span class="dv">2</span>_tbl</a>
-<a class="sourceLine" id="cb58-166" data-line-number="166"></a>
-<a class="sourceLine" id="cb58-167" data-line-number="167"><span class="co"># Step 2 - Visualize</span></a>
-<a class="sourceLine" id="cb58-168" data-line-number="168"></a>
-<a class="sourceLine" id="cb58-169" data-line-number="169">sales_by_year_cat_<span class="dv">2</span>_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-170" data-line-number="170"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-171" data-line-number="171"><span class="st">    </span><span class="co"># Set up x, y, fill </span></a>
-<a class="sourceLine" id="cb58-172" data-line-number="172"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> sales, <span class="dt">fill =</span> category_<span class="dv">2</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-173" data-line-number="173"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-174" data-line-number="174"><span class="st">    </span><span class="co"># Geometries</span></a>
-<a class="sourceLine" id="cb58-175" data-line-number="175"><span class="st">    </span><span class="kw">geom_col</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-176" data-line-number="176"><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-177" data-line-number="177"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-178" data-line-number="178"><span class="st">    </span><span class="co"># Facet</span></a>
-<a class="sourceLine" id="cb58-179" data-line-number="179"><span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>category_<span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>, <span class="dt">scales =</span> <span class="st">&quot;free_y&quot;</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-180" data-line-number="180"><span class="st">    </span></a>
-<a class="sourceLine" id="cb58-181" data-line-number="181"><span class="st">    </span><span class="co"># Formatting</span></a>
-<a class="sourceLine" id="cb58-182" data-line-number="182"><span class="st">    </span><span class="kw">theme_tq</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-183" data-line-number="183"><span class="st">    </span><span class="kw">scale_fill_tq</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-184" data-line-number="184"><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar) <span class="op">+</span></a>
-<a class="sourceLine" id="cb58-185" data-line-number="185"><span class="st">    </span><span class="kw">labs</span>(</a>
-<a class="sourceLine" id="cb58-186" data-line-number="186">        <span class="dt">title =</span> <span class="st">&quot;Revenue by Year and Category 2&quot;</span>,</a>
-<a class="sourceLine" id="cb58-187" data-line-number="187">        <span class="dt">subtitle =</span> <span class="st">&quot;Each product category has an upward trend&quot;</span>,</a>
-<a class="sourceLine" id="cb58-188" data-line-number="188">        <span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
-<a class="sourceLine" id="cb58-189" data-line-number="189">        <span class="dt">y =</span> <span class="st">&quot;Revenue&quot;</span>,</a>
-<a class="sourceLine" id="cb58-190" data-line-number="190">        <span class="dt">fill =</span> <span class="st">&quot;Product Secondary Category&quot;</span></a>
-<a class="sourceLine" id="cb58-191" data-line-number="191">    )</a>
-<a class="sourceLine" id="cb58-192" data-line-number="192"></a>
-<a class="sourceLine" id="cb58-193" data-line-number="193"></a>
-<a class="sourceLine" id="cb58-194" data-line-number="194"><span class="co"># 7.0 Writing Files ----</span></a>
-<a class="sourceLine" id="cb58-195" data-line-number="195"></a>
-<a class="sourceLine" id="cb58-196" data-line-number="196">fs<span class="op">::</span><span class="kw">dir_create</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student&quot;</span>)</a>
-<a class="sourceLine" id="cb58-197" data-line-number="197"></a>
-<a class="sourceLine" id="cb58-198" data-line-number="198"><span class="co"># 7.1 Excel ----</span></a>
-<a class="sourceLine" id="cb58-199" data-line-number="199"></a>
-<a class="sourceLine" id="cb58-200" data-line-number="200">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-201" data-line-number="201"><span class="st">    </span><span class="kw">write_xlsx</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.xlsx&quot;</span>)</a>
-<a class="sourceLine" id="cb58-202" data-line-number="202"></a>
-<a class="sourceLine" id="cb58-203" data-line-number="203"></a>
-<a class="sourceLine" id="cb58-204" data-line-number="204"><span class="co"># 7.2 CSV ----</span></a>
-<a class="sourceLine" id="cb58-205" data-line-number="205"></a>
-<a class="sourceLine" id="cb58-206" data-line-number="206">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-207" data-line-number="207"><span class="st">    </span><span class="kw">write_csv</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.csv&quot;</span>)</a>
-<a class="sourceLine" id="cb58-208" data-line-number="208"></a>
-<a class="sourceLine" id="cb58-209" data-line-number="209"></a>
-<a class="sourceLine" id="cb58-210" data-line-number="210"><span class="co"># 7.3 RDS ----</span></a>
-<a class="sourceLine" id="cb58-211" data-line-number="211"></a>
-<a class="sourceLine" id="cb58-212" data-line-number="212">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb58-213" data-line-number="213"><span class="st">    </span><span class="kw">write_rds</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.rds&quot;</span>)</a>
-<a class="sourceLine" id="cb58-214" data-line-number="214"></a></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" data-line-number="1"><span class="co"># DS4B 101-R: R FOR BUSINESS ANALYSIS ----</span></a>
+<a class="sourceLine" id="cb55-2" data-line-number="2"><span class="co"># JUMPSTART: First Sales Analysis ----</span></a>
+<a class="sourceLine" id="cb55-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb55-4" data-line-number="4"><span class="co"># 1.0 Load libraries ----</span></a>
+<a class="sourceLine" id="cb55-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb55-6" data-line-number="6"><span class="co"># Work horse packages</span></a>
+<a class="sourceLine" id="cb55-7" data-line-number="7"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb55-8" data-line-number="8"><span class="kw">library</span>(lubridate)</a>
+<a class="sourceLine" id="cb55-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb55-10" data-line-number="10"><span class="co"># theme_tq()</span></a>
+<a class="sourceLine" id="cb55-11" data-line-number="11"><span class="kw">library</span>(tidyquant)</a>
+<a class="sourceLine" id="cb55-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb55-13" data-line-number="13"><span class="co"># Excel Files</span></a>
+<a class="sourceLine" id="cb55-14" data-line-number="14"><span class="kw">library</span>(readxl)</a>
+<a class="sourceLine" id="cb55-15" data-line-number="15"><span class="kw">library</span>(writexl)</a>
+<a class="sourceLine" id="cb55-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb55-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb55-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb55-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb55-20" data-line-number="20"><span class="co"># 2.0 Importing Files ----</span></a>
+<a class="sourceLine" id="cb55-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb55-22" data-line-number="22">?<span class="kw">read_excel</span>()</a>
+<a class="sourceLine" id="cb55-23" data-line-number="23"></a>
+<a class="sourceLine" id="cb55-24" data-line-number="24">bikes_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="dt">path =</span> <span class="st">&quot;00_data/bike_sales/data_raw/bikes.xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb55-25" data-line-number="25"></a>
+<a class="sourceLine" id="cb55-26" data-line-number="26">bikeshops_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;00_data/bike_sales/data_raw/bikeshops.xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb55-27" data-line-number="27"></a>
+<a class="sourceLine" id="cb55-28" data-line-number="28">orderlines_tbl &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;00_data/bike_sales/data_raw/orderlines.xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb55-29" data-line-number="29"><span class="kw">names</span>(orderlines_tbl)[<span class="dv">1</span>] &lt;-<span class="st"> &quot;X__1&quot;</span></a>
+<a class="sourceLine" id="cb55-30" data-line-number="30"></a>
+<a class="sourceLine" id="cb55-31" data-line-number="31"></a>
+<a class="sourceLine" id="cb55-32" data-line-number="32"></a>
+<a class="sourceLine" id="cb55-33" data-line-number="33"><span class="co"># 3.0 Examining Data ----</span></a>
+<a class="sourceLine" id="cb55-34" data-line-number="34"></a>
+<a class="sourceLine" id="cb55-35" data-line-number="35">bikes_tbl</a>
+<a class="sourceLine" id="cb55-36" data-line-number="36"></a>
+<a class="sourceLine" id="cb55-37" data-line-number="37"><span class="kw">glimpse</span>(bikes_tbl)</a>
+<a class="sourceLine" id="cb55-38" data-line-number="38"></a>
+<a class="sourceLine" id="cb55-39" data-line-number="39">bikeshops_tbl</a>
+<a class="sourceLine" id="cb55-40" data-line-number="40"></a>
+<a class="sourceLine" id="cb55-41" data-line-number="41">orderlines_tbl</a>
+<a class="sourceLine" id="cb55-42" data-line-number="42"></a>
+<a class="sourceLine" id="cb55-43" data-line-number="43"><span class="co"># 4.0 Joining Data ----</span></a>
+<a class="sourceLine" id="cb55-44" data-line-number="44"></a>
+<a class="sourceLine" id="cb55-45" data-line-number="45">?left_join</a>
+<a class="sourceLine" id="cb55-46" data-line-number="46"></a>
+<a class="sourceLine" id="cb55-47" data-line-number="47">orderlines_tbl</a>
+<a class="sourceLine" id="cb55-48" data-line-number="48"></a>
+<a class="sourceLine" id="cb55-49" data-line-number="49">bikes_tbl</a>
+<a class="sourceLine" id="cb55-50" data-line-number="50"></a>
+<a class="sourceLine" id="cb55-51" data-line-number="51"><span class="kw">left_join</span>(orderlines_tbl, bikes_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;product.id&quot;</span> =<span class="st"> &quot;bike.id&quot;</span>))</a>
+<a class="sourceLine" id="cb55-52" data-line-number="52"></a>
+<a class="sourceLine" id="cb55-53" data-line-number="53">bike_orderlines_joined_tbl &lt;-<span class="st"> </span>orderlines_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-54" data-line-number="54"><span class="st">    </span><span class="kw">left_join</span>(bikes_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;product.id&quot;</span> =<span class="st"> &quot;bike.id&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-55" data-line-number="55"><span class="st">    </span><span class="kw">left_join</span>(bikeshops_tbl, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;customer.id&quot;</span> =<span class="st"> &quot;bikeshop.id&quot;</span>))</a>
+<a class="sourceLine" id="cb55-56" data-line-number="56"></a>
+<a class="sourceLine" id="cb55-57" data-line-number="57">bike_orderlines_joined_tbl</a>
+<a class="sourceLine" id="cb55-58" data-line-number="58"></a>
+<a class="sourceLine" id="cb55-59" data-line-number="59">bike_orderlines_joined_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</a>
+<a class="sourceLine" id="cb55-60" data-line-number="60"></a>
+<a class="sourceLine" id="cb55-61" data-line-number="61"><span class="co"># 5.0 Wrangling Data ----</span></a>
+<a class="sourceLine" id="cb55-62" data-line-number="62"></a>
+<a class="sourceLine" id="cb55-63" data-line-number="63">bike_orderlines_wrangled_tbl &lt;-<span class="st"> </span>bike_orderlines_joined_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-64" data-line-number="64"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-65" data-line-number="65"><span class="st">    </span><span class="co"># Separate description into category.1, category.2, and frame.material</span></a>
+<a class="sourceLine" id="cb55-66" data-line-number="66"><span class="st">    </span><span class="kw">separate</span>(description,</a>
+<a class="sourceLine" id="cb55-67" data-line-number="67">             <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;category.1&quot;</span>, <span class="st">&quot;category.2&quot;</span>, <span class="st">&quot;frame.material&quot;</span>),</a>
+<a class="sourceLine" id="cb55-68" data-line-number="68">             <span class="dt">sep =</span> <span class="st">&quot; - &quot;</span>,</a>
+<a class="sourceLine" id="cb55-69" data-line-number="69">             <span class="dt">remove =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-70" data-line-number="70"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-71" data-line-number="71"><span class="st">    </span><span class="co"># Separate location into city and state</span></a>
+<a class="sourceLine" id="cb55-72" data-line-number="72"><span class="st">    </span><span class="kw">separate</span>(location,</a>
+<a class="sourceLine" id="cb55-73" data-line-number="73">             <span class="dt">into =</span> <span class="kw">c</span>(<span class="st">&quot;city&quot;</span>, <span class="st">&quot;state&quot;</span>),</a>
+<a class="sourceLine" id="cb55-74" data-line-number="74">             <span class="dt">sep  =</span> <span class="st">&quot;, &quot;</span>,</a>
+<a class="sourceLine" id="cb55-75" data-line-number="75">             <span class="dt">remove =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-76" data-line-number="76"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-77" data-line-number="77"><span class="st">    </span><span class="co"># price extended</span></a>
+<a class="sourceLine" id="cb55-78" data-line-number="78"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">total.price =</span> price <span class="op">*</span><span class="st"> </span>quantity) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-79" data-line-number="79"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-80" data-line-number="80"><span class="st">    </span><span class="co"># Reorganize</span></a>
+<a class="sourceLine" id="cb55-81" data-line-number="81"><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>X__<span class="dv">1</span>, <span class="op">-</span>location) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-82" data-line-number="82"><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span><span class="kw">ends_with</span>(<span class="st">&quot;.id&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-83" data-line-number="83"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-84" data-line-number="84"><span class="st">    </span><span class="kw">bind_cols</span>(bike_orderlines_joined_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(order.id)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-85" data-line-number="85"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-86" data-line-number="86"><span class="st">    </span><span class="co"># Reorder columns</span></a>
+<a class="sourceLine" id="cb55-87" data-line-number="87"><span class="st">    </span><span class="kw">select</span>(<span class="kw">contains</span>(<span class="st">&quot;date&quot;</span>), <span class="kw">contains</span>(<span class="st">&quot;id&quot;</span>), <span class="kw">contains</span>(<span class="st">&quot;order&quot;</span>),</a>
+<a class="sourceLine" id="cb55-88" data-line-number="88">           quantity, price, total.price,</a>
+<a class="sourceLine" id="cb55-89" data-line-number="89">           <span class="kw">everything</span>()) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-90" data-line-number="90"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-91" data-line-number="91"><span class="st">    </span><span class="co"># Renaming columns</span></a>
+<a class="sourceLine" id="cb55-92" data-line-number="92"><span class="st">    </span><span class="kw">rename</span>(<span class="dt">order_date =</span> order.date) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-93" data-line-number="93"><span class="st">    </span><span class="kw">set_names</span>(<span class="kw">names</span>(.) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;_&quot;</span>)) </a>
+<a class="sourceLine" id="cb55-94" data-line-number="94"></a>
+<a class="sourceLine" id="cb55-95" data-line-number="95">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">glimpse</span>()</a>
+<a class="sourceLine" id="cb55-96" data-line-number="96"></a>
+<a class="sourceLine" id="cb55-97" data-line-number="97"></a>
+<a class="sourceLine" id="cb55-98" data-line-number="98"></a>
+<a class="sourceLine" id="cb55-99" data-line-number="99"><span class="co"># 6.0 Business Insights ----</span></a>
+<a class="sourceLine" id="cb55-100" data-line-number="100"></a>
+<a class="sourceLine" id="cb55-101" data-line-number="101"></a>
+<a class="sourceLine" id="cb55-102" data-line-number="102"><span class="co"># 6.1 Sales by Year ----</span></a>
+<a class="sourceLine" id="cb55-103" data-line-number="103"></a>
+<a class="sourceLine" id="cb55-104" data-line-number="104"><span class="co"># Step 1 - Manipulate</span></a>
+<a class="sourceLine" id="cb55-105" data-line-number="105"></a>
+<a class="sourceLine" id="cb55-106" data-line-number="106">sales_by_year_tbl &lt;-<span class="st"> </span>bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-107" data-line-number="107"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-108" data-line-number="108"><span class="st">    </span><span class="co"># Selecting columns to focus on and adding a year column</span></a>
+<a class="sourceLine" id="cb55-109" data-line-number="109"><span class="st">    </span><span class="kw">select</span>(order_date, total_price) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-110" data-line-number="110"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">year</span>(order_date)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-111" data-line-number="111"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-112" data-line-number="112"><span class="st">    </span><span class="co"># Grouping by year, and summarizing sales</span></a>
+<a class="sourceLine" id="cb55-113" data-line-number="113"><span class="st">    </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-114" data-line-number="114"><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">sales =</span> <span class="kw">sum</span>(total_price)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-115" data-line-number="115"><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-116" data-line-number="116"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-117" data-line-number="117"><span class="st">    </span><span class="co"># $ Format Text</span></a>
+<a class="sourceLine" id="cb55-118" data-line-number="118"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sales_text =</span> scales<span class="op">::</span><span class="kw">dollar</span>(sales))</a>
+<a class="sourceLine" id="cb55-119" data-line-number="119">    </a>
+<a class="sourceLine" id="cb55-120" data-line-number="120">sales_by_year_tbl</a>
+<a class="sourceLine" id="cb55-121" data-line-number="121"></a>
+<a class="sourceLine" id="cb55-122" data-line-number="122"></a>
+<a class="sourceLine" id="cb55-123" data-line-number="123"><span class="co"># Step 2 - Visualize</span></a>
+<a class="sourceLine" id="cb55-124" data-line-number="124"></a>
+<a class="sourceLine" id="cb55-125" data-line-number="125">sales_by_year_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-126" data-line-number="126"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-127" data-line-number="127"><span class="st">    </span><span class="co"># Setup canvas with year (x-axis) and sales (y-axis)</span></a>
+<a class="sourceLine" id="cb55-128" data-line-number="128"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> sales)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-129" data-line-number="129"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-130" data-line-number="130"><span class="st">    </span><span class="co"># Geometries</span></a>
+<a class="sourceLine" id="cb55-131" data-line-number="131"><span class="st">    </span><span class="kw">geom_col</span>(<span class="dt">fill =</span> <span class="st">&quot;#2c3e50&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-132" data-line-number="132"><span class="st">    </span><span class="kw">geom_label</span>(<span class="kw">aes</span>(<span class="dt">label =</span> sales_text)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-133" data-line-number="133"><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-134" data-line-number="134"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-135" data-line-number="135"><span class="st">    </span><span class="co"># Formatting</span></a>
+<a class="sourceLine" id="cb55-136" data-line-number="136"><span class="st">    </span><span class="kw">theme_tq</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-137" data-line-number="137"><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-138" data-line-number="138"><span class="st">    </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb55-139" data-line-number="139">        <span class="dt">title =</span> <span class="st">&quot;Revenue by Year&quot;</span>,</a>
+<a class="sourceLine" id="cb55-140" data-line-number="140">        <span class="dt">subtitle =</span> <span class="st">&quot;Upward trend&quot;</span>,</a>
+<a class="sourceLine" id="cb55-141" data-line-number="141">        <span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb55-142" data-line-number="142">        <span class="dt">y =</span> <span class="st">&quot;Revenue&quot;</span></a>
+<a class="sourceLine" id="cb55-143" data-line-number="143">    )</a>
+<a class="sourceLine" id="cb55-144" data-line-number="144"></a>
+<a class="sourceLine" id="cb55-145" data-line-number="145"><span class="co"># 6.2 Sales by Year and Category 2 ----</span></a>
+<a class="sourceLine" id="cb55-146" data-line-number="146"></a>
+<a class="sourceLine" id="cb55-147" data-line-number="147"></a>
+<a class="sourceLine" id="cb55-148" data-line-number="148"><span class="co"># Step 1 - Manipulate</span></a>
+<a class="sourceLine" id="cb55-149" data-line-number="149"></a>
+<a class="sourceLine" id="cb55-150" data-line-number="150">sales_by_year_cat_<span class="dv">2</span>_tbl &lt;-<span class="st"> </span>bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-151" data-line-number="151"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-152" data-line-number="152"><span class="st">    </span><span class="co"># Selecting columns and add a year</span></a>
+<a class="sourceLine" id="cb55-153" data-line-number="153"><span class="st">    </span><span class="kw">select</span>(order_date, total_price, category_<span class="dv">2</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-154" data-line-number="154"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">year</span>(order_date)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-155" data-line-number="155"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-156" data-line-number="156"><span class="st">    </span><span class="co"># Groupby and Summarize year and category 2</span></a>
+<a class="sourceLine" id="cb55-157" data-line-number="157"><span class="st">    </span><span class="kw">group_by</span>(year, category_<span class="dv">2</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-158" data-line-number="158"><span class="st">    </span><span class="kw">summarise</span>(<span class="dt">sales =</span> <span class="kw">sum</span>(total_price)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-159" data-line-number="159"><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-160" data-line-number="160"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-161" data-line-number="161"><span class="st">    </span><span class="co"># Format $ Text</span></a>
+<a class="sourceLine" id="cb55-162" data-line-number="162"><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sales_text =</span> scales<span class="op">::</span><span class="kw">dollar</span>(sales))</a>
+<a class="sourceLine" id="cb55-163" data-line-number="163"></a>
+<a class="sourceLine" id="cb55-164" data-line-number="164"></a>
+<a class="sourceLine" id="cb55-165" data-line-number="165">sales_by_year_cat_<span class="dv">2</span>_tbl</a>
+<a class="sourceLine" id="cb55-166" data-line-number="166"></a>
+<a class="sourceLine" id="cb55-167" data-line-number="167"><span class="co"># Step 2 - Visualize</span></a>
+<a class="sourceLine" id="cb55-168" data-line-number="168"></a>
+<a class="sourceLine" id="cb55-169" data-line-number="169">sales_by_year_cat_<span class="dv">2</span>_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-170" data-line-number="170"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-171" data-line-number="171"><span class="st">    </span><span class="co"># Set up x, y, fill </span></a>
+<a class="sourceLine" id="cb55-172" data-line-number="172"><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> year, <span class="dt">y =</span> sales, <span class="dt">fill =</span> category_<span class="dv">2</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-173" data-line-number="173"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-174" data-line-number="174"><span class="st">    </span><span class="co"># Geometries</span></a>
+<a class="sourceLine" id="cb55-175" data-line-number="175"><span class="st">    </span><span class="kw">geom_col</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-176" data-line-number="176"><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-177" data-line-number="177"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-178" data-line-number="178"><span class="st">    </span><span class="co"># Facet</span></a>
+<a class="sourceLine" id="cb55-179" data-line-number="179"><span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>category_<span class="dv">2</span>, <span class="dt">ncol =</span> <span class="dv">3</span>, <span class="dt">scales =</span> <span class="st">&quot;free_y&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-180" data-line-number="180"><span class="st">    </span></a>
+<a class="sourceLine" id="cb55-181" data-line-number="181"><span class="st">    </span><span class="co"># Formatting</span></a>
+<a class="sourceLine" id="cb55-182" data-line-number="182"><span class="st">    </span><span class="kw">theme_tq</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-183" data-line-number="183"><span class="st">    </span><span class="kw">scale_fill_tq</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-184" data-line-number="184"><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">labels =</span> scales<span class="op">::</span>dollar) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-185" data-line-number="185"><span class="st">    </span><span class="kw">labs</span>(</a>
+<a class="sourceLine" id="cb55-186" data-line-number="186">        <span class="dt">title =</span> <span class="st">&quot;Revenue by Year and Category 2&quot;</span>,</a>
+<a class="sourceLine" id="cb55-187" data-line-number="187">        <span class="dt">subtitle =</span> <span class="st">&quot;Each product category has an upward trend&quot;</span>,</a>
+<a class="sourceLine" id="cb55-188" data-line-number="188">        <span class="dt">x =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb55-189" data-line-number="189">        <span class="dt">y =</span> <span class="st">&quot;Revenue&quot;</span>,</a>
+<a class="sourceLine" id="cb55-190" data-line-number="190">        <span class="dt">fill =</span> <span class="st">&quot;Product Secondary Category&quot;</span></a>
+<a class="sourceLine" id="cb55-191" data-line-number="191">    )</a>
+<a class="sourceLine" id="cb55-192" data-line-number="192"></a>
+<a class="sourceLine" id="cb55-193" data-line-number="193"></a>
+<a class="sourceLine" id="cb55-194" data-line-number="194"><span class="co"># 7.0 Writing Files ----</span></a>
+<a class="sourceLine" id="cb55-195" data-line-number="195"></a>
+<a class="sourceLine" id="cb55-196" data-line-number="196">fs<span class="op">::</span><span class="kw">dir_create</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student&quot;</span>)</a>
+<a class="sourceLine" id="cb55-197" data-line-number="197"></a>
+<a class="sourceLine" id="cb55-198" data-line-number="198"><span class="co"># 7.1 Excel ----</span></a>
+<a class="sourceLine" id="cb55-199" data-line-number="199"></a>
+<a class="sourceLine" id="cb55-200" data-line-number="200">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-201" data-line-number="201"><span class="st">    </span><span class="kw">write_xlsx</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.xlsx&quot;</span>)</a>
+<a class="sourceLine" id="cb55-202" data-line-number="202"></a>
+<a class="sourceLine" id="cb55-203" data-line-number="203"></a>
+<a class="sourceLine" id="cb55-204" data-line-number="204"><span class="co"># 7.2 CSV ----</span></a>
+<a class="sourceLine" id="cb55-205" data-line-number="205"></a>
+<a class="sourceLine" id="cb55-206" data-line-number="206">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-207" data-line-number="207"><span class="st">    </span><span class="kw">write_csv</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb55-208" data-line-number="208"></a>
+<a class="sourceLine" id="cb55-209" data-line-number="209"></a>
+<a class="sourceLine" id="cb55-210" data-line-number="210"><span class="co"># 7.3 RDS ----</span></a>
+<a class="sourceLine" id="cb55-211" data-line-number="211"></a>
+<a class="sourceLine" id="cb55-212" data-line-number="212">bike_orderlines_wrangled_tbl <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb55-213" data-line-number="213"><span class="st">    </span><span class="kw">write_rds</span>(<span class="st">&quot;00_data/bike_sales/data_wrangled_student/bike_orderlines.rds&quot;</span>)</a>
+<a class="sourceLine" id="cb55-214" data-line-number="214"></a></code></pre></div>
 </div>
 <!-- </div> -->
             </section>
