@@ -1111,11 +1111,10 @@ RStudio allows you to execute commands directly from the script editor by using 
 Note that running code via source differs in a few respects from entering it at the R command line. Sourcing a file does not print command outputs. To see your output click the arrow next to the source icon <img src="input/00_getting_started/01_images/source_icon.png" style="width:3.1%" /> and click <code>Source with Echo</code> or use <kbd><code>Cmd</code></kbd> + <kbd><code>Shift</code></kbd> + <kbd><code>Return</code></kbd>.
 <hr>
 </hr>
-<p><strong>Assignment</strong></p>
+<p><strong>Assignment operator</strong></p>
 <p>You can get now output from R simply by typing math in the console or by running a script. You generated different numbers for you to see, but it didn’t save that values anywhere in your computer’s memory. If you want to use those numbers again, you’ll have to ask your computer to save them somewhere. You can do that by creating R objects. R lets you save data by storing it inside an R object. What is an object? Just a name that you can use to call up stored data. For example, you can save data into an object like <code>a</code> or <code>b</code>. Wherever R encounters the object, it will replace it with the data saved inside.</p>
-<p>To create an object, we need to give it a name followed by the assignment operator <code>&lt;-</code>, and the value we want to give it next to it. Typing <kbd>Cmd</kbd> + <kbd>-</kbd> will write <code>&lt;-</code> in a single keystroke. Spaces are optional around assignment operators.</p>
+<p>To create an object, we need to give it a name followed by the assignment operator <code>&lt;-</code>, and the value we want to give it next to it. Typing <kbd>Cmd</kbd> + <kbd>-</kbd> will write <code>&lt;-</code> in a single keystroke. R ignores spaces and line breaks and executes one complete expression at a time. But it makes the code easier for you and me to read.</p>
 <pre><code>EOQ &lt;- 200</code></pre>
-<p>To see what is stored in an object, just type the object’s name by itself.</p>
 <div class="rmdblankbox">
 <p>
 Infobox
@@ -1126,6 +1125,10 @@ Infobox
 For historical reasons, you can also use = for assignments, but not in every context. Because of the slight differences in syntax, it is good practice to always use &lt;- for assignments.
 </p>
 </div>
+<p>To see what is stored in an object, just type the object’s name by itself.</p>
+<pre><code>EOQ &lt;- 200
+EOQ
+## 200</code></pre>
 <p>You can name an object in R almost anything you want such as x, current_temperature, or subject_id, but there are a few rules. First, a name cannot start with a number (2x is not valid, but x2 is). Second, a name cannot use some special symbols, like ^, !, $, @, +, -, /, or *. You want your object names to be explicit and not too long. There are some names that cannot be used because they are the names of fundamental functions in R (e.g., if, else, for, see here for a complete list). In general, even if it’s allowed, it’s best to not use other function names (e.g., c, T, mean, data, df, weights). It’s also best to avoid dots (.) within an object name as in my.dataset. There are many functions in R with dots in their names for historical reasons, but because dots have a special meaning in R (for methods) and other programming languages, it’s best to avoid them. It is also recommended to use nouns for object names, and verbs for function names. It’s important to be consistent in the styling of your code (where you put spaces, how you name objects, etc.). Using a consistent coding style makes your code clearer to read for your future self and your collaborators.</p>
 <p>Another important question here is, is R case sensitive? Is A the same as a? Figure out a way to check for yourself.</p>
 <!-- RStudio IDE: Environment -->
@@ -1137,12 +1140,12 @@ Environment/ History
 </div>
 <p><strong>Exercise</strong></p>
 <p>Now that we know how to put values into memory, we can do arithmetic with it and calculate EOQ again. Assign all values to R objects. You can even assign the formula to an object.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">D &lt;-<span class="st"> </span><span class="dv">1000</span></a>
-<a class="sourceLine" id="cb8-2" data-line-number="2">K &lt;-<span class="st"> </span><span class="dv">5</span></a>
-<a class="sourceLine" id="cb8-3" data-line-number="3">h &lt;-<span class="st"> </span><span class="fl">0.25</span></a>
-<a class="sourceLine" id="cb8-4" data-line-number="4">Q &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span><span class="op">*</span>D<span class="op">*</span>K<span class="op">/</span>h)</a>
-<a class="sourceLine" id="cb8-5" data-line-number="5">Q</a>
-<a class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">## 200</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">D &lt;-<span class="st"> </span><span class="dv">1000</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">K &lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">h &lt;-<span class="st"> </span><span class="fl">0.25</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">Q &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span><span class="op">*</span>D<span class="op">*</span>K<span class="op">/</span>h)</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5">Q</a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">## 200</span></a></code></pre></div>
 <!-- RStudio IDE: Misc -->
 <div class="boxouter">
 <div class="boxfloat" style="border-color: #AA7942">
