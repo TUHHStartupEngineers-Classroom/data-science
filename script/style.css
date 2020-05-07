@@ -138,3 +138,29 @@ background: url("input/00_general/01_images/shiny.png") no-repeat;
     padding: 2px 4px;
     white-space: nowrap;
    }
+   
+.boxouter {
+      border-radius: 5px;
+      width: 800px;
+      padding: 0px;
+      margin-bottom: 10px;
+}
+    
+.boxfloat {
+      padding: 10px;
+      border: 5px solid;
+      background-color: #fff;
+      border-radius: 5px;
+      color: #000000;
+      font-weight: bold;
+      float: left;  
+      width: 150px;
+      height: 80px;
+      margin: 5px 20px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align:center;
+}
+   
+   
