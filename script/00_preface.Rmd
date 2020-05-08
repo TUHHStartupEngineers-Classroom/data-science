@@ -10,7 +10,6 @@ There is no prerequisite knowledge needed in R Programming, Data Science, or Mac
 
 Visualizing and modeling data are complicated skills that require a scientist's full attention. It takes expertise, judgement, and focus to extract reliable insights from a data set. I would not recommend that any data scientist distract herself with computer programming until she feels comfortable with the basic theory and practice of her craft. If you would like to learn the craft of data science, I recommend the book [R for Data Science](http://r4ds.had.co.nz/), written by Hadley Wickham.
 
-***
 ## Introduction to R 
 
 ### What is R?
