@@ -1161,23 +1161,24 @@ Environment/ History
 <div class="boxfloat" style="border-color: #AA7942">
 Misc. Displays
 </div>
-<p>Finally, the bottom right panel is the miscellaneous panel containing five separate tabs. The <b>Files</b> tab has a navigable file manager, just like the file system on your operating system. It shows all the files and folders in the default workspace. The <b>Plot</b> tab is where graphics you create will appear. Here we can zoom, export, configure and inspect graphs/figures. The <b>Packages</b> tab shows you the packages that are installed and those that can be installed (more on this later). The <b>Help</b> tab allows you to search the R documentation for help and is where the help appears when you ask for it from the Console. You can just type <code>?function_name</code> or <code>help(function_name)</code> into the console.</p>
+<p>Finally, the bottom right panel is the miscellaneous panel containing five separate tabs. The <b>Files</b> tab has a navigable file manager, just like the file system on your operating system. It shows all the files and folders in the default workspace. The <b>Plot</b> tab is where graphics you create will appear. Here we can zoom, export, configure and inspect graphs/figures. The <b>Packages</b> tab shows you the packages that are installed and those that can be installed (more on this later). The <b>Help</b> tab allows you to search the R documentation for help and is where the help appears when you ask for it from the Console.</p>
 </div>
-<p><strong>Getting set up</strong></p>
-<p>It is good practice to keep a set of related data, analyses, and text self-contained in a single folder, called the working directory. All of the scripts within this folder can then use relative paths to files that indicate where inside the project a file is located (as opposed to absolute paths, which point to where a file is on a specific computer). Working this way makes it a lot easier to move your project around on your computer and share it with others without worrying about whether or not the underlying scripts will still work.</p>
-<p>RStudio provides a helpful set of tools to do this through its “Projects” interface, which not only creates a working directory for you, but also remembers its location (allowing you to quickly navigate to it) and optionally preserves custom settings and open files to make it easier to resume work after a break. Go through the steps for creating an “R Project” for this tutorial below.</p>
-<div class="rmdblankbox">
-<p>
-Pro Tip
-</p>
-</div>
-<div class="rmdprotip">
-<p>
-Change saving to never …
-</p>
-</div>
+<p><strong>Getting set up</strong> WD</p>
+<p>It is good practice to keep a set of related data, analyses, and text self-contained in a single folder, called the working directory. It is the place from where R will be looking for and saving the files. All of the scripts within this folder can then use relative paths to files that indicate where inside the project a file is located (as opposed to absolute paths, which point to where a file is on a specific computer). Working this way makes it a lot easier to move your project around on your computer and share it with others without worrying about whether or not the underlying scripts will still work.</p>
+<p>RStudio provides a helpful set of tools to do this through its “Projects” interface, which not only creates a working directory for you, but also remembers its location (allowing you to quickly navigate to it) and optionally preserves custom settings and open files to make it easier to resume work after a break. Using RStudio projects makes this easy and ensures that your working directory is set properly.</p>
+<p>You can see your current working directory in the path given above the console or run the command <code>getwd()</code>. If for some reason your working directory is not what it should be, you can change it in the RStudio interface by navigating in the file browser where your working directory should be, and clicking on the blue gear icon <img src="input/00_getting_started/01_images/more_icon.png" style="width:3.1%" /> <code>More</code>, and select <code>Set As Working Directory</code>. Alternatively you can use setwd(“/path/to/working/directory”) to reset your working directory. However, your scripts should not include this line because it will fail on someone else’s computer.</p>
+<p>Using a consistent folder structure across your projects will help keep things organized, and will also make it easy to find/file things in the future. This can be especially helpful when you have multiple projects. In general, you may create directories (folders) for scripts, data, and documents.</p>
+<p><strong>data_raw/ &amp; data/</strong>
+Use these folders to store raw data and intermediate datasets you may create for the need of a particular analysis. For the sake of transparency and provenance, you should always keep a copy of your raw data accessible and do as much of your data cleanup and preprocessing programmatically (i.e., with scripts, rather than manually) as possible. Separating raw data from processed data is also a good idea. For example, you could have files data_raw/tree_survey.plot1.txt and …plot2.txt kept separate from a data/tree.survey.csv file generated by the scripts/01.preprocess.tree_survey.R script.</p>
+<p><strong>documents/</strong>
+This would be a place to keep outlines, drafts and other text.</p>
+<p><strong>scripts/</strong>
+This would be the location to keep your R scripts for different analyses or plotting, and potentially a separate folder for your functions (more on that later).
+Additional (sub)directories depending on your project needs.</p>
+<p><strong>Exercise</strong></p>
+<p>Getting set up: Create a new project and organize your working directory</p>
 <ol style="list-style-type: decimal">
-<li>Download the zip file, extract the date and and choose a convenient location for it. (e.g. C:/files/data-science/)
+<li>Download the zip file, extract the date and and choose a convenient location for it. (e.g. WIN: <code>C:/Dropbox/data-science/</code> macOS: <code>~/Dropbox/data-science</code>)
 <div class="rmdblankbox">
 <p>
 Download
@@ -1188,8 +1189,20 @@ Download
 <strong><a href="lorem.zip">https://desktop.github.com</a></strong>
 </p>
 </div></li>
-<li>In RStudio under the <code>File</code> menu, click on <code>New Project</code> and then choose <code>Existing Directory</code>. This will be your working directory (e.g., ~/data-science).</li>
+<li>In RStudio under the <code>File</code> menu, click on <code>New Project</code> (or click <img src="input/00_getting_started/01_images/new_project_icon.png" style="width:3.1%" />) and then choose <code>Existing Directory</code>. This will be your working directory (e.g., ~/data-science).</li>
 <li>Locate the downloaded folder and then click <code>Create Project</code>.</li>
+</ol>
+<p>Your working directory should now look like this:</p>
+<div class="figure"><span id="fig:project-struct"></span>
+<img src="input/00_getting_started/01_images/project_structure.png" alt="Project structure example in RStudio." width="100%" />
+<p class="caption">
+FIGURE 1.2: Project structure example in RStudio.
+</p>
+</div>
+<p>For this first project, we will just need a <code>00_getting_started/</code> folder to store our first script. We will use the other folders for when we learn how to import data such as CSV files, and for the figures that we will save.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Under the Files tab on the right of the screen, click on New Folder and create a folder named <code>00_getting_started</code> within your newly created working directory (e.g., ~/Dropbox/data-science). (Alternatively, type <code>dir.create(&quot;00_getting_started&quot;)</code> at your R console.)</p></li>
+<li><p>Open your R-script and save it in this directory.</p></li>
 </ol>
 <div class="rmdblankbox">
 <p>
@@ -1201,27 +1214,9 @@ Tip - Set Preferences to ‘Never’ save workspace in RStudio.
 RStudio’s default preferences generally work well, but saving a workspace to .RData can be cumbersome, especially if you are working with larger datasets. To turn that off, go to Tools –&gt; ‘Global Options’ and select the ‘Never’ option for ‘Save workspace to .RData’ on exit.’
 </p>
 </div>
-<div id="organizing-your-working-directory" class="section level4">
-<h4><span class="header-section-number">1.2.1.1</span> Organizing your working directory</h4>
-<p>Using a consistent folder structure across your projects will help keep things organized, and will also make it easy to find/file things in the future. This can be especially helpful when you have multiple projects. In general, you may create directories (folders) for scripts, data, and documents.</p>
-<p>data_raw/ &amp; data/
-Use these folders to store raw data and intermediate datasets you may create for the need of a particular analysis. For the sake of transparency and provenance, you should always keep a copy of your raw data accessible and do as much of your data cleanup and preprocessing programmatically (i.e., with scripts, rather than manually) as possible. Separating raw data from processed data is also a good idea. For example, you could have files data_raw/tree_survey.plot1.txt and …plot2.txt kept separate from a data/tree.survey.csv file generated by the scripts/01.preprocess.tree_survey.R script.</p>
-<p>documents/
-This would be a place to keep outlines, drafts and other text.</p>
-<p>scripts/
-This would be the location to keep your R scripts for different analyses or plotting, and potentially a separate folder for your functions (more on that later).
-Additional (sub)directories depending on your project needs.</p>
-<p>For this first project, we will just need a getting_started/ folder to store our first script, and we will use data/ for when we learn how to export data as CSV files, and a fig/ folder for the figures that we will save.</p>
-<p>Under the Files tab on the right of the screen, click on New Folder and create a folder named data_raw within your newly created working directory (e.g., ~/data-carpentry/). (Alternatively, type dir.create(“data_raw”) at your R console.) Repeat these operations to create a data and a fig folder.
-We are going to keep the script in the root of our working directory because we are only going to use one file and it will make things easier.</p>
-<p>Your working directory should now look like this:</p>
-</div>
-<div id="the-working-directory" class="section level4">
-<h4><span class="header-section-number">1.2.1.2</span> The working directory</h4>
-<p>The working directory is an important concept to understand. It is the place from where R will be looking for and saving the files. When you write code for your project, it should refer to files in relation to the root of your working directory and only need files within this structure.</p>
-<p>Using RStudio projects makes this easy and ensures that your working directory is set properly. If you need to check it, you can use getwd(). If for some reason your working directory is not what it should be, you can change it in the RStudio interface by navigating in the file browser where your working directory should be, and clicking on the blue gear icon “More”, and select “Set As Working Directory”. Alternatively you can use setwd(“/path/to/working/directory”) to reset your working directory. However, your scripts should not include this line because it will fail on someone else’s computer.</p>
 <p><strong>Getting help</strong></p>
-<p>Inside RStudio</p>
+<p>Inside RStudio
+You can just type <code>?function_name</code> or <code>help(function_name)</code> into the console.</p>
 <pre><code># provides details for specific function
 help(sqrt)
 
@@ -1235,7 +1230,6 @@ example(sqrt)</code></pre>
 rseek
 Stackoverflow
 …</p>
-</div>
 <div id="task" class="section level4 unnumbered">
 <h4>Task</h4>
 <ol style="list-style-type: decimal">
