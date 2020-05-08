@@ -1,38 +1,14 @@
 # Preface {-}
 
-__Ziel des scripts__
-This book will teach you how to program in R. You'll go from loading data to writing your own functions (which will outperform the functions of other R users). But this is not a typical introduction to R. I want to help you become a data scientist, as well as a computer scientist, so this book will focus on the programming skills that are most related to data science. 
+This book will teach you how to program in R. You'll go from loading data to writing your own functions. But this is not a typical introduction to R. I want to help you become a data scientist, as well as a computer scientist, so this book will focus on the programming skills that are most related to data science and business analytics.
 
-__##Aufbau##__
-The chapters in the book are arranged according to three practical projects--given that they're fairly substantial projects, they span multiple chapters. I chose these projects for two reasons. First, they cover the breadth of the R language. You will learn how to load data, assemble and disassemble data objects, navigate R's environment system, write your own functions, and use all of R's programming tools, such as `if else` statements, for loops, S3 classes, R's package system, and R's debugging tools. The projects will also teach you how to write vectorized R code, a style of lightning-fast code that takes advantage of all of the things R does best.
+The chapters in the book are arranged according to seven practical projects. When you work with data, you will need to store, retrieve, and manipulate large sets of values without introducing errors. As you work through the book, I will teach you not just how to program with R, but how to use the programming skills to support your work as a data scientist. 
 
-But, more importantly, the projects will teach you how to solve the logistical problems of data science—and there are many logistical problems. When you work with data, you will need to store, retrieve, and manipulate large sets of values without introducing errors. As you work through the book, I will teach you not just how to program with R, but how to use the programming skills to support your work as a data scientist. 
+As you complete the projects, you will become an expert at the skills you need to work with data as a data scientist. You will learn how to store data in your computer’s memory, how to access data that is already there, and how to transform data values in memory when necessary. You will also learn how to write your own programs in R that you can use to analyze data and run simulations.
 
-Is made of projects ... As you complete them, you will become an expert at the skills you need to work with data as a data scientist. You will learn how to store data in your computer’s memory, how to access data that is already there, and how to transform data values in memory when necessary. You will also learn how to write your own programs in R that you can use to analyze data and run simulations.
+There is no prerequisite knowledge needed in R Programming, Data Science, or Machine Learning. I have written it for beginning programmers. I do not talk about the theory of computer science. Nor do I get into advanced details such as the workings of _lazy evaluation_. These things are interesting if you think of computer science at the theoretical level, but they are a distraction when you first learn to program. Instead, I teach you how to program in R with concrete examples. These examples are short, easy to understand, and cover everything you need to know. The examples have a second advantage, as well: they provide immediate practice. Learning to program is like learning to speak another language—you progress faster when you practice. In fact, learning to program _is_ learning to speak another language. You will get the best results if you follow along with the examples in the book and experiment whenever an idea strikes you.
 
-__##Audience##__
-Not every programmer needs to be a data scientist, so not every programmer will find this book useful. You will find this book helpful if you're in one of the following categories:
-
-* You already use R as a statistical tool, but you would like to learn how to write your own functions and simulations with R.
-
-* You would like to teach yourself how to program, and you see the sense of learning a language related to data science.
-
-There is no prerequisite knowledge needed in R Programming, Data Science, or Machine Learning.
-
-I have written it for beginning programmers. I do not talk about the theory of computer science—there are no discussions of big `O()` and little `o()` in these pages. Nor do I get into advanced details such as the workings of _lazy evaluation_. These things are interesting if you think of computer science at the theoretical level, but they are a distraction when you first learn to program.
-
-Instead, I teach you how to program in R with three concrete examples. These examples are short, easy to understand, and cover everything you need to know.
-
-As a teacher, I have found that students learn abstract concepts much faster when they are illustrated by concrete examples. The examples have a second advantage, as well: they provide immediate practice. Learning to program is like learning to speak another language—you progress faster when you practice. In fact, learning to program _is_ learning to speak another language. You will get the best results if you follow along with the examples in the book and experiment whenever an idea strikes you.
-
-__##Business Bezug##__
-One of the biggest surprises in this book is that I do not cover traditional applications of R, such as models and graphs; instead, I treat R purely as a programming language. Why this narrow focus? R is designed to be a tool that helps scientists analyze data. It has many excellent functions that make plots and fit models to data. As a result, many statisticians learn to use R as if it were a piece of software—they learn which functions do what they want, and they ignore the rest. 
-
-Visualizing and modeling data are complicated skills that require a scientist's full attention. It takes expertise, judgement, and focus to extract reliable insights from a data set. I would not recommend that any data scientist distract herself with computer programming until she feels comfortable with the basic theory and practice of her craft. If you would like to learn the craft of data science, I recommend the book [R for Data Science](http://r4ds.had.co.nz/), my companion volume to this book, co-written with Hadley Wickham.
-
-***
-
-The book is a companion to [R for Data Science](http://r4ds.had.co.nz/). In that book, Hadley Wickham and I explain how to use R to make plots, model data, and write reports. That book teaches these tasks as data-science skills, which require judgement and expertise—not as programming exercises, which they also are. This book will teach you how to program in R. It does not assume that you have mastered the data-science skills taught in _R for Data Science_ (nor that you ever intend to). However, this skill set amplifies that one. And if you master both, you will be a powerful, computer-augmented data scientist, fit to command a high salary and influence scientific dialogue.
+Visualizing and modeling data are complicated skills that require a scientist's full attention. It takes expertise, judgement, and focus to extract reliable insights from a data set. I would not recommend that any data scientist distract herself with computer programming until she feels comfortable with the basic theory and practice of her craft. If you would like to learn the craft of data science, I recommend the book [R for Data Science](http://r4ds.had.co.nz/), written by Hadley Wickham.
 
 ***
 ## Introduction to R 
@@ -48,7 +24,6 @@ R is a powerful statistical environment and programming language for the analysi
 * Powerful graphics
 * Access to fast growing number of analysis packages
 * Technical advantages: free, open-source, available for all OSs
-
 
 It’s easy to get distracted by Tableau and PowerBI’s visuals, but when it comes to making business decisions, your organization needs to be able to take actions. This is where R Shiny is lightyears ahead of the other tools - R Shiny is a powerful ecosystem for business + data science + apps.
 
@@ -111,22 +86,8 @@ When do we compile?
 In some languages, like C, Java, and FORTRAN, you have to compile your human-readable code into machine-readable code (often 1s and 0s) before you can run it. If you’ve programmed in such a language before, you may wonder whether you have to compile your R code before you can use it. The answer is no. R is a dynamic programming language, which means R automatically interprets your code as you run it.
 
 
-## Conventions Used in This Book
-
-The following typographical conventions are used in this book:
-
-_Italic_:: Indicates new terms, URLs, email addresses, filenames, and file extensions.
-
-`Constant width`:: Used for program listings, as well as within paragraphs to refer to program elements such as variable or function names, databases, data types, environment variables, statements, and keywords.
-
-**`Constant width bold`**:: Shows commands or other text that should be typed literally by the user.
-
-_`Constant width italic`_:: Shows text that should be replaced with user-supplied values or by values determined by context.
-
-To comment or ask technical questions about this book, please file an issue at [github.com/rstudio-education/hopr](https://github.com/rstudio-education/hopr).
-
 ## Acknowledgments
 
 Hadley Wickham ...
-
-
+Hands on R 
+Other sources

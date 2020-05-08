@@ -17,8 +17,7 @@ library(fontawesome)
   </tr>
 </table>
 
-
-This chapter provides a broad overview of the R language that will get you programming right away. The first project will be creating a decision tool used in cost accounting. This first project will make it easier to study these things by teaching you the basics of R. The term “R” is used to refer to both the programming language and the software that interprets the scripts written using it. Your first mission is simple: assemble R code that will calculate the ideal quantity of inventory to order for a given product. 
+This chapter provides a broad overview of the R language that will get you programming right away. The first project will be creating a decision tool used in cost accounting. This  project will make it easier to study these things by teaching you the basics of R. The term “R” is used to refer to both the programming language and the software that interprets the scripts written using it. Your first mission is simple: assemble R code that will calculate the ideal quantity of inventory to order for a given product. 
 
 In this project, you will learn how to:
 
@@ -331,6 +330,10 @@ Infobox
 RStudio’s default preferences generally work well, but saving a workspace to .RData can be cumbersome, especially if you are working with larger datasets. To turn that off, go to Tools –> ‘Global Options’ and select the ‘Never’ option for ‘Save workspace to .RData’ on exit.’ This also helps to save your entire work in your code instead of saving it into variables.
 ```
 
+<hr></hr>
+
+**Exercise**
+
 6. Create a new .R script, write and execute the following code in the .R script and identify where in the IDE the outputs can be found.
 
 ```
@@ -346,7 +349,8 @@ history()
 
 **Getting help**
 
-Inside RStudio
+Inside RStudio:
+
 You can just type <code>?function_name</code> or <code>help(function_name)</code> into the console.
 
 ```
@@ -360,19 +364,19 @@ help(sqrt)
 example(sqrt)
 ```
 
-External to R
-
-Google 
-rseek
-Stackoverflow
-...
-
 ```{block, type='rmdblankbox'}
 Infobox
 ```
 ```{block, type='rmdprotip'}
 Explain the ? in front of functions (contr + enter). Use ?function_name to get the help documentation on a function. Usage and arguments section.
 ```
+
+External to RStudio:
+
+Google 
+rseek
+Stackoverflow
+...
 
 
 <!-- ++++++ -->
@@ -389,11 +393,9 @@ Explain the ? in front of functions (contr + enter). Use ?function_name to get t
   </tr>
 </table>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat. Cras mollis scelerisque nunc. Nullam arcu. Aliquam consequat. Curabitur augue lorem, dapibus quis, laoreet et, pretium ac, nisi. Aenean magna nisl, mollis quis, molestie eu, feugiat in, orci. In hac habitasse platea dictumst.
+We will use GitHub to store your data and hand in your assignments. To be able to do so, complete the following steps:
 
-
-## Create a free github account.
+1. Create a free github account. 
 
 ```{block, type='rmdblankbox'}
 Website
@@ -402,7 +404,7 @@ Website
 **[https://github.com/](https://github.com/)**
 ```
 
-## Download and install github desktop 
+2. Download and install github desktop
 
 ```{block, type='rmdblankbox'}
 Download
@@ -415,16 +417,39 @@ Download
 knitr::include_graphics('input/session_01/01_images/github_desktop.png', dpi = NA)
 ```
 
+3. Create a website using R Markdown and host it on Github pages, then submit the link to your website for Assignment 1. 
 
-<!-- ++++++++++ -->
-<!-- LabJournal -->
-<!-- ++++++++++ -->
-## Create your own LabJournal
+You will create the website using this template <a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>. 
 
-Fork, or download ....
+To use this, got to <a href="https://github.com/TUHH-W11/lab_journal_website/" target="_blank"> and fork thir repository (press the fork button in top right hand corner, then choose your github account) to get started that way. You should now see a copy of this repo in your github account. That means you have all of the files you need to compile a website with RMarkdown.
 
-<a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>
+**Steps for compiling on your local computer**
 
+1. Make sure the rmarkdown package is installed in R-studio: Open R-studio, click the packages tab in the lower left hand corner, click install packages, type in rmarkdown, make sure "install dependencies" is clicked on, then press install. Close R-studio.
+
+2. Open GitHub Deskttop, make sure it is connected to your account,  and clone your forked repository to your computer so that you have a local copy of that data.
+
+3. Navigate to the folder you just cloned/downloaded, open the `lab_journal_website.Rproj` file. This should automatically open R-studio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell R-studio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the R-studio editor. Click the "Index.Rmd" file.
+
+4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to "build website". Click this. The website should be built.
+After the website is built, you should be able to see it in the R-studio browser. There is a little button (blue arrow with a little browser icon) that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
+Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the index.html file into a browser), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.
+
+
+**Steps for serving your webpage using github pages**
+
+Every github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository. The webpage is served from the docs folder. The example files are set so that when you compile the example in R-studio, the output automatically goes into the docs folder. As a result, when you have these files in a github repository, github will serve the html files in your docs folder as a website.
+
+
+1. Click the Settings (also near top right), scroll down to Github Pages options
+2. click the option to serve from docs folder (You should see a little green message above the github pages options with a link to your new webpage).
+
+Editing webpage and serving on github
+
+1. Open up the project file in the folder for your repo on your local computer (.rproj file)
+2. Edit the .rmd files in R-studio
+3. Recompile website (build website when index.rmd is loaded), or knit individual .rmd files
+4. send your changes back to the online github repository (note this can be done in github desktop, or directly in R-studio, in R-studio you will see a git tab if you are working in a git repo. Click the git tab, click the diff button, which will show you if there are any new changes. Click each of the files that you want to commit. Write a short note to describe the changes. Press the commit button. Wait a couple seconds, your changes should now be served on your website).
 
 <!-- +++++++++++ -->
 <!-- DS Overview -->
