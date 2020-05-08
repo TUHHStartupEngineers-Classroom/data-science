@@ -1,5 +1,47 @@
 # (PART) Session 1 {-}
 # Overview
+
+**Video instructions to install R packages (--y weiter nach hinten)**
+
+<div style="padding:62.5% 0 3% 0;position:relative;"><iframe src="https://player.vimeo.com/video/203516241?color=428bca&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+1. Install the `tidyverse` package.
+
+```{r, eval = FALSE}
+install.packages("tidyverse")
+```
+
+2. Load the `tidyverse` package.
+```{r}
+library(tidyverse)
+```
+
+```{block, type='rmdblankbox'}
+Infobox
+```
+```{block, type='rmdprotip'}
+Use tab complete to quickly complete function names as well as file pathes
+```
+
+
+Installing Packages
+
+```r
+# install package from CRAN
+install.packages("dplyr")   
+```
+Loading packages
+
+```r
+# load the package to use in the current R session
+library("packagename")         
+
+# use a particular function within a package without loading the package
+packagename::functionname   
+```
+
+
+
 #  `r fa("r-project", fill = "black")` Introduction to the tidyverse {#session_01_01}
 
 ```{r data-science-workflow_1, echo=FALSE, fig.cap='Project structure example in RStudio.', out.width='100%'}

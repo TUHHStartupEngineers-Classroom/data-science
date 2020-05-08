@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>22.1 Checkpoint | DATA SCIENCE Course script</title>
+  <title>1.2 Understanding the RStudio IDE &amp; Working with RStudio | DATA SCIENCE Course script</title>
   <meta name="description" content="This is a minimal example the concepts covered in the class." />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="22.1 Checkpoint | DATA SCIENCE Course script" />
+  <meta property="og:title" content="1.2 Understanding the RStudio IDE &amp; Working with RStudio | DATA SCIENCE Course script" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="22.1 Checkpoint | DATA SCIENCE Course script" />
+  <meta name="twitter:title" content="1.2 Understanding the RStudio IDE &amp; Working with RStudio | DATA SCIENCE Course script" />
   
   <meta name="twitter:description" content="This is a minimal example the concepts covered in the class." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="business-case-reporting.html"/>
-<link rel="next" href="challenge-3.html"/>
+<link rel="prev" href="installing-r-rstudio-ide.html"/>
+<link rel="next" href="github-github-desktop.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -997,8 +997,256 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="checkpoint-5" class="section level2">
-<h2><span class="header-section-number">22.1</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</h2>
+<div id="understanding-the-rstudio-ide-working-with-rstudio" class="section level2">
+<h2><span class="header-section-number">1.2</span> Understanding the RStudio IDE &amp; Working with RStudio</h2>
+<p>Let’s start by learning about RStudio, the Integrated Development Environment (IDE) for working with R. We will use RStudio IDE to write code, navigate the files on our computer, inspect the variables we are going to create, and visualize the plots we will generate. RStudio can also be used for other things (e.g., version control, developing packages, writing Shiny apps) that we will not cover during this class.</p>
+<p>One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone. To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in Figure <a href="understanding-the-rstudio-ide-working-with-rstudio.html#fig:rstudio-ide">1.1</a>. RStudio is divided into 4 Panes.</p>
+<div class="rmdblankbox">
+<p>
+Infobox
+</p>
+</div>
+<div class="rmdprotip">
+<p>
+The placement of these panes and their content can be customized <code>Tools -&gt; Global Options -&gt; Pane Layout</code>. To change the appearence of RStudio go to <code>Tools –&gt; Global options –&gt; appearences</code>.
+</p>
+</div>
+<p>At first startup you will not see an open script as seen in the green frame. You can create one by clicking first on <img src="input/00_getting_started/01_images/new_file.png" style="width:3.1%" /> (new file) and then on <img src="input/00_getting_started/01_images/new_r_file.png" style="width:3.1%" /> (new R script) in the upper left corner. Alternatively you can use the shortcut <kbd>Shift</kbd>+<kbd>⌘</kbd>+<kbd>N</kbd> on macOS or <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>N</kbd> on Windows &amp; Linux.</p>
+<div class="figure"><span id="fig:rstudio-ide"></span>
+<img src="input/00_getting_started/01_images/rstudio_ide.png" alt="RStudio Integrated Development Environment (IDE)." width="100%" />
+<p class="caption">
+FIGURE 1.1: RStudio Integrated Development Environment (IDE).
+</p>
+</div>
+<p>The basis of programming is that we write down instructions for the computer to follow, and then we tell the computer to follow those instructions. We write, or <b>code</b>, instructions in R because it is a common language that both the computer and we can understand. We call the instructions <b>commands</b> and we tell the computer to follow the instructions by <b>executing</b> (also called <b>running</b>) those commands. There are two main ways of interacting with R: by using the console or by using script files.</p>
+<!-- RStudio IDE: Console -->
+<div class="boxouter">
+<div class="boxfloat" style="border-color: #F52602">
+Console
+</div>
+<p>The console appears in the bottom left panel. Simply put, the Console is where you type commands and visually see the outputs. This is the place where commands written in the R language can be typed and executed immediately by hitting <kbd><code>Enter</code></kbd>. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line. This pane does not save your code. Those commands will be forgotten when you close the session. It only displays the output and the history of commands that have been executed. When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. If R is ready to accept a new command, RStudio displays a fresh <code>&gt;</code> prompt for your next command. For example, if you type 10 * 10 and hit Enter, RStudio will display:</p>
+</div>
+<pre><code>&gt; 10 * 10
+[1] 100
+&gt;</code></pre>
+<p>You’ll notice that a <code>[1]</code> appears next to your result. R is just letting you know that this line begins with the first value in your result. Some commands return more than one value, and their results may fill up multiple lines. For example, the command <code>1:100</code> returns 100 integer (numbers that have no no digits after the decimal point). It creates a sequence of integers from 1 to 100. Notice that new bracketed numbers appear at the start of the second and third lines of output. These numbers just mean that the second line begins with the 30th value in the result, and the third line begins with the 59th value and so on. You can mostly ignore the numbers that appear in brackets:</p>
+<pre><code>[1]   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29
+[30]  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58
+[59]  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87
+[88]  88  89  90  91  92  93  94  95  96  97  98  99 100</code></pre>
+<div class="rmdblankbox">
+<p>
+Infobox
+</p>
+</div>
+<div class="rmdprotip">
+<p>
+The colon operator (:) returns every integer between two integers. It is an easy way to create a sequence of numbers.
+</p>
+</div>
+<p>If you type an incomplete command and press Enter, R will display a <code>+</code> prompt, which means R is waiting for you to type the rest of your command. This is because you have not closed a parenthesis or quotation, i.e. you do not have the same number of left-parentheses as right-parentheses, or the same number of opening and closing quotation marks. Either finish the command or hit <kbd><code>Esc</code></kbd> to start over:</p>
+<pre><code>&gt; 99 +
++
++ 1
+[1] 100</code></pre>
+<p>If you type a command that R doesn’t recognize, R will return an error message. If you ever see an error message, don’t panic. R is just telling you that your computer couldn’t understand or do what you asked it to do. You can then try a different command at the next prompt:</p>
+<pre><code>&gt; 100 % 2
+Error: unexpected input in &quot;100 % 2&quot;
+&gt;</code></pre>
+<p>Once you get the hang of the command line, you can easily do anything in R that you would do with a calculator. For example, you could do some basic arithmetic:</p>
+<pre><code>2 * 3   
+## 6
+
+4 - 1   
+## 3
+
+6 / (4 - 1)   
+## 2</code></pre>
+<p>Did you notice something different about this code? I’ve left out the <code>&gt;</code>’s and <code>[1]</code>’s. This will make the code easier to copy and paste if you want to put it in your own console.</p>
+<p>R treats the hashtag character, <code>#</code>, in a special way; R will not run anything that follows a hashtag on a line. This makes hashtags very useful for adding comments and annotations to your code. Humans will be able to read the comments, but your computer will pass over them. The hashtag is known as the commenting symbol in R.</p>
+<p>For the remainder of the book, I’ll use hashtags to display the output of R code. I’ll use a single hashtag to add my own comments and a double hashtag, <code>##</code>, to display the results of code. I’ll avoid showing <code>&gt;</code> and <code>[1]</code> unless I want you to look at them.</p>
+<!-- EXERCISE RStudio IDE: Console -->
+<hr>
+</hr>
+<p><font size="4"><b>Exercise</b></font></p>
+<p>That’s the basic interface for executing R code in RStudio. Think you have it? If so, try doing these simple tasks to calculate the economic order quantity with the given formula (Hint: Use <code>sqrt(x)</code> to calculate the square root).</p>
+<p><span class="math display">\[Q = \sqrt{\frac{2DK}{h}}\]</span></p>
+<p>Calulate the Q where:</p>
+<p><span class="math inline">\(D = 1000\)</span>,
+<span class="math inline">\(K = 5\)</span>,
+<span class="math inline">\(h = 0.25\)</span></p>
+<p><font size="4"><b>Solution</b></font></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="dv">1000</span> <span class="op">*</span><span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">## 10000</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="dv">10000</span> <span class="op">/</span><span class="st"> </span><span class="fl">0.25</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">## 40000</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="kw">sqrt</span>(<span class="dv">40000</span>)</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">## 200</span></a></code></pre></div>
+<hr />
+<p>Throughout the book, I’ll put exercises in chunks, like the one above. I’ll follow each exercise with a model answer, like the one above.</p>
+<!-- RStudio IDE: Source -->
+<div class="boxouter">
+<div class="boxfloat" style="border-color: #4EF903">
+Script files/ Source
+</div>
+<p>Because we want our code and workflow to be reproducible and generally we will want to write programs longer than a few lines, it is better to type the commands we want in the script editor, and save the script. In the source tab you can create a draft of your code as you go by using an R script. An R script is just a plain text file (saved with a .R or .r extension) that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. Moreover, the source editor in RStudio has the advantage of providing syntax highlighting, code completion, and smart indentation. You can see the different colours for numbers and there is also highlighting to help you count brackets (click your cursor next to a bracket and push the right arrow and you will see its partner bracket highlighted).To save a script, click <img src="input/00_getting_started/01_images/save.png" alt="save icon" width="3.1%" > or use the shortcut <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS or <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows &amp; Linux.<br>
+<br>
+RStudio allows you to execute commands directly from the script editor by using the <kbd><code>Ctrl</code></kbd> + <kbd><code>Enter</code></kbd> shortcut (on Macs, <kbd><code>Cmd</code></kbd> + <kbd><code>Return</code></kbd> will work, too). The command on the current line in the script (indicated by the cursor) or all of the commands in the currently selected text will be sent to the console and executed when you press the shortcut.</p>
+</div>
+<hr>
+</hr>
+<!-- EXERCISE RStudio IDE: Console -->
+<p><font size="4"><b>Exercise</b></font></p>
+<p>Write your calculations for the EOQ in the script editor and …</p>
+<ul>
+<li>… execute a single line (Run icon <img src="input/00_getting_started/01_images/run_icon.png" style="width:3.1%" /> or <kbd><code>Cmd</code></kbd>+ <kbd><code>Return</code></kbd>). Note that the cursor can be anywhere on the line and one does not need to highlight anything — do this for the code on line 2</li>
+<li>… execute multiple lines (Highlight lines with the cursor, then Run icon or <kbd><code>Cmd</code></kbd>+ <kbd><code>Return</code></kbd></li>
+<li>… execute the whole script (Source icon <img src="input/00_getting_started/01_images/source_icon.png" style="width:3.1%" /> or <kbd><code>Cmd</code></kbd> + <kbd><code>Shift</code></kbd> + <kbd><code>S</code></kbd>)</li>
+</ul>
+Note that running code via source differs in a few respects from entering it at the R command line. Sourcing a file does not print command outputs. To see your output click the arrow next to the source icon <img src="input/00_getting_started/01_images/source_icon.png" style="width:3.1%" /> and click <code>Source with Echo</code> or use <kbd><code>Cmd</code></kbd> + <kbd><code>Shift</code></kbd> + <kbd><code>Return</code></kbd>.
+<hr>
+</hr>
+<p><strong>Assignment operator</strong></p>
+<p>You can get now output from R simply by typing math in the console or by running a script. You generated different numbers for you to see, but it didn’t save that values anywhere in your computer’s memory. If you want to use those numbers again, you’ll have to ask your computer to save them somewhere. You can do that by creating R objects. R lets you save data by storing it inside an R object. What is an object? Just a name that you can use to call up stored data. For example, you can save data into an object like <code>a</code> or <code>b</code>. Wherever R encounters the object, it will replace it with the data saved inside.</p>
+<p>To create an object, we need to give it a name followed by the assignment operator <code>&lt;-</code>, and the value we want to give it next to it. Typing <kbd>Cmd</kbd> + <kbd>-</kbd> will write <code>&lt;-</code> in a single keystroke. R ignores spaces and line breaks and executes one complete expression at a time. But it makes the code easier for you and me to read.</p>
+<pre><code>EOQ &lt;- 200</code></pre>
+<div class="rmdblankbox">
+<p>
+Infobox
+</p>
+</div>
+<div class="rmdprotip">
+<p>
+For historical reasons, you can also use = for assignments, but not in every context. Because of the slight differences in syntax, it is good practice to always use &lt;- for assignments.
+</p>
+</div>
+<p>To see what is stored in an object, just type the object’s name by itself.</p>
+<pre><code>EOQ &lt;- 200
+EOQ
+## 200</code></pre>
+<p>You can name an object in R almost anything you want such as x, current_temperature, or subject_id, but there are a few rules. First, a name cannot start with a number (2x is not valid, but x2 is). Second, a name cannot use some special symbols, like ^, !, $, @, +, -, /, or *. You want your object names to be explicit and not too long. There are some names that cannot be used because they are the names of fundamental functions in R (e.g., if, else, for, see here for a complete list). In general, even if it’s allowed, it’s best to not use other function names (e.g., c, T, mean, data, df, weights). It’s also best to avoid dots (.) within an object name as in my.dataset. There are many functions in R with dots in their names for historical reasons, but because dots have a special meaning in R (for methods) and other programming languages, it’s best to avoid them. It is also recommended to use nouns for object names, and verbs for function names. It’s important to be consistent in the styling of your code (where you put spaces, how you name objects, etc.). Using a consistent coding style makes your code clearer to read for your future self and your collaborators.</p>
+<p>Another important question here is, is R case sensitive? Is A the same as a? Figure out a way to check for yourself.</p>
+<!-- RStudio IDE: Environment -->
+<div class="boxouter">
+<div class="boxfloat" style="border-color: #2332FF">
+Environment/ History
+</div>
+<p>When you create an object (i.e., dataframes, arrays, values and functions), the object will appear in the index tab Environment. If an object with the same name already exists in the active environment, R will overwrite it without asking you for permission. This pane will show you all of the objects you’ve created since opening RStudio. You can see the values for objects with a single value and for those that are longer R will tell you their class. When you have data in your environment that have two dimensions (rows and columns) you may click on them and they will appear in the Source Editor pane like a spreadsheet. Also in this pane is the History tab, where you can see all of the code executed for the session. If you double-click a line or highlight a block of lines and then double-click those, you can send it to the Console (i.e., run them). The history will not be saved if we did not choose to save the environment after a session. The Build Tab will be useful later when you create your own website to hand in your code. We will come back to this shortly.</p>
+</div>
+<hr>
+</hr>
+<p><strong>Exercise</strong></p>
+<p>Now that we know how to put values into memory, we can do arithmetic with it and calculate EOQ again. Assign all values to R objects. Replicate the formula with those ojects and assign this formula to the variable Q.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">D &lt;-<span class="st"> </span><span class="dv">1000</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">K &lt;-<span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">h &lt;-<span class="st"> </span><span class="fl">0.25</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">Q &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">2</span><span class="op">*</span>D<span class="op">*</span>K<span class="op">/</span>h)</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5">Q</a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">## 200</span></a></code></pre></div>
+<hr>
+</hr>
+<!-- RStudio IDE: Misc -->
+<div class="boxouter">
+<div class="boxfloat" style="border-color: #AA7942">
+Misc. Displays
+</div>
+<p>Finally, the bottom right panel is the miscellaneous panel containing five separate tabs. The <b>Files</b> tab has a navigable file manager, just like the file system on your operating system. It shows all the files and folders in the default workspace. The <b>Plot</b> tab is where graphics you create will appear. Here we can zoom, export, configure and inspect graphs/figures. The <b>Packages</b> tab shows you the packages that are installed and those that can be installed (more on this later). The <b>Help</b> tab allows you to search the R documentation for help and is where the help appears when you ask for it from the Console.</p>
+</div>
+<p><strong>Getting set up</strong></p>
+<p>It is good practice to keep a set of related data, analyses, and text self-contained in a single folder, called the working directory. It is the place from where R will be looking for and saving the files. All of the scripts within this folder can then use relative paths to files that indicate where inside the project a file is located (as opposed to absolute paths, which point to where a file is on a specific computer). Working this way makes it a lot easier to move your project around on your computer and share it with others without worrying about whether or not the underlying scripts will still work.</p>
+<p>RStudio provides a helpful set of tools to do this through its <strong>Projects</strong> interface, which not only creates a working directory for you, but also remembers its location (allowing you to quickly navigate to it) and optionally preserves custom settings and open files to make it easier to resume work after a break. Using RStudio projects makes this easy and ensures that your working directory is set properly.</p>
+<p>You can see your current working directory in the path given above the console or you can just run the command <code>getwd()</code>. If for some reason your working directory is not what it should be, you can change it in the RStudio interface by navigating in the file browser where your working directory should be, and clicking on the blue gear icon <img src="input/00_getting_started/01_images/more_icon.png" style="width:3.1%" /> <code>More</code>, and select <code>Set As Working Directory</code>. Alternatively you can use <code>setwd(&quot;/path/to/working/directory&quot;)</code> to reset your working directory. However, your scripts should not include this line because it will fail on someone else’s computer.</p>
+<p>Using a consistent folder structure across your projects will help keep things organized, and will also make it easy to find/file things in the future. This can be especially helpful when you have multiple projects. In general, you may create directories (folders) for scripts, data, and documents.</p>
+<p><strong>data_raw/ &amp; data/</strong><br>
+Use these folders to store raw data and intermediate datasets you may create for the need of a particular analysis. For the sake of transparency and provenance, you should always keep a copy of your raw data accessible and do as much of your data cleanup and preprocessing programmatically (i.e., with scripts, rather than manually) as possible. Separating raw data from processed data is also a good idea. For example, you could have files <code>data_raw/tree_survey.plot1.txt</code> and <code>...plot2.txt</code> kept separate from a <code>data/tree.survey.csv</code> file generated by the <code>scripts/01.preprocess.tree_survey.R</code> script.</p>
+<p><strong>documents/</strong><br>
+This would be a place to keep outlines, drafts and other text.</p>
+<p><strong>scripts/</strong><br>
+This would be the location to keep your R scripts for different analyses or plotting, and potentially a separate folder for your functions (more on that later).</p>
+<p>Additional (sub)directories depending on your project needs.</p>
+<hr>
+</hr>
+<p><strong>Exercise</strong></p>
+<p>Getting set up: Create a new project, organize your working directory and save your first script:</p>
+<ol style="list-style-type: decimal">
+<li>Download the zip file, extract the date and and choose a convenient location for it. (e.g. WIN: <code>C:/Dropbox/data-science/</code> macOS: <code>~/Dropbox/data-science</code>)</li>
+</ol>
+<div class="rmdblankbox">
+<p>
+Download
+</p>
+</div>
+<div class="rmdattachment">
+<p>
+<strong><a href="lorem.zip">https://desktop.github.com</a></strong>
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>In RStudio under the <code>File</code> menu, click on <code>New Project</code> (or click <img src="input/00_getting_started/01_images/new_project_icon.png" style="width:3.1%" />) and then choose <code>Existing Directory</code>. This will be your working directory (e.g., ~/data-science).</li>
+<li>Locate the downloaded folder and then click <code>Create Project</code>.</li>
+</ol>
+<p>Your working directory should now look like this:</p>
+<div class="figure"><span id="fig:project-struct"></span>
+<img src="input/00_getting_started/01_images/project_structure.png" alt="Project structure example in RStudio." width="100%" />
+<p class="caption">
+FIGURE 1.2: Project structure example in RStudio.
+</p>
+</div>
+<p>For this first project, we will just need a <code>00_getting_started/</code> folder to store our first script. We will use the other folders for when we learn how to import data such as CSV files, and for the figures that we will save.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Under the Files tab on the right of the screen, click on New Folder and create a folder named <code>00_getting_started</code> within your newly created working directory. (Alternatively, type <code>dir.create(&quot;00_getting_started&quot;)</code> at your R console.)</p></li>
+<li><p>Open your previously saved R-script and save it in this directory.</p></li>
+</ol>
+<div class="rmdblankbox">
+<p>
+Infobox
+</p>
+</div>
+<div class="rmdprotip">
+<p>
+RStudio’s default preferences generally work well, but saving a workspace to .RData can be cumbersome, especially if you are working with larger datasets. To turn that off, go to Tools –&gt; ‘Global Options’ and select the ‘Never’ option for ‘Save workspace to .RData’ on exit.’ This also helps to save your entire work in your code instead of saving it into variables.
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Create a new .R script, write and execute the following code in the .R script and identify where in the IDE the outputs can be found.</li>
+</ol>
+<pre><code>mtcars
+?sum
+hist(mtcars$mpg)
+avg_mpg &lt;- mean(mtcars$mpg)
+random_numbers &lt;- runif(25)
+history()</code></pre>
+<hr>
+</hr>
+<p><strong>Getting help</strong></p>
+<p>Inside RStudio
+You can just type <code>?function_name</code> or <code>help(function_name)</code> into the console.</p>
+<pre><code># provides details for specific function
+help(sqrt)
+
+# provides same information as help(functionname)
+?sqrt
+
+# provides examples for said function
+example(sqrt)</code></pre>
+<p>External to R</p>
+<p>Google
+rseek
+Stackoverflow
+…</p>
+<div class="rmdblankbox">
+<p>
+Infobox
+</p>
+</div>
+<div class="rmdprotip">
+<p>
+Explain the ? in front of functions (contr + enter). Use ?function_name to get the help documentation on a function. Usage and arguments section.
+</p>
+</div>
+<!-- ++++++ -->
+<!-- GitHub -->
+<!-- ++++++ -->
 </div>
 <!-- </div> -->
             </section>
@@ -1006,8 +1254,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="business-case-reporting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="challenge-3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="installing-r-rstudio-ide.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="github-github-desktop.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
