@@ -110,6 +110,7 @@ knitr::include_graphics('input/00_getting_started/01_images/rstudio_ide.png', dp
 The basis of programming is that we write down instructions for the computer to follow, and then we tell the computer to follow those instructions. We write, or <b>code</b>, instructions in R because it is a common language that both the computer and we can understand. We call the instructions <b>commands</b> and we tell the computer to follow the instructions by <b>executing</b> (also called <b>running</b>) those commands. There are two main ways of interacting with R: by using the console or by using script files.
 
 <!-- RStudio IDE: Console -->
+### Console
 <div class="boxouter">
   <div class="boxfloat" style="border-color: #F52602">Console</div>
 The console appears in the bottom left panel. Simply put, the Console is where you type commands and visually see the outputs. This is the place where commands written in the R language can be typed and executed immediately by hitting <kbd>`Enter`</kbd>. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line. This pane does not save your code. Those commands will be forgotten when you close the session. It only displays the output and the history of commands that have been executed. When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. If R is ready to accept a new command, RStudio displays a fresh <code>></code> prompt for your next command. For example, if you type 10 * 10 and hit Enter, RStudio will display:
@@ -194,6 +195,7 @@ sqrt(40000)
 Throughout the book, I’ll put exercises in chunks, like the one above. I’ll follow each exercise with a model answer, like the one above.
 
 <!-- RStudio IDE: Source -->
+### Source
 <div class="boxouter">
   <div class="boxfloat" style="border-color: #4EF903">Script files/ Source</div>
 Because we want our code and workflow to be reproducible and generally we will want to write programs longer than a few lines, it is better to type the commands we want in the script editor, and save the script. In the source tab you can create a draft of your code as you go by using an R script. An R script is just a plain text file (saved with a .R or .r extension) that you save R code in. I strongly encourage you to write and edit all of your R code in a script before you run it in the console. This habit creates a reproducible record of your work. When you’re finished for the day, you can save your script and then use it to rerun your entire analysis the next day. Scripts are also very handy for editing and proofreading your code, and they make a nice copy of your work to share with others. This way, there is a complete record of what we did, and anyone (including our future selves!) can easily replicate the results on their computer. Moreover, the source editor in RStudio has the advantage of providing syntax highlighting, code completion, and smart indentation. You can see the different colours for numbers and there is also highlighting to help you count brackets (click your cursor next to a bracket and push the right arrow and you will see its partner bracket highlighted).To save a script, click <img src="input/00_getting_started/01_images/save.png" alt="save icon" width="3.1%" > or use the shortcut <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS or <kbd>Ctrl</kbd>+<kbd>S</kbd> on Windows & Linux.<br>
@@ -242,6 +244,7 @@ You can name an object in R almost anything you want such as x, current_temperat
 Another important question here is, is R case sensitive? Is A the same as a? Figure out a way to check for yourself.
 
 <!-- RStudio IDE: Environment -->
+### Environment
 <div class="boxouter">
   <div class="boxfloat" style="border-color: #2332FF">Environment/ History</div>
 When you create an object (i.e., dataframes, arrays, values and functions), the object will appear in the index tab Environment. If an object with the same name already exists in the active environment, R will overwrite it without asking you for permission. This pane will show you all of the objects you’ve created since opening RStudio. You can see the values for objects with a single value and for those that are longer R will tell you their class. When you have data in your environment that have two dimensions (rows and columns) you may click on them and they will appear in the Source Editor pane like a spreadsheet. Also in this pane is the History tab, where you can see all of the code executed for the session. If you double-click a line or highlight a block of lines and then double-click those, you can send it to the Console (i.e., run them). The history will not be saved if we did not choose to save the environment after a session. The Build Tab will be useful later when you create your own website to hand in your code. We will come back to this shortly.
@@ -264,6 +267,7 @@ Q
 
 <hr></hr>
 
+### Miscellaneous
 <!-- RStudio IDE: Misc -->
 <div class="boxouter">
   <div class="boxfloat" style="border-color: #AA7942">Misc. Displays</div>
@@ -282,13 +286,13 @@ You can see your current working directory in the path given above the console o
 
 Using a consistent folder structure across your projects will help keep things organized, and will also make it easy to find/file things in the future. This can be especially helpful when you have multiple projects. In general, you may create directories (folders) for scripts, data, and documents.
 
-__data_raw/ & data/__<br>
+<u>data_raw/ & data/</u><br>
 Use these folders to store raw data and intermediate datasets you may create for the need of a particular analysis. For the sake of transparency and provenance, you should always keep a copy of your raw data accessible and do as much of your data cleanup and preprocessing programmatically (i.e., with scripts, rather than manually) as possible. Separating raw data from processed data is also a good idea. For example, you could have files `data_raw/tree_survey.plot1.txt` and `...plot2.txt` kept separate from a `data/tree.survey.csv` file generated by the `scripts/01.preprocess.tree_survey.R` script.
 
-__documents/__<br> 
+<u>documents/</u><br> 
 This would be a place to keep outlines, drafts and other text.
 
-__scripts/__<br> 
+<u>scripts/</u><br> 
 This would be the location to keep your R scripts for different analyses or plotting, and potentially a separate folder for your functions (more on that later).
 
 Additional (sub)directories depending on your project needs.
@@ -336,7 +340,7 @@ RStudio’s default preferences generally work well, but saving a workspace to .
 
 There are over 1,000 functions at the core of R, and new R functions are created all of the time. This can be a lot of material to memorize and learn! Luckily, each R function comes with its own help page, which you can access by typing the function's name after a question mark. For example, each of these commands will open a help page. Look for the pages to appear in the Help tab of RStudio's bottom-right pane:
 
-```r
+```
 ?sqrt
 ?log10
 ?sample
