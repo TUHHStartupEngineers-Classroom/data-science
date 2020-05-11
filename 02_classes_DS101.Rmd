@@ -24,39 +24,39 @@ library(icon)
 
 2020 | 01 | 23 Last compiled: `r Sys.Date()`
 
-Before we meet (online via [zoom](https://zoom.us/download)) for our first class there are few things you should try at home to get started.
+Before we meet (online via [zoom](https://zoom.us/download)) for our first class there are few things you should try at home to get started. Each of the assignments are explained in detail in the corresponding course script chapter.  
 
+## Part 1
 |#|Assignment|script chapter|
 |:-|------------------------|-----:|
-|1.|Download and install R on your computer. This is the R website [https://www.r-project.org](https://www.r-project.org)|<a href="https://tuhh-w11.github.io/data-science/script/docs/r-rstudio.html" target="_blank"><b>1.1</b></a>|
-|2.|Download and install R-studio. You must download and install R first before installing R-studio. The R-studio website is [https://www.rstudio.com](https://www.rstudio.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/r-rstudio.html" target="_blank"><b>1.1</b></a>|
-|3.|Create a free github account. The github website is [https://github.com](https://github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/github.html" target="_blank"><b>1.6</b></a>|
-|4.|Download and install github desktop [https://desktop.github.com](https://desktop.github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/github.html" target="_blank"><b>1.6</b></a>|
-|5.|Create your own lab journal [LabJournal](https://tuhh-w11.github.io/lab_journal_website/index.html)|<a href="https://tuhh-w11.github.io/data-science/script/docs/github.html" target="_blank"><b>1.6</b></a>|
+|1.1|Download and install R on your computer. This is the R website [https://www.r-project.org](https://www.r-project.org)|<a href="https://tuhh-w11.github.io/data-science/script/docs/installing-r-rstudio-ide.html" target="_blank"><b>1.1</b></a>|
+|1.2|Download and install R-studio. You must download and install R first before installing R-studio. The R-studio website is [https://www.rstudio.com](https://www.rstudio.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/installing-r-rstudio-ide.html" target="_blank"><b>1.1</b></a>|
+|1.3|Get familiar with R and RStudio and complete the minor tasks within this chapter|<a href="https://tuhh-w11.github.io/data-science/script/docs/understanding-the-rstudio-ide-working-with-rstudio.html" target="_blank"><b>1.2</b></a>|
+
+## Part 2
+|#|Assignment|script chapter|
+|:-|------------------------|-----:|
+|2.1|Create a free github account. The github website is [https://github.com](https://github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/github-github-desktop.html" target="_blank"><b>2.0</b></a>|
+|2.2|Download and install github desktop [https://desktop.github.com](https://desktop.github.com)|<a href="https://tuhh-w11.github.io/data-science/script/docs/github-github-desktop.html" target="_blank"><b>2.0</b></a>|
+|2.3|Create your own lab journal and host it on github.com [LabJournal](https://tuhh-w11.github.io/lab_journal_website/index.html)|<a href="https://tuhh-w11.github.io/data-science/script/docs/github.html" target="_blank"><b>2.0</b></a>|
 
 Don't worry if you ran into issues with these first steps, we will address them in our first video session. 
 
-***
+## ![](images/datacamp-vector-logo.svg){width=130px}
 
-<p>
-![](images/datacamp-vector-logo.svg)
-</p>
+If you have R-studio working and your github page set up, is there anything else you can do before we meet for the first time? Yes.
 
-If you have R-studio working is there anything else you can do before we meet for the first time? Yes.
-
-You can follow the video tutorial on creating an R markdown website with github pages on the video page. And, you can get started with some of the following tutorials, and you can begin messing around in R. 
+You can get started with some of the following tutorials, and you can begin messing around in R. 
 
 Join the NIT data science team on data camp via this link. Please register with your tuhh email address. [datacamp.com](https://www.datacamp.com/groups/shared_links/91287653ed5bd4c0f14e7c60e2d61a62dc1f1ba2afc84a4909665c00cd441f0c)
 
-Complete the following assignments in your team.
+These tutorials are optional and you can choose whatever <a href="https://learn.datacamp.com/courses/" target="_blank"><b>courses</b></a> you want. In accordance with the content of this session, I would recommend you to complete the following tutorials: 
 
 |#|Course|datacamp-link|script chapter|
 |:-|------------------------|-|-:|
 |1.|Introduction to R|<a href="https://learn.datacamp.com/courses/free-introduction-to-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
 |2.|Intermediate R|<a href="https://learn.datacamp.com/courses/intermediate-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
-|3.|Introduction to the Tidyverse|<a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
-|4.|Introduction to Importing Data in R|<a href="https://learn.datacamp.com/courses/introduction-to-importing-data-in-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
-|5.|Chose further courses as you desire ...|<a href="https://learn.datacamp.com/courses/" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|---|
+
 
 We will be spending the first few weeks of the course working on solving different kinds of business problems in R. These problems will help you learn the ins and outs of coding in R. You can get a head start by trying to solve the problems in this [list of programming challenges](https://crumplab.github.io/programmingforpsych/programming-challenges-i-learning-the-fundamentals.html). 
 
@@ -64,15 +64,18 @@ We will be spending the first few weeks of the course working on solving differe
 
 2018 | 7 | 23 Last compiled: `r Sys.Date()`
 
-## R & RStudio
+## Part 1
+Lorem Ipsum
 
-You can add more headers by adding more hashtags. These won't be put into the table of contents
+## Part 2
+Lorem Ipsum
 
-### third level header
+## ![](images/datacamp-vector-logo.svg){width=130px}
 
-Here's an even lower level header
-
-I'm writing this tutorial going from the top down. And, this is how it will be printed. So, notice the second post is second in the list. If you want your most recent post to be at the top, then make a new post starting at the top. If you want the oldest first, do, then keep adding to the bottom
+|#|Course|datacamp-link|script chapter|
+|:-|------------------------|-|-:|
+|3.|Introduction to the Tidyverse|<a href="https://learn.datacamp.com/courses/introduction-to-the-tidyverse" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
+|4.|Introduction to Importing Data in R|<a href="https://learn.datacamp.com/courses/introduction-to-importing-data-in-r" target="_blank"><b>`r icon::fa("globe")` Link</b></a>|2.0|
 
 # Session
 ## Second level

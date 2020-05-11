@@ -4,35 +4,33 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.2 Understanding the RStudio IDE &amp; Working with RStudio | DATA SCIENCE Course script</title>
-  <meta name="description" content="This is a minimal example the concepts covered in the class." />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <title>00_getting_started.utf8</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.2 Understanding the RStudio IDE &amp; Working with RStudio | DATA SCIENCE Course script" />
+  <meta property="og:title" content="00_getting_started.utf8" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a minimal example the concepts covered in the class." />
-  <meta name="github-repo" content="rstudio/bookdown-demo" />
+  
+  
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.2 Understanding the RStudio IDE &amp; Working with RStudio | DATA SCIENCE Course script" />
+  <meta name="twitter:title" content="00_getting_started.utf8" />
   
-  <meta name="twitter:description" content="This is a minimal example the concepts covered in the class." />
+  
   
 
-<meta name="author" content="Joschka Schwarz" />
 
 
-<meta name="date" content="2020-05-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="installing-r-rstudio-ide.html"/>
-<link rel="next" href="github-github-desktop.html"/>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -41,15 +39,15 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 
 <script>
 /* ========================================================================
@@ -847,135 +845,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<!--bookdown:title:start-->
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
     <div class="book-summary">
       <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Data Science at NIT</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i>Welcome</a></li>
-<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a><ul>
-<li class="chapter" data-level="0.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html"><i class="fa fa-check"></i><b>0.1</b> Introduction to R</a><ul>
-<li class="chapter" data-level="0.1.1" data-path="introduction-to-r.html"><a href="introduction-to-r.html#what-is-r"><i class="fa fa-check"></i><b>0.1.1</b> What is R?</a></li>
-<li class="chapter" data-level="0.1.2" data-path="introduction-to-r.html"><a href="introduction-to-r.html#why-using-r"><i class="fa fa-check"></i><b>0.1.2</b> Why using R?</a></li>
+<!--bookdown:toc2:start-->
+<ul>
+<li><a href="#part-getting-started">(PART) Getting Started</a></li>
+<li><a href="#getting_started"><span class="toc-section-number">1</span> R &amp; RStudio</a><ul>
+<li><a href="#installing-r-rstudio-ide"><span class="toc-section-number">1.1</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</a><ul>
+<li><a href="#interactively"><span class="toc-section-number">1.1.1</span> Interactively</a></li>
+<li><a href="#manually"><span class="toc-section-number">1.1.2</span> Manually</a></li>
 </ul></li>
-<li class="chapter" data-level="0.2" data-path="acknowledgments.html"><a href="acknowledgments.html"><i class="fa fa-check"></i><b>0.2</b> Acknowledgments</a></li>
+<li><a href="#understanding-the-rstudio-ide-working-with-rstudio"><span class="toc-section-number">1.2</span> Understanding the RStudio IDE &amp; Working with RStudio</a></li>
 </ul></li>
-<li class="part"><span><b>I Getting Started</b></span></li>
-<li class="chapter" data-level="1" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>1</b> R &amp; RStudio</a><ul>
-<li class="chapter" data-level="1.1" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html"><i class="fa fa-check"></i><b>1.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</a><ul>
-<li class="chapter" data-level="1.1.1" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html#interactively"><i class="fa fa-check"></i><b>1.1.1</b> Interactively</a></li>
-<li class="chapter" data-level="1.1.2" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html#manually"><i class="fa fa-check"></i><b>1.1.2</b> Manually</a></li>
+<li><a href="#github-github-desktop"><span class="toc-section-number">2</span> GitHub &amp; GitHub Desktop</a><ul>
+<li><a href="#information-about-data"><span class="toc-section-number">2.1</span> Information about data</a></li>
+<li><a href="#application-areas"><span class="toc-section-number">2.2</span> Application areas</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="understanding-the-rstudio-ide-working-with-rstudio.html"><a href="understanding-the-rstudio-ide-working-with-rstudio.html"><i class="fa fa-check"></i><b>1.2</b> Understanding the RStudio IDE &amp; Working with RStudio</a></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="github-github-desktop.html"><a href="github-github-desktop.html"><i class="fa fa-check"></i><b>2</b> GitHub &amp; GitHub Desktop</a><ul>
-<li class="chapter" data-level="2.1" data-path="information-about-data.html"><a href="information-about-data.html"><i class="fa fa-check"></i><b>2.1</b> Information about data</a></li>
-<li class="chapter" data-level="2.2" data-path="application-areas.html"><a href="application-areas.html"><i class="fa fa-check"></i><b>2.2</b> Application areas</a></li>
-</ul></li>
-<li class="part"><span><b>II Session 1</b></span></li>
-<li class="chapter" data-level="3" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i><b>3</b> Overview</a></li>
-<li class="chapter" data-level="4" data-path="session-01-01.html"><a href="session-01-01.html"><i class="fa fa-check"></i><b>4</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 581 512"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> Introduction to the tidyverse</a><ul>
-<li class="chapter" data-level="4.1" data-path="import-loading-data-with-readr-readxl.html"><a href="import-loading-data-with-readr-readxl.html"><i class="fa fa-check"></i><b>4.1</b> <strong>IMPORT</strong> - Loading data with readr / readxl</a></li>
-<li class="chapter" data-level="4.2" data-path="pipes.html"><a href="pipes.html"><i class="fa fa-check"></i><b>4.2</b> Pipes</a></li>
-<li class="chapter" data-level="4.3" data-path="tibbles.html"><a href="tibbles.html"><i class="fa fa-check"></i><b>4.3</b> Tibbles</a></li>
-<li class="chapter" data-level="4.4" data-path="tidy-reshaping-your-data-with-tidyr.html"><a href="tidy-reshaping-your-data-with-tidyr.html"><i class="fa fa-check"></i><b>4.4</b> <strong>TIDY</strong> - Reshaping your data with tidyr</a></li>
-<li class="chapter" data-level="4.5" data-path="transform-data-transformations-with-dplyr.html"><a href="transform-data-transformations-with-dplyr.html"><i class="fa fa-check"></i><b>4.5</b> <strong>TRANSFORM</strong> - Data Transformations with dplyr</a></li>
-<li class="chapter" data-level="4.6" data-path="lubridate.html"><a href="lubridate.html"><i class="fa fa-check"></i><b>4.6</b> Lubridate</a></li>
-<li class="chapter" data-level="4.7" data-path="stringr.html"><a href="stringr.html"><i class="fa fa-check"></i><b>4.7</b> Stringr</a></li>
-<li class="chapter" data-level="4.8" data-path="purrr.html"><a href="purrr.html"><i class="fa fa-check"></i><b>4.8</b> Purrr</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="business-case-sales-analysis.html"><a href="business-case-sales-analysis.html"><i class="fa fa-check"></i><b>5</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg> Business case - Sales Analysis</a><ul>
-<li class="chapter" data-level="5.1" data-path="theory-background.html"><a href="theory-background.html"><i class="fa fa-check"></i><b>5.1</b> Theory / Background</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="theory-background.html"><a href="theory-background.html#transactional-data"><i class="fa fa-check"></i><b>5.1.1</b> Transactional data</a></li>
-<li class="chapter" data-level="5.1.2" data-path="theory-background.html"><a href="theory-background.html#data-schema"><i class="fa fa-check"></i><b>5.1.2</b> data schema</a></li>
-</ul></li>
-<li class="chapter" data-level="5.2" data-path="project-setup.html"><a href="project-setup.html"><i class="fa fa-check"></i><b>5.2</b> Project Setup</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="project-setup.html"><a href="project-setup.html#project-structure"><i class="fa fa-check"></i><b>5.2.1</b> Project structure</a></li>
-<li class="chapter" data-level="5.2.2" data-path="project-setup.html"><a href="project-setup.html#setup-template-file"><i class="fa fa-check"></i><b>5.2.2</b> Setup (Template File)</a></li>
-<li class="chapter" data-level="5.2.3" data-path="project-setup.html"><a href="project-setup.html#installing-packages"><i class="fa fa-check"></i><b>5.2.3</b> Installing Packages</a></li>
-<li class="chapter" data-level="5.2.4" data-path="project-setup.html"><a href="project-setup.html#checkpoint"><i class="fa fa-check"></i><b>5.2.4</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="5.3" data-path="import.html"><a href="import.html"><i class="fa fa-check"></i><b>5.3</b> Import</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="import.html"><a href="import.html#checkpoint-1"><i class="fa fa-check"></i><b>5.3.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="5.4" data-path="examine.html"><a href="examine.html"><i class="fa fa-check"></i><b>5.4</b> Examine</a></li>
-<li class="chapter" data-level="5.5" data-path="cleaning-and-joining-data.html"><a href="cleaning-and-joining-data.html"><i class="fa fa-check"></i><b>5.5</b> Cleaning and joining data</a><ul>
-<li class="chapter" data-level="5.5.1" data-path="cleaning-and-joining-data.html"><a href="cleaning-and-joining-data.html#checkpoint-2"><i class="fa fa-check"></i><b>5.5.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="session-01-challenge.html"><a href="session-01-challenge.html"><i class="fa fa-check"></i><b>5.6</b> Session 01 Challenge</a></li>
-<li class="chapter" data-level="5.7" data-path="session-01-solution.html"><a href="session-01-solution.html"><i class="fa fa-check"></i><b>5.7</b> Session 01 Solution</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="challenge.html"><a href="challenge.html"><i class="fa fa-check"></i><b>6</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> Challenge</a></li>
-<li class="part"><span><b>III Session 2</b></span></li>
-<li class="chapter" data-level="7" data-path="overview-1.html"><a href="overview-1.html"><i class="fa fa-check"></i><b>7</b> Overview</a></li>
-<li class="chapter" data-level="8" data-path="session-01-02.html"><a href="session-01-02.html"><i class="fa fa-check"></i><b>8</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 581 512"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> Data visualization with ggplot</a><ul>
-<li class="chapter" data-level="8.1" data-path="visualize-introduction-to-visualization-in-ggplot2.html"><a href="visualize-introduction-to-visualization-in-ggplot2.html"><i class="fa fa-check"></i><b>8.1</b> <strong>VISUALIZE</strong> - Introduction To Visualization In ggplot2</a></li>
-<li class="chapter" data-level="8.2" data-path="adding-complexity-to-visualizations.html"><a href="adding-complexity-to-visualizations.html"><i class="fa fa-check"></i><b>8.2</b> Adding Complexity To Visualizations</a></li>
-<li class="chapter" data-level="8.3" data-path="customizing-your-plots.html"><a href="customizing-your-plots.html"><i class="fa fa-check"></i><b>8.3</b> Customizing Your Plots</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="business-case-sales-analysis-1.html"><a href="business-case-sales-analysis-1.html"><i class="fa fa-check"></i><b>9</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg> Business case - Sales Analysis</a><ul>
-<li class="chapter" data-level="9.1" data-path="checkpoint-3.html"><a href="checkpoint-3.html"><i class="fa fa-check"></i><b>9.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="challenge-1.html"><a href="challenge-1.html"><i class="fa fa-check"></i><b>10</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> Challenge</a></li>
-<li class="part"><span><b>IV Session 3</b></span></li>
-<li class="chapter" data-level="11" data-path="overview-2.html"><a href="overview-2.html"><i class="fa fa-check"></i><b>11</b> Overview</a></li>
-<li class="chapter" data-level="12" data-path="session-01-03.html"><a href="session-01-03.html"><i class="fa fa-check"></i><b>12</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 581 512"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> Data manipulation</a><ul>
-<li class="chapter" data-level="12.1" data-path="time-series.html"><a href="time-series.html"><i class="fa fa-check"></i><b>12.1</b> Time Series</a></li>
-<li class="chapter" data-level="12.2" data-path="text-fundamentals.html"><a href="text-fundamentals.html"><i class="fa fa-check"></i><b>12.2</b> Text Fundamentals</a></li>
-<li class="chapter" data-level="12.3" data-path="categorical-data.html"><a href="categorical-data.html"><i class="fa fa-check"></i><b>12.3</b> Categorical data</a></li>
-<li class="chapter" data-level="12.4" data-path="functional-programming.html"><a href="functional-programming.html"><i class="fa fa-check"></i><b>12.4</b> Functional Programming</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="business-case-sales-analysis-2.html"><a href="business-case-sales-analysis-2.html"><i class="fa fa-check"></i><b>13</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg> Business case - Sales Analysis</a><ul>
-<li class="chapter" data-level="13.1" data-path="checkpoint-4.html"><a href="checkpoint-4.html"><i class="fa fa-check"></i><b>13.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="challenge-2.html"><a href="challenge-2.html"><i class="fa fa-check"></i><b>14</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> Challenge</a></li>
-<li class="part"><span><b>V Session 4</b></span></li>
-<li class="chapter" data-level="15" data-path="overview-3.html"><a href="overview-3.html"><i class="fa fa-check"></i><b>15</b> Overview</a></li>
-<li class="chapter" data-level="16" data-path="session-01-04.html"><a href="session-01-04.html"><i class="fa fa-check"></i><b>16</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 581 512"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> Machine Learning concepts</a><ul>
-<li class="chapter" data-level="16.1" data-path="customer-segmentation-with-k-means-clustering-umap.html"><a href="customer-segmentation-with-k-means-clustering-umap.html"><i class="fa fa-check"></i><b>16.1</b> Customer Segmentation with K-Means Clustering &amp; UMAP</a></li>
-<li class="chapter" data-level="16.2" data-path="ml-linear-algorithms.html"><a href="ml-linear-algorithms.html"><i class="fa fa-check"></i><b>16.2</b> ML - Linear Algorithms</a></li>
-<li class="chapter" data-level="16.3" data-path="ml-tree-based-algorithms.html"><a href="ml-tree-based-algorithms.html"><i class="fa fa-check"></i><b>16.3</b> ML - Tree Based Algorithms</a></li>
-<li class="chapter" data-level="16.4" data-path="ml-preprocessing-svm.html"><a href="ml-preprocessing-svm.html"><i class="fa fa-check"></i><b>16.4</b> ML - Preprocessing &amp; SVM</a></li>
-<li class="chapter" data-level="16.5" data-path="testing-the-models.html"><a href="testing-the-models.html"><i class="fa fa-check"></i><b>16.5</b> Testing the models</a></li>
-</ul></li>
-<li class="chapter" data-level="17" data-path="business-case-company-segmentation-with-stock-prices.html"><a href="business-case-company-segmentation-with-stock-prices.html"><i class="fa fa-check"></i><b>17</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg> Business case - Company Segmentation with Stock Prices</a></li>
-<li class="part"><span><b>VI Session 5</b></span></li>
-<li class="chapter" data-level="18" data-path="overview-4.html"><a href="overview-4.html"><i class="fa fa-check"></i><b>18</b> Overview</a></li>
-<li class="chapter" data-level="19" data-path="session-01-05.html"><a href="session-01-05.html"><i class="fa fa-check"></i><b>19</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 581 512"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> Communication basics</a><ul>
-<li class="chapter" data-level="19.1" data-path="reports-pdf.html"><a href="reports-pdf.html"><i class="fa fa-check"></i><b>19.1</b> Reports (PDF)</a></li>
-<li class="chapter" data-level="19.2" data-path="presentation-ioslides.html"><a href="presentation-ioslides.html"><i class="fa fa-check"></i><b>19.2</b> Presentation • ioslides</a></li>
-<li class="chapter" data-level="19.3" data-path="presentation-revealjs.html"><a href="presentation-revealjs.html"><i class="fa fa-check"></i><b>19.3</b> Presentation • revealjs</a></li>
-<li class="chapter" data-level="19.4" data-path="presentation-xaringang.html"><a href="presentation-xaringang.html"><i class="fa fa-check"></i><b>19.4</b> Presentation • xaringang</a></li>
-</ul></li>
-<li class="chapter" data-level="20" data-path="interactive-report-with-plotly.html"><a href="interactive-report-with-plotly.html"><i class="fa fa-check"></i><b>20</b> Interactive Report with plotly</a></li>
-<li class="chapter" data-level="21" data-path="business-case-reporting.html"><a href="business-case-reporting.html"><i class="fa fa-check"></i><b>21</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg> Business case - Reporting</a><ul>
-<li class="chapter" data-level="21.1" data-path="checkpoint-5.html"><a href="checkpoint-5.html"><i class="fa fa-check"></i><b>21.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="22" data-path="challenge-3.html"><a href="challenge-3.html"><i class="fa fa-check"></i><b>22</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> Challenge</a></li>
-<li class="part"><span><b>VII Session 6</b></span></li>
-<li class="chapter" data-level="23" data-path="overview-5.html"><a href="overview-5.html"><i class="fa fa-check"></i><b>23</b> Overview</a></li>
-<li class="chapter" data-level="24" data-path="session-01-06.html"><a href="session-01-06.html"><i class="fa fa-check"></i><b>24</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 581 512"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> Flexdashboard basics</a></li>
-<li class="chapter" data-level="25" data-path="business-case-dashboatd-flex.html"><a href="business-case-dashboatd-flex.html"><i class="fa fa-check"></i><b>25</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg> Business case - Dashboatd (Flex)</a><ul>
-<li class="chapter" data-level="25.1" data-path="checkpoint-6.html"><a href="checkpoint-6.html"><i class="fa fa-check"></i><b>25.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="26" data-path="challenge-4.html"><a href="challenge-4.html"><i class="fa fa-check"></i><b>26</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> Challenge</a></li>
-<li class="part"><span><b>VIII Session 7</b></span></li>
-<li class="chapter" data-level="27" data-path="overview-6.html"><a href="overview-6.html"><i class="fa fa-check"></i><b>27</b> Overview</a></li>
-<li class="chapter" data-level="28" data-path="session-01-07.html"><a href="session-01-07.html"><i class="fa fa-check"></i><b>28</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 581 512"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg> Shiny basics</a></li>
-<li class="chapter" data-level="29" data-path="business-case-stock-analyzer.html"><a href="business-case-stock-analyzer.html"><i class="fa fa-check"></i><b>29</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm95.8 32.6L272 480l-32-136 32-56h-96l32 56-32 136-47.8-191.4C56.9 292 0 350.3 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-72.1-56.9-130.4-128.2-133.8z"/></svg> Business case - STock Analyzer</a><ul>
-<li class="chapter" data-level="29.1" data-path="checkpoint-7.html"><a href="checkpoint-7.html"><i class="fa fa-check"></i><b>29.1</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M243.2 189.9V258c26.1 5.9 49.3 15.6 73.6 22.3v-68.2c-26-5.8-49.4-15.5-73.6-22.2zm223.3-123c-34.3 15.9-76.5 31.9-117 31.9C296 98.8 251.7 64 184.3 64c-25 0-47.3 4.4-68 12 2.8-7.3 4.1-15.2 3.6-23.6C118.1 24 94.8 1.2 66.3 0 34.3-1.3 8 24.3 8 56c0 19 9.5 35.8 24 45.9V488c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24v-94.4c28.3-12.1 63.6-22.1 114.4-22.1 53.6 0 97.8 34.8 165.2 34.8 48.2 0 86.7-16.3 122.5-40.9 8.7-6 13.8-15.8 13.8-26.4V95.9c.1-23.3-24.2-38.8-45.4-29zM169.6 325.5c-25.8 2.7-50 8.2-73.6 16.6v-70.5c26.2-9.3 47.5-15 73.6-17.4zM464 191c-23.6 9.8-46.3 19.5-73.6 23.9V286c24.8-3.4 51.4-11.8 73.6-26v70.5c-25.1 16.1-48.5 24.7-73.6 27.1V286c-27 3.7-47.9 1.5-73.6-5.6v67.4c-23.9-7.4-47.3-16.7-73.6-21.3V258c-19.7-4.4-40.8-6.8-73.6-3.8v-70c-22.4 3.1-44.6 10.2-73.6 20.9v-70.5c33.2-12.2 50.1-19.8 73.6-22v71.6c27-3.7 48.4-1.3 73.6 5.7v-67.4c23.7 7.4 47.2 16.7 73.6 21.3v68.4c23.7 5.3 47.6 6.9 73.6 2.7V143c27-4.8 52.3-13.6 73.6-22.5z"/></svg> Checkpoint</a></li>
-</ul></li>
-<li class="chapter" data-level="30" data-path="challenge-5.html"><a href="challenge-5.html"><i class="fa fa-check"></i><b>30</b> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg> Challenge</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
-
+<!--bookdown:toc2:end-->
       </nav>
     </div>
 
@@ -983,7 +876,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">DATA SCIENCE Course script</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
           </h1>
         </div>
 
@@ -991,10 +884,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<script src="https://cdn.datacamp.com/datacamp-light-latest.min.js"></script>
+<div id="part-getting-started" class="section level1 unnumbered">
+<h1>(PART) Getting Started</h1>
+<!-- Load gloabal packages -->
+<!-- ++++++++++++++++++++++++++++++ -->
+<!-- Chapter: Install R and RStudio -->
+<!-- ++++++++++++++++++++++++++++++ -->
+</div>
+<div id="getting_started" class="section level1">
+<h1><span class="header-section-number">1</span> R &amp; RStudio</h1>
+<!-- Logos of R and R-Studio -->
+<table>
+<tr>
+<td>
+<img src='https://www.r-project.org/logo/Rlogo.png' style="height:100px" align="left" valign="middle" hspace="50px">
+</td>
+<td>
+<img src='https://rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png' style="height:100px" align="right" valign="middle" hspace="50px">
+</td>
+</tr>
+</table>
+<p>This chapter provides a broad overview of the R language that will get you programming right away. The first project will be creating a decision tool used in cost accounting. This project will make it easier to study these things by teaching you the basics of R. The term “R” is used to refer to both the programming language and the software that interprets the scripts written using it. Your first mission is simple: assemble R code that will calculate the ideal quantity of inventory to order for a given product.</p>
+<p>In this project, you will learn how to:</p>
+<ul>
+<li>Use the R and RStudio interfaces</li>
+<li>Run R commands</li>
+<li>Create R objects</li>
+<li>Write your own R functions and scripts</li>
+</ul>
+<p>Don’t worry if you’ve never programmed before and it seems like we cover a lot of ground fast. The chapter will teach you everything you need to know and gives you a concise overview of the R language. You will return to many of the concepts we meet here in the next projects, where you will examine the concepts in depth.</p>
+<p>Before you can ask your computer to save some numbers, you’ll need to know how to talk to it. RStudio gives you a way to talk to your computer. R gives you a language to speak in. To start you will need to have both R and RStudio installed on your computer before you can use them. R and RStudio are separate downloads and installations. Both are free (under the Affero General Public License (AGPL) v3) and easy to download. R is the underlying statistical computing environment, but using R alone is no fun. RStudio is a graphical integrated development environment (IDE) that makes using R much easier and more interactive. You need to install R before you install RStudio. On the following sites you’ll find information about how to install the language R and the IDE RStudio. You can choose between an interactive and a manual tutorial.</p>
+<div id="installing-r-rstudio-ide" class="section level2">
+<h2><span class="header-section-number">1.1</span> <svg style="height:0.8em;top:.04em;position:relative;fill:black;" viewBox="0 0 512 512"><path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"/></svg> Installing R &amp; RStudio IDE</h2>
+<div id="interactively" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Interactively</h3>
+<p>Go to the following link and follow the instructions to install R and the IDE RStudio</p>
+<div class="rmdblankbox">
+<p>
+Interactive Shinyapp
+</p>
+</div>
+<div class="rmdshiny">
+<p>
+<a href="https://jwarz.shinyapps.io/learnR/" target="_blank"><b>Install R &amp; RStudio IDE</b></a>
+</p>
+</div>
+</div>
+<div id="manually" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> Manually</h3>
+<p>Download and install R, a free software environment for statistical computing and graphics from CRAN, the Comprehensive R Archive Network.</p>
+<p><strong>Video instructions to install R (Download link below)</strong></p>
+<div style="padding:62.5% 0 3% 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/203516510?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<div class="rmdblankbox">
+<p>
+Download
+</p>
+</div>
+<div class="rmdattachment">
+<p>
+<a href="https://cloud.r-project.org" target="_blank"><b><a href="https://cloud.r-project.org" class="uri">https://cloud.r-project.org</a></b></a>
+</p>
+</div>
+<p><strong>Steps</strong></p>
+<ol style="list-style-type: decimal">
+<li>Click “Download R for Mac/Windows”</li>
+<li>Download the appropriate file:
+<ul>
+<li>Windows users click Base, and download the installer for the latest R version</li>
+<li>Mac users select the file R-3.X.X.pkg that aligns with your OS version</li>
+</ul></li>
+<li>Follow the instructions of the installer.</li>
+</ol>
+<hr />
+<p>Install RStudio’s IDE (stands for integrated development environment), a powerful user interface for R.</p>
+<p><strong>Video instructions to install RStudio (Download link below)</strong></p>
+<div style="padding:62.5% 0 3% 0;position:relative;">
+<iframe src="https://player.vimeo.com/video/203516968?color=428bca&amp;title=0&amp;byline=0&amp;portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
+</iframe>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<div class="rmdblankbox">
+<p>
+Download
+</p>
+</div>
+<div class="rmdattachment">
+<p>
+<a href="https://rstudio.com/products/rstudio/download/" target="_blank"><b><a href="https://rstudio.com/products/rstudio/download/" class="uri">https://rstudio.com/products/rstudio/download/</a></b></a>
+</p>
+</div>
+<p><strong>Steps</strong></p>
+<ol style="list-style-type: decimal">
+<li>Select the install file for your OS.</li>
+<li>Follow the instructions of the installer.</li>
+</ol>
+</div>
+</div>
 <div id="understanding-the-rstudio-ide-working-with-rstudio" class="section level2">
 <h2><span class="header-section-number">1.2</span> Understanding the RStudio IDE &amp; Working with RStudio</h2>
 <p>Let’s start by learning about RStudio, the Integrated Development Environment (IDE) for working with R. We will use RStudio IDE to write code, navigate the files on our computer, inspect the variables we are going to create, and visualize the plots we will generate. RStudio can also be used for other things (e.g., version control, developing packages, writing Shiny apps) that we will not cover during this class.</p>
-<p>One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone. To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in Figure <a href="understanding-the-rstudio-ide-working-with-rstudio.html#fig:rstudio-ide">1.1</a>. RStudio is divided into 4 Panes.</p>
+<p>One of the advantages of using RStudio is that all the information you need to write code is available in a single window. Additionally, with many shortcuts, autocompletion, and highlighting for the major file types you use while developing in R, RStudio will make typing easier and less error-prone. To get started, open RStudio just as you would open any other application on your computer. When you do, a window should appear in your screen like the one shown in Figure @ref(fig:rstudio-ide). RStudio is divided into 4 Panes.</p>
 <div class="rmdblankbox">
 <p>
 Infobox
@@ -1006,10 +1002,10 @@ The placement of these panes and their content can be customized <code>Tools -&g
 </p>
 </div>
 <p>At first startup you will not see an open script as seen in the green frame. You can create one by clicking first on <img src="input/00_getting_started/01_images/new_file.png" style="width:3.1%" /> (new file) and then on <img src="input/00_getting_started/01_images/new_r_file.png" style="width:3.1%" /> (new R script) in the upper left corner. Alternatively you can use the shortcut <kbd>Shift</kbd>+<kbd>⌘</kbd>+<kbd>N</kbd> on macOS or <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd>N</kbd> on Windows &amp; Linux.</p>
-<div class="figure"><span id="fig:rstudio-ide"></span>
+<div class="figure">
 <img src="input/00_getting_started/01_images/rstudio_ide.png" alt="RStudio Integrated Development Environment (IDE)." width="100%" />
 <p class="caption">
-FIGURE 1.1: RStudio Integrated Development Environment (IDE).
+(#fig:rstudio-ide)RStudio Integrated Development Environment (IDE).
 </p>
 </div>
 <p>The basis of programming is that we write down instructions for the computer to follow, and then we tell the computer to follow those instructions. We write, or <b>code</b>, instructions in R because it is a common language that both the computer and we can understand. We call the instructions <b>commands</b> and we tell the computer to follow the instructions by <b>executing</b> (also called <b>running</b>) those commands. There are two main ways of interacting with R: by using the console or by using script files.</p>
@@ -1180,10 +1176,10 @@ Download
 <li>Locate the downloaded folder and then click <code>Create Project</code>.</li>
 </ol>
 <p>Your working directory should now look like this:</p>
-<div class="figure"><span id="fig:project-struct"></span>
+<div class="figure">
 <img src="input/00_getting_started/01_images/project_structure.png" alt="Project structure example in RStudio." width="100%" />
 <p class="caption">
-FIGURE 1.2: Project structure example in RStudio.
+(#fig:project-struct)Project structure example in RStudio.
 </p>
 </div>
 <p>For this first project, we will just need a <code>00_getting_started/</code> folder to store our first script. We will use the other folders for when we learn how to import data such as CSV files, and for the figures that we will save.</p>
@@ -1245,62 +1241,126 @@ Stackoverflow
 <!-- GitHub -->
 <!-- ++++++ -->
 </div>
-<!-- </div> -->
+</div>
+<div id="github-github-desktop" class="section level1">
+<h1><span class="header-section-number">2</span> GitHub &amp; GitHub Desktop</h1>
+<table>
+<tr>
+<td>
+<img src='input/00_getting_started/01_images/logo_github.svg' style="height:100px" align="left">
+</td>
+<td>
+<img src='input/00_getting_started/01_images/logo_github_desktop.svg' style="height:100px" align="right">
+</td>
+</tr>
+</table>
+<p>We will use GitHub to store your data and hand in your assignments. To be able to do so, complete the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>Create a free github account.</li>
+</ol>
+<div class="rmdblankbox">
+<p>
+Website
+</p>
+</div>
+<div class="rmdwebsite">
+<p>
+<strong><a href="https://github.com/">https://github.com/</a></strong>
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Download, install github desktop and connect it with your account.</li>
+</ol>
+<div class="rmdblankbox">
+<p>
+Download
+</p>
+</div>
+<div class="rmdattachment">
+<p>
+<strong><a href="https://desktop.github.com">https://desktop.github.com</a></strong>
+</p>
+</div>
+<div class="figure">
+<img src="input/session_01/01_images/github_desktop.png" alt="Project structure example in RStudio." width="100%" />
+<p class="caption">
+(#fig:github-desktop)Project structure example in RStudio.
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Create a website using R Markdown and host it on Github pages, then submit the link to your website for Assignment 1. You will create the website using this template <a href="https://tuhh-w11.github.io/lab_journal_website/" target="_blank"><b>LabJournalTemplate</b></a>.</li>
+</ol>
+<p>To use this, got to <a href="https://github.com/TUHH-W11/lab_journal_website/" target="_blank"> and fork thir repository (press the fork button in top right hand corner, then choose your github account) to get started that way. You should now see a copy of this repo in your github account. That means you have all of the files you need to compile a website with RMarkdown.</p>
+<p><strong>Steps for compiling on your local computer</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Make sure the rmarkdown package is installed in R-studio: Open R-studio, click the packages tab in the lower left hand corner, click install packages, type in rmarkdown, make sure “install dependencies” is clicked on, then press install. Close R-studio.</p></li>
+<li><p>Open GitHub Deskttop, make sure it is connected to your account, and clone your forked repository to your computer so that you have a local copy of that data.</p></li>
+<li><p>Navigate to the folder you just cloned/downloaded, open the <code>lab_journal_website.Rproj</code> file. This should automatically open R-studio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell R-studio to save something somewhere else. Have a look at the files tab in the bottom right hand corner. Most files you click will be opened up as text files in the R-studio editor. Click the “Index.Rmd” file.</p></li>
+<li><p>To compile the entire website, find the build tab in the top right hand corner. You should see the option to “build website”. Click this. The website should be built.
+After the website is built, you should be able to see it in the R-studio browser. There is a little button (blue arrow with a little browser icon) that allows you to pop the website into your default web-browser. This way you can look at the website in your browser.
+Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the index.html file into a browser), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.</p></li>
+</ol>
+<p><strong>Steps for serving your webpage using github pages</strong></p>
+<p>Every github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository. The webpage is served from the docs folder. The example files are set so that when you compile the example in R-studio, the output automatically goes into the docs folder. As a result, when you have these files in a github repository, github will serve the html files in your docs folder as a website.</p>
+<ol style="list-style-type: decimal">
+<li>Click the Settings (also near top right), scroll down to Github Pages options</li>
+<li>click the option to serve from docs folder (You should see a little green message above the github pages options with a link to your new webpage).</li>
+</ol>
+<p>Editing webpage and serving on github</p>
+<ol style="list-style-type: decimal">
+<li>Open up the project file in the folder for your repo on your local computer (.rproj file)</li>
+<li>Edit the .rmd files in R-studio</li>
+<li>Recompile website (build website when index.rmd is loaded), or knit individual .rmd files</li>
+<li>send your changes back to the online github repository (note this can be done in github desktop, or directly in R-studio, in R-studio you will see a git tab if you are working in a git repo. Click the git tab, click the diff button, which will show you if there are any new changes. Click each of the files that you want to commit. Write a short note to describe the changes. Press the commit button. Wait a couple seconds, your changes should now be served on your website).</li>
+</ol>
+<p>By default, <code>tutorial</code> will convert all R chunks.</p>
+<div data-datacamp-exercise="" data-height="300" data-encoded="true">
+eyJsYW5ndWFnZSI6InIiLCJzYW1wbGUiOiJhIDwtIDJcbmIgPC0gM1xuXG5hICsgYiJ9
+</div>
+<!-- +++++++++++ -->
+<p>†
+<!-- DS Overview -->
+<!-- +++++++++++ -->
+# A data science project step-by-step</p>
+<div id="information-about-data" class="section level2">
+<h2><span class="header-section-number">2.1</span> Information about data</h2>
+<p>–&gt; See 1st/2nd from skillshare
+* Total Amount
+* Amound analyzed</p>
+<ul>
+<li><p>Benefits from data analyics (like revenue increase etc.)</p></li>
+<li><p>Pareto /80-20 –&gt; Big increase is pretty simple with low knowledge</p></li>
+</ul>
+</div>
+<div id="application-areas" class="section level2">
+<h2><span class="header-section-number">2.2</span> Application areas</h2>
+<p>(see third skillshare video)
+Return on investment
+cost per acquistion
+sales growth
+customer retention
+A/B Testing
+Predicrive Analytics / ML …</p>
+<p><a href="https://data36.com/data-science-for-business/" class="uri">https://data36.com/data-science-for-business/</a>
+1. Data Collection
+2. Data Storage
+3. Data Cleaning
+4. Data Analysis
+5. Communication, data visualization
+6. Data-driven Decision</p>
+</div>
+</div>
+<!--bookdown:body:end-->
             </section>
 
           </div>
         </div>
       </div>
-<a href="installing-r-rstudio-ide.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="github-github-desktop.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
     </div>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": null,
-"text": null
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["book.pdf", "book.epub"],
-"toc": {
-"collapse": "subsection"
-}
-});
-});
-</script>
+<!--bookdown:config-->
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
