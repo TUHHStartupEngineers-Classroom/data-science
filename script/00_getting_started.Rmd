@@ -306,7 +306,7 @@ Getting set up: Create a new project, organize your working directory and save y
 Download
 ```
 ```{block, type='rmdattachment'}
-**[https://desktop.github.com](lorem.zip)**
+**[ds_project.zip](lorem.zip)**
 ```
 2. In RStudio under the `File` menu, click on `New Project` (or click ![](input/00_getting_started/01_images/new_project_icon.png){ width="3.1%" }) and then choose `Existing Directory`. This will be your working directory (e.g., ~/data-science).
 3. Locate the downloaded folder and then click `Create Project`.
@@ -332,22 +332,60 @@ RStudio’s default preferences generally work well, but saving a workspace to .
 
 <hr></hr>
 
-**Exercise**
+**Getting help with Help Pages**
 
-6. Create a new .R script, write and execute the following code in the .R script and identify where in the IDE the outputs can be found.
+There are over 1,000 functions at the core of R, and new R functions are created all of the time. This can be a lot of material to memorize and learn! Luckily, each R function comes with its own help page, which you can access by typing the function's name after a question mark. For example, each of these commands will open a help page. Look for the pages to appear in the Help tab of RStudio's bottom-right pane:
 
-```
-mtcars
-?sum
-hist(mtcars$mpg)
-avg_mpg <- mean(mtcars$mpg)
-random_numbers <- runif(25)
-history()
+```r
+?sqrt
+?log10
+?sample
 ```
 
-<hr></hr>
+Help pages contain useful information about what each function does. These help pages also serve as code documentation, so reading them can be bittersweet. They often seem to be written for people who already understand the function and do not need help. 
 
-**Getting help**
+Don't let this bother you—you can gain a lot from a help page by scanning it for information that makes sense and glossing over the rest. This technique will inevitably bring you to the most helpful part of each help page: the bottom. Here, almost every help page includes some example code that puts the function in action. Running this code is a great way to learn by example.
+
+Parts of a Help Page
+
+Each help page is divided into sections. Which sections appear can vary from help page to help page, but you can usually expect to find these useful topics:
+
+**Description** - A short summary of what the function does.
+
+**Usage** - An example of how you would type the function. Each argument of the function will appear in the order R expects you to supply it (if you don't use argument names).
+
+**Arguments** -  A list of each argument the function takes, what type of information R expects you to supply for the argument, and what the function will do with the information.
+
+**Details** - A more in-depth description of the function and how it operates. The details section also gives the function author a chance to alert you to anything you might want to know when using the function.
+
+**Value** - A description of what the function returns when you run it.
+
+**See Also** - A short list of related R functions.
+
+**Examples** - Example code that uses the function and is guaranteed to work. The examples section of a help page usually demonstrates a couple different ways to use a function. This helps give you an idea of what the function is capable of.
+
+If you'd like to look up the help page for a function but have forgotten the function's name, you can search by keyword. To do this, type two question marks followed by a keyword in R's command line. R will pull up a list of links to help pages related to the keyword. You can think of this as the help page for the help page:
+
+```r
+??log
+```
+
+Let's take a stroll through `sample`'s help page. Remember: we're searching for anything that could help you change the probabilities involved in the sampling process. I'm not going to reproduce the whole help page here (just the juiciest parts), so you should follow along on your computer.
+
+First, open the help page. It will appear in the same pane in RStudio as your plots did (but in the Help tab, not the Plots tab):
+
+```r
+?sample
+```
+
+What do you see? Starting from the top:
+
+```
+Random Samples and Permutations
+Description
+    sample takes a sample of the specified size from the elements of x using 
+either with or without replacement.
+```
 
 Inside RStudio:
 
@@ -373,11 +411,20 @@ Explain the ? in front of functions (contr + enter). Use ?function_name to get t
 
 External to RStudio:
 
-Google 
-rseek
-Stackoverflow
-...
+R also comes with a super active community of users that you can turn to for help. Stack Overflow, a website that allows programmers to answer questions and users to rank answers based on helpfulness, is the best place to find an answer to your question. You can submit your own question or search through Stack Overflow’s previously answered questions related to R, because there’s a great chance that your question has already been asked and answered. You’re more likely to get a useful answer if you provide a reproducible example with your question. This means pasting in a short snippet of code that users can run to arrive at the bug or question you have in mind.
 
+Addtionally to Stackoverflow you can just use [google.com](https://google.com) or [seek.org](https://rseek.org) to search for an r related problem.
+
+6. Create a new .R script, write and execute the following code in the .R script and identify where in the IDE the outputs can be found.
+
+```
+mtcars
+?sum
+hist(mtcars$mpg)
+avg_mpg <- mean(mtcars$mpg)
+random_numbers <- runif(25)
+history()
+```
 
 <!-- ++++++ -->
 <!-- GitHub -->

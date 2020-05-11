@@ -1172,7 +1172,7 @@ Download
 </div>
 <div class="rmdattachment">
 <p>
-<strong><a href="lorem.zip">https://desktop.github.com</a></strong>
+<strong><a href="lorem.zip">ds_project.zip</a></strong>
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -1203,19 +1203,32 @@ RStudio’s default preferences generally work well, but saving a workspace to .
 </div>
 <hr>
 </hr>
-<p><strong>Exercise</strong></p>
-<ol start="6" style="list-style-type: decimal">
-<li>Create a new .R script, write and execute the following code in the .R script and identify where in the IDE the outputs can be found.</li>
-</ol>
-<pre><code>mtcars
-?sum
-hist(mtcars$mpg)
-avg_mpg &lt;- mean(mtcars$mpg)
-random_numbers &lt;- runif(25)
-history()</code></pre>
-<hr>
-</hr>
-<p><strong>Getting help</strong></p>
+<p><strong>Getting help with Help Pages</strong></p>
+<p>There are over 1,000 functions at the core of R, and new R functions are created all of the time. This can be a lot of material to memorize and learn! Luckily, each R function comes with its own help page, which you can access by typing the function’s name after a question mark. For example, each of these commands will open a help page. Look for the pages to appear in the Help tab of RStudio’s bottom-right pane:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">?sqrt</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2">?log10</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3">?sample</a></code></pre></div>
+<p>Help pages contain useful information about what each function does. These help pages also serve as code documentation, so reading them can be bittersweet. They often seem to be written for people who already understand the function and do not need help.</p>
+<p>Don’t let this bother you—you can gain a lot from a help page by scanning it for information that makes sense and glossing over the rest. This technique will inevitably bring you to the most helpful part of each help page: the bottom. Here, almost every help page includes some example code that puts the function in action. Running this code is a great way to learn by example.</p>
+<p>Parts of a Help Page</p>
+<p>Each help page is divided into sections. Which sections appear can vary from help page to help page, but you can usually expect to find these useful topics:</p>
+<p><strong>Description</strong> - A short summary of what the function does.</p>
+<p><strong>Usage</strong> - An example of how you would type the function. Each argument of the function will appear in the order R expects you to supply it (if you don’t use argument names).</p>
+<p><strong>Arguments</strong> - A list of each argument the function takes, what type of information R expects you to supply for the argument, and what the function will do with the information.</p>
+<p><strong>Details</strong> - A more in-depth description of the function and how it operates. The details section also gives the function author a chance to alert you to anything you might want to know when using the function.</p>
+<p><strong>Value</strong> - A description of what the function returns when you run it.</p>
+<p><strong>See Also</strong> - A short list of related R functions.</p>
+<p><strong>Examples</strong> - Example code that uses the function and is guaranteed to work. The examples section of a help page usually demonstrates a couple different ways to use a function. This helps give you an idea of what the function is capable of.</p>
+<p>If you’d like to look up the help page for a function but have forgotten the function’s name, you can search by keyword. To do this, type two question marks followed by a keyword in R’s command line. R will pull up a list of links to help pages related to the keyword. You can think of this as the help page for the help page:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">??log</a></code></pre></div>
+<p>Let’s take a stroll through <code>sample</code>’s help page. Remember: we’re searching for anything that could help you change the probabilities involved in the sampling process. I’m not going to reproduce the whole help page here (just the juiciest parts), so you should follow along on your computer.</p>
+<p>First, open the help page. It will appear in the same pane in RStudio as your plots did (but in the Help tab, not the Plots tab):</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">?sample</a></code></pre></div>
+<p>What do you see? Starting from the top:</p>
+<pre><code>Random Samples and Permutations
+Description
+    sample takes a sample of the specified size from the elements of x using 
+either with or without replacement.</code></pre>
 <p>Inside RStudio:</p>
 <p>You can just type <code>?function_name</code> or <code>help(function_name)</code> into the console.</p>
 <pre><code># provides details for specific function
@@ -1237,10 +1250,17 @@ Explain the ? in front of functions (contr + enter). Use ?function_name to get t
 </p>
 </div>
 <p>External to RStudio:</p>
-<p>Google
-rseek
-Stackoverflow
-…</p>
+<p>R also comes with a super active community of users that you can turn to for help. Stack Overflow, a website that allows programmers to answer questions and users to rank answers based on helpfulness, is the best place to find an answer to your question. You can submit your own question or search through Stack Overflow’s previously answered questions related to R, because there’s a great chance that your question has already been asked and answered. You’re more likely to get a useful answer if you provide a reproducible example with your question. This means pasting in a short snippet of code that users can run to arrive at the bug or question you have in mind.</p>
+<p>Addtionally to Stackoverflow you can just use <a href="https://google.com">google.com</a> or <a href="https://rseek.org">seek.org</a> to search for an r related problem.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Create a new .R script, write and execute the following code in the .R script and identify where in the IDE the outputs can be found.</li>
+</ol>
+<pre><code>mtcars
+?sum
+hist(mtcars$mpg)
+avg_mpg &lt;- mean(mtcars$mpg)
+random_numbers &lt;- runif(25)
+history()</code></pre>
 <!-- ++++++ -->
 <!-- GitHub -->
 <!-- ++++++ -->

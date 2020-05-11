@@ -42,7 +42,7 @@ Before we meet (online via [zoom](https://zoom.us/download)) for our first class
 
 Don't worry if you ran into issues with these first steps, we will address them in our first video session. 
 
-## ![](images/datacamp-vector-logo.svg){width=130px}
+## ![](images/datacamp-vector-logo.svg){width=130px} {-}
 
 If you have R-studio working and your github page set up, is there anything else you can do before we meet for the first time? Yes.
 
