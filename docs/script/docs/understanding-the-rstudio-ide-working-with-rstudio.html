@@ -870,7 +870,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1.1" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html#interactively"><i class="fa fa-check"></i><b>1.1.1</b> Interactively</a></li>
 <li class="chapter" data-level="1.1.2" data-path="installing-r-rstudio-ide.html"><a href="installing-r-rstudio-ide.html#manually"><i class="fa fa-check"></i><b>1.1.2</b> Manually</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="understanding-the-rstudio-ide-working-with-rstudio.html"><a href="understanding-the-rstudio-ide-working-with-rstudio.html"><i class="fa fa-check"></i><b>1.2</b> Understanding the RStudio IDE &amp; Working with RStudio</a></li>
+<li class="chapter" data-level="1.2" data-path="understanding-the-rstudio-ide-working-with-rstudio.html"><a href="understanding-the-rstudio-ide-working-with-rstudio.html"><i class="fa fa-check"></i><b>1.2</b> Understanding the RStudio IDE &amp; Working with RStudio</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="understanding-the-rstudio-ide-working-with-rstudio.html"><a href="understanding-the-rstudio-ide-working-with-rstudio.html#console"><i class="fa fa-check"></i><b>1.2.1</b> Console</a></li>
+<li class="chapter" data-level="1.2.2" data-path="understanding-the-rstudio-ide-working-with-rstudio.html"><a href="understanding-the-rstudio-ide-working-with-rstudio.html#source"><i class="fa fa-check"></i><b>1.2.2</b> Source</a></li>
+<li class="chapter" data-level="1.2.3" data-path="understanding-the-rstudio-ide-working-with-rstudio.html"><a href="understanding-the-rstudio-ide-working-with-rstudio.html#environment"><i class="fa fa-check"></i><b>1.2.3</b> Environment</a></li>
+<li class="chapter" data-level="1.2.4" data-path="understanding-the-rstudio-ide-working-with-rstudio.html"><a href="understanding-the-rstudio-ide-working-with-rstudio.html#miscellaneous"><i class="fa fa-check"></i><b>1.2.4</b> Miscellaneous</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="github-github-desktop.html"><a href="github-github-desktop.html"><i class="fa fa-check"></i><b>2</b> GitHub &amp; GitHub Desktop</a><ul>
 <li class="chapter" data-level="2.1" data-path="information-about-data.html"><a href="information-about-data.html"><i class="fa fa-check"></i><b>2.1</b> Information about data</a></li>
@@ -1014,6 +1019,8 @@ FIGURE 1.1: RStudio Integrated Development Environment (IDE).
 </div>
 <p>The basis of programming is that we write down instructions for the computer to follow, and then we tell the computer to follow those instructions. We write, or <b>code</b>, instructions in R because it is a common language that both the computer and we can understand. We call the instructions <b>commands</b> and we tell the computer to follow the instructions by <b>executing</b> (also called <b>running</b>) those commands. There are two main ways of interacting with R: by using the console or by using script files.</p>
 <!-- RStudio IDE: Console -->
+<div id="console" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Console</h3>
 <div class="boxouter">
 <div class="boxfloat" style="border-color: #F52602">
 Console
@@ -1079,6 +1086,9 @@ Error: unexpected input in &quot;100 % 2&quot;
 <hr />
 <p>Throughout the book, I’ll put exercises in chunks, like the one above. I’ll follow each exercise with a model answer, like the one above.</p>
 <!-- RStudio IDE: Source -->
+</div>
+<div id="source" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Source</h3>
 <div class="boxouter">
 <div class="boxfloat" style="border-color: #4EF903">
 Script files/ Source
@@ -1121,6 +1131,9 @@ EOQ
 <p>You can name an object in R almost anything you want such as x, current_temperature, or subject_id, but there are a few rules. First, a name cannot start with a number (2x is not valid, but x2 is). Second, a name cannot use some special symbols, like ^, !, $, @, +, -, /, or *. You want your object names to be explicit and not too long. There are some names that cannot be used because they are the names of fundamental functions in R (e.g., if, else, for, see here for a complete list). In general, even if it’s allowed, it’s best to not use other function names (e.g., c, T, mean, data, df, weights). It’s also best to avoid dots (.) within an object name as in my.dataset. There are many functions in R with dots in their names for historical reasons, but because dots have a special meaning in R (for methods) and other programming languages, it’s best to avoid them. It is also recommended to use nouns for object names, and verbs for function names. It’s important to be consistent in the styling of your code (where you put spaces, how you name objects, etc.). Using a consistent coding style makes your code clearer to read for your future self and your collaborators.</p>
 <p>Another important question here is, is R case sensitive? Is A the same as a? Figure out a way to check for yourself.</p>
 <!-- RStudio IDE: Environment -->
+</div>
+<div id="environment" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Environment</h3>
 <div class="boxouter">
 <div class="boxfloat" style="border-color: #2332FF">
 Environment/ History
@@ -1139,6 +1152,9 @@ Environment/ History
 <a class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">## 200</span></a></code></pre></div>
 <hr>
 </hr>
+</div>
+<div id="miscellaneous" class="section level3">
+<h3><span class="header-section-number">1.2.4</span> Miscellaneous</h3>
 <!-- RStudio IDE: Misc -->
 <div class="boxouter">
 <div class="boxfloat" style="border-color: #AA7942">
@@ -1151,11 +1167,11 @@ Misc. Displays
 <p>RStudio provides a helpful set of tools to do this through its <strong>Projects</strong> interface, which not only creates a working directory for you, but also remembers its location (allowing you to quickly navigate to it) and optionally preserves custom settings and open files to make it easier to resume work after a break. Using RStudio projects makes this easy and ensures that your working directory is set properly.</p>
 <p>You can see your current working directory in the path given above the console or you can just run the command <code>getwd()</code>. If for some reason your working directory is not what it should be, you can change it in the RStudio interface by navigating in the file browser where your working directory should be, and clicking on the blue gear icon <img src="input/00_getting_started/01_images/more_icon.png" style="width:3.1%" /> <code>More</code>, and select <code>Set As Working Directory</code>. Alternatively you can use <code>setwd(&quot;/path/to/working/directory&quot;)</code> to reset your working directory. However, your scripts should not include this line because it will fail on someone else’s computer.</p>
 <p>Using a consistent folder structure across your projects will help keep things organized, and will also make it easy to find/file things in the future. This can be especially helpful when you have multiple projects. In general, you may create directories (folders) for scripts, data, and documents.</p>
-<p><strong>data_raw/ &amp; data/</strong><br>
+<p><u>data_raw/ &amp; data/</u><br>
 Use these folders to store raw data and intermediate datasets you may create for the need of a particular analysis. For the sake of transparency and provenance, you should always keep a copy of your raw data accessible and do as much of your data cleanup and preprocessing programmatically (i.e., with scripts, rather than manually) as possible. Separating raw data from processed data is also a good idea. For example, you could have files <code>data_raw/tree_survey.plot1.txt</code> and <code>...plot2.txt</code> kept separate from a <code>data/tree.survey.csv</code> file generated by the <code>scripts/01.preprocess.tree_survey.R</code> script.</p>
-<p><strong>documents/</strong><br>
+<p><u>documents/</u><br>
 This would be a place to keep outlines, drafts and other text.</p>
-<p><strong>scripts/</strong><br>
+<p><u>scripts/</u><br>
 This would be the location to keep your R scripts for different analyses or plotting, and potentially a separate folder for your functions (more on that later).</p>
 <p>Additional (sub)directories depending on your project needs.</p>
 <hr>
@@ -1205,9 +1221,9 @@ RStudio’s default preferences generally work well, but saving a workspace to .
 </hr>
 <p><strong>Getting help with Help Pages</strong></p>
 <p>There are over 1,000 functions at the core of R, and new R functions are created all of the time. This can be a lot of material to memorize and learn! Luckily, each R function comes with its own help page, which you can access by typing the function’s name after a question mark. For example, each of these commands will open a help page. Look for the pages to appear in the Help tab of RStudio’s bottom-right pane:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">?sqrt</a>
-<a class="sourceLine" id="cb10-2" data-line-number="2">?log10</a>
-<a class="sourceLine" id="cb10-3" data-line-number="3">?sample</a></code></pre></div>
+<pre><code>?sqrt
+?log10
+?sample</code></pre>
 <p>Help pages contain useful information about what each function does. These help pages also serve as code documentation, so reading them can be bittersweet. They often seem to be written for people who already understand the function and do not need help.</p>
 <p>Don’t let this bother you—you can gain a lot from a help page by scanning it for information that makes sense and glossing over the rest. This technique will inevitably bring you to the most helpful part of each help page: the bottom. Here, almost every help page includes some example code that puts the function in action. Running this code is a great way to learn by example.</p>
 <p>Parts of a Help Page</p>
@@ -1264,6 +1280,7 @@ history()</code></pre>
 <!-- ++++++ -->
 <!-- GitHub -->
 <!-- ++++++ -->
+</div>
 </div>
 <!-- </div> -->
             </section>
